@@ -1,0 +1,50 @@
+#
+# Questo è un file .gitignore.
+#
+# Indica a git quali sono i file di cui non deve tener traccia
+# tra i commit, poichè non sono di rilevante importanza per la
+# build e i test del progetto.
+#
+
+# Files e directoried generate da IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Files e directories generate da NetBeans
+nbproject/
+nbproject/private/
+build/
+dist/
+*.nb-gradle/
+*.nb-gradle-private/
+
+# Files e directories generati da Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Files Java-specific
+*.class
+*.jar
+*.war
+*.ear
+*.javadoc
+
+# Logs
+*.log
+
+# Files generati dall'OS
+.DS_Store
+Thumbs.db
+
+# Files temporanei
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig

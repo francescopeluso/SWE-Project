@@ -1,0 +1,2 @@
+- This directory contains all the documentation related to the project.
+- Questa directory contiene tutta la documentazione relativa al progetto.
