@@ -1,4 +1,4 @@
-# 🚀 Software Engineering course project - Group XX
+# 🚀 Software Engineering course project - Group 12
 - ⚙️ Software Engineering team project, Academic Year 2024-25
 - 🎓 Computer Engineering Bachelor's degree course, cohort 2022-23
 - 🏫 Dept. of Information, Electrical Engineering and Applied Mathematics @ University of Salerno
