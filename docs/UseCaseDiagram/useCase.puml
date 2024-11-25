@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+
+!define primary_color #5D9CEC
+!define secondary_color #EBEBEB
+
+actor "Utente" as User
+
+usecase "Crea un contatto" as UC_Creazione
+usecase "Modifica un contatto" as UC_Modifica
+usecase "Elimina un contatto" as UC_Elimina
+usecase "Aggiungi ai preferiti" as UC_Preferiti
+usecase "Visualizza rubrica" as UC_Visualizzazione
+usecase "Ricerca" as UC_Ricerca
+usecase "Ricerca di un contatto" as UC_RicercaContatto
+usecase "Ricerca di una categoria" as UC_RicercaCategoria
+usecase "Import rubrica" as UC_Import
+usecase "Export rubrica" as UC_Export
+usecase "Ordinamento della rubrica" as UC_Ordinamento
+usecase "Visualizza i contatti preferiti" as UC_VediPreferiti
+
+User --> UC_Creazione
+User --> UC_Modifica
+User --> UC_Ricerca
+User --> UC_Visualizzazione
+User -right-> UC_Import
+User -right-> UC_Export
+
+UC_Elimina .up.> UC_Modifica : <<extend>>
+UC_Preferiti .up.> UC_Modifica : <<extend>>
+UC_Ordinamento .up.> UC_Visualizzazione : <<include>>
+UC_RicercaContatto -up-|> UC_Ricerca
+UC_RicercaCategoria -up-|> UC_Ricerca
+
+UC_VediPreferiti .right.> UC_Visualizzazione : <<extend>>
+UC_Preferiti .right.> UC_VediPreferiti : <<extend>>
+@enduml
