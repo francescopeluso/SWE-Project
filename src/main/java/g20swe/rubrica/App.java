@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 /**
  * JavaFX App
- * Scemo Chi Legge (push di prova di valerio)
+ * Scemo Chi Legge (push di prova di valerio)!
  */
 public class App extends Application {
 
