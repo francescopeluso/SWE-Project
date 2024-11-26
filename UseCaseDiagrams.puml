@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+
+actor "Utente" as User
+
+usecase "Import" as Import
+usecase "Export" as Export
+usecase "Crea contatto" as Create
+usecase "Modifica contatto" as Modify
+usecase "Aggiungi ai preferiti" as Favorites
+usecase "Elimina contatto" as Delete
+usecase "Cerca" as Search
+usecase "Cerca contatto" as ContactSearch
+usecase "Cerca per categoria" as SearchByList
+usecase "Visualizza Rubrica" as View
+usecase "Visualizza preferiti" as ViewFavorites
+usecase "Ordina contatti" as Order
+
+' Relazioni principali
+User -right-> Export
+User -right-> Import
+
+User --> Create
+User --> Modify
+
+User --> Search
+User -left--> View
+
+
+' Relazioni con il sistema (eventuale estensione)
+
+
+ViewFavorites -right..>View : <<extend>>
+Order  ..> View : <<include>>
+
+ContactSearch ..> Search : <<extend>>
+SearchByList ..> Search : <<extend>>
+
+Favorites -left..> Modify: <<extend>>
+Favorites ..> ViewFavorites : <<extend>>
+
+Delete -right..> Modify : <<extend>>
+
+@enduml

@@ -11,6 +11,8 @@ import javafx.stage.Stage;
  * JavaFX App
  */
 public class App extends Application {
+    
+    // test comment
 
     @Override
     public void start(Stage stage) {
