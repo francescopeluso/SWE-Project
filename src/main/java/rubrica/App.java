@@ -1,4 +1,4 @@
-package g20swe.rubrica;
+package rubrica;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

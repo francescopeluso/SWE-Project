@@ -1,4 +1,4 @@
-package g20swe.rubrica;
+package rubrica;
 
 public class SystemInfo {
 
