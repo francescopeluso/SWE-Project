@@ -1,4 +1,4 @@
-package rubrica;
+package addressbook;
 
 public class SystemInfo {
 

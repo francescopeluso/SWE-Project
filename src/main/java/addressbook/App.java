@@ -1,4 +1,4 @@
-package rubrica;
+package addressbook;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
