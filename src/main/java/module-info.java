@@ -1,4 +1,4 @@
-module g20swe.rubrica {
+module g20swe.addressbook {
     requires javafx.controls;
-    exports addressbook;
+    exports g20swe.addressbook;
 }
