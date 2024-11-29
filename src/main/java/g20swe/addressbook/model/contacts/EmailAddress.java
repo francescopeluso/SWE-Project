@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
  * More detailed information about the file and its role is in the project.
  * 
  */
-
 public class EmailAddress implements Validatable{
     
     private String emailAddress; ///< The email address
@@ -36,7 +35,7 @@ public class EmailAddress implements Validatable{
      * with the value of the input parameters
      * 
      * @param[in] emailAddress represents the email address
-     * @param[in] label represents the category of the email 
+     * @param[in] category represents the category of the email 
      */
     public EmailAddress(String emailAddress, EntryLabel category){
         this.emailAddress = emailAddress;
