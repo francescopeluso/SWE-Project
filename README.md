@@ -16,6 +16,10 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![LaTeX (for docs)](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
 
+## 🧩 Dependencies used (at the moment you're reading/copying this)
+- [ez-vcard](https://github.com/mangstadt/ez-vcard)
+- [JUnit 5](https://github.com/junit-team/junit5)
+
 ## ℹ️ About the project
 - We were asked to develop an application that implements an address book to manage telephone and/or e-mail contacts.
 - The project must be developed in Java, using the Apache Maven build automation tool, and the JavaFX library for developing the graphical user interface (GUI).

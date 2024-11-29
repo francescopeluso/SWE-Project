@@ -1,0 +1,67 @@
+@startuml
+package "rubrica" {
+
+    class Main
+
+    package "controller" {
+        class MainController
+        class ContactController
+    }
+
+    package "model" {
+        class AddressBook
+        package "contacts" {
+            abstract class Contact
+            class BasicContact
+            class ExtendedContact
+            class PhoneNumber
+            class EmailAddress
+        }
+    }
+        
+    package "view" {
+        class MainView <<FXML>>
+        class ContactView <<FXML>>
+    }
+
+    package "validation" {
+        abstract class Validatable
+    }
+
+    package "service" {
+        abstract class AddressBookService
+        class FileService
+        class ImportExportService
+    }
+
+  
+}
+
+package "com.googlecode.ez-vcard" {
+    class VCard
+}
+
+' Relazioni
+Main --> MainController
+Main --> ContactController
+MainController --> MainView
+ContactController --> ContactView
+
+AddressBook --> "0..5000" Contact
+Contact "0..3" --> PhoneNumber
+Contact "0..3" --> EmailAddress
+Contact <|-- BasicContact
+BasicContact <|-- ExtendedContact
+
+Contact ..|> Validatable : <<implements>>
+AddressBookService <|-- FileService
+AddressBookService <|-- ImportExportService
+ImportExportService --> VCard
+
+FileService --> AddressBook : salva/legge
+
+' Nuove relazioni possibili:
+ImportExportService --> AddressBook : utilizza
+VCard --> Contact : conversione
+
+@enduml
