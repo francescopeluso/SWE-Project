@@ -4,37 +4,79 @@ import g20swe.addressbook.validation.Validatable;
 import java.util.regex.Pattern;
 
 
+/**
+ * @file EmailAddress.java
+ * @brief This class implements the email entity with its category.
+ * 
+ * More detailed information about the file and its role is in the project.
+ * 
+ */
+
 public class EmailAddress implements Validatable{
     
-    private String emailAddress;
-    private EntryLabel label;
+    private String emailAddress; ///< The email address
+    private EntryLabel category;    ///< The category of the email address
     
+    /**
+     * @brief Default constructor of the class.
+     * 
+     * This constructor creates an EmailAddress object and initializes attributes
+     * to null.
+     * 
+     */
     public EmailAddress(){
         this.emailAddress = null;
-        this.label = null;
+        this.category = null;
     }
     
-    public EmailAddress(String emailAddress, EntryLabel label){
+    /**
+     * @brief Constructor of the class.
+     * 
+     * This constructor creates an EmailAddress object and initializes attributes
+     * with the value of the input parameters
+     * 
+     * @param[in] emailAddress represents the email address
+     * @param[in] label represents the category of the email 
+     */
+    public EmailAddress(String emailAddress, EntryLabel category){
         this.emailAddress = emailAddress;
-        this.label = label;
+        this.category = category;
     }
     
-    public EntryLabel getLabel(){
-        return this.label;
+    /**
+     * @return the category
+     */
+    public EntryLabel getCategory(){
+        return this.category;
     }
     
+    /**
+     * @return the email address 
+     */
     public String getEmailAddress(){
         return this.emailAddress;
     }
     
-    public void setLabel(EntryLabel label){
-        this.label = label;
+    /**
+     * @param category the category to set
+     */
+    public void setCategory(EntryLabel category){
+        this.category = category;
     }
     
+    /**
+     * @param emailAddress the email address to set 
+     */
     public void setEmailAddress(String emailAddress){
         this.emailAddress = emailAddress;
     }
 
+    /**
+     * @brief Verify the correctness of an email address.
+     * 
+     * 
+     * @return true if the emailAddress attribute is valid, false otherwise.
+     */
     @Override
     public boolean validate() {
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
