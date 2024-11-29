@@ -19,7 +19,7 @@ public class PhoneNumber implements Validatable{
         return this.phoneNumber;
     }
     
-    public void setPhoneNumber(){
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
 
