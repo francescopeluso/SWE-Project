@@ -1,9 +1,10 @@
 package g20swe.addressbook;
 
+import javafx.fxml.FXMLLoader;
+
 import javafx.application.Application;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 
@@ -13,10 +14,12 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws Exception {
 
-        var label = new Label("Ciaone.");
-        var scene = new Scene(new StackPane(label), 640, 480);
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/RootView.fxml"));
+        
+        Scene scene = new Scene(root);
+        stage.setTitle("Rubrica telefonica");
         stage.setScene(scene);
         stage.show();
     }

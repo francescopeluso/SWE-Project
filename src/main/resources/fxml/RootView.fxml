@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+
+<HBox id="AnchorPane" alignment="center" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
+   <children>
+      <fx:include source="MainView.fxml" />
+      <fx:include source="ContactView.fxml" />
+   </children>
+</HBox>
