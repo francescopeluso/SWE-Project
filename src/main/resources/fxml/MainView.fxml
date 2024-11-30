@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -7,50 +8,61 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g20swe.addressbook.controller.MainController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="256.0" prefHeight="400.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g20swe.addressbook.controller.MainController">
    <children>
-      <MenuBar>
+      <MenuBar styleClass="menuBar">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" text="Importa da file" />
+                  <MenuItem mnemonicParsing="false" text="Esporta su file" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Chiudi" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Modifica">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" text="Inserisci contatto" />
+                  <MenuItem mnemonicParsing="false" text="Elimina contatto" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Reinizializza rubrica" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Aiuto">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" text="Documentazione" />
+                  <MenuItem mnemonicParsing="false" text="Chi siamo" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="127.0">
+      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="16.0" prefWidth="200.0" spacing="127.0">
          <VBox.margin>
             <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
          </VBox.margin>
          <children>
-            <Label text="Rubrica">
+            <Label maxWidth="1.7976931348623157E308" text="Rubrica">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="addContactBtn" alignment="TOP_LEFT" mnemonicParsing="false" text="+">
+            <Button fx:id="addContactBtn" alignment="TOP_LEFT" contentDisplay="TOP" mnemonicParsing="false" stylesheets="@mainview.css" text="+" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
+               <styleClass>
+                  <String fx:value="primaryBtn" />
+                  <String fx:value="roundBtn" />
+               </styleClass>
             </Button>
          </children>
       </HBox>
-      <ListView fx:id="contactListView" maxHeight="1.7976931348623157E308" prefHeight="357.0" prefWidth="232.0">
+      <ListView fx:id="contactListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="232.0" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets bottom="12.0" left="12.0" right="12.0" />
          </VBox.margin>
