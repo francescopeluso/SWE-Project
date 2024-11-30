@@ -1,7 +1,4 @@
-/*
- * Empty Stylesheet file.
- */
-
-.mainFxmlClass {
-
+.contactView {
+    -fx-border-color: transparent transparent transparent lightgray;
+    -fx-border-width: 0 0 0 1px;
 }

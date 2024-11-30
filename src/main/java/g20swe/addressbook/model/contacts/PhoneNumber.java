@@ -30,6 +30,19 @@ public class PhoneNumber implements Validatable{
     /**
      * @brief Constructor of the class.
      * 
+     * This constructor creates a PhoneNumeber object and initializes just the
+     * phone number attribute, while leaving category to being null.
+     * 
+     * @param[in] phoneNumber represents the phone number
+     */
+    public PhoneNumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
+        this.category = null;
+    }
+    
+    /**
+     * @brief Constructor of the class.
+     * 
      * This constructor creates a PhoneNumeber object and initializes attributes
      * with the value of the input parameters
      * 
@@ -76,7 +89,7 @@ public class PhoneNumber implements Validatable{
      * @return true if the phone number attribute is valid, false otherwise.
      */
     @Override
-    public boolean validate() {
+    public boolean isValid() {
         String numberRegex = "^(\\+?\\d{1,4}[\\s\\-]?)?(\\(?\\d{2,4}\\)?[\\s\\-]?)?[\\d\\s\\-]{6,10}$";
         
         return Pattern.matches(numberRegex, this.phoneNumber);

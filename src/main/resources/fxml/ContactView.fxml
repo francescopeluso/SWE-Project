@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="456.0" spacing="12.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g20swe.addressbook.controller.ContactController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="456.0" spacing="12.0" styleClass="contactView" stylesheets="@contactview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g20swe.addressbook.controller.ContactController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <ImageView cache="true" cacheHint="SPEED" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" smooth="false">
+      <ImageView cache="true" cacheHint="SPEED" fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
             <Image url="@../assets/elmo.jpg" />
          </image>
@@ -48,4 +48,7 @@
          </children>
       </VBox>
    </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </VBox>

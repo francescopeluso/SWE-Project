@@ -77,7 +77,7 @@ public class EmailAddress implements Validatable{
      * @return true if the emailAddress attribute is valid, false otherwise.
      */
     @Override
-    public boolean validate() {
+    public boolean isValid() {
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
         return Pattern.matches(emailRegex, this.emailAddress);

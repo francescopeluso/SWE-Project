@@ -1,7 +1,14 @@
-/*
- * Empty Stylesheet file.
- */
+.roundBtn {
+    -fx-background-radius: 100%;
+    -fx-background-color: #cccccc;
+    -fx-border: 0px;
+    -fx-color: white;
+}
 
-.mainFxmlClass {
+.primaryBtn {
+    -fx-background-color: #66ccff;
+}
 
+.menuBar {
+    -fx-background-color: transparent;
 }
