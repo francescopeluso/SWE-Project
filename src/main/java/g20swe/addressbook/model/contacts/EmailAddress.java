@@ -1,6 +1,7 @@
 package g20swe.addressbook.model.contacts;
 
 import g20swe.addressbook.validation.Validatable;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 
@@ -83,5 +84,39 @@ public class EmailAddress implements Validatable{
         return Pattern.matches(emailRegex, this.emailAddress);
     }
     
-     
+    /**
+     * @brief Override the equals method.
+     * 
+     * @param obj
+     * @return False if the parameter is null or does not belong to the 
+     * EmailAddress class. True if the calling object is equal to the parameter
+     * or if they belong to the same class and their emailAddress attributes are 
+     * equal.
+     */
+    @Override
+    public boolean equals(Object obj){
+        if(obj == null)
+            return false;
+        
+        if(this == obj)
+            return true;
+        
+        if(obj.getClass() != EmailAddress.class)
+            return false;
+        
+        EmailAddress ea = (EmailAddress)obj;
+        return this.emailAddress.equals(ea.getEmailAddress());
+    }
+    
+    /**
+     * @brief Override the hashCode method.
+     * 
+     * @return the hashcode
+     */
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 41 * hash + Objects.hashCode(this.emailAddress);
+        return hash;
+    }
 }

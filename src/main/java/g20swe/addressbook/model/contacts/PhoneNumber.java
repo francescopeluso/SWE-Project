@@ -1,6 +1,7 @@
 package g20swe.addressbook.model.contacts;
 
 import g20swe.addressbook.validation.Validatable;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
@@ -12,7 +13,7 @@ import java.util.regex.Pattern;
  */
 public class PhoneNumber implements Validatable{
     
-    private String phoneNumber;     ///< The phone number
+    private String phoneNumber;           ///< The phone number
     private EntryCategory category;       ///< The category of the email address
     
     /**
@@ -24,19 +25,6 @@ public class PhoneNumber implements Validatable{
      */
     public PhoneNumber(){
         this.phoneNumber = null;
-        this.category = null;
-    }
-    
-    /**
-     * @brief Constructor of the class.
-     * 
-     * This constructor creates a PhoneNumeber object and initializes just the
-     * phone number attribute, while leaving category to being null.
-     * 
-     * @param[in] phoneNumber represents the phone number
-     */
-    public PhoneNumber(String phoneNumber){
-        this.phoneNumber = phoneNumber;
         this.category = null;
     }
     
@@ -95,5 +83,40 @@ public class PhoneNumber implements Validatable{
         return Pattern.matches(numberRegex, this.phoneNumber);
     }
     
+    /**
+     * @brief Override the equals method.
+     * 
+     * @param obj
+     * @return False if the parameter is null or does not belong to the 
+     * PhoneNumber class. True if the calling object is equal to the parameter
+     * or if they belong to the same class and their phoneNumber attributes are 
+     * equal.
+     */
+    @Override
+    public boolean equals(Object obj){
+        if(obj == null)
+            return false;
+        
+        if(this == obj)
+            return true;
+        
+        if(obj.getClass() != PhoneNumber.class)
+            return false;
+        
+        PhoneNumber pn = (PhoneNumber)obj;
+        return this.phoneNumber.equals(pn.getPhoneNumber());
+    }
+
+    /**
+     * @brief Override the hashCode method.
+     * 
+     * @return the hashcode
+     */
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + Objects.hashCode(this.phoneNumber);
+        return hash;
+    }
     
 }
