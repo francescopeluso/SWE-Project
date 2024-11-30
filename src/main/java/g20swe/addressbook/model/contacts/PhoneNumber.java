@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public class PhoneNumber implements Validatable{
     
     private String phoneNumber;     ///< The phone number
-    private EntryLabel category;       ///< The category of the email address
+    private EntryCategory category;       ///< The category of the email address
     
     /**
      * @brief Default constructor of the class.
@@ -36,7 +36,7 @@ public class PhoneNumber implements Validatable{
      * @param[in] phoneNumber represents the phone number
      * @param[in] category represents the category of the email 
      */
-    public PhoneNumber(String phoneNumber, EntryLabel category){
+    public PhoneNumber(String phoneNumber, EntryCategory category){
         this.phoneNumber = phoneNumber;
         this.category = category;
     }
@@ -44,7 +44,7 @@ public class PhoneNumber implements Validatable{
     /**
      * @return the category 
      */
-    public EntryLabel getCategory(){
+    public EntryCategory getCategory(){
         return this.category;
     }
     
@@ -58,7 +58,7 @@ public class PhoneNumber implements Validatable{
     /**
      * @param category the category to set
      */
-    public void setCategory(EntryLabel category){
+    public void setCategory(EntryCategory category){
         this.category = category;
     }
     

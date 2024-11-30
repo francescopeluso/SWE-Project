@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class EmailAddress implements Validatable{
     
     private String emailAddress; ///< The email address
-    private EntryLabel category;    ///< The category of the email address
+    private EntryCategory category;    ///< The category of the email address
     
     /**
      * @brief Default constructor of the class.
@@ -37,7 +37,7 @@ public class EmailAddress implements Validatable{
      * @param[in] emailAddress represents the email address
      * @param[in] category represents the category of the email 
      */
-    public EmailAddress(String emailAddress, EntryLabel category){
+    public EmailAddress(String emailAddress, EntryCategory category){
         this.emailAddress = emailAddress;
         this.category = category;
     }
@@ -45,7 +45,7 @@ public class EmailAddress implements Validatable{
     /**
      * @return the category
      */
-    public EntryLabel getCategory(){
+    public EntryCategory getCategory(){
         return this.category;
     }
     
@@ -59,7 +59,7 @@ public class EmailAddress implements Validatable{
     /**
      * @param category the category to set
      */
-    public void setCategory(EntryLabel category){
+    public void setCategory(EntryCategory category){
         this.category = category;
     }
     
