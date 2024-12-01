@@ -14,10 +14,10 @@ usecase "Cerca contatto" as ContactSearch
 usecase "Cerca per categoria" as SearchByList
 usecase "Visualizza Rubrica" as View
 usecase "Visualizza preferiti" as ViewFavorites
-usecase "Ordina contatti" as Order
+
 
 ' Relazioni principali
-User -right-> Export
+User -up-> Export
 User -right-> Import
 
 User --> Create
@@ -31,13 +31,13 @@ User -left--> View
 
 
 ViewFavorites -right..>View : <<extend>>
-Order  ..> View : <<include>>
 
-ContactSearch ..> Search : <<extend>>
-SearchByList ..> Search : <<extend>>
+
+Search <|-- ContactSearch
+Search <|-- SearchByList 
 
 Favorites -left..> Modify: <<extend>>
-Favorites ..> ViewFavorites : <<extend>>
+Favorites -right..> ViewFavorites : <<extend>>
 
 Delete -right..> Modify : <<extend>>
 
