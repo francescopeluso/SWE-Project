@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['emailaddress_0',['EmailAddress',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address.html#aa0f30ccb561b983e1e097e88f510e2b3',1,'g20swe.addressbook.model.contacts.EmailAddress.EmailAddress()'],['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address.html#a1117a71add18dd2515bd772d838df046',1,'g20swe.addressbook.model.contacts.EmailAddress.EmailAddress(String emailAddress, EntryLabel category)']]]
+  ['addemailaddress_0',['addEmailAddress',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact.html#a208bf47bbcea77d5be2876d1f7427327',1,'g20swe::addressbook::model::contacts::Contact']]],
+  ['addphonenumber_1',['addPhoneNumber',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact.html#a90429c4b16a793685d26736dfe4bf4ec',1,'g20swe::addressbook::model::contacts::Contact']]]
 ];

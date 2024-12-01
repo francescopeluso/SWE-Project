@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['you_20re_20reading_20copying_20this_0',['🧩 Dependencies used (at the moment you&apos;re reading/copying this)',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]]
+  ['validatable_0',['Validatable',['../interfaceg20swe_1_1addressbook_1_1validation_1_1_validatable.html',1,'g20swe::addressbook::validation']]],
+  ['validatable_2ejava_1',['Validatable.java',['../_validatable_8java.html',1,'']]]
 ];

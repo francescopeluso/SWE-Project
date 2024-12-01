@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['emailaddress_2ejava_0',['EmailAddress.java',['../_email_address_8java.html',1,'']]]
+  ['contact_2ejava_0',['Contact.java',['../_contact_8java.html',1,'']]]
 ];

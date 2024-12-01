@@ -28,6 +28,11 @@ package "rubrica" {
         abstract class Validatable
     }
 
+    package "exceptions" {
+        class InvalidPhoneNumberException
+        class InvalidEmailAddressException
+    }
+
     package "service" {
         abstract class AddressBookService
         class FileService

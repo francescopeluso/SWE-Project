@@ -11,18 +11,22 @@ Inheritance diagram for g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number\
 \item 
 \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a7f1faecd705c82535b37b377bd014404}{Phone\+Number}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor of the class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_ada99ba69478e5a6507e953cab7ba84d1}{Phone\+Number}} (String phone\+Number, \mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} category)
+\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_adbddc774ec826afa8667c22470786155}{Phone\+Number}} (String phone\+Number, \mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} category)
 \begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a2eef85f3492e9980996084651df5be21}{get\+Category}} ()
+\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a289d2c7f8c815ac4c9622198d0707819}{get\+Category}} ()
 \item 
 String \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a7512075d51c7b17c9aed13fcd979b887}{get\+Phone\+Number}} ()
 \item 
-void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a044838f776b9cf33342aec177a5a7f1f}{set\+Category}} (\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} category)
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_acec16e53232f67a5aa10485a01fe571f}{set\+Category}} (\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} category)
 \item 
 void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a43957bcf1a1e9ffc9c3285399c223c31}{set\+Phone\+Number}} (String phone\+Number)
 \item 
-boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a478c0955369b8dc0f43692107f83af78}{validate}} ()
-\begin{DoxyCompactList}\small\item\em Verify the correctness of a phone number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_aede4c666bd0b208bacd780eefdf6c1b0}{is\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em Verify the correctness of a phone number. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a9f6dcb488b5e982d433eec9683743643}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Override the equals method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a531ff7f93c565cb3eafb79ec6eb82e72}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Override the hash\+Code method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceg20swe_1_1addressbook_1_1validation_1_1_validatable}{g20swe.\+addressbook.\+validation.\+Validatable}}}
 
 
@@ -37,11 +41,11 @@ g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+Phone\+Number (\begin{
 
 Default constructor of the class. 
 
-This constructor creates a \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number} object and initializes attributes to null. \Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_ada99ba69478e5a6507e953cab7ba84d1}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!PhoneNumber@{PhoneNumber}}
+This constructor creates a \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number} object and initializes attributes to null. \Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_adbddc774ec826afa8667c22470786155}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!PhoneNumber@{PhoneNumber}}
 \index{PhoneNumber@{PhoneNumber}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
 \doxysubsubsection{\texorpdfstring{PhoneNumber()}{PhoneNumber()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_ada99ba69478e5a6507e953cab7ba84d1} 
-g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{, }\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}}}]{category}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_adbddc774ec826afa8667c22470786155} 
+g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{, }\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption})}
 
 
 
@@ -59,11 +63,29 @@ This constructor creates a Phone\+Numeber object and initializes attributes with
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a2eef85f3492e9980996084651df5be21}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!getCategory@{getCategory}}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a9f6dcb488b5e982d433eec9683743643}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!equals@{equals}}
+\index{equals@{equals}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a9f6dcb488b5e982d433eec9683743643} 
+boolean g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Override the equals method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the parameter is null or does not belong to the \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number} class. True if the calling object is equal to the parameter or if they belong to the same class and their phone\+Number attributes are equal. 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a289d2c7f8c815ac4c9622198d0707819}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!getCategory@{getCategory}}
 \index{getCategory@{getCategory}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
 \doxysubsubsection{\texorpdfstring{getCategory()}{getCategory()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a2eef85f3492e9980996084651df5be21} 
-\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+get\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a289d2c7f8c815ac4c9622198d0707819} 
+\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+get\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 the category 
@@ -77,33 +99,24 @@ String g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+get\+Phone\+Num
 \begin{DoxyReturn}{Returns}
 the phone number 
 \end{DoxyReturn}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a044838f776b9cf33342aec177a5a7f1f}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!setCategory@{setCategory}}
-\index{setCategory@{setCategory}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
-\doxysubsubsection{\texorpdfstring{setCategory()}{setCategory()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a044838f776b9cf33342aec177a5a7f1f} 
-void g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+set\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}}}]{category}{}\end{DoxyParamCaption})}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a531ff7f93c565cb3eafb79ec6eb82e72}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a531ff7f93c565cb3eafb79ec6eb82e72} 
+int g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}{Parameters}
-{\em category} & the category to set \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a43957bcf1a1e9ffc9c3285399c223c31}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!setPhoneNumber@{setPhoneNumber}}
-\index{setPhoneNumber@{setPhoneNumber}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
-\doxysubsubsection{\texorpdfstring{setPhoneNumber()}{setPhoneNumber()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a43957bcf1a1e9ffc9c3285399c223c31} 
-void g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+set\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{}\end{DoxyParamCaption})}
 
+Override the hash\+Code method. 
 
-\begin{DoxyParams}{Parameters}
-{\em phone\+Number} & the phone number to set \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a478c0955369b8dc0f43692107f83af78}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!validate@{validate}}
-\index{validate@{validate}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
-\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a478c0955369b8dc0f43692107f83af78} 
-boolean g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+validate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\begin{DoxyReturn}{Returns}
+the hashcode 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_aede4c666bd0b208bacd780eefdf6c1b0}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!isValid@{isValid}}
+\index{isValid@{isValid}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_aede4c666bd0b208bacd780eefdf6c1b0} 
+boolean g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+is\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -116,6 +129,28 @@ true if the phone number attribute is valid, false otherwise.
 
 Implements \mbox{\hyperlink{interfaceg20swe_1_1addressbook_1_1validation_1_1_validatable}{g20swe.\+addressbook.\+validation.\+Validatable}}.
 
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_acec16e53232f67a5aa10485a01fe571f}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!setCategory@{setCategory}}
+\index{setCategory@{setCategory}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
+\doxysubsubsection{\texorpdfstring{setCategory()}{setCategory()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_acec16e53232f67a5aa10485a01fe571f} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+set\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em category} & the category to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a43957bcf1a1e9ffc9c3285399c223c31}\index{g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}!setPhoneNumber@{setPhoneNumber}}
+\index{setPhoneNumber@{setPhoneNumber}!g20swe.addressbook.model.contacts.PhoneNumber@{g20swe.addressbook.model.contacts.PhoneNumber}}
+\doxysubsubsection{\texorpdfstring{setPhoneNumber()}{setPhoneNumber()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number_a43957bcf1a1e9ffc9c3285399c223c31} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Phone\+Number.\+set\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phone\+Number} & the phone number to set \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

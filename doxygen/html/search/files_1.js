@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['phonenumber_2ejava_0',['PhoneNumber.java',['../_phone_number_8java.html',1,'']]]
+  ['emailaddress_2ejava_0',['EmailAddress.java',['../_email_address_8java.html',1,'']]],
+  ['entrycategory_2ejava_1',['EntryCategory.java',['../_entry_category_8java.html',1,'']]]
 ];

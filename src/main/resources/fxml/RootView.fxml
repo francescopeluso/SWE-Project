@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 
-<HBox id="AnchorPane" minHeight="400.0" minWidth="256.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="rootView" minHeight="400.0" minWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g20swe.addressbook.controller.RootController">
    <children>
-      <fx:include source="MainView.fxml" />
-      <fx:include source="ContactView.fxml" />
+      <StackPane fx:id="mainView" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <fx:include source="MainView.fxml" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="secondaryView" alignment="TOP_LEFT">
+         <children>
+            <fx:include source="ContactView.fxml" />
+         </children>
+      </StackPane>
    </children>
 </HBox>

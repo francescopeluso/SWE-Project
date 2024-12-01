@@ -1,13 +1,282 @@
 \doxysection{g20swe.\+addressbook.\+model.\+contacts.\+Contact Class Reference}
 \hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{}\label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+Inheritance diagram for g20swe.\+addressbook.\+model.\+contacts.\+Contact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_abb482ea2cc10baccda0d3382e292cb97}\label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_abb482ea2cc10baccda0d3382e292cb97} 
-{\bfseries Contact} (String name, String surname)
+\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_abb482ea2cc10baccda0d3382e292cb97}{Contact}} (String name, String surname)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_ac677948040a13487f33dc22964eb55bc}{get\+Name}} ()
+\item 
+String \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_adb877600be1f3c40aa1bbce50fd557ed}{get\+Surname}} ()
+\item 
+List$<$ \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number}} $>$ \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_afc797f8f03179dc47276a9287992a70b}{get\+Phone\+Numbers}} ()
+\item 
+List$<$ \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address}} $>$ \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a61a1af143863f394ae150ac82471702f}{get\+Email\+Addresses}} ()
+\item 
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_af27f342eb8d6a3c13d305fd4439f167f}{set\+Name}} (String name)
+\item 
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a59a6d73f021288b15dd68d6adce1b9d1}{set\+Surname}} (String surname)
+\item 
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a208bf47bbcea77d5be2876d1f7427327}{add\+Email\+Address}} (String email\+Address, \mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg20swe_1_1addressbook_1_1exceptions_1_1_invalid_email_address_exception}{Invalid\+Email\+Address\+Exception}}
+\begin{DoxyCompactList}\small\item\em Method to add an email to the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a90429c4b16a793685d26736dfe4bf4ec}{add\+Phone\+Number}} (String phone\+Number, \mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg20swe_1_1addressbook_1_1exceptions_1_1_invalid_phone_number_exception}{Invalid\+Phone\+Number\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Method to add a phone number to the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a8d0056a8c3768a28451db3e6d38748d3}{remove\+Email\+Address}} (String email\+Address)
+\begin{DoxyCompactList}\small\item\em Method to remove an email address from the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a6a0f536c72fcf4e387caac748dc940de}{remove\+Phone\+Number}} (String phone\+Number)
+\begin{DoxyCompactList}\small\item\em Method to remove a phone number from the contact. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a1543a25bbb420a7721e3b7e4aebf3ca8}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Override the hash\+Code method. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a1f5ca68b427510789c334423dca8bbf5}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Override the equals method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_ac4f81ffcd750cb31f9ec77977f62b60b}{compare\+To}} (\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{Contact}} o)
+\begin{DoxyCompactList}\small\item\em Method to compare the calling object to another \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{Contact} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a63a241bce8194c83b87d3e53810efc53}{unique\+Contacts}} = 0
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_abb482ea2cc10baccda0d3382e292cb97}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{Contact()}{Contact()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_abb482ea2cc10baccda0d3382e292cb97} 
+g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+Contact (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{}\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+This constructor creates a \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{Contact} object and initialize the attributes with the values of the input parameters. It also initialize the class collections and the unique\+Id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & represents the name \\
+\hline
+\mbox{\texttt{ in}}  & {\em surname} & represents the surname \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a208bf47bbcea77d5be2876d1f7427327}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!addEmailAddress@{addEmailAddress}}
+\index{addEmailAddress@{addEmailAddress}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{addEmailAddress()}{addEmailAddress()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a208bf47bbcea77d5be2876d1f7427327} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+add\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{, }\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classg20swe_1_1addressbook_1_1exceptions_1_1_invalid_email_address_exception}{Invalid\+Email\+Address\+Exception}}}
+
+
+
+Method to add an email to the contact. 
+
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} object will be added to the list.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em email\+Address} & the email to set if it is valid \\
+\hline
+\mbox{\texttt{ in}}  & {\em category} & the category to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Email\+Address\+Exception} & if the email\+Address is not valid \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a90429c4b16a793685d26736dfe4bf4ec}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!addPhoneNumber@{addPhoneNumber}}
+\index{addPhoneNumber@{addPhoneNumber}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{addPhoneNumber()}{addPhoneNumber()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a90429c4b16a793685d26736dfe4bf4ec} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+add\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{, }\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classg20swe_1_1addressbook_1_1exceptions_1_1_invalid_phone_number_exception}{Invalid\+Phone\+Number\+Exception}}}
+
+
+
+Method to add a phone number to the contact. 
+
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number} object will be added to the list.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phone\+Number} & the phone number to set if it is valid \\
+\hline
+\mbox{\texttt{ in}}  & {\em category} & the category to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Phone\+Number\+Exception} & if the phone\+Number is not valid \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_ac4f81ffcd750cb31f9ec77977f62b60b}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_ac4f81ffcd750cb31f9ec77977f62b60b} 
+int g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{Contact}}}]{o}{}\end{DoxyParamCaption})}
+
+
+
+Method to compare the calling object to another \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{Contact} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em o} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a1f5ca68b427510789c334423dca8bbf5}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!equals@{equals}}
+\index{equals@{equals}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a1f5ca68b427510789c334423dca8bbf5} 
+boolean g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Override the equals method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the parameter is null or does not belong to the \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact}{Contact} class. True if the calling object is equal to the parameter or if they belong to the same class and their unique\+Id attributes are equal. 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a61a1af143863f394ae150ac82471702f}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!getEmailAddresses@{getEmailAddresses}}
+\index{getEmailAddresses@{getEmailAddresses}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getEmailAddresses()}{getEmailAddresses()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a61a1af143863f394ae150ac82471702f} 
+List$<$ \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address}} $>$ g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+get\+Email\+Addresses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the list of email addresses 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_ac677948040a13487f33dc22964eb55bc}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!getName@{getName}}
+\index{getName@{getName}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_ac677948040a13487f33dc22964eb55bc} 
+String g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the name 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_afc797f8f03179dc47276a9287992a70b}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!getPhoneNumbers@{getPhoneNumbers}}
+\index{getPhoneNumbers@{getPhoneNumbers}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getPhoneNumbers()}{getPhoneNumbers()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_afc797f8f03179dc47276a9287992a70b} 
+List$<$ \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number}} $>$ g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+get\+Phone\+Numbers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the list of phone numbers 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_adb877600be1f3c40aa1bbce50fd557ed}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!getSurname@{getSurname}}
+\index{getSurname@{getSurname}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getSurname()}{getSurname()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_adb877600be1f3c40aa1bbce50fd557ed} 
+String g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+get\+Surname (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the surname 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a1543a25bbb420a7721e3b7e4aebf3ca8}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a1543a25bbb420a7721e3b7e4aebf3ca8} 
+int g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Override the hash\+Code method. 
+
+\begin{DoxyReturn}{Returns}
+the hashcode 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a8d0056a8c3768a28451db3e6d38748d3}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!removeEmailAddress@{removeEmailAddress}}
+\index{removeEmailAddress@{removeEmailAddress}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{removeEmailAddress()}{removeEmailAddress()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a8d0056a8c3768a28451db3e6d38748d3} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+remove\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{}\end{DoxyParamCaption})}
+
+
+
+Method to remove an email address from the contact. 
+
+\begin{DoxyPrecond}{Precondition}
+The email\+Address parameter must be valid. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} object will be removed from the list.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em email\+Address} & the email to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a6a0f536c72fcf4e387caac748dc940de}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!removePhoneNumber@{removePhoneNumber}}
+\index{removePhoneNumber@{removePhoneNumber}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{removePhoneNumber()}{removePhoneNumber()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a6a0f536c72fcf4e387caac748dc940de} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+remove\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{}\end{DoxyParamCaption})}
+
+
+
+Method to remove a phone number from the contact. 
+
+\begin{DoxyPrecond}{Precondition}
+The phone\+Number parameter must be valid. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number}{Phone\+Number} object will be removed from the list
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phone\+Number} & the phone number to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_af27f342eb8d6a3c13d305fd4439f167f}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!setName@{setName}}
+\index{setName@{setName}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_af27f342eb8d6a3c13d305fd4439f167f} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+set\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & the name to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a59a6d73f021288b15dd68d6adce1b9d1}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!setSurname@{setSurname}}
+\index{setSurname@{setSurname}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{setSurname()}{setSurname()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a59a6d73f021288b15dd68d6adce1b9d1} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+set\+Surname (\begin{DoxyParamCaption}\item[{String}]{surname}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em surname} & the surname to set \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a63a241bce8194c83b87d3e53810efc53}\index{g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}!uniqueContacts@{uniqueContacts}}
+\index{uniqueContacts@{uniqueContacts}!g20swe.addressbook.model.contacts.Contact@{g20swe.addressbook.model.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{uniqueContacts}{uniqueContacts}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact_a63a241bce8194c83b87d3e53810efc53} 
+int g20swe.\+addressbook.\+model.\+contacts.\+Contact.\+unique\+Contacts = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+The static attribute that increments the unique id. 
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/main/java/g20swe/addressbook/model/contacts/Contact.\+java\end{DoxyCompactItemize}
+src/main/java/g20swe/addressbook/model/contacts/\mbox{\hyperlink{_contact_8java}{Contact.\+java}}\end{DoxyCompactItemize}

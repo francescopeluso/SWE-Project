@@ -11,18 +11,22 @@ Inheritance diagram for g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address
 \item 
 \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aa0f30ccb561b983e1e097e88f510e2b3}{Email\+Address}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor of the class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a1117a71add18dd2515bd772d838df046}{Email\+Address}} (String email\+Address, \mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} category)
+\mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a61ebb96c3a22de808e5691795a542bca}{Email\+Address}} (String email\+Address, \mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} category)
 \begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_ab4c7b79dd661e398c4e4b709fa592412}{get\+Category}} ()
+\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a1a021f5409dffad9e6e399f0c15d19e1}{get\+Category}} ()
 \item 
 String \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a11232725a74114841fd19561945dcc01}{get\+Email\+Address}} ()
 \item 
-void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a756c3c3456da6d15762b2f4386cf52e2}{set\+Category}} (\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} category)
+void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aa646c518b7e684ce8e514809aeddf4a7}{set\+Category}} (\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} category)
 \item 
 void \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a5e4e0d8b7414ba39f15f1e2b322cf120}{set\+Email\+Address}} (String email\+Address)
 \item 
-boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aea80a5ec7254bf0cf8369bd831ccdf63}{validate}} ()
-\begin{DoxyCompactList}\small\item\em Verify the correctness of an email address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_ad23a3834f4074d588e5fd401c34c013a}{is\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em Verify the correctness of an email address. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a232e83633a0f96ddbf4e90fddfe24822}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Override the equals method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_abba16f10bb6009a6fe9ec214b83ae09a}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Override the hash\+Code method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfaceg20swe_1_1addressbook_1_1validation_1_1_validatable}{g20swe.\+addressbook.\+validation.\+Validatable}}}
 
 
@@ -37,17 +41,17 @@ g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+Email\+Address (\begi
 
 Default constructor of the class. 
 
-This constructor creates an \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} object and initializes attributes to null. \Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a1117a71add18dd2515bd772d838df046}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!EmailAddress@{EmailAddress}}
+This constructor creates an \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} object and initializes attributes to null. \Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a61ebb96c3a22de808e5691795a542bca}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!EmailAddress@{EmailAddress}}
 \index{EmailAddress@{EmailAddress}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
 \doxysubsubsection{\texorpdfstring{EmailAddress()}{EmailAddress()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a1117a71add18dd2515bd772d838df046} 
-g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{, }\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}}}]{category}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a61ebb96c3a22de808e5691795a542bca} 
+g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{, }\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption})}
 
 
 
 Constructor of the class. 
 
-This constructor creates an \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} object and initializes attributes with the value of the input parameters
+This constructor creates an \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} object and initializes attributes with the values of the input parameters
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -59,11 +63,29 @@ This constructor creates an \doxylink{classg20swe_1_1addressbook_1_1model_1_1con
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_ab4c7b79dd661e398c4e4b709fa592412}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!getCategory@{getCategory}}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a232e83633a0f96ddbf4e90fddfe24822}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!equals@{equals}}
+\index{equals@{equals}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a232e83633a0f96ddbf4e90fddfe24822} 
+boolean g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Override the equals method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the parameter is null or does not belong to the \doxylink{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address}{Email\+Address} class. True if the calling object is equal to the parameter or if they belong to the same class and their email\+Address attributes are equal. 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a1a021f5409dffad9e6e399f0c15d19e1}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!getCategory@{getCategory}}
 \index{getCategory@{getCategory}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
 \doxysubsubsection{\texorpdfstring{getCategory()}{getCategory()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_ab4c7b79dd661e398c4e4b709fa592412} 
-\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}} g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+get\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a1a021f5409dffad9e6e399f0c15d19e1} 
+\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}} g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+get\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 the category 
@@ -77,33 +99,24 @@ String g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+get\+Email\+Ad
 \begin{DoxyReturn}{Returns}
 the email address 
 \end{DoxyReturn}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a756c3c3456da6d15762b2f4386cf52e2}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!setCategory@{setCategory}}
-\index{setCategory@{setCategory}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
-\doxysubsubsection{\texorpdfstring{setCategory()}{setCategory()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a756c3c3456da6d15762b2f4386cf52e2} 
-void g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+set\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_label}{Entry\+Label}}}]{category}{}\end{DoxyParamCaption})}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_abba16f10bb6009a6fe9ec214b83ae09a}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_abba16f10bb6009a6fe9ec214b83ae09a} 
+int g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}{Parameters}
-{\em category} & the category to set \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a5e4e0d8b7414ba39f15f1e2b322cf120}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!setEmailAddress@{setEmailAddress}}
-\index{setEmailAddress@{setEmailAddress}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
-\doxysubsubsection{\texorpdfstring{setEmailAddress()}{setEmailAddress()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a5e4e0d8b7414ba39f15f1e2b322cf120} 
-void g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+set\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{}\end{DoxyParamCaption})}
 
+Override the hash\+Code method. 
 
-\begin{DoxyParams}{Parameters}
-{\em email\+Address} & the email address to set \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aea80a5ec7254bf0cf8369bd831ccdf63}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!validate@{validate}}
-\index{validate@{validate}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
-\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
-{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aea80a5ec7254bf0cf8369bd831ccdf63} 
-boolean g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+validate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\begin{DoxyReturn}{Returns}
+the hashcode 
+\end{DoxyReturn}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_ad23a3834f4074d588e5fd401c34c013a}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!isValid@{isValid}}
+\index{isValid@{isValid}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_ad23a3834f4074d588e5fd401c34c013a} 
+boolean g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+is\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -116,6 +129,28 @@ true if the email\+Address attribute is valid, false otherwise.
 
 Implements \mbox{\hyperlink{interfaceg20swe_1_1addressbook_1_1validation_1_1_validatable}{g20swe.\+addressbook.\+validation.\+Validatable}}.
 
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aa646c518b7e684ce8e514809aeddf4a7}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!setCategory@{setCategory}}
+\index{setCategory@{setCategory}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
+\doxysubsubsection{\texorpdfstring{setCategory()}{setCategory()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_aa646c518b7e684ce8e514809aeddf4a7} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+set\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumg20swe_1_1addressbook_1_1model_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em category} & the category to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a5e4e0d8b7414ba39f15f1e2b322cf120}\index{g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}!setEmailAddress@{setEmailAddress}}
+\index{setEmailAddress@{setEmailAddress}!g20swe.addressbook.model.contacts.EmailAddress@{g20swe.addressbook.model.contacts.EmailAddress}}
+\doxysubsubsection{\texorpdfstring{setEmailAddress()}{setEmailAddress()}}
+{\footnotesize\ttfamily \label{classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_email_address_a5e4e0d8b7414ba39f15f1e2b322cf120} 
+void g20swe.\+addressbook.\+model.\+contacts.\+Email\+Address.\+set\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em email\+Address} & the email address to set \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
