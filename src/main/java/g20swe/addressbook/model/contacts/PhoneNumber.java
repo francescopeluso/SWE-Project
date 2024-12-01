@@ -57,14 +57,14 @@ public class PhoneNumber implements Validatable{
     }
     
     /**
-     * @param category the category to set
+     * @param[in] category the category to set
      */
     public void setCategory(EntryCategory category){
         this.category = category;
     }
     
     /**
-     * @param phoneNumber the phone number to set 
+     * @param[in] phoneNumber the phone number to set 
      */
     public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
@@ -86,7 +86,7 @@ public class PhoneNumber implements Validatable{
     /**
      * @brief Override the equals method.
      * 
-     * @param obj
+     * @param[in] obj
      * @return False if the parameter is null or does not belong to the 
      * PhoneNumber class. True if the calling object is equal to the parameter
      * or if they belong to the same class and their phoneNumber attributes are 

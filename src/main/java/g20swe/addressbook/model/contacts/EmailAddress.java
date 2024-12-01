@@ -58,14 +58,14 @@ public class EmailAddress implements Validatable{
     }
     
     /**
-     * @param category the category to set
+     * @param[in] category the category to set
      */
     public void setCategory(EntryCategory category){
         this.category = category;
     }
     
     /**
-     * @param emailAddress the email address to set 
+     * @param[in] emailAddress the email address to set 
      */
     public void setEmailAddress(String emailAddress){
         this.emailAddress = emailAddress;
@@ -87,7 +87,7 @@ public class EmailAddress implements Validatable{
     /**
      * @brief Override the equals method.
      * 
-     * @param obj
+     * @param[in] obj
      * @return False if the parameter is null or does not belong to the 
      * EmailAddress class. True if the calling object is equal to the parameter
      * or if they belong to the same class and their emailAddress attributes are 
