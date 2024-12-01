@@ -5,16 +5,52 @@ import g20swe.addressbook.exceptions.InvalidPhoneNumberException;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * @file Contact.java
+ * @brief This class implements the contact entity.
+ * 
+ * More detailed information about the file and its role is in the project.
+ * 
+ */
 public class Contact implements Comparable<Contact> {
     
-    private final List<EmailAddress> emailAddresses; //Arrays.asList(new EmailAddress[3]);
+    /**
+     * Each contact can be associated with 0 to 3 emails. This is managed through
+     * a 3-element EmailAddress list.
+     */
+    private final List<EmailAddress> emailAddresses;
+    
+    /**
+     * Each contact can be associateed with 0 to 3 phone numbers. This is managed
+     * through a 3-element PhoneNumber list.
+     */
     private final List<PhoneNumber> phoneNumbers;
-    private String name;
-    private String surname;
-    private final int uniqueId;
     
-    public static int uniqueContacts = 0;
+    private String name;            ///< The contact's name.
+    private String surname;         ///< The contact's surname.
     
+    /**
+     * Each contact can be identified with a unique id.
+     */
+    private final int uniqueId;     
+    
+    /**
+     * The static attribute that increments the unique id.
+     */
+    public static int uniqueContacts = 0;  
+    
+    
+    /**
+     * @brief Constructor of the class.
+     * 
+     * This constructor creates a Contact object and initialize the attributes
+     * with the values of the input parameters.
+     * It also initialize the class collections and the uniqueId.
+     * 
+     * @param[in] name represents the name
+     * @param[in] surname represents the surname
+     */
     public Contact(String name, String surname){
         this.name = name;
         this.surname = surname;

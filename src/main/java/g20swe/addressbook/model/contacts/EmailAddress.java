@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
  */
 public class EmailAddress implements Validatable{
     
-    private String emailAddress; ///< The email address
-    private EntryCategory category;    ///< The category of the email address
+    private String emailAddress; ///< The email address.
+    private EntryCategory category;    ///< The category of the email address.
     
     /**
      * @brief Default constructor of the class.
@@ -33,7 +33,7 @@ public class EmailAddress implements Validatable{
      * @brief Constructor of the class.
      * 
      * This constructor creates an EmailAddress object and initializes attributes
-     * with the value of the input parameters
+     * with the values of the input parameters
      * 
      * @param[in] emailAddress represents the email address
      * @param[in] category represents the category of the email 
