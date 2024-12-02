@@ -1,6 +1,14 @@
 @startuml
-package "g12swe․rubrica" {
 
+skinparam linetype polyline
+skinparam nodesep 20
+skinparam ranksep 20
+
+package "com․googlecode․ez-vcard" {
+    class VCard
+}
+
+package "g12swe․rubrica" {
     class App
 
     package "controller" {
@@ -11,12 +19,17 @@ package "g12swe․rubrica" {
 
     package "model" {
         class AddressBook
+        
         package "contacts" {
             abstract class Contact
             class BasicContact
             class ExtendedContact
             class PhoneNumber
             class EmailAddress
+
+            package "validation" {
+                abstract class Validatable
+            }
         }
     }
         
@@ -24,10 +37,6 @@ package "g12swe․rubrica" {
         class RootView <<FXML>>
         class MainView <<FXML>>
         class ContactView <<FXML>>
-    }
-
-    package "validation" {
-        abstract class Validatable
     }
 
     package "exceptions" {
@@ -41,14 +50,26 @@ package "g12swe․rubrica" {
         class ImportExportService
     }
 
-  
+    ' Relazioni più pulite e dirette
+    exceptions ..> model : valida
+    model --> service : utilizza
+    service --> controller : fornisce dati
+    controller --> view : aggiorna
+    controller <--> model : gestisce
+
+    contacts <.. view : usa
+    
+    ' Relazioni con VCard
+    VCard <.. service : import/export
+    VCard <.. contacts : conversione
 }
 
-package "com․googlecode․ez-vcard" {
-    class VCard
-}
-
-
-
+' Migliorie grafiche
+hide class circle
+hide abstract circle
+hide class methods
+hide class attributes
+hide abstract methods
+hide abstract attributes
 
 @enduml
