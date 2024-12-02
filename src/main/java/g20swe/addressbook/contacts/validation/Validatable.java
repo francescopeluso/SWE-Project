@@ -1,4 +1,4 @@
-package g20swe.addressbook.validation;
+package g20swe.addressbook.contacts.validation;
 
 /**
  * @file Validatable.java
