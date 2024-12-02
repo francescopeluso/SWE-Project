@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="367px" preserveAspectRatio="none" style="width:892px;height:367px;background:#FFFFFF;" version="1.1" viewBox="0 0 892 367" width="892px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="26" x2="26" y1="37.6094" y2="330.7734"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="244" x2="244" y1="37.6094" y2="330.7734"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="477.5" x2="477.5" y1="37.6094" y2="330.7734"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="614.5" x2="614.5" y1="37.6094" y2="330.7734"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="736.5" x2="736.5" y1="37.6094" y2="330.7734"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="837.5" x2="837.5" y1="37.6094" y2="330.7734"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="12" y="26.5332">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="5" y="329.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="12" y="351.3066">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="223" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="230" y="26.5332">View</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="223" y="329.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="230" y="351.3066">View</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="439.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="446.5" y="26.5332">Controller</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="439.5" y="329.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="446.5" y="351.3066">Controller</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="544.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="551.5" y="26.5332">ImportExportService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="544.5" y="329.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="551.5" y="351.3066">ImportExportService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="694.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="701.5" y="26.5332">FileService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="694.5" y="329.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="701.5" y="351.3066">FileService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="788.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="795.5" y="26.5332">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="788.5" y="329.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="795.5" y="351.3066">AddressBook</text>
+        <polygon fill="#181818" points="232.5,65.9609,242.5,69.9609,232.5,73.9609,236.5,69.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="26.5" x2="238.5" y1="69.9609" y2="69.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100" x="33.5" y="65.1045">selectImportFile()</text>
+        <polygon fill="#181818" points="465.5,96.3125,475.5,100.3125,465.5,104.3125,469.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="244.5" x2="471.5" y1="100.3125" y2="100.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="209" x="251.5" y="95.4561">importContactListFromFile(filename)</text>
+        <polygon fill="#181818" points="602.5,126.6641,612.5,130.6641,602.5,134.6641,606.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="477.5" x2="608.5" y1="130.6641" y2="130.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="484.5" y="125.8076">importFile(filename)</text>
+        <polygon fill="#181818" points="724.5,157.0156,734.5,161.0156,724.5,165.0156,728.5,161.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="614.5" x2="730.5" y1="161.0156" y2="161.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="621.5" y="156.1592">readFile()</text>
+        <polygon fill="#181818" points="625.5,187.3672,615.5,191.3672,625.5,195.3672,621.5,191.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="619.5" x2="735.5" y1="191.3672" y2="191.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="631.5" y="186.5107">importedData</text>
+        <polygon fill="#181818" points="825.5,217.7188,835.5,221.7188,825.5,225.7188,829.5,221.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="614.5" x2="831.5" y1="221.7188" y2="221.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="621.5" y="216.8623">addContact(Contact)</text>
+        <polygon fill="#181818" points="488.5,248.0703,478.5,252.0703,488.5,256.0703,484.5,252.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="482.5" x2="836.5" y1="252.0703" y2="252.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="494.5" y="247.2139">importConfirm()</text>
+        <polygon fill="#181818" points="255.5,278.4219,245.5,282.4219,255.5,286.4219,251.5,282.4219" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="249.5" x2="476.5" y1="282.4219" y2="282.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="261.5" y="277.5654">showMsg("importazione eseguita")</text>
+        <polygon fill="#181818" points="37.5,308.7734,27.5,312.7734,37.5,316.7734,33.5,312.7734" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="31.5" x2="243.5" y1="312.7734" y2="312.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="194" x="43.5" y="307.917">viewMsg("importazione eseguita")</text>
+        <!--SRC=[VP1D3e8m48NtdA9XLHPUW8M9VoGckZAudz016rjgfXMCfvT28uI8csaw_TwRpiij4bkjsLLYcpAB2Wjtr0z3BfCAUHBv1m_iJEt8A8MKCja3lWE5EqdhCZAwvykkrA0nYKRUgmVBmylN2r8Z2qnPy9a9Vw3UmLDV9I68yBz9Vt7GC0V57Xmi-M-48BHsQymzPI14s8w7Cuacm68UfIJDvxk7Q6-cFTkAnmCCRsbgP6YnUae7yHXqRhrbqzt-uXy0]-->
+    </g>
+</svg>
