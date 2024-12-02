@@ -1,7 +1,7 @@
-package g20swe.addressbook.controller;
+package g12swe.addressbook.controller;
 
-import g20swe.addressbook.model.AddressBook;
-import g20swe.addressbook.model.contacts.Contact;
+import g12swe.addressbook.model.AddressBook;
+import g12swe.addressbook.model.contacts.Contact;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,11 +13,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.application.Platform;
+import javafx.scene.control.Alert;
 
 import java.awt.Desktop;
 import java.net.URI;
-import javafx.application.Platform;
-import javafx.scene.control.Alert;
 
 public class MainController implements Initializable {
 

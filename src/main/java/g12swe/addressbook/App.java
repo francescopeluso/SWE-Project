@@ -1,6 +1,6 @@
-package g20swe.addressbook;
+package g12swe.addressbook;
 
-import g20swe.addressbook.controller.RootController;
+import g12swe.addressbook.controller.RootController;
 import javafx.fxml.FXMLLoader;
 
 import javafx.application.Application;

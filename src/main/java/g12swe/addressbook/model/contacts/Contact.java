@@ -1,7 +1,7 @@
-package g20swe.addressbook.model.contacts;
+package g12swe.addressbook.model.contacts;
 
-import g20swe.addressbook.exceptions.InvalidEmailAddressException;
-import g20swe.addressbook.exceptions.InvalidPhoneNumberException;
+import g12swe.addressbook.exceptions.InvalidEmailAddressException;
+import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import java.util.Arrays;
 import java.util.List;
 

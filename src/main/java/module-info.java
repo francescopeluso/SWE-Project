@@ -1,10 +1,10 @@
-module g20swe.addressbook {
+module g12swe.addressbook {
     requires javafx.controls;
     requires javafx.fxml;
     
     requires java.desktop;
     requires java.base;
 
-    exports g20swe.addressbook;
-    opens g20swe.addressbook.controller to javafx.fxml;
+    exports g12swe.addressbook;
+    opens g12swe.addressbook.controller to javafx.fxml;
 }

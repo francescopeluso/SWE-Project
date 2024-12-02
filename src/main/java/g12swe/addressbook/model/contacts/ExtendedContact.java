@@ -1,4 +1,4 @@
-package g20swe.addressbook.model.contacts;
+package g12swe.addressbook.model.contacts;
 
 import java.time.LocalDateTime;
 

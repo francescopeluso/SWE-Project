@@ -1,4 +1,4 @@
-package g20swe.addressbook.exceptions;
+package g12swe.addressbook.exceptions;
 
 public class InvalidPhoneNumberException extends Exception {
 

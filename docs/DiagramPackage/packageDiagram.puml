@@ -1,9 +1,10 @@
 @startuml
-package "rubrica" {
+package "g12swe․rubrica" {
 
-    class Main
+    class App
 
     package "controller" {
+        class RootController
         class MainController
         class ContactController
     }
@@ -20,6 +21,7 @@ package "rubrica" {
     }
         
     package "view" {
+        class RootView <<FXML>>
         class MainView <<FXML>>
         class ContactView <<FXML>>
     }
@@ -42,31 +44,11 @@ package "rubrica" {
   
 }
 
-package "com.googlecode.ez-vcard" {
+package "com․googlecode․ez-vcard" {
     class VCard
 }
 
-' Relazioni
-Main --> MainController
-Main --> ContactController
-MainController --> MainView
-ContactController --> ContactView
 
-AddressBook --> "0..5000" Contact
-Contact "0..3" --> PhoneNumber
-Contact "0..3" --> EmailAddress
-Contact <|-- BasicContact
-BasicContact <|-- ExtendedContact
 
-Contact ..|> Validatable : <<implements>>
-AddressBookService <|-- FileService
-AddressBookService <|-- ImportExportService
-ImportExportService --> VCard
-
-FileService --> AddressBook : salva/legge
-
-' Nuove relazioni possibili:
-ImportExportService --> AddressBook : utilizza
-VCard --> Contact : conversione
 
 @enduml
