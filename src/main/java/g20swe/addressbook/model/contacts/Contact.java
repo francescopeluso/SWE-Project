@@ -17,13 +17,13 @@ import java.util.List;
 public class Contact implements Comparable<Contact> {
     
     /**
-     * Each contact can be associated with 0 to 3 emails. This is managed through
+     * Each contact can be associated to 0 to 3 emails. This is managed through
      * a 3-element EmailAddress list.
      */
     private final List<EmailAddress> emailAddresses;
     
     /**
-     * Each contact can be associateed with 0 to 3 phone numbers. This is managed
+     * Each contact can be associated to 0 to 3 phone numbers. This is managed
      * through a 3-element PhoneNumber list.
      */
     private final List<PhoneNumber> phoneNumbers;
@@ -32,7 +32,7 @@ public class Contact implements Comparable<Contact> {
     private String surname;         ///< The contact's surname.
     
     /**
-     * Each contact can be identified with a unique id.
+     * Each contact can be identified by a unique id.
      */
     private final int uniqueId;     
     
@@ -47,7 +47,7 @@ public class Contact implements Comparable<Contact> {
      * 
      * This constructor creates a Contact object and initialize the attributes
      * with the values of the input parameters.
-     * It also initialize the class collections and the uniqueId.
+     * It also initializes the class collections and the uniqueId.
      * 
      * @param[in] name represents the name
      * @param[in] surname represents the surname
