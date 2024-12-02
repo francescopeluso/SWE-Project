@@ -150,7 +150,6 @@ public class Contact implements Comparable<Contact> {
         this.emailAddresses.remove(ea); 
     }
 
-    // Precondizioni: numero presente nel contatto
     /**
      * @brief Method to remove a phone number from the contact.
      * 
