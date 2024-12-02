@@ -1,0 +1,12 @@
+@startuml
+User -> View: selectImportFile()
+View -> Controller: importContactListFromFile(filename)
+Controller -> ImportExportService:  importFile(filename)
+ImportExportService -> FileService: readFile()
+FileService -> ImportExportService: importedData
+ImportExportService -> AddressBook: addContact(Contact)
+AddressBook -> Controller: importConfirm()
+Controller -> View: showMsg("importazione eseguita")
+View -> User: viewMsg("importazione eseguita")
+
+@enduml
