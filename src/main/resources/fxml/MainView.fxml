@@ -19,24 +19,24 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Importa da file" />
-                  <MenuItem mnemonicParsing="false" text="Esporta su file" />
+              <MenuItem mnemonicParsing="false" onAction="#importVCard" text="Importa da file" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportVCard" text="Esporta su file" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Chiudi" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitProgram" text="Chiudi" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Modifica">
             <items>
-              <MenuItem mnemonicParsing="false" text="Inserisci contatto" />
-                  <MenuItem mnemonicParsing="false" text="Elimina contatto" />
+              <MenuItem mnemonicParsing="false" onAction="#insertContact" text="Inserisci contatto" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteContact" text="Elimina contatto" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Reinizializza rubrica" />
+                  <MenuItem mnemonicParsing="false" onAction="#reinitializeAddressBook" text="Reinizializza rubrica" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Aiuto">
             <items>
-              <MenuItem mnemonicParsing="false" text="Documentazione" />
-                  <MenuItem mnemonicParsing="false" text="Chi siamo" />
+              <MenuItem mnemonicParsing="false" onAction="#openDocumentation" text="Documentazione" />
+                  <MenuItem mnemonicParsing="false" onAction="#openRepository" text="Chi siamo" />
             </items>
           </Menu>
         </menus>
@@ -51,7 +51,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="addContactBtn" alignment="TOP_LEFT" contentDisplay="TOP" mnemonicParsing="false" stylesheets="@mainview.css" text="+" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+            <Button fx:id="addContactBtn" alignment="TOP_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#insertContact" stylesheets="@mainview.css" text="+" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

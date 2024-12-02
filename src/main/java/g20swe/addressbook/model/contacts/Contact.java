@@ -23,7 +23,7 @@ public class Contact implements Comparable<Contact> {
     private final List<EmailAddress> emailAddresses;
     
     /**
-     * Each contact can be associated to 0 to 3 phone numbers. This is managed
+     * Each contact can be associated with 0 to 3 phone numbers. This is managed
      * through a 3-element PhoneNumber list.
      */
     private final List<PhoneNumber> phoneNumbers;
