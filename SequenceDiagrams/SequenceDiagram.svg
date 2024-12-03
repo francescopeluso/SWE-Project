@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="337px" preserveAspectRatio="none" style="width:1112px;height:337px;background:#FFFFFF;" version="1.1" viewBox="0 0 1112 337" width="1112px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="26" x2="26" y1="37.6094" y2="300.4219"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="291" x2="291" y1="37.6094" y2="300.4219"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="562" x2="562" y1="37.6094" y2="300.4219"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="745.5" x2="745.5" y1="37.6094" y2="300.4219"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="919" x2="919" y1="37.6094" y2="300.4219"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1033" x2="1033" y1="37.6094" y2="300.4219"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="12" y="26.5332">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="5" y="299.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="12" y="320.9551">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="270" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="277" y="26.5332">View</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="270" y="299.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="277" y="320.9551">View</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="500" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="507" y="26.5332">ContactController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="500" y="299.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="507" y="320.9551">ContactController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="696.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="703.5" y="26.5332">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="696.5" y="299.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="703.5" y="320.9551">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="888" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="895" y="26.5332">Contact</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="888" y="299.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="895" y="320.9551">Contact</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="961" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="968" y="26.5332">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="961" y="299.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="968" y="320.9551">AddressBookService</text>
+        <polygon fill="#181818" points="279.5,65.9609,289.5,69.9609,279.5,73.9609,283.5,69.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="26.5" x2="285.5" y1="69.9609" y2="69.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144" x="33.5" y="65.1045">addContact(datiContatto)</text>
+        <polygon fill="#181818" points="550.5,96.3125,560.5,100.3125,550.5,104.3125,554.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="291.5" x2="556.5" y1="100.3125" y2="100.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144" x="298.5" y="95.4561">addContact(datiContatto)</text>
+        <polygon fill="#181818" points="733.5,126.6641,743.5,130.6641,733.5,134.6641,737.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="562.5" x2="739.5" y1="130.6641" y2="130.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="569.5" y="125.8076">createContact(datiContatto)</text>
+        <polygon fill="#181818" points="907.5,157.0156,917.5,161.0156,907.5,165.0156,911.5,161.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="745.5" x2="913.5" y1="161.0156" y2="161.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="752.5" y="156.1592">new Contact(datiContatto)</text>
+        <polygon fill="#181818" points="1021.5,187.3672,1031.5,191.3672,1021.5,195.3672,1025.5,191.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="745.5" x2="1027.5" y1="191.3672" y2="191.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135" x="752.5" y="186.5107">saveContact(Contact c)</text>
+        <polygon fill="#181818" points="573.5,217.7188,563.5,221.7188,573.5,225.7188,569.5,221.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="567.5" x2="1032.5" y1="221.7188" y2="221.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="579.5" y="216.8623">confirmSave()</text>
+        <polygon fill="#181818" points="302.5,248.0703,292.5,252.0703,302.5,256.0703,298.5,252.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="296.5" x2="561.5" y1="252.0703" y2="252.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="247" x="308.5" y="247.2139">showMsg("Contatto creato con successo")</text>
+        <polygon fill="#181818" points="37.5,278.4219,27.5,282.4219,37.5,286.4219,33.5,282.4219" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="31.5" x2="290.5" y1="282.4219" y2="282.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="241" x="43.5" y="277.5654">viewMsg("Contatto creato con successo")</text>
+        <!--SRC=[ZL0x3i8m3DqvXTMf35mW0n8mCrLbZnm34QMMxD1UdwGDg0YAEjcMtyVFjP80RBPmyjGRiCuTk0qMG-biy4CV0gzNQGq3CEzJ4MuQaZ-iBsmIs3adfBfdlXb08HleDti2d1WRQECfYnYJiIBfF981jTtRBbV03sQ6pcH5RizUxbMKAMS2Zg_KA_T7lPJ5wxmnAoS5q0TYjECYVpQoQatoNPoMi9u0]-->
+    </g>
+</svg>
