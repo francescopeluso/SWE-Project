@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="538px" preserveAspectRatio="none" style="width:724px;height:538px;" version="1.1" viewBox="0 0 724 538" width="724px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f1lcqe4gcbpzja" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <!--MD5=[fee662a292a0353a69bd162820bae93b]
+entity User-->
+        <ellipse cx="374" cy="321" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/>
+        <path d="M374,329 L374,356 M361,337 L387,337 M374,356 L361,371 M374,356 L387,371 " fill="none" filter="url(#f1lcqe4gcbpzja)" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="353.5" y="391.0332">Utente</text>
+        <ellipse cx="374.0624" cy="444.9517" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="39.0624" ry="15.4517" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="354.5624" y="448.6802">Import</text>
+        <ellipse cx="373.7696" cy="510.9517" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="39.7696" ry="15.4517" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="353.7696" y="514.6802">Export</text>
+        <ellipse cx="643.457" cy="352.7914" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="69.457" ry="16.2914" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="597.457" y="357.308">Crea contatto</text>
+        <ellipse cx="89.1203" cy="352.8241" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="77.1203" ry="17.8241" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="33.2783" y="357.1856">Modifica contatto</text>
+        <ellipse cx="89.169" cy="443.0338" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="83.169" ry="19.0338" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="28.169" y="446.7623">Aggiungi ai preferiti</text>
+        <ellipse cx="88.981" cy="264.7962" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="74.481" ry="17.2962" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="35.981" y="269.3128">Elimina contatto</text>
+        <ellipse cx="643.3553" cy="94.9517" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="38.3553" ry="15.4517" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="624.3553" y="98.6802">Cerca</text>
+        <ellipse cx="373.9259" cy="22.7852" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="71.9259" ry="16.7852" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="324.4259" y="27.3018">Cerca contatto</text>
+        <ellipse cx="373.8478" cy="94.8696" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="84.8478" ry="19.3696" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="310.8478" y="98.5981">Cerca per categoria</text>
+        <ellipse cx="373.8789" cy="257.8758" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="79.8789" ry="18.3758" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="315.8373" y="261.9024">Visualizza Rubrica</text>
+        <ellipse cx="373.9775" cy="167.7955" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="79.4775" ry="18.2955" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="316.256" y="171.8709">Visualizza preferiti</text>
+        <ellipse cx="88.9259" cy="194.7852" fill="#FEFECE" filter="url(#f1lcqe4gcbpzja)" rx="71.9259" ry="16.7852" style="stroke:#A80036;stroke-width:1.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="39.4259" y="199.3018">Ordina contatti</text>
+        <!--MD5=[38ea5960a202a785b1a6e1c9e59c625f]
+link User to Export-->
+        <path d="M353.4,358.28 C305.61,371.55 193.98,408.93 230.5,460.5 C252.6,491.7 295.59,503.76 328.78,508.35 " fill="none" id="User-to-Export" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="#A80036" points="334.01,509.03,325.5973,503.9088,329.0513,508.3888,324.5713,511.8428,334.01,509.03" style="stroke:#A80036;stroke-width:1.0;"/>
+        <!--MD5=[7dc6e14b82ce74474a9393af27e91e25]
+link User to Import-->
+        <path d="M374,394.67 C374,404.46 374,414.26 374,424.06 " fill="none" id="User-to-Import" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="#A80036" points="374,429.19,378,420.19,374,424.19,370,420.19,374,429.19" style="stroke:#A80036;stroke-width:1.0;"/>
+        <!--MD5=[88f5eed4e0f90fed0fbbcb8f6c4fd1c4]
+link User to Create-->
+        <path d="M394.67,353 C430.8,353 509.45,353 568.52,353 " fill="none" id="User-to-Create" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="#A80036" points="573.81,353,564.81,349,568.81,353,564.81,357,573.81,353" style="stroke:#A80036;stroke-width:1.0;"/>
+        <!--MD5=[91f3125cd35f99ab2c2a778be87331d2]
+link User to Modify-->
+        <path d="M353.37,353 C316.33,353 234.22,353 171.46,353 " fill="none" id="User-to-Modify" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="#A80036" points="166.21,353,175.21,357,171.21,353,175.21,349,166.21,353" style="stroke:#A80036;stroke-width:1.0;"/>
+        <!--MD5=[74a3fdbd19e1c47cc229fca7940b5204]
+link User to Search-->
+        <path d="M394.54,340.97 C412.15,329.76 438.35,312.08 459,294 C527.46,234.06 597.34,150.95 627.32,114.01 " fill="none" id="User-to-Search" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="#A80036" points="630.78,109.74,622.0101,114.2221,627.6357,113.6276,628.2302,119.2531,630.78,109.74" style="stroke:#A80036;stroke-width:1.0;"/>
+        <!--MD5=[3117f910b314f9a147cc4cb4d60fd35a]
+reverse link View to User-->
+        <path d="M374,281.93 C374,291.77 374,301.6 374,311.44 " fill="none" id="View-backto-User" style="stroke:#A80036;stroke-width:1.0;"/>
+        <polygon fill="#A80036" points="374,276.79,370,285.79,374,281.79,378,285.79,374,276.79" style="stroke:#A80036;stroke-width:1.0;"/>
+        <!--MD5=[85b8fe9a2e0c885b864c805403f1cea7]
+link ViewFavorites to View-->
+        <path d="M374,186.62 C374,200.38 374,219.2 374,234.07 " fill="none" id="ViewFavorites-to-View" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="374,239.35,378,230.35,374,234.35,370,230.35,374,239.35" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="335.5" y="218.4951">«extend»</text>
+        <!--MD5=[81bf077963c7d4f6f3177c3e1de22172]
+link Order to View-->
+        <path d="M141.91,206.56 C189.42,217.13 259.84,232.81 310.44,244.07 " fill="none" id="Order-to-View" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="315.58,245.22,307.662,239.3629,310.6991,244.1353,305.9266,247.1724,315.58,245.22" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="203" y="217.4951">«include»</text>
+        <!--MD5=[af5e3143bfa6d578159df53e27fa915e]
+link ContactSearch to Search-->
+        <path d="M422.21,35.71 C474.59,49.81 558.02,72.26 605.76,85.11 " fill="none" id="ContactSearch-to-Search" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="610.84,86.48,603.1894,80.2778,606.0119,85.1801,601.1096,88.0027,610.84,86.48" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="490" y="51.4951">«extend»</text>
+        <!--MD5=[4262b651ae39f0b6860f5749d234c91b]
+link SearchByList to Search-->
+        <path d="M459.27,95 C505.83,95 561.71,95 599.42,95 " fill="none" id="SearchByList-to-Search" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="604.85,95,595.85,91,599.85,95,595.85,99,604.85,95" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="490" y="91.4951">«extend»</text>
+        <!--MD5=[5bf59423e0edd2d2b3adc464e4697b9f]
+reverse link Modify to Favorites-->
+        <path d="M89,376.38 C89,391.17 89,410.03 89,423.91 " fill="none" id="Modify-backto-Favorites" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="89,371.14,85,380.14,89,376.14,93,380.14,89,371.14" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="50.5" y="402.9951">«extend»</text>
+        <!--MD5=[5d90b70dfac07c6043a6658ba0ad3451]
+link Favorites to ViewFavorites-->
+        <path d="M121.98,425.34 C138.03,415.58 157.16,402.5 172,388 C204.28,356.46 256.42,253.23 289,222 C302.96,208.62 320.7,196.65 336.27,187.4 " fill="none" id="Favorites-to-ViewFavorites" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="340.6,184.87,330.8112,185.9557,336.2827,187.392,334.8464,192.8635,340.6,184.87" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="204" y="259.4951">«extend»</text>
+        <!--MD5=[30852b233cc883f011b5ab3ba1645de9]
+link Delete to Modify-->
+        <path d="M89,282.61 C89,296.08 89,314.79 89,329.53 " fill="none" id="Delete-to-Modify" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+        <polygon fill="#A80036" points="89,334.77,93,325.77,89,329.77,85,325.77,89,334.77" style="stroke:#A80036;stroke-width:1.0;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="50.5" y="314.2451">«extend»</text>
+        <!--MD5=[2a57e6297c910e854fa2830f768c37c1]
+@startuml
+left to right direction
+
+actor "Utente" as User
+
+usecase "Import" as Import
+usecase "Export" as Export
+usecase "Crea contatto" as Create
+usecase "Modifica contatto" as Modify
+usecase "Aggiungi ai preferiti" as Favorites
+usecase "Elimina contatto" as Delete
+usecase "Cerca" as Search
+usecase "Cerca contatto" as ContactSearch
+usecase "Cerca per categoria" as SearchByList
+usecase "Visualizza Rubrica" as View
+usecase "Visualizza preferiti" as ViewFavorites
+usecase "Ordina contatti" as Order
+
+' Relazioni principali
+User -right-> Export
+User -right-> Import
+
+User - -> Create
+User - -> Modify
+
+User - -> Search
+User -left- -> View
+
+
+' Relazioni con il sistema (eventuale estensione)
+
+
+ViewFavorites -right..>View : <<extend>>
+Order  ..> View : <<include>>
+
+ContactSearch ..> Search : <<extend>>
+SearchByList ..> Search : <<extend>>
+
+Favorites -left..> Modify: <<extend>>
+Favorites ..> ViewFavorites : <<extend>>
+
+Delete -right..> Modify : <<extend>>
+
+@enduml
+
+@startuml
+left to right direction
+
+actor "Utente" as User
+
+usecase "Import" as Import
+usecase "Export" as Export
+usecase "Crea contatto" as Create
+usecase "Modifica contatto" as Modify
+usecase "Aggiungi ai preferiti" as Favorites
+usecase "Elimina contatto" as Delete
+usecase "Cerca" as Search
+usecase "Cerca contatto" as ContactSearch
+usecase "Cerca per categoria" as SearchByList
+usecase "Visualizza Rubrica" as View
+usecase "Visualizza preferiti" as ViewFavorites
+usecase "Ordina contatti" as Order
+
+User -right-> Export
+User -right-> Import
+
+User - -> Create
+User - -> Modify
+
+User - -> Search
+User -left- -> View
+
+
+
+
+ViewFavorites -right..>View : <<extend>>
+Order  ..> View : <<include>>
+
+ContactSearch ..> Search : <<extend>>
+SearchByList ..> Search : <<extend>>
+
+Favorites -left..> Modify: <<extend>>
+Favorites ..> ViewFavorites : <<extend>>
+
+Delete -right..> Modify : <<extend>>
+
+@enduml
+
+PlantUML version 1.2021.3(Mon Mar 22 17:53:19 CET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: it
+Country: IT
+-->
+    </g>
+</svg>
