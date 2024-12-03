@@ -1,4 +1,4 @@
-package g12swe.addressbook.controller;
+package g12swe.addressbook.controllers;
 
 public class ContactController {
     

@@ -6,5 +6,5 @@ module g12swe.addressbook {
     requires java.base;
 
     exports g12swe.addressbook;
-    opens g12swe.addressbook.controller to javafx.fxml;
+    opens g12swe.addressbook.controllers to javafx.fxml;
 }

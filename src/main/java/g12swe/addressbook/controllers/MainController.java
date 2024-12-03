@@ -1,7 +1,7 @@
-package g12swe.addressbook.controller;
+package g12swe.addressbook.controllers;
 
-import g12swe.addressbook.model.AddressBook;
-import g12swe.addressbook.model.contacts.Contact;
+import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
 
 import java.net.URL;
 import java.util.ResourceBundle;

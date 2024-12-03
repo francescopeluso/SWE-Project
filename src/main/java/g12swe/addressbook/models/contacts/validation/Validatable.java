@@ -1,4 +1,4 @@
-package g12swe.addressbook.contacts.validation;
+package g12swe.addressbook.models.contacts.validation;
 
 /**
  * @file Validatable.java

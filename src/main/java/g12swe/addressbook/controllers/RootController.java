@@ -1,4 +1,4 @@
-package g12swe.addressbook.controller;
+package g12swe.addressbook.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.HBox;

@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 
-<HBox fx:id="rootView" minHeight="400.0" minWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g12swe.addressbook.controller.RootController">
+<HBox fx:id="rootView" minHeight="400.0" minWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g12swe.addressbook.controllers.RootController">
    <children>
       <StackPane fx:id="mainView" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
          <children>

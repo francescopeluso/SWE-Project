@@ -1,6 +1,6 @@
-package g12swe.addressbook.model;
+package g12swe.addressbook.models;
 
-import g12swe.addressbook.model.contacts.Contact;
+import g12swe.addressbook.models.contacts.Contact;
 
 import java.util.Collections;
 import java.util.Set;

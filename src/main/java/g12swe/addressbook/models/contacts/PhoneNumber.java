@@ -1,6 +1,6 @@
-package g12swe.addressbook.model.contacts;
+package g12swe.addressbook.models.contacts;
 
-import g12swe.addressbook.contacts.validation.Validatable;
+import g12swe.addressbook.models.contacts.validation.Validatable;
 import java.util.Objects;
 import java.util.regex.Pattern;
 

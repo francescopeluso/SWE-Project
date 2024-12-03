@@ -1,6 +1,6 @@
 package g12swe.addressbook;
 
-import g12swe.addressbook.controller.RootController;
+import g12swe.addressbook.controllers.RootController;
 import javafx.fxml.FXMLLoader;
 
 import javafx.application.Application;
