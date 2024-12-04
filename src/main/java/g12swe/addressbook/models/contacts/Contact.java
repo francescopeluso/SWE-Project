@@ -166,7 +166,7 @@ public class Contact implements Comparable<Contact> {
     /**
      * @brief Override the hashCode method.
      * 
-     * @return the hashcode
+     * @return the hash code of the contact based on its uniqueID
      */
     @Override
     public int hashCode() {
@@ -177,6 +177,8 @@ public class Contact implements Comparable<Contact> {
 
     /**
      * @brief Override the equals method.
+     * 
+     * Two contacts are equal if they have the same uniqueID
      * 
      * @param[in] obj
      * @return False if the parameter is null or does not belong to the 
@@ -192,7 +194,7 @@ public class Contact implements Comparable<Contact> {
         if (obj == null)
             return false;
         
-        if (obj.getClass() != Contact.class)
+        if (obj instanceof Contact)
             return false;
 
         return this.uniqueId == ((Contact)obj).uniqueId;
