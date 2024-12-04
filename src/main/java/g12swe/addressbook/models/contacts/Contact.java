@@ -194,7 +194,7 @@ public class Contact implements Comparable<Contact> {
         if (obj == null)
             return false;
         
-        if (obj instanceof Contact)
+        if (!(obj instanceof Contact))
             return false;
 
         return this.uniqueId == ((Contact)obj).uniqueId;

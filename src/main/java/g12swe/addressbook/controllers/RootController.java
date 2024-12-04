@@ -7,10 +7,11 @@ import javafx.scene.layout.StackPane;
 
 /**
  * @file RootController.java
- * @brief
+ * @brief Controller for managing the overall structure and flow of the application.
  * 
- * More detailed information about the file and its role is in the project.
- * 
+ * Responsibilities include loading and initializing views, including the main interface
+ * and detailed contact views. This controller ensures smooth navigation and layout
+ * responsiveness as user resizes the application window.
  */
 public class RootController {
 

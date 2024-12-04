@@ -22,10 +22,10 @@ import java.net.URI;
 
 /**
  * @file MainController.java
- * @brief
- * 
- * More detailed information about the file and its role is in the project.
- * 
+ * @brief Controller for managing the main view of the address book application.
+ *
+ * This controller is responsible for handling the main interface, which displays a list of contacts,
+ * and all the buttons and menus that implements part of the software features.
  */
 public class MainController implements Initializable {
 
