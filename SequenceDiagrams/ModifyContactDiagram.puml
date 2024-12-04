@@ -1,0 +1,30 @@
+@startuml
+
+User -> MainView: selectModifyContactBtn()
+MainView -> MainController: ModifyContactEvent(contactId)
+MainController -> AddressBookService: fetchContact
+AddressBookService -> MainController: contactData
+MainController -> MainView: showModifyContactForm(contactData)
+MainView -> User: viewModifyForm()
+
+User -> MainView: modifyContactDetails(newDetails)
+MainView -> MainController: sendModifiedContact(newDetails)
+MainController -> Validatable: validateModifiedContact(newDetails)
+
+alt Validation Failed
+  Validatable -> MainController: validationFailed
+  MainController -> MainView: showError("Invalid Contact Details")
+else Validation Success
+  MainController -> AddressBookService: updateContact(newDetails)
+  AddressBookService -> MainController: contactUpdated
+  
+  alt Save Failed
+    AddressBookService -> MainController: saveFailed
+    MainController -> MainView: showError("Save Failed")
+  else Save Success
+    MainController -> MainView: showMsg("Contact Updated Successfully!")
+    MainView -> User: viewMsg("Contact Updated")
+  end
+end
+
+@enduml

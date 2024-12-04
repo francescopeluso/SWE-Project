@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="476px" preserveAspectRatio="none" style="width:976px;height:476px;background:#FFFFFF;" version="1.1" viewBox="0 0 976 476" width="976px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="none" height="277" style="stroke:#000000;stroke-width:1.5;" width="959.5" x="10" y="145.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="41" x2="41" y1="37.6094" y2="439.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="303" x2="303" y1="37.6094" y2="439.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="574.5" x2="574.5" y1="37.6094" y2="439.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="739" x2="739" y1="37.6094" y2="439.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="910.5" x2="910.5" y1="37.6094" y2="439.6641"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="20" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="27" y="26.5332">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="20" y="438.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="27" y="460.1973">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="267" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="274" y="26.5332">MainView</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="267" y="438.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="274" y="460.1973">MainView</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="521.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="528.5" y="26.5332">MainController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="521.5" y="438.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="528.5" y="460.1973">MainController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="667" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="674" y="26.5332">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="667" y="438.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="674" y="460.1973">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="861.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="868.5" y="26.5332">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="861.5" y="438.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="868.5" y="460.1973">AddressBook</text>
+        <polygon fill="#181818" points="291.5,65.9609,301.5,69.9609,291.5,73.9609,295.5,69.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="41.5" x2="297.5" y1="69.9609" y2="69.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="48.5" y="65.1045">selectDeleteContactBtn()</text>
+        <polygon fill="#181818" points="562.5,96.3125,572.5,100.3125,562.5,104.3125,566.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="303.5" x2="568.5" y1="100.3125" y2="100.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="175" x="310.5" y="95.4561">DeleteContactEvent(contactId)</text>
+        <polygon fill="#181818" points="727.5,126.6641,737.5,130.6641,727.5,134.6641,731.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="574.5" x2="733.5" y1="130.6641" y2="130.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="581.5" y="125.8076">deleteContact(contactId)</text>
+        <path d="M10,145.6641 L71,145.6641 L71,154.0156 L61,164.0156 L10,164.0156 L10,145.6641 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="277" style="stroke:#000000;stroke-width:1.5;" width="959.5" x="10" y="145.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="25" y="160.1592">alt</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="108" x="86" y="159.083">[Contact Not Found]</text>
+        <polygon fill="#181818" points="585.5,182.3672,575.5,186.3672,585.5,190.3672,581.5,186.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="579.5" x2="738.5" y1="186.3672" y2="186.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="591.5" y="181.5107">contactNotFound</text>
+        <polygon fill="#181818" points="314.5,212.7188,304.5,216.7188,314.5,220.7188,310.5,216.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="308.5" x2="573.5" y1="216.7188" y2="216.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="320.5" y="211.8623">showError("Contact Not Found")</text>
+        <polygon fill="#181818" points="52.5,243.0703,42.5,247.0703,52.5,251.0703,48.5,247.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="46.5" x2="302.5" y1="247.0703" y2="247.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="58.5" y="242.2139">viewMsg("Contact Not Found")</text>
+        <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="969.5" y1="256.0703" y2="256.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="103" x="15" y="267.4893">[Deletion Success]</text>
+        <polygon fill="#181818" points="898.5,289.2578,908.5,293.2578,898.5,297.2578,902.5,293.2578" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="739.5" x2="904.5" y1="293.2578" y2="293.2578"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="746.5" y="288.4014">removeContact(contactId)</text>
+        <polygon fill="#181818" points="750.5,319.6094,740.5,323.6094,750.5,327.6094,746.5,323.6094" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="744.5" x2="909.5" y1="323.6094" y2="323.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="756.5" y="318.7529">contactRemoved</text>
+        <polygon fill="#181818" points="585.5,349.9609,575.5,353.9609,585.5,357.9609,581.5,353.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="579.5" x2="738.5" y1="353.9609" y2="353.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="591.5" y="349.1045">contactDeleted</text>
+        <polygon fill="#181818" points="314.5,380.3125,304.5,384.3125,314.5,388.3125,310.5,384.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="308.5" x2="573.5" y1="384.3125" y2="384.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="247" x="320.5" y="379.4561">showMsg("Contact Deleted Successfully!")</text>
+        <polygon fill="#181818" points="52.5,410.6641,42.5,414.6641,52.5,418.6641,48.5,414.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="46.5" x2="302.5" y1="414.6641" y2="414.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="238" x="58.5" y="409.8076">viewMsg("Contact Deleted Successfully")</text>
+        <!--SRC=[bP6x3i8m34NtVeLXAWC_q069fyG00nNiLMAW8iIIaxRYxqbf8beH95WYsRd7Z-kZGORf37P5gKybDXaOL2ZiohqMbwHj8Up2wdII14cGjvzCIY5dC92lQzGs5LsmbHtvLhVyN4f6OnP4jnovBWLc8Fir-dXIA0i-3tkoiA5AomGYLMAp-KeE3DpdFBtrhzIicOdJyKVBySJ3mOQZQHlKBjgPInn0PR2pfoGDUIM4c_ZhxBri1entgcE63EXlTdhzuLNaRxUwW_vYrc1pZuKzpvLIZz6ljiNWra5tioS0]-->
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+@startuml
+
+User -> MainView: selectDeleteContactBtn()
+MainView -> MainController: DeleteContactEvent(contactId)
+MainController -> AddressBookService: deleteContact(contactId)
+
+alt Contact Not Found
+  AddressBookService -> MainController: contactNotFound
+  MainController -> MainView: showError("Contact Not Found")
+  MainView -> User: viewMsg("Contact Not Found")
+else Deletion Success
+  AddressBookService -> AddressBook: removeContact(contactId)
+  AddressBook -> AddressBookService: contactRemoved
+  AddressBookService -> MainController: contactDeleted
+  MainController -> MainView: showMsg("Contact Deleted Successfully!")
+  MainView -> User: viewMsg("Contact Deleted Successfully")
+end
+
+@enduml

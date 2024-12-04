@@ -1,0 +1,35 @@
+@startuml
+User -> MainView: exportContacts
+MainView -> MainController: exportContactsEvent
+MainController -> MainView: requestExportDetails
+MainView -> User: askFormatAndPath
+User -> MainView: provideDetails
+MainView -> MainController: sendExportDetails(format, path)
+
+MainController -> AddressBookService: 
+AddressBookService -> ImportExportService: fetchContactData
+ImportExportService -> AddressBook: gimmeContacts
+AddressBook -> ImportExportService: returnContacts
+ImportExportService -> VCard: convertContactFormat
+VCard -> ImportExportService: returnConvertedData
+
+ImportExportService -> FileService: saveExportFile
+FileService --> ImportExportService: ExportCompleted (async)
+
+ImportExportService -> MainController: ExportCompleted
+MainController -> MainView: showMsg("exportCompleted")
+MainView -> User: ViewMsg
+
+alt File Save Error
+  FileService --> ImportExportService: ExportFailed (async)
+  ImportExportService -> MainController: ExportFailed
+  MainController -> MainView: showError("Export failed")
+end
+
+alt Conversion Error
+  VCard -> ImportExportService: ConversionFailed
+  ImportExportService -> MainController: ConversionFailed
+  MainController -> MainView: showError("Conversion failed")
+end
+
+@enduml
