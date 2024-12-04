@@ -19,6 +19,14 @@ import javafx.scene.control.Alert;
 import java.awt.Desktop;
 import java.net.URI;
 
+
+/**
+ * @file MainController.java
+ * @brief
+ * 
+ * More detailed information about the file and its role is in the project.
+ * 
+ */
 public class MainController implements Initializable {
 
     private AddressBook ab;

@@ -5,6 +5,13 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 
+/**
+ * @file RootController.java
+ * @brief
+ * 
+ * More detailed information about the file and its role is in the project.
+ * 
+ */
 public class RootController {
 
     @FXML
