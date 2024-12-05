@@ -2,18 +2,30 @@
 
 User -> MainView: selectDeleteContactBtn()
 MainView -> MainController: DeleteContactEvent(contactId)
-MainController -> AddressBookService: deleteContact(contactId)
+MainController -> MainView: showConfirmOrAbort
+MainView -> User: ConfirmOrAbort?
 
-alt Contact Not Found
-  AddressBookService -> MainController: contactNotFound
-  MainController -> MainView: showError("Contact Not Found")
-  MainView -> User: viewMsg("Contact Not Found")
+alt Confirm
+  User -> MainView: confirmBtn
+  MainView -> MainController: deletionConfirmed
+else Abort
+    User -> MainView: abortBtn
+    MainView -X MainController: abortDeletionOperations
+end
+
+MainController -> AddressBookService: deleteContact(contactID)
+
+alt Deletion Failed
+    AddressBookService -> MainController: couldNotDeleteContact
+    MainController -> MainView: showErrMsg("Deletion failed, try again")
+    MainView -> User: viewErrMsg
+
 else Deletion Success
   AddressBookService -> AddressBook: removeContact(contactId)
   AddressBook -> AddressBookService: contactRemoved
   AddressBookService -> MainController: contactDeleted
   MainController -> MainView: showMsg("Contact Deleted Successfully!")
-  MainView -> User: viewMsg("Contact Deleted Successfully")
+  MainView -> User: viewMsg
 end
 
 @enduml

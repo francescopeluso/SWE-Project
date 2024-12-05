@@ -18,9 +18,11 @@ else Validation Success
   alt Save Failed
     AddressBookService -> MainController: saveFailed
     MainController -> MainView: showError("Save Failed")
+    MainView -> User: viewError("Save Failed")
   else Save Success
     AddressBookService -> MainController: contactIsSaved
     MainController -> MainView: showMsg("Contact Saved!")
+    MainView -> User: viewError("Contact Saved!")
   end
 end
 
