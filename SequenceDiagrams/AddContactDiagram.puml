@@ -2,8 +2,11 @@
 
 User -> MainView: addContactBtn
 MainView -> MainController: AddContactEvent
-MainController -> ContactController: addNewContact
-ContactController -> Validatable: validateContact
+MainController -> MainView: showAddContactForm
+MainView -> User: viewContactForm
+User -> MainView: fillContactInfo
+MainView -> MainController: addContact
+MainController -> Validatable: validateContact
 
 alt Validation Failed
   Validatable -> MainController: validationFailed
