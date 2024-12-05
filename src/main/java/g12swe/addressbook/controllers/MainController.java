@@ -29,7 +29,16 @@ import java.net.URI;
  */
 public class MainController implements Initializable {
 
+    /**
+     * Reference to AddressBook which is initialized in <code>initialize()</code>
+     */
     private AddressBook ab;
+    
+    /**
+     * This <code>ObservableList</code> is used to synchronize the content
+     * of the TableView FXML object with the content of the TreeSed used
+     * in the <code>AddressBook</code> to contain all the contacts.
+     */
     private ObservableList<Contact> observableContacstList;
     
     private void workInProgressAlert() {
@@ -45,6 +54,14 @@ public class MainController implements Initializable {
     @FXML
     private ListView<Contact> contactListView;
 
+    /**
+     * @brief Overrides the initialize method
+     * 
+     * Loads up the view and all the bindings needed.
+     * 
+     * @param url URL object
+     * @param rb ResousceBundle object
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
