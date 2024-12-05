@@ -1,0 +1,29 @@
+@startuml
+
+User -> MainView: addContactBtn
+MainView -> MainController: AddContactEvent
+MainController -> MainView: showAddContactForm
+MainView -> User: viewContactForm
+User -> MainView: fillContactInfo
+MainView -> MainController: addContact
+MainController -> Validatable: validateContact
+
+alt Validation Failed
+  Validatable -> MainController: validationFailed
+  MainController -> MainView: showError("Invalid Contact")
+else Validation Success
+  Validatable -> VCard: convertContact
+  VCard -> AddressBookService: saveToAddressBook
+  
+  alt Save Failed
+    AddressBookService -> MainController: saveFailed
+    MainController -> MainView: showError("Save Failed")
+    MainView -> User: viewError("Save Failed")
+  else Save Success
+    AddressBookService -> MainController: contactIsSaved
+    MainController -> MainView: showMsg("Contact Saved!")
+    MainView -> User: viewError("Contact Saved!")
+  end
+end
+
+@enduml

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="840px" preserveAspectRatio="none" style="width:1009px;height:840px;background:#FFFFFF;" version="1.1" viewBox="0 0 1009 840" width="1009px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="none" height="109.4063" style="stroke:#000000;stroke-width:1.5;" width="887.5" x="116" y="554.2344"/>
+        <rect fill="none" height="109.4063" style="stroke:#000000;stroke-width:1.5;" width="793.5" x="116" y="677.6406"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="26" x2="26" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="162" x2="162" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="369.5" x2="369.5" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="504.5" x2="504.5" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="657.5" x2="657.5" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="786.5" x2="786.5" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="872.5" x2="872.5" y1="37.6094" y2="804.0469"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="951.5" x2="951.5" y1="37.6094" y2="804.0469"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="12" y="26.5332">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="12" y="824.5801">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="126" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="133" y="26.5332">MainView</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="126" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="133" y="824.5801">MainView</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="316.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="323.5" y="26.5332">MainController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="316.5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="323.5" y="824.5801">MainController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="432.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="439.5" y="26.5332">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="432.5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="439.5" y="824.5801">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="587.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="594.5" y="26.5332">ImportExportService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="587.5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="594.5" y="824.5801">ImportExportService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="737.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="744.5" y="26.5332">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="737.5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="744.5" y="824.5801">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="845.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="852.5" y="26.5332">VCard</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="845.5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="852.5" y="824.5801">VCard</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="909.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="916.5" y="26.5332">FileService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="909.5" y="803.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="916.5" y="824.5801">FileService</text>
+        <polygon fill="#181818" points="150.5,65.9609,160.5,69.9609,150.5,73.9609,154.5,69.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="26.5" x2="156.5" y1="69.9609" y2="69.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="33.5" y="65.1045">exportContacts</text>
+        <polygon fill="#181818" points="357.5,96.3125,367.5,100.3125,357.5,104.3125,361.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="162.5" x2="363.5" y1="100.3125" y2="100.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="169.5" y="95.4561">exportContactsEvent</text>
+        <polygon fill="#181818" points="173.5,126.6641,163.5,130.6641,173.5,134.6641,169.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="167.5" x2="368.5" y1="130.6641" y2="130.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="179.5" y="125.8076">requestExportDetails</text>
+        <polygon fill="#181818" points="37.5,157.0156,27.5,161.0156,37.5,165.0156,33.5,161.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="31.5" x2="161.5" y1="161.0156" y2="161.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="43.5" y="156.1592">askFormatAndPath</text>
+        <polygon fill="#181818" points="150.5,187.3672,160.5,191.3672,150.5,195.3672,154.5,191.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="26.5" x2="156.5" y1="191.3672" y2="191.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="33.5" y="186.5107">provideDetails</text>
+        <polygon fill="#181818" points="357.5,217.7188,367.5,221.7188,357.5,225.7188,361.5,221.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="162.5" x2="363.5" y1="221.7188" y2="221.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="169.5" y="216.8623">sendExportDetails(format, path)</text>
+        <polygon fill="#181818" points="493,231.7188,503,235.7188,493,239.7188,497,235.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="369.5" x2="499" y1="235.7188" y2="235.7188"/>
+        <polygon fill="#181818" points="645.5,262.0703,655.5,266.0703,645.5,270.0703,649.5,266.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="505" x2="651.5" y1="266.0703" y2="266.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100" x="512" y="261.2139">fetchContactData</text>
+        <polygon fill="#181818" points="774.5,292.4219,784.5,296.4219,774.5,300.4219,778.5,296.4219" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="657.5" x2="780.5" y1="296.4219" y2="296.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="664.5" y="291.5654">gimmeContacts</text>
+        <polygon fill="#181818" points="668.5,322.7734,658.5,326.7734,668.5,330.7734,664.5,326.7734" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="662.5" x2="785.5" y1="326.7734" y2="326.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="85" x="674.5" y="321.917">returnContacts</text>
+        <polygon fill="#181818" points="860.5,353.125,870.5,357.125,860.5,361.125,864.5,357.125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="657.5" x2="866.5" y1="357.125" y2="357.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="664.5" y="352.2686">convertContactFormat</text>
+        <polygon fill="#181818" points="668.5,383.4766,658.5,387.4766,668.5,391.4766,664.5,387.4766" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="662.5" x2="871.5" y1="387.4766" y2="387.4766"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="674.5" y="382.6201">returnConvertedData</text>
+        <polygon fill="#181818" points="939.5,413.8281,949.5,417.8281,939.5,421.8281,943.5,417.8281" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="657.5" x2="945.5" y1="417.8281" y2="417.8281"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="85" x="664.5" y="412.9717">saveExportFile</text>
+        <polygon fill="#181818" points="668.5,444.1797,658.5,448.1797,668.5,452.1797,664.5,448.1797" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="662.5" x2="950.5" y1="448.1797" y2="448.1797"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="674.5" y="443.3232">ExportCompleted (async)</text>
+        <polygon fill="#181818" points="380.5,474.5313,370.5,478.5313,380.5,482.5313,376.5,478.5313" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="374.5" x2="656.5" y1="478.5313" y2="478.5313"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100" x="386.5" y="473.6748">ExportCompleted</text>
+        <polygon fill="#181818" points="173.5,504.8828,163.5,508.8828,173.5,512.8828,169.5,508.8828" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="167.5" x2="368.5" y1="508.8828" y2="508.8828"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="179.5" y="504.0264">showMsg("exportCompleted")</text>
+        <polygon fill="#181818" points="37.5,535.2344,27.5,539.2344,37.5,543.2344,33.5,539.2344" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="31.5" x2="161.5" y1="539.2344" y2="539.2344"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="43.5" y="534.3779">ViewMsg</text>
+        <path d="M116,554.2344 L177,554.2344 L177,562.5859 L167,572.5859 L116,572.5859 L116,554.2344 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="109.4063" style="stroke:#000000;stroke-width:1.5;" width="887.5" x="116" y="554.2344"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="131" y="568.7295">alt</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="87" x="192" y="567.6533">[File Save Error]</text>
+        <polygon fill="#181818" points="668.5,590.9375,658.5,594.9375,668.5,598.9375,664.5,594.9375" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="662.5" x2="950.5" y1="594.9375" y2="594.9375"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="674.5" y="590.0811">ExportFailed (async)</text>
+        <polygon fill="#181818" points="380.5,621.2891,370.5,625.2891,380.5,629.2891,376.5,625.2891" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="374.5" x2="656.5" y1="625.2891" y2="625.2891"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="386.5" y="620.4326">ExportFailed</text>
+        <polygon fill="#181818" points="173.5,651.6406,163.5,655.6406,173.5,659.6406,169.5,655.6406" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="167.5" x2="368.5" y1="655.6406" y2="655.6406"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="179.5" y="650.7842">showError("Export failed")</text>
+        <path d="M116,677.6406 L177,677.6406 L177,685.9922 L167,695.9922 L116,695.9922 L116,677.6406 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="109.4063" style="stroke:#000000;stroke-width:1.5;" width="793.5" x="116" y="677.6406"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="131" y="692.1357">alt</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="103" x="192" y="691.0596">[Conversion Error]</text>
+        <polygon fill="#181818" points="668.5,714.3438,658.5,718.3438,668.5,722.3438,664.5,718.3438" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="662.5" x2="871.5" y1="718.3438" y2="718.3438"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="674.5" y="713.4873">ConversionFailed</text>
+        <polygon fill="#181818" points="380.5,744.6953,370.5,748.6953,380.5,752.6953,376.5,748.6953" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="374.5" x2="656.5" y1="748.6953" y2="748.6953"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="386.5" y="743.8389">ConversionFailed</text>
+        <polygon fill="#181818" points="173.5,775.0469,163.5,779.0469,173.5,783.0469,169.5,779.0469" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="167.5" x2="368.5" y1="779.0469" y2="779.0469"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173" x="179.5" y="774.1904">showError("Conversion failed")</text>
+        <!--SRC=[bLFDZe8m4BxtAIQUC5bVWCCchcAo1vDD3DuR6BKHMdPQSVVjjxJQ1GH_ZdI-ttP8DHBCtc7DXTmAFCU0FvKYir3IyCneTXrSGSs0L54WzQ59ZTAmBgOhJVXzGcqIHrkYuQBe6gIwaUNwk59KSZEN-HSt1vRUXAn8rIB78Or-I8qoxpX6EoV-1fNLdhA1nFCy9zJwGwdZ1gaM6SR0RWyRw6VPA7lzWDsXoGwNQrbomza0gkSJmrwK9OPhRur6RGZDYMIWZ9Xi5vpo638bQmoFvU-NkTbZ_OQ8kMiovh8I1GQYvZLwH7FCMZEOZPabbrqggmAj6KHS_yfiEchOV-OU_-uUweCwh_K-cc2ND9aER6FpPS6CySAuch2nzI0XKiG0NYYtijlNQWRmKZNFjgn7pLooQE9Pi7Cqsyp-1hw3Vr0jb0mbxk_1Fo5aU3Bv0FF9zAsGdGP_]-->
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+@startuml
+User -> View: selectImportFile()
+View -> Controller: importContactListFromFile(filename)
+Controller -> ImportExportService: importFile(filename)
+
+alt File Not Found
+  ImportExportService -> Controller: ImportFailed
+  Controller -> View: showError("File non trovato")
+else Valid File
+  ImportExportService -> FileService: readFile()
+  FileService --> ImportExportService: importedData (async)
+
+  ImportExportService -> ValidationService: validateData(importedData)
+  ValidationService -> ImportExportService: validationResult
+
+  alt Validation Failed
+    ImportExportService -> Controller: ImportFailed
+    Controller -> View: showError("Dati non validi")
+  else Validation Success
+    ImportExportService -> AddressBook: addContact(Contact)
+    AddressBook -> Controller: importConfirm()
+    Controller -> View: showMsg("importazione eseguita")
+    View -> User: viewMsg("importazione eseguita")
+  end
+end
+@enduml

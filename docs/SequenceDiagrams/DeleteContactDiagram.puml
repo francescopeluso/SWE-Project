@@ -1,0 +1,31 @@
+@startuml
+
+User -> MainView: selectDeleteContactBtn()
+MainView -> MainController: DeleteContactEvent(contactId)
+MainController -> MainView: showConfirmOrAbort
+MainView -> User: ConfirmOrAbort?
+
+alt Confirm
+  User -> MainView: confirmBtn
+  MainView -> MainController: deletionConfirmed
+else Abort
+    User -> MainView: abortBtn
+    MainView -X MainController: abortDeletionOperations
+end
+
+MainController -> AddressBookService: deleteContact(contactID)
+
+alt Deletion Failed
+    AddressBookService -> MainController: couldNotDeleteContact
+    MainController -> MainView: showErrMsg("Deletion failed, try again")
+    MainView -> User: viewErrMsg
+
+else Deletion Success
+  AddressBookService -> AddressBook: removeContact(contactId)
+  AddressBook -> AddressBookService: contactRemoved
+  AddressBookService -> MainController: contactDeleted
+  MainController -> MainView: showMsg("Contact Deleted Successfully!")
+  MainView -> User: viewMsg
+end
+
+@enduml
