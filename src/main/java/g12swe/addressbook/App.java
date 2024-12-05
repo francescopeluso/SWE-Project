@@ -11,10 +11,11 @@ import javafx.stage.Stage;
 
 /**
  * @file App.java
- * @brief
+ * @brief Application loader.
  * 
- * More detailed information about the file and its role is in the project.
- * 
+ * This file loads up the application and all its core components (stage,
+ * scene, view loaders and controllers) and keeps the application layout
+ * responsive as window gets resized by user. 
  */
 public class App extends Application {
 
