@@ -53,7 +53,7 @@ public class App extends Application {
             }
         });
                 
-        stage.setTitle("Gruppo 20 | Rubrica telefonica");
+        stage.setTitle("Gruppo 12 | Rubrica telefonica");
         stage.setScene(scene);
         stage.show();
     }
