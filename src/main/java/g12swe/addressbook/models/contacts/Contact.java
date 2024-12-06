@@ -39,7 +39,7 @@ public class Contact implements Comparable<Contact> {
     /**
      * The static attribute that increments the unique id.
      */
-    public static int uniqueContacts = 0;  
+    private static int uniqueContacts = 0;  
     
     
     /**
