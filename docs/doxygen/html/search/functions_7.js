@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['removeemailaddress_0',['removeEmailAddress',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact.html#a8d0056a8c3768a28451db3e6d38748d3',1,'g20swe::addressbook::model::contacts::Contact']]],
-  ['removephonenumber_1',['removePhoneNumber',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact.html#a6a0f536c72fcf4e387caac748dc940de',1,'g20swe::addressbook::model::contacts::Contact']]]
+  ['removecontact_0',['removeContact',['../classg12swe_1_1addressbook_1_1models_1_1_address_book.html#a59198013c7d1063a8b5a63b46fcc0bd6',1,'g12swe::addressbook::models::AddressBook']]],
+  ['removeemailaddress_1',['removeEmailAddress',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html#a16001912a7ba596d4af2b8ab159b3ab4',1,'g12swe::addressbook::models::contacts::Contact']]],
+  ['removephonenumber_2',['removePhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html#a6d3041d1ba890cd4304c8314f419468e',1,'g12swe::addressbook::models::contacts::Contact']]]
 ];

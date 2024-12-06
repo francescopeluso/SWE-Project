@@ -1,0 +1,26 @@
+\doxysection{src/main/java/g12swe/addressbook/service/\+File\+Service.java File Reference}
+\hypertarget{_file_service_8java}{}\label{_file_service_8java}\index{src/main/java/g12swe/addressbook/service/FileService.java@{src/main/java/g12swe/addressbook/service/FileService.java}}
+
+
+Service for managing file operations in the address book application.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{g12swe.\+addressbook.\+service.\+File\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service for managing file operations in the address book application. 
+
+This class handles low-\/level file operations, such as reading from and writing to storage. It ensures data consistency and supports the persistence of address book data.
+
+Key functionalities include\+:
+\begin{DoxyItemize}
+\item Saving the current state of the address book to a file.
+\item Loading address book data from existing files at startup.
+\end{DoxyItemize}
+
+This service operates independently but may be used by other services like {\ttfamily Import\+Export\+Service}. 

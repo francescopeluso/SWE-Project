@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['contact_0',['Contact',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_contact.html',1,'g20swe::addressbook::model::contacts']]],
-  ['contactcontroller_1',['ContactController',['../classg20swe_1_1addressbook_1_1controller_1_1_contact_controller.html',1,'g20swe::addressbook::controller']]]
+  ['contact_0',['Contact',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html',1,'g12swe::addressbook::models::contacts']]],
+  ['contactcontroller_1',['ContactController',['../classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller.html',1,'g12swe::addressbook::controllers']]]
 ];

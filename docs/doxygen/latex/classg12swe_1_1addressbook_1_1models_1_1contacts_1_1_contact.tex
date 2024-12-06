@@ -1,0 +1,284 @@
+\doxysection{g12swe.\+addressbook.\+models.\+contacts.\+Contact Class Reference}
+\hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{}\label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+Inheritance diagram for g12swe.\+addressbook.\+models.\+contacts.\+Contact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ada3e57f063d0d597e3ffdd4c0fde98b2}{Contact}} (String name, String surname)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7ce0839c69226f2e9c198a4fba12187a}{get\+Name}} ()
+\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a2b12aa49458f5d605870fc1e6d96ddb0}{get\+Surname}} ()
+\item 
+List$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number}{Phone\+Number}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a8df9e8ec0a8ebbcebec972ad7b8df54f}{get\+Phone\+Numbers}} ()
+\item 
+List$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_email_address}{Email\+Address}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a79a69f43f210e3b49ca7278f35b15d16}{get\+Email\+Addresses}} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3e09e2b923a89e6551099707019b44cb}{set\+Name}} (String name)
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16b52dfa1595a6940ec92672f9729c4f}{set\+Surname}} (String surname)
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3d11e8c09da7fd9824cde7233cc57b57}{add\+Email\+Address}} (String email\+Address, \mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_email_address_exception}{Invalid\+Email\+Address\+Exception}}
+\begin{DoxyCompactList}\small\item\em Method to add an email to the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aa946fbcc766f81d628457ef90019832b}{add\+Phone\+Number}} (String phone\+Number, \mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_phone_number_exception}{Invalid\+Phone\+Number\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Method to add a phone number to the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16001912a7ba596d4af2b8ab159b3ab4}{remove\+Email\+Address}} (String email\+Address)
+\begin{DoxyCompactList}\small\item\em Method to remove an email address from the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a6d3041d1ba890cd4304c8314f419468e}{remove\+Phone\+Number}} (String phone\+Number)
+\begin{DoxyCompactList}\small\item\em Method to remove a phone number from the contact. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7b2b014121a29839afc434d6dbfd06a8}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Override the hash\+Code method. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a57350eb46ffe110382292662e78ce507}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Override the equals method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aced836cf33254d69d57ee6b4e6ce0b9d}{compare\+To}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} o)
+\begin{DoxyCompactList}\small\item\em Method to compare the calling object to another \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ab6a96a626de67387cb3cecc078ab189b}{unique\+Contacts}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ada3e57f063d0d597e3ffdd4c0fde98b2}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{Contact()}{Contact()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ada3e57f063d0d597e3ffdd4c0fde98b2} 
+g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+Contact (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{}\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+This constructor creates a \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object and initialize the attributes with the values of the input parameters. It also initializes the class collections and the unique\+Id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & represents the name \\
+\hline
+\mbox{\texttt{ in}}  & {\em surname} & represents the surname \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3d11e8c09da7fd9824cde7233cc57b57}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!addEmailAddress@{addEmailAddress}}
+\index{addEmailAddress@{addEmailAddress}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{addEmailAddress()}{addEmailAddress()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3d11e8c09da7fd9824cde7233cc57b57} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+add\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{, }\item[{\mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_email_address_exception}{Invalid\+Email\+Address\+Exception}}}
+
+
+
+Method to add an email to the contact. 
+
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_email_address}{Email\+Address} object will be added to the list.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em email\+Address} & the email to set if it is valid \\
+\hline
+\mbox{\texttt{ in}}  & {\em category} & the category to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Email\+Address\+Exception} & if the email\+Address is not valid \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aa946fbcc766f81d628457ef90019832b}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!addPhoneNumber@{addPhoneNumber}}
+\index{addPhoneNumber@{addPhoneNumber}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{addPhoneNumber()}{addPhoneNumber()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aa946fbcc766f81d628457ef90019832b} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+add\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{, }\item[{\mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}}}]{category}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_phone_number_exception}{Invalid\+Phone\+Number\+Exception}}}
+
+
+
+Method to add a phone number to the contact. 
+
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number}{Phone\+Number} object will be added to the list.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phone\+Number} & the phone number to set if it is valid \\
+\hline
+\mbox{\texttt{ in}}  & {\em category} & the category to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Phone\+Number\+Exception} & if the phone\+Number is not valid \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aced836cf33254d69d57ee6b4e6ce0b9d}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aced836cf33254d69d57ee6b4e6ce0b9d} 
+int g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{o}{}\end{DoxyParamCaption})}
+
+
+
+Method to compare the calling object to another \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em o} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a57350eb46ffe110382292662e78ce507}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!equals@{equals}}
+\index{equals@{equals}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a57350eb46ffe110382292662e78ce507} 
+boolean g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Override the equals method. 
+
+Two contacts are equal if they have the same unique\+ID
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if the parameter is null or does not belong to the \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} class. True if the calling object is equal to the parameter or if they belong to the same class and their unique\+Id attributes are equal. 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a79a69f43f210e3b49ca7278f35b15d16}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!getEmailAddresses@{getEmailAddresses}}
+\index{getEmailAddresses@{getEmailAddresses}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getEmailAddresses()}{getEmailAddresses()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a79a69f43f210e3b49ca7278f35b15d16} 
+List$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_email_address}{Email\+Address}} $>$ g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+get\+Email\+Addresses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the list of email addresses 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7ce0839c69226f2e9c198a4fba12187a}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!getName@{getName}}
+\index{getName@{getName}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7ce0839c69226f2e9c198a4fba12187a} 
+String g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the name 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a8df9e8ec0a8ebbcebec972ad7b8df54f}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!getPhoneNumbers@{getPhoneNumbers}}
+\index{getPhoneNumbers@{getPhoneNumbers}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getPhoneNumbers()}{getPhoneNumbers()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a8df9e8ec0a8ebbcebec972ad7b8df54f} 
+List$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number}{Phone\+Number}} $>$ g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+get\+Phone\+Numbers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the list of phone numbers 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a2b12aa49458f5d605870fc1e6d96ddb0}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!getSurname@{getSurname}}
+\index{getSurname@{getSurname}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getSurname()}{getSurname()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a2b12aa49458f5d605870fc1e6d96ddb0} 
+String g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+get\+Surname (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the surname 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7b2b014121a29839afc434d6dbfd06a8}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7b2b014121a29839afc434d6dbfd06a8} 
+int g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Override the hash\+Code method. 
+
+\begin{DoxyReturn}{Returns}
+the hash code of the contact based on its unique\+ID 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16001912a7ba596d4af2b8ab159b3ab4}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!removeEmailAddress@{removeEmailAddress}}
+\index{removeEmailAddress@{removeEmailAddress}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{removeEmailAddress()}{removeEmailAddress()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16001912a7ba596d4af2b8ab159b3ab4} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+remove\+Email\+Address (\begin{DoxyParamCaption}\item[{String}]{email\+Address}{}\end{DoxyParamCaption})}
+
+
+
+Method to remove an email address from the contact. 
+
+\begin{DoxyPrecond}{Precondition}
+The email\+Address parameter must be valid. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_email_address}{Email\+Address} object will be removed from the list.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em email\+Address} & the email to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a6d3041d1ba890cd4304c8314f419468e}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!removePhoneNumber@{removePhoneNumber}}
+\index{removePhoneNumber@{removePhoneNumber}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{removePhoneNumber()}{removePhoneNumber()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a6d3041d1ba890cd4304c8314f419468e} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+remove\+Phone\+Number (\begin{DoxyParamCaption}\item[{String}]{phone\+Number}{}\end{DoxyParamCaption})}
+
+
+
+Method to remove a phone number from the contact. 
+
+\begin{DoxyPrecond}{Precondition}
+The phone\+Number parameter must be valid. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number}{Phone\+Number} object will be removed from the list
+\end{DoxyPostcond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em phone\+Number} & the phone number to remove \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3e09e2b923a89e6551099707019b44cb}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!setName@{setName}}
+\index{setName@{setName}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3e09e2b923a89e6551099707019b44cb} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+set\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & the name to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16b52dfa1595a6940ec92672f9729c4f}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!setSurname@{setSurname}}
+\index{setSurname@{setSurname}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{setSurname()}{setSurname()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16b52dfa1595a6940ec92672f9729c4f} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+set\+Surname (\begin{DoxyParamCaption}\item[{String}]{surname}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em surname} & the surname to set \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ab6a96a626de67387cb3cecc078ab189b}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!uniqueContacts@{uniqueContacts}}
+\index{uniqueContacts@{uniqueContacts}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{uniqueContacts}{uniqueContacts}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ab6a96a626de67387cb3cecc078ab189b} 
+int g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+unique\+Contacts = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+The static attribute that increments the unique id. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/g12swe/addressbook/models/contacts/\mbox{\hyperlink{_contact_8java}{Contact.\+java}}\end{DoxyCompactItemize}

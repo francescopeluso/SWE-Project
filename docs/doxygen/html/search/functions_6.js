@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['phonenumber_0',['PhoneNumber',['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number.html#a7f1faecd705c82535b37b377bd014404',1,'g20swe.addressbook.model.contacts.PhoneNumber.PhoneNumber()'],['../classg20swe_1_1addressbook_1_1model_1_1contacts_1_1_phone_number.html#adbddc774ec826afa8667c22470786155',1,'g20swe.addressbook.model.contacts.PhoneNumber.PhoneNumber(String phoneNumber, EntryCategory category)']]]
+  ['phonenumber_0',['PhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number.html#adf1b3f4140d90c371c61b7339532ea25',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber()'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number.html#a6d939441c7177087d2d82bf5a4883642',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber(String phoneNumber, EntryCategory category)']]]
 ];

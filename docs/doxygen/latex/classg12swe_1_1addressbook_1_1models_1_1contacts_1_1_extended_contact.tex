@@ -1,0 +1,184 @@
+\doxysection{g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact Class Reference}
+\hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}{}\label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+Inheritance diagram for g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a8ca9beeb302659535d10f24ef29d9ced}{Extended\+Contact}} (String name, String surname, String address, Local\+Date\+Time birthday, String notes, String pronouns)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a58ab91d832466411ea49c903346f9560}{get\+Address}} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a58e928bbf029b4d81b58b1359ad4f7cf}{set\+Address}} (String address)
+\item 
+Local\+Date\+Time \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a8a044bd8e0e0bdd00020c49369154bf1}{get\+Birthday}} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a3e34ab7babc90f9994e61e21e361f452}{set\+Birthday}} (Local\+Date\+Time birthday)
+\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_aced11c574ba5d3c558adf2629354297c}{get\+Notes}} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_af0c7b2ba2f02e6b4580c09cc2d8edc7a}{set\+Notes}} (String notes)
+\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_adbde3876596c5c8da182401c04ff4f77}{get\+Pronouns}} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a987eed516e2924ff23a9b6c626e70c02}{set\+Pronouns}} (String pronouns)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{g12swe.\+addressbook.\+models.\+contacts.\+Contact}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ada3e57f063d0d597e3ffdd4c0fde98b2}{Contact}} (String name, String surname)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7ce0839c69226f2e9c198a4fba12187a}{get\+Name}} ()
+\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a2b12aa49458f5d605870fc1e6d96ddb0}{get\+Surname}} ()
+\item 
+List$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number}{Phone\+Number}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a8df9e8ec0a8ebbcebec972ad7b8df54f}{get\+Phone\+Numbers}} ()
+\item 
+List$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_email_address}{Email\+Address}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a79a69f43f210e3b49ca7278f35b15d16}{get\+Email\+Addresses}} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3e09e2b923a89e6551099707019b44cb}{set\+Name}} (String name)
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16b52dfa1595a6940ec92672f9729c4f}{set\+Surname}} (String surname)
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3d11e8c09da7fd9824cde7233cc57b57}{add\+Email\+Address}} (String email\+Address, \mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_email_address_exception}{Invalid\+Email\+Address\+Exception}}
+\begin{DoxyCompactList}\small\item\em Method to add an email to the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aa946fbcc766f81d628457ef90019832b}{add\+Phone\+Number}} (String phone\+Number, \mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_phone_number_exception}{Invalid\+Phone\+Number\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Method to add a phone number to the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16001912a7ba596d4af2b8ab159b3ab4}{remove\+Email\+Address}} (String email\+Address)
+\begin{DoxyCompactList}\small\item\em Method to remove an email address from the contact. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a6d3041d1ba890cd4304c8314f419468e}{remove\+Phone\+Number}} (String phone\+Number)
+\begin{DoxyCompactList}\small\item\em Method to remove a phone number from the contact. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7b2b014121a29839afc434d6dbfd06a8}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Override the hash\+Code method. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a57350eb46ffe110382292662e78ce507}{equals}} (Object obj)
+\begin{DoxyCompactList}\small\item\em Override the equals method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aced836cf33254d69d57ee6b4e6ce0b9d}{compare\+To}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} o)
+\begin{DoxyCompactList}\small\item\em Method to compare the calling object to another \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{g12swe.\+addressbook.\+models.\+contacts.\+Contact}}}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_ab6a96a626de67387cb3cecc078ab189b}{unique\+Contacts}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a8ca9beeb302659535d10f24ef29d9ced}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!ExtendedContact@{ExtendedContact}}
+\index{ExtendedContact@{ExtendedContact}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{ExtendedContact()}{ExtendedContact()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a8ca9beeb302659535d10f24ef29d9ced} 
+g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+Extended\+Contact (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{surname}{, }\item[{String}]{address}{, }\item[{Local\+Date\+Time}]{birthday}{, }\item[{String}]{notes}{, }\item[{String}]{pronouns}{}\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+This constructor creates an \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}{Extended\+Contact} object and initialize the attributes with the values of the input parameters. It also initializes the class collections and the unique\+Id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & represents the name. \\
+\hline
+\mbox{\texttt{ in}}  & {\em surname} & represents the surname. \\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & represents the address. \\
+\hline
+\mbox{\texttt{ in}}  & {\em birthday} & represents the birthday. \\
+\hline
+\mbox{\texttt{ in}}  & {\em notes} & represents the description of the contact. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pronouns} & represents the pronouns of the contact. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a58ab91d832466411ea49c903346f9560}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a58ab91d832466411ea49c903346f9560} 
+String g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+get\+Address (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the address 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a8a044bd8e0e0bdd00020c49369154bf1}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!getBirthday@{getBirthday}}
+\index{getBirthday@{getBirthday}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{getBirthday()}{getBirthday()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a8a044bd8e0e0bdd00020c49369154bf1} 
+Local\+Date\+Time g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+get\+Birthday (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the birthday 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_aced11c574ba5d3c558adf2629354297c}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!getNotes@{getNotes}}
+\index{getNotes@{getNotes}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{getNotes()}{getNotes()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_aced11c574ba5d3c558adf2629354297c} 
+String g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+get\+Notes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the notes 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_adbde3876596c5c8da182401c04ff4f77}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!getPronouns@{getPronouns}}
+\index{getPronouns@{getPronouns}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{getPronouns()}{getPronouns()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_adbde3876596c5c8da182401c04ff4f77} 
+String g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+get\+Pronouns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the pronouns 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a58e928bbf029b4d81b58b1359ad4f7cf}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a58e928bbf029b4d81b58b1359ad4f7cf} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+set\+Address (\begin{DoxyParamCaption}\item[{String}]{address}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em address} & the address to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a3e34ab7babc90f9994e61e21e361f452}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!setBirthday@{setBirthday}}
+\index{setBirthday@{setBirthday}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{setBirthday()}{setBirthday()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a3e34ab7babc90f9994e61e21e361f452} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+set\+Birthday (\begin{DoxyParamCaption}\item[{Local\+Date\+Time}]{birthday}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em birthday} & the birthday to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_af0c7b2ba2f02e6b4580c09cc2d8edc7a}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!setNotes@{setNotes}}
+\index{setNotes@{setNotes}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{setNotes()}{setNotes()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_af0c7b2ba2f02e6b4580c09cc2d8edc7a} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+set\+Notes (\begin{DoxyParamCaption}\item[{String}]{notes}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em notes} & the notes to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a987eed516e2924ff23a9b6c626e70c02}\index{g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}!setPronouns@{setPronouns}}
+\index{setPronouns@{setPronouns}!g12swe.addressbook.models.contacts.ExtendedContact@{g12swe.addressbook.models.contacts.ExtendedContact}}
+\doxysubsubsection{\texorpdfstring{setPronouns()}{setPronouns()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact_a987eed516e2924ff23a9b6c626e70c02} 
+void g12swe.\+addressbook.\+models.\+contacts.\+Extended\+Contact.\+set\+Pronouns (\begin{DoxyParamCaption}\item[{String}]{pronouns}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pronouns} & the pronouns to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/g12swe/addressbook/models/contacts/\mbox{\hyperlink{_extended_contact_8java}{Extended\+Contact.\+java}}\end{DoxyCompactItemize}
