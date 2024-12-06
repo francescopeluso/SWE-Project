@@ -6,30 +6,31 @@ MainView -> User: askFormatAndPath
 User -> MainView: provideDetails
 MainView -> MainController: sendExportDetails(format, path)
 
-MainController -> AddressBookService: 
-AddressBookService -> ImportExportService: fetchContactData
-ImportExportService -> AddressBook: gimmeContacts
+MainController -> AddressBookService: getContactList
+AddressBookService -> ImportExportService: getContactData
+ImportExportService -> AddressBook: getContacts
 AddressBook -> ImportExportService: returnContacts
 ImportExportService -> VCard: convertContactFormat
 VCard -> ImportExportService: returnConvertedData
-
-ImportExportService -> FileService: saveExportFile
-FileService --> ImportExportService: ExportCompleted (async)
-
+ImportExportService --> FileService: saveToExportFile(async)
+FileService -> ImportExportService: ExportCompleted
 ImportExportService -> MainController: ExportCompleted
 MainController -> MainView: showMsg("exportCompleted")
 MainView -> User: ViewMsg
-
-alt File Save Error
-  FileService --> ImportExportService: ExportFailed (async)
-  ImportExportService -> MainController: ExportFailed
-  MainController -> MainView: showError("Export failed")
-end
 
 alt Conversion Error
   VCard -> ImportExportService: ConversionFailed
   ImportExportService -> MainController: ConversionFailed
   MainController -> MainView: showError("Conversion failed")
 end
+
+alt File Save Error
+  FileService -> ImportExportService: ExportFailed
+  ImportExportService -> MainController: ExportFailed
+  MainController -> MainView: showErrMsg("Export failed")
+  MainView -> User: ViewErrMsg
+end
+
+
 
 @enduml

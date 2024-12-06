@@ -1,26 +1,30 @@
 @startuml
-User -> View: selectImportFile()
-View -> Controller: importContactListFromFile(filename)
-Controller -> ImportExportService: importFile(filename)
+User -> MainView: selectImportFile()
+MainView -> MainController: importContactListFromFile(filename)
+MainController -> AddressBookService: importFile(filename)
+AddressBookService -> ImportExportService: importFile(filename)
+ImportExportService -> FileService: readFile()
 
-alt File Not Found
-  ImportExportService -> Controller: ImportFailed
-  Controller -> View: showError("File non trovato")
+alt File Not Valid
+  FileService -> MainController: unreadableFile()
+  MainController -> MainView: showErrMsg("File non leggibile")
+  MainView -> User: viewErrMsg
 else Valid File
-  ImportExportService -> FileService: readFile()
   FileService --> ImportExportService: importedData (async)
+  ImportExportService -> Validatable: validateData(importedData)
+  Validatable -> ImportExportService: validationResult
 
-  ImportExportService -> ValidationService: validateData(importedData)
-  ValidationService -> ImportExportService: validationResult
-
-  alt Validation Failed
-    ImportExportService -> Controller: ImportFailed
-    Controller -> View: showError("Dati non validi")
-  else Validation Success
-    ImportExportService -> AddressBook: addContact(Contact)
-    AddressBook -> Controller: importConfirm()
-    Controller -> View: showMsg("importazione eseguita")
-    View -> User: viewMsg("importazione eseguita")
+  alt Contact Validation Failed
+    ImportExportService -> MainController: ImportFailed
+    MainController -> MainView: showErrMsg("Dati non validi")
+    MainView -> User: viewErrMsg
+  else Contact Validation Success
+    ImportExportService -> VCard: convertContactFormat
+    VCard -> ImportExportService: returnConvertedData
+    ImportExportService -> AddressBook: importContacts
+    AddressBook -> MainController: importConfirm
+    MainController -> MainView: showMsg("importazione eseguita con successo")
+    MainView -> User: viewMsg
   end
 end
 @enduml

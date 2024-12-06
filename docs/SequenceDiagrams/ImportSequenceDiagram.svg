@@ -1,100 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="645px" preserveAspectRatio="none" style="width:1097px;height:645px;background:#FFFFFF;" version="1.1" viewBox="0 0 1097 645" width="1097px" zoomAndPan="magnify">
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="797px" preserveAspectRatio="none" style="width:1257px;height:797px;background:#FFFFFF;" version="1.1" viewBox="0 0 1257 797" width="1257px" zoomAndPan="magnify">
     <defs/>
     <g>
-        <rect fill="none" height="446.5938" style="stroke:#000000;stroke-width:1.5;" width="1080.5" x="10" y="145.6641"/>
-        <rect fill="none" height="216.2969" style="stroke:#000000;stroke-width:1.5;" width="1060.5" x="20" y="368.9609"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="51" x2="51" y1="37.6094" y2="609.2578"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="269" x2="269" y1="37.6094" y2="609.2578"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="502.5" x2="502.5" y1="37.6094" y2="609.2578"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="639.5" x2="639.5" y1="37.6094" y2="609.2578"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="787.5" x2="787.5" y1="37.6094" y2="609.2578"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="900.5" x2="900.5" y1="37.6094" y2="609.2578"/>
-        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1021.5" x2="1021.5" y1="37.6094" y2="609.2578"/>
+        <rect fill="none" height="537.6484" style="stroke:#000000;stroke-width:1.5;" width="1240" x="10" y="206.3672"/>
+        <rect fill="none" height="307.3516" style="stroke:#000000;stroke-width:1.5;" width="1220" x="20" y="429.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="51" x2="51" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="175" x2="175" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="484.5" x2="484.5" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="621" x2="621" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="774" x2="774" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="922" x2="922" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1016" x2="1016" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1095" x2="1095" y1="37.6094" y2="761.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1181" x2="1181" y1="37.6094" y2="761.0156"/>
         <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="30" y="5"/>
         <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="37" y="26.5332">User</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="30" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="37" y="629.791">User</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="248" y="5"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="255" y="26.5332">View</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="248" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="255" y="629.791">View</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="464.5" y="5"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="471.5" y="26.5332">Controller</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="464.5" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="471.5" y="629.791">Controller</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="569.5" y="5"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="576.5" y="26.5332">ImportExportService</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="569.5" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="576.5" y="629.791">ImportExportService</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="745.5" y="5"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="752.5" y="26.5332">FileService</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="745.5" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="752.5" y="629.791">FileService</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="123" x="839.5" y="5"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="846.5" y="26.5332">ValidationService</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="123" x="839.5" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="846.5" y="629.791">ValidationService</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="972.5" y="5"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="979.5" y="26.5332">AddressBook</text>
-        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="972.5" y="608.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="979.5" y="629.791">AddressBook</text>
-        <polygon fill="#181818" points="257.5,65.9609,267.5,69.9609,257.5,73.9609,261.5,69.9609" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="51.5" x2="263.5" y1="69.9609" y2="69.9609"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="30" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="37" y="781.5488">User</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="139" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="146" y="26.5332">MainView</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="139" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="146" y="781.5488">MainView</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="431.5" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="438.5" y="26.5332">MainController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="106" x="431.5" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="438.5" y="781.5488">MainController</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="549" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="556" y="26.5332">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="145" x="549" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="556" y="781.5488">AddressBookService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="704" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="711" y="26.5332">ImportExportService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="140" x="704" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="711" y="781.5488">ImportExportService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="880" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="887" y="26.5332">FileService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="880" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="887" y="781.5488">FileService</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="974" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="981" y="26.5332">Validatable</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="84" x="974" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="981" y="781.5488">Validatable</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="1068" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="1075" y="26.5332">VCard</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="1068" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="1075" y="781.5488">VCard</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="1132" y="5"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="1139" y="26.5332">AddressBook</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="1132" y="760.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="1139" y="781.5488">AddressBook</text>
+        <polygon fill="#181818" points="163.5,65.9609,173.5,69.9609,163.5,73.9609,167.5,69.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="51.5" x2="169.5" y1="69.9609" y2="69.9609"/>
         <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100" x="58.5" y="65.1045">selectImportFile()</text>
-        <polygon fill="#181818" points="490.5,96.3125,500.5,100.3125,490.5,104.3125,494.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="269.5" x2="496.5" y1="100.3125" y2="100.3125"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="209" x="276.5" y="95.4561">importContactListFromFile(filename)</text>
-        <polygon fill="#181818" points="627.5,126.6641,637.5,130.6641,627.5,134.6641,631.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="502.5" x2="633.5" y1="130.6641" y2="130.6641"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="509.5" y="125.8076">importFile(filename)</text>
-        <path d="M10,145.6641 L71,145.6641 L71,154.0156 L61,164.0156 L10,164.0156 L10,145.6641 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
-        <rect fill="none" height="446.5938" style="stroke:#000000;stroke-width:1.5;" width="1080.5" x="10" y="145.6641"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="25" y="160.1592">alt</text>
-        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="85" x="86" y="159.083">[File Not Found]</text>
-        <polygon fill="#181818" points="513.5,182.3672,503.5,186.3672,513.5,190.3672,509.5,186.3672" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="507.5" x2="638.5" y1="186.3672" y2="186.3672"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="519.5" y="181.5107">ImportFailed</text>
-        <polygon fill="#181818" points="280.5,212.7188,270.5,216.7188,280.5,220.7188,276.5,216.7188" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="274.5" x2="501.5" y1="216.7188" y2="216.7188"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="286.5" y="211.8623">showError("File non trovato")</text>
-        <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="1090.5" y1="225.7188" y2="225.7188"/>
-        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="57" x="15" y="237.1377">[Valid File]</text>
-        <polygon fill="#181818" points="775.5,258.9063,785.5,262.9063,775.5,266.9063,779.5,262.9063" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="639.5" x2="781.5" y1="262.9063" y2="262.9063"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="646.5" y="258.0498">readFile()</text>
-        <polygon fill="#181818" points="650.5,289.2578,640.5,293.2578,650.5,297.2578,646.5,293.2578" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="644.5" x2="786.5" y1="293.2578" y2="293.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="656.5" y="288.4014">importedData (async)</text>
-        <polygon fill="#181818" points="889,319.6094,899,323.6094,889,327.6094,893,323.6094" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="639.5" x2="895" y1="323.6094" y2="323.6094"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="155" x="646.5" y="318.7529">validateData(importedData)</text>
-        <polygon fill="#181818" points="650.5,349.9609,640.5,353.9609,650.5,357.9609,646.5,353.9609" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="644.5" x2="900" y1="353.9609" y2="353.9609"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="656.5" y="349.1045">validationResult</text>
-        <path d="M20,368.9609 L81,368.9609 L81,377.3125 L71,387.3125 L20,387.3125 L20,368.9609 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
-        <rect fill="none" height="216.2969" style="stroke:#000000;stroke-width:1.5;" width="1060.5" x="20" y="368.9609"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="35" y="383.4561">alt</text>
-        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="97" x="96" y="382.3799">[Validation Failed]</text>
-        <polygon fill="#181818" points="513.5,405.6641,503.5,409.6641,513.5,413.6641,509.5,409.6641" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="507.5" x2="638.5" y1="409.6641" y2="409.6641"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="519.5" y="404.8076">ImportFailed</text>
-        <polygon fill="#181818" points="280.5,436.0156,270.5,440.0156,280.5,444.0156,276.5,440.0156" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="274.5" x2="501.5" y1="440.0156" y2="440.0156"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="286.5" y="435.1592">showError("Dati non validi")</text>
-        <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="1080.5" y1="449.0156" y2="449.0156"/>
-        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="112" x="25" y="460.4346">[Validation Success]</text>
-        <polygon fill="#181818" points="1009.5,482.2031,1019.5,486.2031,1009.5,490.2031,1013.5,486.2031" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="639.5" x2="1015.5" y1="486.2031" y2="486.2031"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="646.5" y="481.3467">addContact(Contact)</text>
-        <polygon fill="#181818" points="513.5,512.5547,503.5,516.5547,513.5,520.5547,509.5,516.5547" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="507.5" x2="1020.5" y1="516.5547" y2="516.5547"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="519.5" y="511.6982">importConfirm()</text>
-        <polygon fill="#181818" points="280.5,542.9063,270.5,546.9063,280.5,550.9063,276.5,546.9063" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="274.5" x2="501.5" y1="546.9063" y2="546.9063"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="286.5" y="542.0498">showMsg("importazione eseguita")</text>
-        <polygon fill="#181818" points="62.5,573.2578,52.5,577.2578,62.5,581.2578,58.5,577.2578" style="stroke:#181818;stroke-width:1.0;"/>
-        <line style="stroke:#181818;stroke-width:1.0;" x1="56.5" x2="268.5" y1="577.2578" y2="577.2578"/>
-        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="194" x="68.5" y="572.4014">viewMsg("importazione eseguita")</text>
-        <!--SRC=[dLFBJiCm4BpdArOvEOV-G0z8F5e92JXGjVTLl2qMZXVPJWfyFLudJKiXHU8G9x5dPcSVNWVoCBk2ZQ7z709PgkDzyyO-BeqbLHLo881RTj6pjUJdO390Th2E3oR4fUScuxTfSTXGLHpnmkub5- -ohiXtfgQ3p1clG1j1zk29qmUtJXVm6__SrE0Q4rKOt-CFwRtmVk4zUrNc28uT9527aSkg81i8DcYDpl6deyhfc8Gdr4EfuFG4PfVJ9ds74K5X-71rIdioMdQ4qR0R5Rf-YqH1dSg9Xn_uoVft8_APGckZc93g7nLWBET_Ml1d4v9bavkGdPXIx1-xq3jOjNLD8LooSAsrJv0RvjSveDR3OAhXNMNk2MXodBV6DwgwwFmnx5JP4_0p-IEWGBlMH2nxuk6-h8D8T-dl3mgb0K_F5m00]-->
+        <polygon fill="#181818" points="472.5,96.3125,482.5,100.3125,472.5,104.3125,476.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="175.5" x2="478.5" y1="100.3125" y2="100.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="209" x="182.5" y="95.4561">importContactListFromFile(filename)</text>
+        <polygon fill="#181818" points="609.5,126.6641,619.5,130.6641,609.5,134.6641,613.5,130.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="484.5" x2="615.5" y1="130.6641" y2="130.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="491.5" y="125.8076">importFile(filename)</text>
+        <polygon fill="#181818" points="762,157.0156,772,161.0156,762,165.0156,766,161.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="621.5" x2="768" y1="161.0156" y2="161.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="628.5" y="156.1592">importFile(filename)</text>
+        <polygon fill="#181818" points="910,187.3672,920,191.3672,910,195.3672,914,191.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="774" x2="916" y1="191.3672" y2="191.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="781" y="186.5107">readFile()</text>
+        <path d="M10,206.3672 L71,206.3672 L71,214.7188 L61,224.7188 L10,224.7188 L10,206.3672 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="537.6484" style="stroke:#000000;stroke-width:1.5;" width="1240" x="10" y="206.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="25" y="220.8623">alt</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="78" x="86" y="219.7861">[File Not Valid]</text>
+        <polygon fill="#181818" points="495.5,243.0703,485.5,247.0703,495.5,251.0703,491.5,247.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="489.5" x2="921" y1="247.0703" y2="247.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="92" x="501.5" y="242.2139">unreadableFile()</text>
+        <polygon fill="#181818" points="186.5,273.4219,176.5,277.4219,186.5,281.4219,182.5,277.4219" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="180.5" x2="483.5" y1="277.4219" y2="277.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="192.5" y="272.5654">showErrMsg("File non leggibile")</text>
+        <polygon fill="#181818" points="62.5,303.7734,52.5,307.7734,62.5,311.7734,58.5,307.7734" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="56.5" x2="174.5" y1="307.7734" y2="307.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66" x="68.5" y="302.917">viewErrMsg</text>
+        <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="1250" y1="316.7734" y2="316.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="57" x="15" y="328.1924">[Valid File]</text>
+        <polygon fill="#181818" points="785,349.9609,775,353.9609,785,357.9609,781,353.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="779" x2="921" y1="353.9609" y2="353.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="791" y="349.1045">importedData (async)</text>
+        <polygon fill="#181818" points="1004,380.3125,1014,384.3125,1004,388.3125,1008,384.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="774" x2="1010" y1="384.3125" y2="384.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="155" x="781" y="379.4561">validateData(importedData)</text>
+        <polygon fill="#181818" points="785,410.6641,775,414.6641,785,418.6641,781,414.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="779" x2="1015" y1="414.6641" y2="414.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="791" y="409.8076">validationResult</text>
+        <path d="M20,429.6641 L81,429.6641 L81,438.0156 L71,448.0156 L20,448.0156 L20,429.6641 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="307.3516" style="stroke:#000000;stroke-width:1.5;" width="1220" x="20" y="429.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="35" y="444.1592">alt</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="142" x="96" y="443.083">[Contact Validation Failed]</text>
+        <polygon fill="#181818" points="495.5,466.3672,485.5,470.3672,495.5,474.3672,491.5,470.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="489.5" x2="773" y1="470.3672" y2="470.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="501.5" y="465.5107">ImportFailed</text>
+        <polygon fill="#181818" points="186.5,496.7188,176.5,500.7188,186.5,504.7188,182.5,500.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="180.5" x2="483.5" y1="500.7188" y2="500.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="170" x="192.5" y="495.8623">showErrMsg("Dati non validi")</text>
+        <polygon fill="#181818" points="62.5,527.0703,52.5,531.0703,62.5,535.0703,58.5,531.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="56.5" x2="174.5" y1="531.0703" y2="531.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66" x="68.5" y="526.2139">viewErrMsg</text>
+        <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="1240" y1="540.0703" y2="540.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="157" x="25" y="551.4893">[Contact Validation Success]</text>
+        <polygon fill="#181818" points="1083,573.2578,1093,577.2578,1083,581.2578,1087,577.2578" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="774" x2="1089" y1="577.2578" y2="577.2578"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="781" y="572.4014">convertContactFormat</text>
+        <polygon fill="#181818" points="785,603.6094,775,607.6094,785,611.6094,781,607.6094" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="779" x2="1094" y1="607.6094" y2="607.6094"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="791" y="602.7529">returnConvertedData</text>
+        <polygon fill="#181818" points="1169,633.9609,1179,637.9609,1169,641.9609,1173,637.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="774" x2="1175" y1="637.9609" y2="637.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="781" y="633.1045">importContacts</text>
+        <polygon fill="#181818" points="495.5,664.3125,485.5,668.3125,495.5,672.3125,491.5,668.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="489.5" x2="1180" y1="668.3125" y2="668.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="501.5" y="663.4561">importConfirm</text>
+        <polygon fill="#181818" points="186.5,694.6641,176.5,698.6641,186.5,702.6641,182.5,698.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="180.5" x2="483.5" y1="698.6641" y2="698.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="285" x="192.5" y="693.8076">showMsg("importazione eseguita con successo")</text>
+        <polygon fill="#181818" points="62.5,725.0156,52.5,729.0156,62.5,733.0156,58.5,729.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="56.5" x2="174.5" y1="729.0156" y2="729.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="68.5" y="724.1592">viewMsg</text>
+        <!--SRC=[ZPF1JiCm38RlVGfhftBW1NP0Wh5AI8m3qtRFKgz4f0bAqWruUkoatQfkBJkqKch_l-slpiQZW_i7M0bbjWgFS_2eKOQN-ikwK2YD-LtM1Rl4XJN1MQtHpK75HFuYP7XLFXJErb6tfvSHDIRzMSCkZsNfqFidQp_Nw0vAOkSqa5uciZnrj_pczxJ-IYORSDP9w52KxQIPq246uSq6s0gjoWpwsTSGD8OTn4vZwm9mEN4Fy8SzBfrR-IgVnLB66j1OLMf7fradxu1lFDSuq2c9CjGUKskniM5_qtYmV1P1G2xyZv5SQWHGzATC6egAfmEoDE_xi44lS_JNj0RAcdVqZGuPwPXqkpQT1yMX43GCGnzjROY_NTMpxbRuD86Ay6DxAfB_Xpr0f7-bxtKZ9ItgLEFRXN3b7AGr1pnTcSAwMeGeY_5HXWv3utWk5YVyKyLw5sTmILEFlVZajTuhLzz4DI9DCl5BH13GOzKesZQQ67pYOoSfjuXDcT7p1m00]-->
     </g>
 </svg>
