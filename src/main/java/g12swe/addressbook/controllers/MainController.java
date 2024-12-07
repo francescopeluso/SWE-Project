@@ -1,7 +1,12 @@
 package g12swe.addressbook.controllers;
 
+import ezvcard.VCard;
+import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
+import g12swe.addressbook.models.contacts.EmailAddress;
+import g12swe.addressbook.models.contacts.EntryCategory;
+import g12swe.addressbook.models.contacts.PhoneNumber;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,7 +22,12 @@ import javafx.application.Platform;
 import javafx.scene.control.Alert;
 
 import java.awt.Desktop;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URI;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 
 /**
@@ -71,10 +81,21 @@ public class MainController implements Initializable {
         ab.addContact(new Contact("Gerardo", "Selce"));
         ab.addContact(new Contact("Sharon", "Schiavano"));
         ab.addContact(new Contact("Valerio", "Volzone"));
+        
         // --- FINO A QUI.
         
         observableContacstList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContacstList);
+        
+        /* TEST ONLY - DELETE LATER*/
+        for (Contact c : ab.getContactList()) {
+            try {
+                c.addEmailAddress(c.getSurname() + c.getName() + "@g12swe.it", EntryCategory.WORK);
+            } catch (InvalidEmailAddressException ex) {
+                ex.printStackTrace();
+            }
+        }
+        /**/
 
         contactListView.setCellFactory(param -> new ListCell<>() {
             @Override
@@ -87,8 +108,58 @@ public class MainController implements Initializable {
                 }
             }
         });
+        
+        /* TEST ONLY - DELETE LATER */
+        
+        try {
+            // Definisci il percorso del file
+            Path filePath = Files.createTempFile("contacts_test", ".vcf");
+
+            // Esporta la vCard
+            try (FileOutputStream outputStream = new FileOutputStream(filePath.toFile())) {
+                exportContactAsVCard(ab, outputStream);
+            }
+
+            System.out.println("vCard esportata con successo in: " + filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        /**/
                 
     }
+    
+    /* TEST ONLY - DELETE LATER*/
+    
+    public void exportContactAsVCard(AddressBook ab, OutputStream outputStream) {
+        for (Contact c : ab.getContactList()) {
+            
+            VCard vc = new VCard();
+            vc.setFormattedName(c.getName() + " " + c.getSurname());
+            
+            for (EmailAddress email : c.getEmailAddresses()) {
+                if (email != null) {
+                    vc.addEmail(email.getEmailAddress()); // Presumi che EmailAddress abbia un metodo getAddress()
+                }
+            }
+            
+            for (PhoneNumber phone : c.getPhoneNumbers()) {
+                if (phone != null) {
+                    vc.addTelephoneNumber(phone.getPhoneNumber()); // Presumi che PhoneNumber abbia un metodo getNumber()
+                }
+            }
+            
+            try {
+                ezvcard.Ezvcard.write(vc).go(outputStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            
+        }
+    }
+    
+    /**/
 
     @FXML
     private void exitProgram(ActionEvent event) {
