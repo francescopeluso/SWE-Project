@@ -20,7 +20,7 @@ public class ExtendedContact extends Contact{
     /**
      * @brief Constructor of the class.
      * 
-     * This constructor creates an ExtendedContact object and initialize the attributes
+     * This constructor creates an ExtendedContact object and initializes the attributes
      * with the values of the input parameters.
      * It also initializes the class collections and the uniqueId.
      * 

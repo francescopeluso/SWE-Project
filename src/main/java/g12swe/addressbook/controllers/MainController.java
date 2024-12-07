@@ -41,6 +41,13 @@ public class MainController implements Initializable {
      */
     private ObservableList<Contact> observableContacstList;
     
+    /**
+     * @brief Displays a warning alert for unimplemented features.
+     *
+     * This method creates and shows an alert dialog informing the user that
+     * the selected feature is not yet implemented.
+     */
+    
     private void workInProgressAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Attenzione");
@@ -50,17 +57,18 @@ public class MainController implements Initializable {
     }
     
     @FXML
-    private Button addContactBtn;
+    private Button addContactBtn; ///< Button for adding a new contact.
     @FXML
-    private ListView<Contact> contactListView;
+    private ListView<Contact> contactListView; ///< ListView displaying the contact list.
 
     /**
-     * @brief Overrides the initialize method
-     * 
-     * Loads up the view and all the bindings needed.
-     * 
-     * @param url URL object
-     * @param rb ResousceBundle object
+     * @brief Initializes the controller and its bindings.
+     *
+     * This method sets up the initial state of the controller, including loading
+     * the AddressBook, populating the UI, and configuring bindings.
+     *
+     * @param url URL for the root object.
+     * @param rb ResourceBundle for localization.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -73,9 +81,11 @@ public class MainController implements Initializable {
         ab.addContact(new Contact("Valerio", "Volzone"));
         // --- FINO A QUI.
         
+        // Create an ObservableList from AddressBook contacts.
         observableContacstList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContacstList);
 
+        // Customize ListView cells to display contact names and surnames.
         contactListView.setCellFactory(param -> new ListCell<>() {
             @Override
             protected void updateItem(Contact contact, boolean empty) {
@@ -89,11 +99,27 @@ public class MainController implements Initializable {
         });
                 
     }
+    
+     /**
+     * @brief Closes the application.
+     *
+     * This method exits the application when the exit button is clicked.
+     *
+     * @param event The action event triggered by the user.
+     */
 
     @FXML
     private void exitProgram(ActionEvent event) {
         Platform.exit();
     }
+    
+    /**
+     * @brief Opens the documentation in the web browser.
+     *
+     * Navigates to the documentation hosted on GitHub.
+     *
+     * @param event The action event triggered by the user.
+     */
 
     @FXML
     private void openDocumentation(ActionEvent event) {
@@ -109,6 +135,14 @@ public class MainController implements Initializable {
             e.printStackTrace();
         }
     }
+    
+      /**
+     * @brief Opens the GitHub repository in the web browser.
+     *
+     * Navigates to the repository's URL.
+     *
+     * @param event The action event triggered by the user.
+     */
 
     @FXML
     private void openRepository(ActionEvent event) {
@@ -125,25 +159,63 @@ public class MainController implements Initializable {
         }
     }
 
+    /**
+     * @brief Handles importing contacts from a vCard file.
+     *
+     * Currently not implemented. Displays a warning alert.
+     *
+     * @param event The action event triggered by the user.
+     */
     @FXML
     private void importVCard(ActionEvent event) {
         this.workInProgressAlert();
     }
+    
+    /**
+     * @brief Handles exporting contacts from a vCard file.
+     *
+     * Currently not implemented. Displays a warning alert.
+     *
+     * @param event The action event triggered by the user.
+     */
 
     @FXML
     private void exportVCard(ActionEvent event) {
         this.workInProgressAlert();
     }
-
+    /**
+     * @brief Handles inserting a new contact.
+     *
+     * Currently not implemented. Displays a warning alert.
+     *
+     * @param event The action event triggered by the user.
+     */
     @FXML
     private void insertContact(ActionEvent event) {
         this.workInProgressAlert();
     }
+    
+    /**
+     * @brief Handles deleting a contact.
+     *
+     * Currently not implemented. Displays a warning alert.
+     *
+     * @param event The action event triggered by the user.
+     */
 
     @FXML
     private void deleteContact(ActionEvent event) {
         this.workInProgressAlert();
     }
+    
+    
+    /**
+     * @brief Resets the AddressBook to its initial state.
+     *
+     * Currently not implemented. Displays a warning alert.
+     *
+     * @param event The action event triggered by the user.
+     */
 
     @FXML
     private void reinitializeAddressBook(ActionEvent event) {

@@ -14,38 +14,51 @@ import javafx.scene.layout.StackPane;
  * responsiveness as user resizes the application window.
  */
 public class RootController {
+    
+    /**
+     * @brief Main view container.
+     *
+     * The StackPane represents the primary view of the application, displaying the main interface.
+     */
 
     @FXML
     private StackPane mainView;
     @FXML
     private StackPane secondaryView;
+    
+    /**
+     * @brief Root container for managing the layout.
+     *
+     * This HBox serves as the root layout container, dynamically displaying either one or both views
+     * based on the application window's width.
+     */
     @FXML
     private HBox rootView;
     
     /**
-     * @brief Shows only MainView on the stage.
+     * @brief Displays only MainView on the stage.
      * 
      * This function is called by <code>App</code> to manage and keep the layout
-     * of the application as more responsive as possible (specifically, when the
+     * of the application as responsive as possible (specifically, when the
      * width of the stage is less than 400px wide).
      */
     public void showMainViewOnly() {
-        rootView.getChildren().clear(); // Rimuove tutte le view
-        rootView.getChildren().add(mainView); // Aggiunge solo MainView
-        HBox.setHgrow(mainView, Priority.ALWAYS); // Forza MainView a occupare tutto lo spazio
+        rootView.getChildren().clear(); ///< Removes all chiled nodes from the rootView
+        rootView.getChildren().add(mainView); ///< adds the mainView as the only child
+        HBox.setHgrow(mainView, Priority.ALWAYS);  ///< Forces the mainView to grow and occupy all available space.
     }
 
     /**
-     * @brief Shows both MainView and ContollerView on the stage
+     * @brief Displays both MainView and ContollerView on the stage
      * 
      * This function is called by <code>App</code> to manage and keep the layout
-     * of the application as more responsive as possible (specifically, when the
+     * of the application as responsive as possible (specifically, when the
      * width of the stage is more than 400px wide).
      */
     public void showBothViews() {
-        rootView.getChildren().clear(); // Ripulisce il contenitore
-        rootView.getChildren().addAll(mainView, secondaryView); // Aggiunge entrambe le view
-        HBox.setHgrow(mainView, Priority.ALWAYS); // Configura la crescita delle view
+        rootView.getChildren().clear(); ///< clears the container
+        rootView.getChildren().addAll(mainView, secondaryView); ///< adds both views to rootView
+        HBox.setHgrow(mainView, Priority.ALWAYS); ///< Configures each view's growth
         HBox.setHgrow(secondaryView, Priority.ALWAYS);
     }
     
