@@ -1,5 +1,6 @@
 package g12swe.addressbook.models.contacts;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
  * More detailed information about the file and its role is in the project.
  * 
  */
-public class ExtendedContact extends Contact{
+public class ExtendedContact extends Contact implements Serializable{
     
     private String address;             ///< The contact's address
     private LocalDateTime birthday;     ///< The contact's birthday

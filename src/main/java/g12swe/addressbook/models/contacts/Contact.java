@@ -2,6 +2,8 @@ package g12swe.addressbook.models.contacts;
 
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +16,7 @@ import java.util.List;
  * More detailed information about the file and its role is in the project.
  * 
  */
-public class Contact implements Comparable<Contact> {
+public class Contact implements Comparable<Contact>, Serializable{
     
     /**
      * Each contact can be associated to 0 to 3 emails. This is managed through
@@ -55,8 +57,8 @@ public class Contact implements Comparable<Contact> {
     public Contact(String name, String surname){
         this.name = name;
         this.surname = surname;
-        this.emailAddresses = Arrays.asList(new EmailAddress[3]);
-        this.phoneNumbers = Arrays.asList(new PhoneNumber[3]);
+        this.emailAddresses = new ArrayList<>();
+        this.phoneNumbers = new ArrayList<>();
         
         this.uniqueId = ++uniqueContacts;
     }

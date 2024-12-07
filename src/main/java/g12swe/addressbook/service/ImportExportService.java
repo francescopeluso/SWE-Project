@@ -1,5 +1,7 @@
 package g12swe.addressbook.service;
 
+import g12swe.addressbook.models.AddressBook;
+
 /**
  * @file ImportExportService.java
  * @brief Service for importing and exporting contacts in the address book application.
@@ -14,6 +16,20 @@ package g12swe.addressbook.service;
  * This service builds on the file operations provided by <code>FileService</code> 
  * and integrates with the application's controllers for seamless user interaction.
  */
-public class ImportExportService {
+public class ImportExportService extends AddressBookService{
+
+    public ImportExportService(String fileName){
+        super(fileName);
+    }
+    
+    @Override
+    public void importFromFile() {
+        
+    }
+
+    @Override
+    public AddressBook exportToFile() {
+        
+    }
     
 }

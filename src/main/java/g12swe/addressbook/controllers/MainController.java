@@ -1,7 +1,14 @@
 package g12swe.addressbook.controllers;
 
+import ezvcard.Ezvcard;
+import ezvcard.VCard;
+import ezvcard.VCardVersion;
+import ezvcard.property.StructuredName;
+import g12swe.addressbook.exceptions.InvalidEmailAddressException;
+import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
+import g12swe.addressbook.models.contacts.EntryCategory;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -75,11 +82,37 @@ public class MainController implements Initializable {
         ab = new AddressBook();
         
         // RIMUOVI APPENA IL PRODOTTO È COMPLETO ---
+        Contact c1 = new Contact("francesco", "peluso");
+        try {
+            c1.addEmailAddress("fp@gmail.com", EntryCategory.WORK);
+            c1.addPhoneNumber("3281644453", EntryCategory.WORK);
+        } catch (InvalidEmailAddressException ex) {
+            
+        } catch (InvalidPhoneNumberException ex) {
+            
+        }
+        
         ab.addContact(new Contact("Francesco", "Peluso"));
         ab.addContact(new Contact("Gerardo", "Selce"));
         ab.addContact(new Contact("Sharon", "Schiavano"));
         ab.addContact(new Contact("Valerio", "Volzone"));
         // --- FINO A QUI.
+        
+        
+        // PROVA PER VCARD
+        /*VCard vcard = new VCard();
+        
+        StructuredName n = new StructuredName();
+        n.setFamily(c1.getSurname());
+        n.setGiven(c1.getName());
+        
+        vcard.setStructuredName(n);
+        vcard.addEmail(c1.getEmailAddresses().get(0).getEmailAddress());
+        vcard.addTelephoneNumber(c1.getPhoneNumbers().get(0).getPhoneNumber());
+        
+        String str = Ezvcard.write(vcard).version(VCardVersion.V4_0).go();
+        System.out.println(str);*/
+        // FINE PROVA PER VCARD
         
         // Create an ObservableList from AddressBook contacts.
         observableContacstList = FXCollections.observableArrayList(ab.getContactList());
