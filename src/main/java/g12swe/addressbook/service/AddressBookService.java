@@ -1,5 +1,7 @@
 package g12swe.addressbook.service;
 
+import g12swe.addressbook.models.AddressBook;
+
 /**
  * @file AddressBookService.java
  * @brief Abstract base class for services related to the address book.
@@ -12,4 +14,6 @@ package g12swe.addressbook.service;
  */
 public abstract class AddressBookService {
     
+    public abstract void saveToFile(String filename);
+    //public abstract AddressBook readFromFile(String filename);
 }

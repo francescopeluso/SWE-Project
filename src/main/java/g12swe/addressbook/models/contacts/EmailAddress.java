@@ -1,6 +1,7 @@
 package g12swe.addressbook.models.contacts;
 
 import g12swe.addressbook.models.contacts.validation.Validatable;
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
@@ -12,7 +13,7 @@ import java.util.regex.Pattern;
  * More detailed information about the file and its role is in the project.
  * 
  */
-public class EmailAddress implements Validatable{
+public class EmailAddress implements Validatable, Serializable {
     
     private String emailAddress; ///< The email address.
     private EntryCategory category;    ///< The category of the email address.

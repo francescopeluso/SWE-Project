@@ -19,22 +19,22 @@ import java.util.*;
  * This service operates independently but may be used by other services 
  * like <code>ImportExportService</code>.
  */
-public class FileService {
-    private final AddressBook lista;
+public class FileService extends AddressBookService {
+    private final AddressBook ab;
     
-    public FileService(AddressBook lista){
-        this.lista = lista;
+    public FileService(AddressBook ab){
+        this.ab = ab;
     }
     
     public void saveToFile(String filename){
            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
-            oos.writeObject(lista);
+            oos.writeObject(ab);
         } catch (IOException e) {
             return;
         }
     }
     
-     public static AddressBook getToFile(String filename) throws ClassNotFoundException{
+    public static AddressBook readFromFile(String filename) throws ClassNotFoundException{
            try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))) {
             return (AddressBook)oos.readObject();
         } catch (IOException e) {
