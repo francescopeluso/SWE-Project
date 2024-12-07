@@ -1,6 +1,7 @@
 package g12swe.addressbook.models;
 
 import g12swe.addressbook.models.contacts.Contact;
+import java.io.Serializable;
 
 import java.util.Collections;
 import java.util.Set;
@@ -14,7 +15,7 @@ import java.util.TreeSet;
  * More detailed information about the file and its role is in the project.
  * 
  */
-public class AddressBook {
+public class AddressBook implements Serializable {
     
     private final Set<Contact> contactList;     ///< The collection used is a set
     

@@ -1,4 +1,8 @@
 package g12swe.addressbook.service;
+import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
+import java.io.*;
+import java.util.*;
 
 /**
  * @file FileService.java
@@ -16,5 +20,25 @@ package g12swe.addressbook.service;
  * like <code>ImportExportService</code>.
  */
 public class FileService {
+    private final AddressBook lista;
     
+    public FileService(AddressBook lista){
+        this.lista = lista;
+    }
+    
+    public void saveToFile(String filename){
+           try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
+            oos.writeObject(lista);
+        } catch (IOException e) {
+            return;
+        }
+    }
+    
+     public static AddressBook getToFile(String filename) throws ClassNotFoundException{
+           try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))) {
+            return (AddressBook)oos.readObject();
+        } catch (IOException e) {
+            return null;
+        }
+    }
 }
