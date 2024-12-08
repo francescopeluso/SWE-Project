@@ -22,7 +22,7 @@
          <children>
             <HBox alignment="CENTER_LEFT">
                <children>
-                  <Label text="Nome Cognome" wrapText="true">
+                  <Label fx:id="fullNameLabel" text="Nome Cognome" wrapText="true">
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>
@@ -50,9 +50,11 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="+39 351 000 0000" />
-                                    <Button mnemonicParsing="false" text="+" />
-                                    <Button mnemonicParsing="false" text="-" />
+                                    <TextField editable="false" maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="+39 351 000 0000" styleClass="contactInput" />
+                                    <Button mnemonicParsing="false" text="-">
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin></Button>
                                  </children>
                               </HBox>
                            </children>
@@ -70,9 +72,11 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="user@domain.com" />
-                                    <Button mnemonicParsing="false" text="+" />
-                                    <Button mnemonicParsing="false" text="-" />
+                                    <TextField editable="false" maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="user@domain.com" styleClass="contactInput" />
+                                    <Button mnemonicParsing="false" text="-">
+                                       <HBox.margin>
+                                          <Insets left="2.0" />
+                                       </HBox.margin></Button>
                                  </children>
                               </HBox>
                            </children>
@@ -93,7 +97,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextArea maxWidth="168.0" prefHeight="200.0" prefWidth="168.0" promptText="Via Giovanni Paolo II, 132, 84084 Fisciano SA" wrapText="true" />
+                                    <TextArea editable="false" maxWidth="168.0" prefWidth="168.0" promptText="Via Giovanni Paolo II, 132, 84084 Fisciano SA" styleClass="contactInput" wrapText="true" />
                                  </children>
                               </HBox>
                            </children>
@@ -111,7 +115,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <DatePicker maxWidth="168.0" prefWidth="168.0" promptText="01/01/1970" />
+                                    <DatePicker editable="false" maxWidth="168.0" prefWidth="168.0" promptText="01/01/1970" />
                                  </children>
                               </HBox>
                            </children>
@@ -129,7 +133,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextArea maxWidth="168.0" prefHeight="200.0" prefWidth="168.0" promptText="Note sul contatto..." />
+                                    <TextArea editable="false" maxWidth="168.0" prefWidth="168.0" promptText="Note sul contatto..." styleClass="contactInput" />
                                  </children>
                               </HBox>
                            </children>
@@ -138,7 +142,7 @@
                   </HBox>
                   <HBox prefWidth="200.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="78.0" text="Email:">
+                        <Label prefHeight="17.0" prefWidth="78.0" text="Pronomi:">
                            <HBox.margin>
                               <Insets right="12.0" />
                            </HBox.margin>
@@ -147,7 +151,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="Pronomi preferiti..." />
+                                    <TextField editable="false" maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="Pronomi preferiti..." styleClass="contactInput" />
                                  </children>
                               </HBox>
                            </children>

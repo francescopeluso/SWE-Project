@@ -1,12 +1,10 @@
 package g12swe.addressbook.controllers;
 
-import ezvcard.VCard;
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
+import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
-import g12swe.addressbook.models.contacts.EmailAddress;
 import g12swe.addressbook.models.contacts.EntryCategory;
-import g12swe.addressbook.models.contacts.PhoneNumber;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,12 +20,9 @@ import javafx.application.Platform;
 import javafx.scene.control.Alert;
 
 import java.awt.Desktop;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 
@@ -39,7 +34,12 @@ import javafx.scene.input.MouseEvent;
  * and all the buttons and menus that implements part of the software features.
  */
 public class MainController implements Initializable {
-
+    
+    /**
+     * Reference to ContactController of this application.
+     */
+    private ContactController contactController;
+    
     /**
      * Reference to AddressBook which is initialized in <code>initialize()</code>
      */
@@ -52,6 +52,13 @@ public class MainController implements Initializable {
      */
     private ObservableList<Contact> observableContacstList;
     
+    @FXML
+    private TextField searchField;
+    
+    public void setContactController(ContactController contactController) {
+        this.contactController = contactController;
+    }
+    
     private void workInProgressAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Attenzione");
@@ -62,6 +69,7 @@ public class MainController implements Initializable {
     
     @FXML
     private Button addContactBtn;
+    
     @FXML
     private ListView<Contact> contactListView;
 
@@ -87,7 +95,15 @@ public class MainController implements Initializable {
         for (Contact c : ab.getContactList()) {
             try {
                 c.addEmailAddress(c.getSurname() + c.getName() + "@g12swe.it", EntryCategory.WORK);
+                c.addPhoneNumber("+39 351 123 4567", EntryCategory.WORK);
+                
+                if (!c.getName().equals("Valerio"))
+                    c.addPhoneNumber("+39 351 765 4321", EntryCategory.WORK);
+                if (c.getName().equals("Francesco"))
+                    c.addPhoneNumber("+39 392 865 0010", EntryCategory.WORK);
             } catch (InvalidEmailAddressException ex) {
+                ex.printStackTrace();
+            } catch (InvalidPhoneNumberException ex) {
                 ex.printStackTrace();
             }
         }
@@ -107,60 +123,11 @@ public class MainController implements Initializable {
                 }
             }
         });
+        contactListView.getSelectionModel().selectFirst();
         
-        
-        
-        /* TEST ONLY - DELETE LATER */
-        
-        try {
-            // Definisci il percorso del file
-            Path filePath = Files.createTempFile("contacts_test", ".vcf");
-
-            // Esporta la vCard
-            try (FileOutputStream outputStream = new FileOutputStream(filePath.toFile())) {
-                exportContactAsVCard(ab, outputStream);
-            }
-
-            System.out.println("vCard esportata con successo in: " + filePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
-        /**/
+        searchField.addEventFilter(KeyEvent.KEY_RELEASED, keyEvent -> filterContacts());
                 
     }
-    
-    /* TEST ONLY - DELETE LATER*/
-    
-    public void exportContactAsVCard(AddressBook ab, OutputStream outputStream) {
-        for (Contact c : ab.getContactList()) {
-            
-            VCard vc = new VCard();
-            vc.setFormattedName(c.getName() + " " + c.getSurname());
-            
-            for (EmailAddress email : c.getEmailAddresses()) {
-                if (email != null) {
-                    vc.addEmail(email.getEmailAddress()); // Presumi che EmailAddress abbia un metodo getAddress()
-                }
-            }
-            
-            for (PhoneNumber phone : c.getPhoneNumbers()) {
-                if (phone != null) {
-                    vc.addTelephoneNumber(phone.getPhoneNumber()); // Presumi che PhoneNumber abbia un metodo getNumber()
-                }
-            }
-            
-            try {
-                ezvcard.Ezvcard.write(vc).go(outputStream);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            
-        }
-    }
-    
-    /**/
 
     @FXML
     private void exitProgram(ActionEvent event) {
@@ -225,10 +192,23 @@ public class MainController implements Initializable {
     @FXML
     private void viewClickedElement(MouseEvent event) {
         contactListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                System.out.println(newValue);
+            if (contactController != null) {
+                contactController.loadContactDetails(newValue);
             }
         });
+    }
+    
+    private void filterContacts() {
+        String searchText = searchField.getText().toLowerCase();
+        
+        ObservableList<Contact> filteredList = FXCollections.observableArrayList();
+        for (Contact contact : ab.getContactList()) {
+            if ((contact.getName() + " " + contact.getSurname()).toLowerCase().contains(searchText)) {
+                filteredList.add(contact);
+            }
+        }
+        
+        contactListView.setItems(filteredList);
     }
     
 }

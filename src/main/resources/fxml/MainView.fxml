@@ -65,7 +65,7 @@
             </Button>
          </children>
       </HBox>
-      <TextField promptText="Cerca contatto..." VBox.vgrow="ALWAYS">
+      <TextField fx:id="searchField" promptText="Cerca contatto..." VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets left="12.0" right="12.0" />
          </VBox.margin>
