@@ -1,6 +1,14 @@
 package g12swe.addressbook.service;
 
 import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.HashSet;
+import java.util.Set;
+import javafx.collections.ObservableList;
 
 /**
  * @file FileService.java
@@ -19,19 +27,25 @@ import g12swe.addressbook.models.AddressBook;
  */
 public class FileService extends AddressBookService{
 
-    public FileService(String fileName){
-        super(fileName);
+    public FileService(String fileName, ObservableList<Contact> contacts){
+        super(fileName, contacts);
     }
-   
+    
     
     @Override
     public void importFromFile() {
-        
+        try(ObjectOutputStream ous = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(super.getFileName())))){
+            Set<Contact> contacts = new HashSet<>(super.getContacts());
+            ous.writeObject(contacts);
+        } catch (IOException ex) {
+            return;
+        }
     }
 
     @Override
     public AddressBook exportToFile() {
-        
+        return null;
     }
+
     
 }

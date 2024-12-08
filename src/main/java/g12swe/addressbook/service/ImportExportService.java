@@ -1,6 +1,8 @@
 package g12swe.addressbook.service;
 
 import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
+import javafx.collections.ObservableList;
 
 /**
  * @file ImportExportService.java
@@ -18,8 +20,8 @@ import g12swe.addressbook.models.AddressBook;
  */
 public class ImportExportService extends AddressBookService{
 
-    public ImportExportService(String fileName){
-        super(fileName);
+    public ImportExportService(String fileName, ObservableList<Contact> contacts){
+        super(fileName, contacts);
     }
     
     @Override
@@ -29,7 +31,7 @@ public class ImportExportService extends AddressBookService{
 
     @Override
     public AddressBook exportToFile() {
-        
+        return null;
     }
     
 }

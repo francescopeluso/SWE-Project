@@ -1,6 +1,8 @@
 package g12swe.addressbook.service;
 
 import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
+import javafx.collections.ObservableList;
 
 /**
  * @file AddressBookService.java
@@ -14,14 +16,20 @@ import g12swe.addressbook.models.AddressBook;
  */
 public abstract class AddressBookService {
     
+    private ObservableList<Contact> contacts;
     private final String fileName;
     
-    public AddressBookService(String fileName){
+    public AddressBookService(String fileName, ObservableList<Contact> contacts){
         this.fileName = fileName;
+        this.contacts = contacts;
     }
     
     public String getFileName(){
         return this.fileName;
+    }
+    
+    public ObservableList<Contact> getContacts(){
+        return this.contacts;
     }
     
     public abstract void importFromFile();
