@@ -28,6 +28,7 @@ import java.io.OutputStream;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import javafx.scene.input.MouseEvent;
 
 
 /**
@@ -82,11 +83,6 @@ public class MainController implements Initializable {
         ab.addContact(new Contact("Sharon", "Schiavano"));
         ab.addContact(new Contact("Valerio", "Volzone"));
         
-        // --- FINO A QUI.
-        
-        observableContacstList = FXCollections.observableArrayList(ab.getContactList());
-        contactListView.setItems(observableContacstList);
-        
         /* TEST ONLY - DELETE LATER*/
         for (Contact c : ab.getContactList()) {
             try {
@@ -95,7 +91,10 @@ public class MainController implements Initializable {
                 ex.printStackTrace();
             }
         }
-        /**/
+        // --- FINO A QUI.
+        
+        observableContacstList = FXCollections.observableArrayList(ab.getContactList());
+        contactListView.setItems(observableContacstList);
 
         contactListView.setCellFactory(param -> new ListCell<>() {
             @Override
@@ -108,6 +107,8 @@ public class MainController implements Initializable {
                 }
             }
         });
+        
+        
         
         /* TEST ONLY - DELETE LATER */
         
@@ -219,6 +220,15 @@ public class MainController implements Initializable {
     @FXML
     private void reinitializeAddressBook(ActionEvent event) {
         this.workInProgressAlert();
+    }
+
+    @FXML
+    private void viewClickedElement(MouseEvent event) {
+        contactListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                System.out.println(newValue);
+            }
+        });
     }
     
 }

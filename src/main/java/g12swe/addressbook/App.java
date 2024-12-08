@@ -8,6 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.IOException;
+
 
 /**
  * @file App.java
@@ -24,7 +27,9 @@ public class App extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RootView.fxml"));
         Parent root = loader.load();
-        
+
+        this.fileSetup();
+
         Scene scene = new Scene(root);
         
         stage.widthProperty().addListener((o, oldValue, newValue) -> {
@@ -60,6 +65,29 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+
+    private void fileSetup() {
+        String userDir = System.getProperty("user.home");
+        File baseDir = new File(userDir + File.separator + "G12-Rubrica");
+
+        if (!baseDir.exists()) {
+            if (!baseDir.mkdirs()) {
+                throw new RuntimeException("Impossibile creare la cartella di base: " + baseDir.getAbsolutePath());
+            }
+        }
+
+        File saveFile = new File(baseDir, "G12-Rubrica-savefile.bin");
+
+        if (!saveFile.exists()) {
+            try {
+                if (!saveFile.createNewFile()) {
+                    throw new RuntimeException("Impossibile creare il file di salvataggio: " + saveFile.getAbsolutePath());
+                }
+            } catch (IOException e) {
+                throw new RuntimeException("Errore nella creazione del file di salvataggio: " + saveFile.getAbsolutePath(), e);
+            }
+        }
     }
 
 }

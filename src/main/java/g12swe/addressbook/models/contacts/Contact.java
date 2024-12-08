@@ -3,7 +3,6 @@ package g12swe.addressbook.models.contacts;
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
