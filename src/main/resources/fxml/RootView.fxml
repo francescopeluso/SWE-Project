@@ -7,12 +7,12 @@
    <children>
       <StackPane fx:id="mainView" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <fx:include source="MainView.fxml" />
+            <fx:include source="MainView.fxml" fx:id="mainViewInclude"/>
          </children>
       </StackPane>
       <StackPane fx:id="secondaryView" alignment="TOP_LEFT">
          <children>
-            <fx:include source="ContactView.fxml" />
+            <fx:include source="ContactView.fxml" fx:id="contactViewInclude"/>
          </children>
       </StackPane>
    </children>

@@ -1,6 +1,12 @@
 package g12swe.addressbook.controllers;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
@@ -13,6 +19,7 @@ import javafx.scene.layout.StackPane;
  * and detailed contact views. This controller ensures smooth navigation and layout
  * responsiveness as user resizes the application window.
  */
+<<<<<<< HEAD
 public class RootController {
     
     /**
@@ -20,6 +27,9 @@ public class RootController {
      *
      * The StackPane represents the primary view of the application, displaying the main interface.
      */
+=======
+public class RootController implements Initializable {
+>>>>>>> draft-interfaccia
 
     @FXML
     private StackPane mainView;
@@ -34,6 +44,33 @@ public class RootController {
      */
     @FXML
     private HBox rootView;
+    
+    private MainController mainController;
+    private ContactController contactController;
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        try {
+            // carico MainController dall'FXML della root
+            FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("/fxml/MainView.fxml"));
+            Parent mainViewParent = mainLoader.load();
+            mainController = mainLoader.getController();
+            mainView.getChildren().setAll(mainViewParent);
+            
+            // carico ContactController dall'FXML della root
+            FXMLLoader contactLoader = new FXMLLoader(getClass().getResource("/fxml/ContactView.fxml"));
+            Parent contactViewParent = contactLoader.load();
+            contactController = contactLoader.getController();
+            secondaryView.getChildren().setAll(contactViewParent);
+            
+            // collego i controller tra di loro
+            mainController.setContactController(contactController);
+            contactController.setMainController(mainController);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
     
     /**
      * @brief Displays only MainView on the stage.
@@ -61,5 +98,5 @@ public class RootController {
         HBox.setHgrow(mainView, Priority.ALWAYS); ///< Configures each view's growth
         HBox.setHgrow(secondaryView, Priority.ALWAYS);
     }
-    
+
 }

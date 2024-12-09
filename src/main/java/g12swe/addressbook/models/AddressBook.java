@@ -5,6 +5,8 @@ import g12swe.addressbook.models.contacts.Contact;
 import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableSet;
 
 /**
  * @file AddressBook.java
@@ -16,7 +18,7 @@ import java.util.TreeSet;
  */
 public class AddressBook {
     
-    private final Set<Contact> contactList;     ///< The collection used is a set
+    private final ObservableSet<Contact> contactList;     ///< The collection used is a set
     
     /**
      * @brief Constructor of the class
@@ -26,7 +28,9 @@ public class AddressBook {
      * 
      */
     public AddressBook() {
-        this.contactList = new TreeSet<>();
+        TreeSet<Contact> orderedContacts = new TreeSet<>();
+        
+        this.contactList = FXCollections.observableSet(orderedContacts);
     }
     
     /**
@@ -60,8 +64,8 @@ public class AddressBook {
      * 
      * @return the contact list 
      */
-    public Set<Contact> getContactList() {
-        return Collections.unmodifiableSet(contactList);
+    public ObservableSet<Contact> getContactList() {
+        return this.contactList;
     }
     
 }
