@@ -13,14 +13,17 @@
 
 .contactInput {
     -fx-border-radius: 0;
+    -fx-border-color: gray;
+    -fx-border-width: 0 0 2px 0;
     -fx-background-radius: 0;
-    -fx-background-color: #a9a9a9 , white , white;
-    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-text-inner-color: black;
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0 0 0 0;
 }
 
 .contactInput:focused {
-    -fx-background-color: #a9a9a9 , white , white;
-    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-background-color: white;
+    -fx-background-insets: 0 0 0 0;
 }
 
 

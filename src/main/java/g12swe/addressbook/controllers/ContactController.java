@@ -25,6 +25,7 @@ public class ContactController {
      * Reference to MainController of this application.
      */
     private MainController mainController;
+    
     @FXML
     private Label fullNameLabel;
     @FXML
@@ -32,6 +33,10 @@ public class ContactController {
     @FXML
     private VBox emailAddressesList;
     
+    /**
+     * Associate this controller to the MainController of the application.
+     * @param mainController 
+     */
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
     }
@@ -75,9 +80,7 @@ public class ContactController {
         }
 
         fullNameLabel.setText(contact.getName() + " " + contact.getSurname());
-        
-        //contactEmailLabel.setText(contact.getEmailAddresses().isEmpty() ? "No email" : contact.getEmailAddresses().get(0).getEmailAddress());
-        //contactPhoneLabel.setText(contact.getPhoneNumbers().isEmpty() ? "No phone" : contact.getPhoneNumbers().get(0).getPhoneNumber());
+       
     }
     
 }
