@@ -45,6 +45,9 @@ public class FileService extends AddressBookService {
     public void exportToFile() throws FileNotFoundException, IOException{
         Set<Contact> tempContacts = new TreeSet<Contact>(super.getContacts());
         
+        System.out.println(super.getFileName());
+        System.out.println(super.getContacts());
+        
         try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(super.getFileName())))){
             oos.writeObject(tempContacts);
         } 
