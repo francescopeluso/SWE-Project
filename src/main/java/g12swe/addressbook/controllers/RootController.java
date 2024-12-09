@@ -19,17 +19,7 @@ import javafx.scene.layout.StackPane;
  * and detailed contact views. This controller ensures smooth navigation and layout
  * responsiveness as user resizes the application window.
  */
-<<<<<<< HEAD
-public class RootController {
-    
-    /**
-     * @brief Main view container.
-     *
-     * The StackPane represents the primary view of the application, displaying the main interface.
-     */
-=======
 public class RootController implements Initializable {
->>>>>>> draft-interfaccia
 
     @FXML
     private StackPane mainView;
