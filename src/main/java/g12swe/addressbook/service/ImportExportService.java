@@ -1,6 +1,10 @@
 package g12swe.addressbook.service;
 
 import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import javafx.collections.ObservableSet;
 
 /**
  * @file ImportExportService.java
@@ -18,9 +22,18 @@ import g12swe.addressbook.models.AddressBook;
  */
 public class ImportExportService extends AddressBookService{
 
+    public ImportExportService(String fileName, ObservableSet<Contact> contacts){
+        super(fileName, contacts);
+    }
+
     @Override
-    public void saveToFile(String filename) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public ObservableSet<Contact> importFromFile() throws FileNotFoundException, IOException {
+        return null;
+    }
+
+    @Override
+    public void exportToFile() throws FileNotFoundException, IOException {
+        
     }
 
 }

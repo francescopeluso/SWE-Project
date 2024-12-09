@@ -3,6 +3,8 @@ import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
 import java.io.*;
 import java.util.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableSet;
 
 /**
  * @file FileService.java
@@ -20,25 +22,31 @@ import java.util.*;
  * like <code>ImportExportService</code>.
  */
 public class FileService extends AddressBookService {
-    private final AddressBook ab;
     
-    public FileService(AddressBook ab){
-        this.ab = ab;
+    public FileService(String fileName, ObservableSet<Contact> contacts){
+        super(fileName, contacts);
     }
     
-    public void saveToFile(String filename){
-           try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
-            oos.writeObject(ab);
-        } catch (IOException e) {
-            return;
-        }
-    }
-    
-    public static AddressBook readFromFile(String filename) throws ClassNotFoundException{
-           try (ObjectInputStream oos = new ObjectInputStream(new FileInputStream(filename))) {
-            return (AddressBook)oos.readObject();
-        } catch (IOException e) {
+
+    @Override
+    public ObservableSet<Contact> importFromFile() throws FileNotFoundException, IOException{
+        Set<Contact> tempSet;
+        
+        try(ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(super.getFileName())))){
+            tempSet = (Set<Contact>) ois.readObject();
+        } catch (ClassNotFoundException ex) {
             return null;
         }
+        
+        return FXCollections.observableSet(tempSet);
+    }
+
+    @Override
+    public void exportToFile() throws FileNotFoundException, IOException{
+        Set<Contact> tempContacts = new TreeSet<Contact>(super.getContacts());
+        
+        try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(super.getFileName())))){
+            oos.writeObject(tempContacts);
+        } 
     }
 }

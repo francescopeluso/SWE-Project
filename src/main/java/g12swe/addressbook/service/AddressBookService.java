@@ -1,6 +1,10 @@
 package g12swe.addressbook.service;
 
 import g12swe.addressbook.models.AddressBook;
+import g12swe.addressbook.models.contacts.Contact;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import javafx.collections.ObservableSet;
 
 /**
  * @file AddressBookService.java
@@ -14,6 +18,22 @@ import g12swe.addressbook.models.AddressBook;
  */
 public abstract class AddressBookService {
     
-    public abstract void saveToFile(String filename);
-    //public abstract AddressBook readFromFile(String filename);
+    private final String fileName;
+    private ObservableSet<Contact> contacts;
+    
+    public AddressBookService(String fileName, ObservableSet<Contact> contacts){
+        this.fileName = fileName;
+        this.contacts = contacts;
+    }
+    
+    public String getFileName(){
+        return this.fileName;
+    }
+    
+    public ObservableSet<Contact> getContacts(){
+        return this.contacts;
+    }
+    
+    public abstract ObservableSet<Contact> importFromFile() throws FileNotFoundException, IOException;
+    public abstract void exportToFile() throws FileNotFoundException, IOException;
 }
