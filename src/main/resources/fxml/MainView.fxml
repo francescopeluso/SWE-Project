@@ -11,12 +11,13 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="256.0" prefHeight="400.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g12swe.addressbook.controllers.MainController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="256.0" prefHeight="400.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g12swe.addressbook.controllers.MainController">
    <children>
-      <MenuBar styleClass="menuBar">
+      <MenuBar styleClass="menuBar" VBox.vgrow="ALWAYS">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -42,16 +43,17 @@
           </Menu>
         </menus>
       </MenuBar>
-      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="16.0" prefWidth="200.0" spacing="127.0">
+      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="16.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
          </VBox.margin>
          <children>
-            <Label maxWidth="1.7976931348623157E308" text="Rubrica">
+            <Label minHeight="-Infinity" prefWidth="200.0" text="Rubrica">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
             <Button fx:id="addContactBtn" alignment="TOP_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#insertContact" stylesheets="@mainview.css" text="+" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -63,12 +65,12 @@
             </Button>
          </children>
       </HBox>
-      <TextField promptText="Cerca contatto...">
+      <TextField fx:id="searchField" promptText="Cerca contatto..." VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets left="12.0" right="12.0" />
          </VBox.margin>
       </TextField>
-      <ListView fx:id="contactListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="232.0" VBox.vgrow="ALWAYS">
+      <ListView fx:id="contactListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#viewClickedElement" prefWidth="232.0" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets bottom="12.0" left="12.0" right="12.0" top="4.0" />
          </VBox.margin>

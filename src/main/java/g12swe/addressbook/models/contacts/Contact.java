@@ -3,7 +3,7 @@ package g12swe.addressbook.models.contacts;
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import java.io.Serializable;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -56,9 +56,8 @@ public class Contact implements Comparable<Contact>, Serializable {
     public Contact(String name, String surname){
         this.name = name;
         this.surname = surname;
-        this.emailAddresses = Arrays.asList(new EmailAddress[3]);
-        this.phoneNumbers = Arrays.asList(new PhoneNumber[3]);
-        
+        this.emailAddresses = new ArrayList<>();
+        this.phoneNumbers = new ArrayList<>();        
         this.uniqueId = ++uniqueContacts;
     }
 

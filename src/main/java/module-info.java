@@ -7,4 +7,5 @@ module g12swe.addressbook {
 
     exports g12swe.addressbook;
     opens g12swe.addressbook.controllers to javafx.fxml;
+    requires com.googlecode.ezvcard;
 }
