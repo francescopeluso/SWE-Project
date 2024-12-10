@@ -10,7 +10,9 @@ Inheritance diagram for g12swe.\+addressbook.\+controllers.\+Main\+Controller\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9684c2c96fc55c52a21963a008bd6fed}{initialize}} (URL url, Resource\+Bundle rb)
-\begin{DoxyCompactList}\small\item\em Overrides the initialize method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes the controller and its bindings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_afa2a91d1bea43b80503effb5b249f726}{set\+Contact\+Controller}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller}{Contact\+Controller}} contact\+Controller)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -22,15 +24,26 @@ void g12swe.\+addressbook.\+controllers.\+Main\+Controller.\+initialize (\begin{
 
 
 
-Overrides the initialize method. 
+Initializes the controller and its bindings. 
 
-Loads up the view and all the bindings needed.
+This method sets up the initial state of the controller, including loading the Address\+Book, populating the UI, and configuring bindings.
 
 
 \begin{DoxyParams}{Parameters}
-{\em url} & URL object \\
+{\em url} & URL for the root object. \\
 \hline
-{\em rb} & Resousce\+Bundle object \\
+{\em rb} & Resource\+Bundle for localization. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_afa2a91d1bea43b80503effb5b249f726}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!setContactController@{setContactController}}
+\index{setContactController@{setContactController}!g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}}
+\doxysubsubsection{\texorpdfstring{setContactController()}{setContactController()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_afa2a91d1bea43b80503effb5b249f726} 
+void g12swe.\+addressbook.\+controllers.\+Main\+Controller.\+set\+Contact\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller}{Contact\+Controller}}}]{contact\+Controller}{}\end{DoxyParamCaption})}
+
+Associate this controller to the \doxylink{classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller}{Contact\+Controller} of the application. 
+\begin{DoxyParams}{Parameters}
+{\em contact\+Controller} & \\
 \hline
 \end{DoxyParams}
 
