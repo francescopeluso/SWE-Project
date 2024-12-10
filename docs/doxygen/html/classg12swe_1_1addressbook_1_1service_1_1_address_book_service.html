@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>G20 SWE Course - Address Book: g12swe.addressbook.service.AddressBookService Class Reference</title>
+<title>G12 Software Engineering final project - Address Book: g12swe.addressbook.service.AddressBookService Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">G20 SWE Course - Address Book
+   <div id="projectname">G12 Software Engineering final project - Address Book
    </div>
    <div id="projectbrief">A Java application which implements an address book to manage your contacts</div>
   </td>
@@ -89,9 +89,41 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classg12swe_1_1addressbook_1_1service_1_1_address_book_service-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">g12swe.addressbook.service.AddressBookService Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for g12swe.addressbook.service.AddressBookService:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classg12swe_1_1addressbook_1_1service_1_1_address_book_service.png" usemap="#g12swe.addressbook.service.AddressBookService_map" alt=""/>
+  <map id="g12swe.addressbook.service.AddressBookService_map" name="g12swe.addressbook.service.AddressBookService_map">
+<area href="classg12swe_1_1addressbook_1_1service_1_1_file_service.html" alt="g12swe.addressbook.service.FileService" shape="rect" coords="0,56,300,80"/>
+<area href="classg12swe_1_1addressbook_1_1service_1_1_import_export_service.html" alt="g12swe.addressbook.service.ImportExportService" shape="rect" coords="310,56,610,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae45c9745b65a41ac9e8beeebb71f177e" id="r_ae45c9745b65a41ac9e8beeebb71f177e"><td class="memItemLeft" align="right" valign="top"><a id="ae45c9745b65a41ac9e8beeebb71f177e" name="ae45c9745b65a41ac9e8beeebb71f177e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AddressBookService</b> (String fileName, ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html">Contact</a> &gt; contacts)</td></tr>
+<tr class="separator:ae45c9745b65a41ac9e8beeebb71f177e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1042f8a3c89cf8e2200583dbc2371eae" id="r_a1042f8a3c89cf8e2200583dbc2371eae"><td class="memItemLeft" align="right" valign="top"><a id="a1042f8a3c89cf8e2200583dbc2371eae" name="a1042f8a3c89cf8e2200583dbc2371eae"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getFileName</b> ()</td></tr>
+<tr class="separator:a1042f8a3c89cf8e2200583dbc2371eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88615ec9aa9b3b3d19620bcf608362a2" id="r_a88615ec9aa9b3b3d19620bcf608362a2"><td class="memItemLeft" align="right" valign="top"><a id="a88615ec9aa9b3b3d19620bcf608362a2" name="a88615ec9aa9b3b3d19620bcf608362a2"></a>
+ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html">Contact</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getContacts</b> ()</td></tr>
+<tr class="separator:a88615ec9aa9b3b3d19620bcf608362a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27864c5ab5e3ffb82ee483a6761ebef" id="r_ab27864c5ab5e3ffb82ee483a6761ebef"><td class="memItemLeft" align="right" valign="top"><a id="ab27864c5ab5e3ffb82ee483a6761ebef" name="ab27864c5ab5e3ffb82ee483a6761ebef"></a>
+abstract ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html">Contact</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>importFromFile</b> ()  throws FileNotFoundException, IOException</td></tr>
+<tr class="separator:ab27864c5ab5e3ffb82ee483a6761ebef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f9820329a666fa6363b14a7c305f8c" id="r_a54f9820329a666fa6363b14a7c305f8c"><td class="memItemLeft" align="right" valign="top"><a id="a54f9820329a666fa6363b14a7c305f8c" name="a54f9820329a666fa6363b14a7c305f8c"></a>
+abstract void&#160;</td><td class="memItemRight" valign="bottom"><b>exportToFile</b> ()  throws FileNotFoundException, IOException</td></tr>
+<tr class="separator:a54f9820329a666fa6363b14a7c305f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/main/java/g12swe/addressbook/service/<a class="el" href="_address_book_service_8java.html">AddressBookService.java</a></li>
 </ul>

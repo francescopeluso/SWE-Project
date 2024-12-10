@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>G20 SWE Course - Address Book: g12swe.addressbook.controllers.MainController Class Reference</title>
+<title>G12 Software Engineering final project - Address Book: g12swe.addressbook.controllers.MainController Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">G20 SWE Course - Address Book
+   <div id="projectname">G12 Software Engineering final project - Address Book
    </div>
    <div id="projectbrief">A Java application which implements an address book to manage your contacts</div>
   </td>
@@ -105,8 +105,10 @@ Inheritance diagram for g12swe.addressbook.controllers.MainController:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9684c2c96fc55c52a21963a008bd6fed" id="r_a9684c2c96fc55c52a21963a008bd6fed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9684c2c96fc55c52a21963a008bd6fed">initialize</a> (URL url, ResourceBundle rb)</td></tr>
-<tr class="memdesc:a9684c2c96fc55c52a21963a008bd6fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides the initialize method.  <br /></td></tr>
+<tr class="memdesc:a9684c2c96fc55c52a21963a008bd6fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the controller and its bindings.  <br /></td></tr>
 <tr class="separator:a9684c2c96fc55c52a21963a008bd6fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2a91d1bea43b80503effb5b249f726" id="r_afa2a91d1bea43b80503effb5b249f726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa2a91d1bea43b80503effb5b249f726">setContactController</a> (<a class="el" href="classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller.html">ContactController</a> contactController)</td></tr>
+<tr class="separator:afa2a91d1bea43b80503effb5b249f726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9684c2c96fc55c52a21963a008bd6fed" name="a9684c2c96fc55c52a21963a008bd6fed"></a>
@@ -128,12 +130,35 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overrides the initialize method. </p>
-<p>Loads up the view and all the bindings needed.</p>
+<p>Initializes the controller and its bindings. </p>
+<p>This method sets up the initial state of the controller, including loading the AddressBook, populating the UI, and configuring bindings.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">url</td><td>URL object </td></tr>
-    <tr><td class="paramname">rb</td><td>ResousceBundle object </td></tr>
+    <tr><td class="paramname">url</td><td>URL for the root object. </td></tr>
+    <tr><td class="paramname">rb</td><td>ResourceBundle for localization. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa2a91d1bea43b80503effb5b249f726" name="afa2a91d1bea43b80503effb5b249f726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa2a91d1bea43b80503effb5b249f726">&#9670;&#160;</a></span>setContactController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g12swe.addressbook.controllers.MainController.setContactController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller.html">ContactController</a></td>          <td class="paramname"><span class="paramname"><em>contactController</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Associate this controller to the <a class="el" href="classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller.html">ContactController</a> of the application. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contactController</td><td></td></tr>
   </table>
   </dd>
 </dl>

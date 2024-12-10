@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>G20 SWE Course - Address Book: g12swe.addressbook.controllers.RootController Class Reference</title>
+<title>G12 Software Engineering final project - Address Book: g12swe.addressbook.controllers.RootController Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">G20 SWE Course - Address Book
+   <div id="projectname">G12 Software Engineering final project - Address Book
    </div>
    <div id="projectbrief">A Java application which implements an address book to manage your contacts</div>
   </td>
@@ -95,14 +95,23 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">g12swe.addressbook.controllers.RootController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for g12swe.addressbook.controllers.RootController:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classg12swe_1_1addressbook_1_1controllers_1_1_root_controller.png" alt=""/>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae4c9dc4d58c0f682eba7f7fc5e6543bc" id="r_ae4c9dc4d58c0f682eba7f7fc5e6543bc"><td class="memItemLeft" align="right" valign="top"><a id="ae4c9dc4d58c0f682eba7f7fc5e6543bc" name="ae4c9dc4d58c0f682eba7f7fc5e6543bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (URL url, ResourceBundle rb)</td></tr>
+<tr class="separator:ae4c9dc4d58c0f682eba7f7fc5e6543bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf54bd571a0f2d171d924d6061452b8d" id="r_aaf54bd571a0f2d171d924d6061452b8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf54bd571a0f2d171d924d6061452b8d">showMainViewOnly</a> ()</td></tr>
-<tr class="memdesc:aaf54bd571a0f2d171d924d6061452b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows only MainView on the stage.  <br /></td></tr>
+<tr class="memdesc:aaf54bd571a0f2d171d924d6061452b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays only MainView on the stage.  <br /></td></tr>
 <tr class="separator:aaf54bd571a0f2d171d924d6061452b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74c68fa550df4208e1b3714190694c7" id="r_ad74c68fa550df4208e1b3714190694c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad74c68fa550df4208e1b3714190694c7">showBothViews</a> ()</td></tr>
-<tr class="memdesc:ad74c68fa550df4208e1b3714190694c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows both MainView and ContollerView on the stage.  <br /></td></tr>
+<tr class="memdesc:ad74c68fa550df4208e1b3714190694c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays both MainView and ContollerView on the stage.  <br /></td></tr>
 <tr class="separator:ad74c68fa550df4208e1b3714190694c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -121,8 +130,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shows both MainView and ContollerView on the stage. </p>
-<p>This function is called by <code><a class="el" href="classg12swe_1_1addressbook_1_1_app.html">App</a></code> to manage and keep the layout of the application as more responsive as possible (specifically, when the width of the stage is more than 400px wide). </p>
+<p>Displays both MainView and ContollerView on the stage. </p>
+<p>This function is called by <code><a class="el" href="classg12swe_1_1addressbook_1_1_app.html">App</a></code> to manage and keep the layout of the application as responsive as possible (specifically, when the width of the stage is more than 400px wide). </p>
+<p>&lt; clears the container</p>
+<p>&lt; adds both views to rootView</p>
+<p>&lt; Configures each view's growth</p>
 
 </div>
 </div>
@@ -141,8 +153,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shows only MainView on the stage. </p>
-<p>This function is called by <code><a class="el" href="classg12swe_1_1addressbook_1_1_app.html">App</a></code> to manage and keep the layout of the application as more responsive as possible (specifically, when the width of the stage is less than 400px wide). </p>
+<p>Displays only MainView on the stage. </p>
+<p>This function is called by <code><a class="el" href="classg12swe_1_1addressbook_1_1_app.html">App</a></code> to manage and keep the layout of the application as responsive as possible (specifically, when the width of the stage is less than 400px wide). </p>
+<p>&lt; Removes all chiled nodes from the rootView</p>
+<p>&lt; adds the mainView as the only child</p>
+<p>&lt; Forces the mainView to grow and occupy all available space.</p>
 
 </div>
 </div>
