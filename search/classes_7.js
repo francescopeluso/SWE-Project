@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['phonenumber_83',['PhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html',1,'g12swe::addressbook::models::contacts']]]
+  ['rootcontroller_123',['RootController',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html',1,'g12swe::addressbook::controllers']]]
 ];

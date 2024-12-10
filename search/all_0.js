@@ -7,6 +7,7 @@ var searchData=
   ['addressbook_2ejava_4',['AddressBook.java',['../AddressBook_8java.html',1,'']]],
   ['addressbookservice_5',['AddressBookService',['../classg12swe_1_1addressbook_1_1service_1_1AddressBookService.html',1,'g12swe::addressbook::service']]],
   ['addressbookservice_2ejava_6',['AddressBookService.java',['../AddressBookService_8java.html',1,'']]],
-  ['app_7',['App',['../classg12swe_1_1addressbook_1_1App.html',1,'g12swe::addressbook']]],
-  ['app_2ejava_8',['App.java',['../App_8java.html',1,'']]]
+  ['addressbooktest_7',['AddressBookTest',['../classg12swe_1_1addressbook_1_1models_1_1AddressBookTest.html',1,'g12swe::addressbook::models']]],
+  ['app_8',['App',['../classg12swe_1_1addressbook_1_1App.html',1,'g12swe::addressbook']]],
+  ['app_2ejava_9',['App.java',['../App_8java.html',1,'']]]
 ];
