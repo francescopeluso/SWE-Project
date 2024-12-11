@@ -93,11 +93,23 @@ public class MainController implements Initializable {
         
         //try {
             // RIMUOVI APPENA IL PRODOTTO È COMPLETO ---
+            Contact cg = new Contact("Gerardo", "Selce");
+        try {
+            cg.addEmailAddress("gerardoselce28@gmail.com", EntryCategory.WORK);
+            cg.addPhoneNumber("3281644453", EntryCategory.WORK);
+        } catch (InvalidEmailAddressException ex) {
+            ex.printStackTrace();
+        } catch (InvalidPhoneNumberException ex) {
+            ex.printStackTrace();
+        }
             ab.addContact(new Contact("Francesco", "Peluso"));
-            ab.addContact(new Contact("Gerardo", "Selce"));
+            ab.addContact(cg);
             ab.addContact(new Contact("Sharon", "Schiavano"));
             ab.addContact(new Contact("Valerio", "Volzone"));
             
+            ImportExportService stampaservice = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\filevcard2.vcf", ab.getContactList());
+        try {
+            stampaservice.exportSingleContact(cg);
             /*try {
             fileService.exportToFile();
             } catch (Exception ex) {
@@ -105,23 +117,26 @@ public class MainController implements Initializable {
             }*/
             
             //ab.initialize(fileService.importFromFile());
-        //} catch (IOException ex) {}
-        
-        /* TEST ONLY - DELETE LATER
-        for (Contact c : ab.getContactList()) {
+            //} catch (IOException ex) {}
+            
+            /* TEST ONLY - DELETE LATER
+            for (Contact c : ab.getContactList()) {
             try {
-                c.addEmailAddress(c.getSurname() + c.getName() + "@g12swe.it", EntryCategory.WORK);
-                c.addPhoneNumber("+39 351 123 4567", EntryCategory.WORK);
-
-                if (!c.getName().equals("Valerio"))
-                    c.addPhoneNumber("+39 351 765 4321", EntryCategory.WORK);
-                if (c.getName().equals("Francesco"))
-                    c.addPhoneNumber("+39 392 865 0010", EntryCategory.WORK);
+            c.addEmailAddress(c.getSurname() + c.getName() + "@g12swe.it", EntryCategory.WORK);
+            c.addPhoneNumber("+39 351 123 4567", EntryCategory.WORK);
+            
+            if (!c.getName().equals("Valerio"))
+            c.addPhoneNumber("+39 351 765 4321", EntryCategory.WORK);
+            if (c.getName().equals("Francesco"))
+            c.addPhoneNumber("+39 392 865 0010", EntryCategory.WORK);
             } catch (InvalidEmailAddressException | InvalidPhoneNumberException ex) {
-                ex.printStackTrace();
+            ex.printStackTrace();
             }
+            }
+            // --- FINO A QUI.*/
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
-        // --- FINO A QUI.*/
         
         
 

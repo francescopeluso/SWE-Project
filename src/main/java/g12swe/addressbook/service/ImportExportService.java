@@ -9,7 +9,9 @@ import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
+import g12swe.addressbook.models.contacts.EmailAddress;
 import g12swe.addressbook.models.contacts.EntryCategory;
+import g12swe.addressbook.models.contacts.PhoneNumber;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -92,21 +94,18 @@ public class ImportExportService extends AddressBookService {
         name.setGiven(c.getName());
         name.setFamily(c.getSurname());
         
-        Email email1 = new Email(c.getEmailAddresses().get(0).getEmailAddress());
-        Email email2 = new Email(c.getEmailAddresses().get(1).getEmailAddress());
-        Email email3 = new Email(c.getEmailAddresses().get(2).getEmailAddress());
+        List<EmailAddress> emails = c.getEmailAddresses();
+        List<PhoneNumber> numbers = c.getPhoneNumbers();
         
-        Telephone phoneNumber1 = new Telephone(c.getPhoneNumbers().get(0).getPhoneNumber());
-        Telephone phoneNumber2 = new Telephone(c.getPhoneNumbers().get(1).getPhoneNumber());
-        Telephone phoneNumber3 = new Telephone(c.getPhoneNumbers().get(2).getPhoneNumber());
+        for(EmailAddress ea : emails){
+            vcard.addEmail(new Email(ea.getEmailAddress()));
+        }
+        
+        for(PhoneNumber pn : numbers){
+            vcard.addTelephoneNumber(new Telephone(pn.getPhoneNumber()));
+        }
         
         vcard.setStructuredName(name);
-        vcard.addEmail(email1);
-        vcard.addEmail(email2);
-        vcard.addEmail(email3);
-        vcard.addTelephoneNumber(phoneNumber1);
-        vcard.addTelephoneNumber(phoneNumber2);
-        vcard.addTelephoneNumber(phoneNumber3);
         
         OutputStream os = new FileOutputStream(super.getFileName());
         Ezvcard.write(vcard).go(os);
