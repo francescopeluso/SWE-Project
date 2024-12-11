@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🚀_20software_20engineering_20course_20project_20_2d_20group_2012_105',['🚀 Software Engineering course project - Group 12',['../md_README.html',1,'']]]
+  ['updatecontact_106',['updateContact',['../classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#ad6db17f2e2140d95e6893cb275b89771',1,'g12swe::addressbook::models::AddressBook']]]
 ];

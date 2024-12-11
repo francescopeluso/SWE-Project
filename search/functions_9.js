@@ -1,16 +1,6 @@
 var searchData=
 [
-  ['setaddress_174',['setAddress',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1ExtendedContact.html#a58e928bbf029b4d81b58b1359ad4f7cf',1,'g12swe::addressbook::models::contacts::ExtendedContact']]],
-  ['setbirthday_175',['setBirthday',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1ExtendedContact.html#a3e34ab7babc90f9994e61e21e361f452',1,'g12swe::addressbook::models::contacts::ExtendedContact']]],
-  ['setcategory_176',['setCategory',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1EmailAddress.html#ae186434f482f56983afe19dd5b25f62c',1,'g12swe.addressbook.models.contacts.EmailAddress.setCategory()'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#a34bd88711b95b7323ca38466e84da794',1,'g12swe.addressbook.models.contacts.PhoneNumber.setCategory()']]],
-  ['setcontactcontroller_177',['setContactController',['../classg12swe_1_1addressbook_1_1controllers_1_1MainController.html#afa2a91d1bea43b80503effb5b249f726',1,'g12swe::addressbook::controllers::MainController']]],
-  ['setemailaddress_178',['setEmailAddress',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1EmailAddress.html#a06cf1c5525c327ccae6252d1b532343a',1,'g12swe::addressbook::models::contacts::EmailAddress']]],
-  ['setmaincontroller_179',['setMainController',['../classg12swe_1_1addressbook_1_1controllers_1_1ContactController.html#ac766fb6052aa7e022114c6b7945898c8',1,'g12swe::addressbook::controllers::ContactController']]],
-  ['setname_180',['setName',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a3e09e2b923a89e6551099707019b44cb',1,'g12swe::addressbook::models::contacts::Contact']]],
-  ['setnotes_181',['setNotes',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1ExtendedContact.html#af0c7b2ba2f02e6b4580c09cc2d8edc7a',1,'g12swe::addressbook::models::contacts::ExtendedContact']]],
-  ['setphonenumber_182',['setPhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#a24d752c6788498ad79aed537319692e3',1,'g12swe::addressbook::models::contacts::PhoneNumber']]],
-  ['setpronouns_183',['setPronouns',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1ExtendedContact.html#a987eed516e2924ff23a9b6c626e70c02',1,'g12swe::addressbook::models::contacts::ExtendedContact']]],
-  ['setsurname_184',['setSurname',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a16b52dfa1595a6940ec92672f9729c4f',1,'g12swe::addressbook::models::contacts::Contact']]],
-  ['showbothviews_185',['showBothViews',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html#ad74c68fa550df4208e1b3714190694c7',1,'g12swe::addressbook::controllers::RootController']]],
-  ['showmainviewonly_186',['showMainViewOnly',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html#aaf54bd571a0f2d171d924d6061452b8d',1,'g12swe::addressbook::controllers::RootController']]]
+  ['removecontact_179',['removeContact',['../classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#a59198013c7d1063a8b5a63b46fcc0bd6',1,'g12swe::addressbook::models::AddressBook']]],
+  ['removeemailaddress_180',['removeEmailAddress',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a16001912a7ba596d4af2b8ab159b3ab4',1,'g12swe::addressbook::models::contacts::Contact']]],
+  ['removephonenumber_181',['removePhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a6d3041d1ba890cd4304c8314f419468e',1,'g12swe::addressbook::models::contacts::Contact']]]
 ];

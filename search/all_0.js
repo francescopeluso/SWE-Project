@@ -9,5 +9,6 @@ var searchData=
   ['addressbookservice_2ejava_6',['AddressBookService.java',['../AddressBookService_8java.html',1,'']]],
   ['addressbooktest_7',['AddressBookTest',['../classg12swe_1_1addressbook_1_1models_1_1AddressBookTest.html',1,'g12swe::addressbook::models']]],
   ['app_8',['App',['../classg12swe_1_1addressbook_1_1App.html',1,'g12swe::addressbook']]],
-  ['app_2ejava_9',['App.java',['../App_8java.html',1,'']]]
+  ['app_2ejava_9',['App.java',['../App_8java.html',1,'']]],
+  ['appdirorfilesexception_10',['AppDirOrFilesException',['../classg12swe_1_1addressbook_1_1exceptions_1_1AppDirOrFilesException.html#a0dea76acd23afc3e72f97e68b50f253e',1,'g12swe.addressbook.exceptions.AppDirOrFilesException.AppDirOrFilesException()'],['../classg12swe_1_1addressbook_1_1exceptions_1_1AppDirOrFilesException.html#a2281b3e79be9846a71683e2c330f7e2d',1,'g12swe.addressbook.exceptions.AppDirOrFilesException.AppDirOrFilesException(String msg)'],['../classg12swe_1_1addressbook_1_1exceptions_1_1AppDirOrFilesException.html',1,'g12swe.addressbook.exceptions.AppDirOrFilesException']]]
 ];
