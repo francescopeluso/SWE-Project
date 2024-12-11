@@ -7,6 +7,7 @@ import g12swe.addressbook.models.contacts.Contact;
 import g12swe.addressbook.models.contacts.EntryCategory;
 import g12swe.addressbook.App;
 import g12swe.addressbook.service.FileService;
+import g12swe.addressbook.service.ImportExportService;
 
 
 import java.net.URL;
@@ -79,6 +80,15 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
         FileService fileService = new FileService("/Users/fp/G12-Rubrica/G12-Rubrica-savefile.bin", ab.getContactList());
+        ImportExportService importService = new ImportExportService("/Users/fp/G12-Rubrica/gerdo.vcf", ab.getContactList());
+        
+        try {
+            Contact c = importService.importSingleContact();
+        } catch (InvalidEmailAddressException ex) {
+            ex.printStackTrace();
+        } catch (InvalidPhoneNumberException ex) {
+            ex.printStackTrace();
+        }
         
         //try {
             // RIMUOVI APPENA IL PRODOTTO È COMPLETO ---
@@ -111,6 +121,8 @@ public class MainController implements Initializable {
             }
         }
         // --- FINO A QUI.*/
+        
+        
 
         observableContactsList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContactsList);

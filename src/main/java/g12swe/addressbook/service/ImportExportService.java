@@ -15,6 +15,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 import javafx.collections.ObservableSet;
 
 /**
@@ -47,28 +50,48 @@ public class ImportExportService extends AddressBookService {
         
     }
 
-    public Contact importSingleContact() throws InvalidEmailAddressException, InvalidPhoneNumberException{
-        VCard vcard = Ezvcard.parse(super.getFileName()).first();
+    public Contact importSingleContact() throws InvalidEmailAddressException, InvalidPhoneNumberException {
+        VCard vcard;
         
-        String name = vcard.getStructuredName().getGiven();
-        String surname = vcard.getStructuredName().getFamily();
-        String email1 = vcard.getEmails().get(0).getValue();
-        String email2 = vcard.getEmails().get(1).getValue();
-        String email3 = vcard.getEmails().get(2).getValue();
-        String phoneNumber1 = vcard.getTelephoneNumbers().get(0).getText();
-        String phoneNumber2 = vcard.getTelephoneNumbers().get(1).getText();
-        String phoneNumber3 = vcard.getTelephoneNumbers().get(2).getText();
+        try {
+            String fileContent = new String(Files.readAllBytes(Paths.get(super.getFileName())));
+            vcard = Ezvcard.parse(fileContent).first();
+            
+            
+            String name = vcard.getStructuredName().getGiven();
+            String surname = vcard.getStructuredName().getFamily();
+            
+            System.out.println(name + " " + surname);
+            
+            List<Email> emails = vcard.getEmails();
+            
+            System.out.println(emails);
+            
+            /*
+            String phoneNumber1 = vcard.getTelephoneNumbers().get(0).getText();
+            String phoneNumber2 = vcard.getTelephoneNumbers().get(1).getText();
+            String phoneNumber3 = vcard.getTelephoneNumbers().get(2).getText();
+            
+            return null;
+
+            Contact c = new Contact(name, surname);
+
+            c.addEmailAddress(email1, null);
+            c.addEmailAddress(email2, null);
+            c.addEmailAddress(email3, null);
+            c.addPhoneNumber(phoneNumber1, null);
+            c.addPhoneNumber(phoneNumber2, null);
+            c.addPhoneNumber(phoneNumber3, null);
+            
+            return c;*/
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }        
         
-        Contact c = new Contact(name, surname);
         
-        c.addEmailAddress(email1, null);
-        c.addEmailAddress(email2, null);
-        c.addEmailAddress(email3, null);
-        c.addPhoneNumber(phoneNumber1, null);
-        c.addPhoneNumber(phoneNumber2, null);
-        c.addPhoneNumber(phoneNumber3, null);
         
-        return c;
+        return null;
     }
     
     public void exportSingleContact(Contact c) throws FileNotFoundException, IOException{
