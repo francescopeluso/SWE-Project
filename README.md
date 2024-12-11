@@ -7,6 +7,7 @@
 
 ## 📄 Documentation
 - All the documentation will be available [here](https://github.com/francescopeluso/SWE-Project/tree/main/docs)
+- Doxygen auto-generated "design-by-contract" documentation is available [in this GitHub Pages deployment](https://francescopeluso.github.io/SWE-Project)
 
 ## 💾 Languages and frameworks
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
