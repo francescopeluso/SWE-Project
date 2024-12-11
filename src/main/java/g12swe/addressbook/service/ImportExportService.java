@@ -20,6 +20,9 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableSet;
 
 /**
@@ -44,7 +47,43 @@ public class ImportExportService extends AddressBookService {
 
     @Override
     public ObservableSet<Contact> importFromFile() throws FileNotFoundException, IOException {
-        return null;
+        Set<Contact> tempSet = new TreeSet<>();
+        List<VCard> vcards;
+        
+        try{
+            String fileContent = new String(Files.readAllBytes(Paths.get(super.getFileName())));
+            vcards = Ezvcard.parse(fileContent).all();
+            
+            for(VCard vcard : vcards){
+                String name = vcard.getStructuredName().getGiven();
+                String surname = vcard.getStructuredName().getFamily();
+
+                List<Email> emails = vcard.getEmails();
+                List<Telephone> phoneNumbers = vcard.getTelephoneNumbers();
+
+                Contact c = new Contact(name, surname);
+
+                for (Email e : emails) {
+                    c.addEmailAddress(e.getValue(), null);
+                }
+
+                for (Telephone t : phoneNumbers) {
+                    c.addPhoneNumber(t.getText(), null);
+                }
+                
+                tempSet.add(c);
+            }
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        } catch (InvalidEmailAddressException ex) {
+            ex.printStackTrace();
+        } catch (InvalidPhoneNumberException ex) {
+            ex.printStackTrace();
+        }
+        
+        return FXCollections.observableSet(tempSet);
     }
 
     @Override
