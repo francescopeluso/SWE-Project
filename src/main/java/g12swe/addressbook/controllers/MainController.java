@@ -78,14 +78,14 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
-        FileService fileService = new FileService("C:\\Users\\ACER\\G12-Rubrica\\G12-Rubrica-savefile.bin", ab.getContactList());
+        FileService fileService = new FileService("/Users/fp/G12-Rubrica/G12-Rubrica-savefile.bin", ab.getContactList());
         
-        try {
+        //try {
             // RIMUOVI APPENA IL PRODOTTO È COMPLETO ---
-            /*ab.addContact(new Contact("Francesco", "Peluso"));
+            ab.addContact(new Contact("Francesco", "Peluso"));
             ab.addContact(new Contact("Gerardo", "Selce"));
             ab.addContact(new Contact("Sharon", "Schiavano"));
-            ab.addContact(new Contact("Valerio", "Volzone"));*/
+            ab.addContact(new Contact("Valerio", "Volzone"));
             
             /*try {
             fileService.exportToFile();
@@ -93,12 +93,10 @@ public class MainController implements Initializable {
             ex.printStackTrace();
             }*/
             
-            ab.initialize(fileService.importFromFile());
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+            //ab.initialize(fileService.importFromFile());
+        //} catch (IOException ex) {}
         
-        /* TEST ONLY - DELETE LATER*/
+        /* TEST ONLY - DELETE LATER
         for (Contact c : ab.getContactList()) {
             try {
                 c.addEmailAddress(c.getSurname() + c.getName() + "@g12swe.it", EntryCategory.WORK);
@@ -112,7 +110,7 @@ public class MainController implements Initializable {
                 ex.printStackTrace();
             }
         }
-        // --- FINO A QUI.
+        // --- FINO A QUI.*/
 
         observableContactsList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContactsList);
@@ -124,6 +122,8 @@ public class MainController implements Initializable {
             if (change.wasRemoved()) {
                 observableContactsList.remove(change.getElementRemoved());
             }
+            
+            contactListView.setItems(observableContactsList);
         });
 
         // Customize ListView cells to display contact names and surnames.
@@ -161,6 +161,11 @@ public class MainController implements Initializable {
         this.contactController = contactController;
     }
     
+    public void updateListView() {
+        System.out.println(ab.getContactList());
+        contactListView.setItems(observableContactsList);
+    }
+    
     private void workInProgressAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Attenzione");
@@ -178,7 +183,9 @@ public class MainController implements Initializable {
      */
 
     @FXML
-    private void exitProgram(ActionEvent event) {
+    private void exitProgram(ActionEvent event) throws IOException {
+        FileService fileService = new FileService("/Users/fp/G12-Rubrica/G12-Rubrica-savefile.bin", ab.getContactList());
+        fileService.exportToFile();
         Platform.exit();
     }
     
@@ -223,9 +230,7 @@ public class MainController implements Initializable {
             } else {
                 System.err.println("Browsing not supported on this system.");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) {}
     }
 
     /**
@@ -281,7 +286,7 @@ public class MainController implements Initializable {
             System.out.println(ab.getContactList());
         }
         
-        filterContacts();
+        observableContactsList.setAll(ab.getContactList());
     }
     
     
@@ -297,15 +302,6 @@ public class MainController implements Initializable {
     private void reinitializeAddressBook(ActionEvent event) {
         this.workInProgressAlert();
     }
-
-    @FXML
-    private void viewClickedElement(MouseEvent event) {
-        contactListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (contactController != null) {
-                contactController.loadContactDetails(newValue);
-            }
-        });
-    }
     
     private void filterContacts() {
         String searchText = searchField.getText().toLowerCase();
@@ -318,6 +314,7 @@ public class MainController implements Initializable {
         }
         
         contactListView.setItems(filteredList);
+        contactListView.getSelectionModel().selectFirst();
     }
     
 }
