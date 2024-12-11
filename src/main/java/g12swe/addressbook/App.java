@@ -21,15 +21,15 @@ import java.io.IOException;
  * responsive as window gets resized by user. 
  */
 public class App extends Application {
-
+    
     @Override
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RootView.fxml"));
         Parent root = loader.load();
 
-        this.fileSetup();
-
+        fileSetup();
+        
         Scene scene = new Scene(root);
         
         stage.widthProperty().addListener((o, oldValue, newValue) -> {
@@ -88,6 +88,8 @@ public class App extends Application {
                 throw new RuntimeException("Errore nella creazione del file di salvataggio: " + saveFile.getAbsolutePath(), e);
             }
         }
+        
+        System.setProperty("g12.rubrica.savefile", saveFile.getAbsolutePath());
     }
 
 }

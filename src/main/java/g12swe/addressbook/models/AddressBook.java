@@ -19,7 +19,7 @@ import javafx.collections.ObservableSet;
  */
 public class AddressBook implements Serializable {
     
-    private final ObservableSet<Contact> contactList;     ///< The collection used is a set
+    private ObservableSet<Contact> contactList;     ///< The collection used is a set
     
     /**
      * @brief Constructor of the class
@@ -67,6 +67,10 @@ public class AddressBook implements Serializable {
      */
     public ObservableSet<Contact> getContactList() {
         return this.contactList;
+    }
+    
+    public void initialize(ObservableSet<Contact> contactList){
+        this.contactList = contactList;
     }
     
 }
