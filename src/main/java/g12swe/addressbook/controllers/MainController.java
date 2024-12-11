@@ -6,6 +6,7 @@ import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
 import g12swe.addressbook.models.contacts.EntryCategory;
 import g12swe.addressbook.App;
+import g12swe.addressbook.service.ContactFileService;
 import g12swe.addressbook.service.FileService;
 import g12swe.addressbook.service.ImportExportService;
 
@@ -26,6 +27,7 @@ import javafx.scene.control.Alert;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URI;
+import javafx.collections.ObservableSet;
 import javafx.collections.SetChangeListener;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -79,21 +81,34 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
-        FileService fileService = new FileService("C:\\Users\\ACER\\G12-Rubrica\\G12-Rubrica-savefile.bin", ab.getContactList());
-        ImportExportService importService = new ImportExportService("C:\\Users\\gerar\\G12-Rubrica\\filevcard.vcf", ab.getContactList());
+        FileService fileService = new FileService("C:\\Users\\gerar\\G12-Rubrica\\G12-Rubrica-savefile.bin", ab.getContactList());
+        //ImportExportService importService = new ImportExportService("C:\\Users\\gerar\\G12-Rubrica\\filevcard.vcf", ab.getContactList());
         
-        try {
-            ab.initialize(importService.importFromFile());
-        } catch (IOException ex) {
+            /*ab.addContact(new Contact("gerardo", "selce"));
+            ab.addContact(new Contact("valerio", "tre"));
+            
+            try {
+            fileService.exportToFile();
+            } catch (IOException ex) {
             ex.printStackTrace();
-        }
-        
-        /*ImportExportService importService2 = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\rubrica2.vcf", ab.getContactList());
-        try {
-            importService2.exportToFile();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }*/
+            }*/
+           
+        ContactFileService cfs = new ContactFileService(fileService, true);
+        cfs.setOnSucceeded(event -> {
+            
+            System.out.println("Contatti importati");
+            ObservableSet<Contact> importedContacts = cfs.getValue();
+            ab.getContactList().clear();
+            ab.getContactList().addAll(importedContacts);
+            observableContactsList.clear();
+            observableContactsList.addAll(importedContacts);
+        });
+
+        cfs.setOnFailed(event -> {
+            System.out.println("Errore nell'importazione");
+        });
+
+        cfs.start(); 
         
         observableContactsList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContactsList);

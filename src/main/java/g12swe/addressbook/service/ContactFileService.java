@@ -23,7 +23,8 @@ public class ContactFileService extends Service<ObservableSet<Contact>>{
             protected ObservableSet<Contact> call() throws Exception {
                 try{
                     if(isImport){
-                        return fileService.importFromFile();
+                        ObservableSet<Contact> c = fileService.importFromFile();
+                        return c;
                     }
                     else{
                         fileService.exportToFile();
