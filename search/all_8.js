@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['phonenumber_48',['PhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html',1,'g12swe.addressbook.models.contacts.PhoneNumber'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#adf1b3f4140d90c371c61b7339532ea25',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber()'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#a6d939441c7177087d2d82bf5a4883642',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber(String phoneNumber, EntryCategory category)']]],
-  ['phonenumber_2ejava_49',['PhoneNumber.java',['../PhoneNumber_8java.html',1,'']]],
-  ['phonenumbertest_50',['PhoneNumberTest',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumberTest.html',1,'g12swe::addressbook::models::contacts']]]
+  ['phonenumber_49',['PhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html',1,'g12swe.addressbook.models.contacts.PhoneNumber'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#adf1b3f4140d90c371c61b7339532ea25',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber()'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#a6d939441c7177087d2d82bf5a4883642',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber(String phoneNumber, EntryCategory category)']]],
+  ['phonenumber_2ejava_50',['PhoneNumber.java',['../PhoneNumber_8java.html',1,'']]],
+  ['phonenumbertest_51',['PhoneNumberTest',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumberTest.html',1,'g12swe::addressbook::models::contacts']]]
 ];
