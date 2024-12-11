@@ -79,11 +79,12 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
-        FileService fileService = new FileService("/Users/fp/G12-Rubrica/G12-Rubrica-savefile.bin", ab.getContactList());
-        ImportExportService importService = new ImportExportService("/Users/fp/G12-Rubrica/gerdo.vcf", ab.getContactList());
+        FileService fileService = new FileService("C:\\Users\\ACER\\G12-Rubrica\\G12-Rubrica-savefile.bin", ab.getContactList());
+        ImportExportService importService = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\filevcard.vcf", ab.getContactList());
         
         try {
             Contact c = importService.importSingleContact();
+            ab.addContact(c);
         } catch (InvalidEmailAddressException ex) {
             ex.printStackTrace();
         } catch (InvalidPhoneNumberException ex) {

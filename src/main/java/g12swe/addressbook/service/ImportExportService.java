@@ -61,29 +61,20 @@ public class ImportExportService extends AddressBookService {
             String name = vcard.getStructuredName().getGiven();
             String surname = vcard.getStructuredName().getFamily();
             
-            System.out.println(name + " " + surname);
-            
             List<Email> emails = vcard.getEmails();
+            List<Telephone> phoneNumbers = vcard.getTelephoneNumbers();
             
-            System.out.println(emails);
-            
-            /*
-            String phoneNumber1 = vcard.getTelephoneNumbers().get(0).getText();
-            String phoneNumber2 = vcard.getTelephoneNumbers().get(1).getText();
-            String phoneNumber3 = vcard.getTelephoneNumbers().get(2).getText();
-            
-            return null;
-
             Contact c = new Contact(name, surname);
-
-            c.addEmailAddress(email1, null);
-            c.addEmailAddress(email2, null);
-            c.addEmailAddress(email3, null);
-            c.addPhoneNumber(phoneNumber1, null);
-            c.addPhoneNumber(phoneNumber2, null);
-            c.addPhoneNumber(phoneNumber3, null);
             
-            return c;*/
+            for(Email e : emails){
+                c.addEmailAddress(e.getValue(), null);
+            }
+            
+            for(Telephone t : phoneNumbers){
+                c.addPhoneNumber(t.getText(), null);
+            }
+            
+            return c;
             
         } catch (IOException e) {
             e.printStackTrace();
