@@ -80,7 +80,7 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
         FileService fileService = new FileService("C:\\Users\\ACER\\G12-Rubrica\\G12-Rubrica-savefile.bin", ab.getContactList());
-        ImportExportService importService = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\rubrica.vcf", ab.getContactList());
+        ImportExportService importService = new ImportExportService("C:\\Users\\gerar\\G12-Rubrica\\filevcard.vcf", ab.getContactList());
         
         try {
             ab.initialize(importService.importFromFile());
@@ -88,12 +88,12 @@ public class MainController implements Initializable {
             ex.printStackTrace();
         }
         
-        ImportExportService importService2 = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\rubrica2.vcf", ab.getContactList());
+        /*ImportExportService importService2 = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\rubrica2.vcf", ab.getContactList());
         try {
             importService2.exportToFile();
         } catch (IOException ex) {
             ex.printStackTrace();
-        }
+        }*/
         
         observableContactsList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContactsList);
