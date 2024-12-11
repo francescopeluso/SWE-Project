@@ -189,11 +189,13 @@ public class ContactController {
         if (!isEditMode) {
             enableEditMode();
             editOrSaveButton.setText("Salva");
+            isEditMode = true;
         } else {
             try {
                 saveContactChanges();
                 disableEditMode();
                 editOrSaveButton.setText("Modifica");
+                isEditMode = false;
             } catch (MandatoryFieldsException ex) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Errore");
@@ -202,7 +204,6 @@ public class ContactController {
                 alert.showAndWait();
             }
         }
-        isEditMode = !isEditMode;
     }
     
     /**
