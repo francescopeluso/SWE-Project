@@ -97,10 +97,14 @@ public class MainController implements Initializable {
             
             System.out.println("Contatti importati");
             ObservableSet<Contact> importedContacts = cfs.getValue();
-            ab.getContactList().clear();
-            ab.getContactList().addAll(importedContacts);
-            observableContactsList.clear();
-            observableContactsList.addAll(importedContacts);
+            
+            if (importedContacts != null) {
+                ab.getContactList().clear();
+                observableContactsList.clear();
+                ab.getContactList().addAll(importedContacts);
+                observableContactsList.addAll(importedContacts);
+            }
+                
         });
 
         cfs.setOnFailed(event -> {

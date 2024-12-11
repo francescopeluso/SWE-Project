@@ -74,6 +74,7 @@ public class ContactController {
         HBox phoneBox = new HBox(5);
         TextField phoneField = new TextField(initialValue);
         phoneField.setPromptText("Numero di telefono");
+        phoneField.setEditable(isEditMode);
         Button removeButton = new Button("-");
         removeButton.getStyleClass().add("remove-btn");
         
@@ -109,6 +110,7 @@ public class ContactController {
         HBox emailBox = new HBox(5);
         TextField emailField = new TextField(initialValue);
         emailField.setPromptText("Indirizzo email");
+        emailField.setEditable(isEditMode);
         Button removeButton = new Button("-");
         removeButton.getStyleClass().add("remove-btn");
         
@@ -209,6 +211,14 @@ public class ContactController {
     private void enableEditMode() {
         firstNameField.setEditable(true);
         lastNameField.setEditable(true);
+
+        for (int i = 0; i < phoneNumbersList.getChildren().size(); i++) {
+            ((TextField)((HBox)phoneNumbersList.getChildren().get(i)).getChildren().get(0)).setEditable(true);
+        }
+
+        for (int i = 0; i < emailAddressesList.getChildren().size(); i++) {
+            ((TextField)((HBox)emailAddressesList.getChildren().get(i)).getChildren().get(0)).setEditable(true);
+        }
     }
     
     /**
@@ -217,6 +227,14 @@ public class ContactController {
     private void disableEditMode() {
         firstNameField.setEditable(false);
         lastNameField.setEditable(false);
+
+        for (int i = 0; i < phoneNumbersList.getChildren().size(); i++) {
+            ((TextField)((HBox)phoneNumbersList.getChildren().get(i)).getChildren().get(0)).setEditable(false);
+        }
+
+        for (int i = 0; i < emailAddressesList.getChildren().size(); i++) {
+            ((TextField)((HBox)emailAddressesList.getChildren().get(i)).getChildren().get(0)).setEditable(false);
+        }
     }
 
     /**

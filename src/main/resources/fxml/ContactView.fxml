@@ -20,8 +20,8 @@
          <children>
             <HBox alignment="CENTER_LEFT">
                <children>
-                  <TextField fx:id="firstNameField" maxWidth="180" promptText="Nome" styleClass="contactInput" HBox.hgrow="ALWAYS" />
-                  <TextField fx:id="lastNameField" maxWidth="180" promptText="Cognome" styleClass="contactInput" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="firstNameField" maxWidth="200" promptText="Nome" styleClass="contactInput" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="lastNameField" maxWidth="200" promptText="Cognome" styleClass="contactInput" HBox.hgrow="ALWAYS" />
                   <Region HBox.hgrow="ALWAYS" />
                   <Button fx:id="editOrSaveButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleEditOrSaveAction" styleClass="edit-save-btn" text="Modifica" />
                </children>
@@ -39,7 +39,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="+39 351 000 0000" styleClass="contactInput" />
+                                    <TextField maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="+39 351 000 0000" styleClass="contactInput" />
                                     <Button mnemonicParsing="false" styleClass="remove-btn" text="-">
                                        <HBox.margin>
                                           <Insets left="2.0" />
@@ -62,7 +62,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="user@domain.com" styleClass="contactInput" />
+                                    <TextField maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="user@domain.com" styleClass="contactInput" />
                                     <Button mnemonicParsing="false" styleClass="remove-btn" text="-">
                                        <HBox.margin>
                                           <Insets left="2.0" />
@@ -88,7 +88,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextArea maxWidth="168.0" prefWidth="168.0" promptText="Via Giovanni Paolo II, 132, 84084 Fisciano SA" styleClass="contactInput" wrapText="true" />
+                                    <TextArea maxWidth="200.0" prefWidth="200.0" promptText="Via Giovanni Paolo II, 132, 84084 Fisciano SA" styleClass="contactInput" wrapText="true" />
                                  </children>
                               </HBox>
                            </children>
@@ -106,7 +106,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <DatePicker maxWidth="168.0" prefWidth="168.0" promptText="01/01/1970" />
+                                    <DatePicker maxWidth="200.0" prefWidth="200.0" promptText="01/01/1970" />
                                  </children>
                               </HBox>
                            </children>
@@ -124,7 +124,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextArea maxWidth="168.0" prefWidth="168.0" promptText="Note sul contatto..." styleClass="contactInput" />
+                                    <TextArea maxWidth="200.0" prefWidth="200.0" promptText="Note sul contatto..." styleClass="contactInput" />
                                  </children>
                               </HBox>
                            </children>
@@ -142,7 +142,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="Pronomi preferiti..." styleClass="contactInput" />
+                                    <TextField maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Pronomi preferiti..." styleClass="contactInput" />
                                  </children>
                               </HBox>
                            </children>
