@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -88,7 +89,34 @@ public class ImportExportService extends AddressBookService {
 
     @Override
     public void exportToFile() throws FileNotFoundException, IOException {
+        List<VCard> vcards = new ArrayList<>();
+        Set<Contact> tempSet = new TreeSet<>(super.getContacts());
         
+        for(Contact c : tempSet){
+            VCard vcard = new VCard();
+
+            StructuredName name = new StructuredName();
+            name.setGiven(c.getName());
+            name.setFamily(c.getSurname());
+
+            List<EmailAddress> emails = c.getEmailAddresses();
+            List<PhoneNumber> numbers = c.getPhoneNumbers();
+
+            for (EmailAddress ea : emails) {
+                vcard.addEmail(new Email(ea.getEmailAddress()));
+            }
+
+            for (PhoneNumber pn : numbers) {
+                vcard.addTelephoneNumber(new Telephone(pn.getPhoneNumber()));
+            }
+
+            vcard.setStructuredName(name);
+            
+            vcards.add(vcard);
+        }
+        
+        OutputStream os = new FileOutputStream(super.getFileName());
+        Ezvcard.write(vcards).go(os);
     }
 
     public Contact importSingleContact() throws InvalidEmailAddressException, InvalidPhoneNumberException {

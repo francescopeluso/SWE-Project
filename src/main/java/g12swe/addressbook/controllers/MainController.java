@@ -88,8 +88,13 @@ public class MainController implements Initializable {
             ex.printStackTrace();
         }
         
+        ImportExportService importService2 = new ImportExportService("C:\\Users\\ACER\\Desktop\\provavcard\\rubrica2.vcf", ab.getContactList());
+        try {
+            importService2.exportToFile();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
         
-
         observableContactsList = FXCollections.observableArrayList(ab.getContactList());
         contactListView.setItems(observableContactsList);
 
