@@ -1,6 +1,7 @@
 package g12swe.addressbook;
 
 import g12swe.addressbook.controllers.RootController;
+import g12swe.addressbook.exceptions.AppDirOrFilesException;
 import javafx.fxml.FXMLLoader;
 
 import javafx.application.Application;
@@ -71,21 +72,20 @@ public class App extends Application {
         String userDir = System.getProperty("user.home");
         File baseDir = new File(userDir + File.separator + "G12-Rubrica");
 
-        if (!baseDir.exists()) {
-            if (!baseDir.mkdirs()) {
-                throw new RuntimeException("Impossibile creare la cartella di base: " + baseDir.getAbsolutePath());
-            }
+        if (!baseDir.exists() && !baseDir.mkdirs()) {
+            throw new AppDirOrFilesException("Impossibile creare la cartella di base: " + baseDir.getAbsolutePath());
         }
+        
 
         File saveFile = new File(baseDir, "G12-Rubrica-savefile.bin");
 
         if (!saveFile.exists()) {
             try {
                 if (!saveFile.createNewFile()) {
-                    throw new RuntimeException("Impossibile creare il file di salvataggio: " + saveFile.getAbsolutePath());
+                    throw new AppDirOrFilesException("Impossibile creare il file di salvataggio: " + saveFile.getAbsolutePath());
                 }
             } catch (IOException e) {
-                throw new RuntimeException("Errore nella creazione del file di salvataggio: " + saveFile.getAbsolutePath(), e);
+                throw new AppDirOrFilesException("Errore nella creazione del file di salvataggio: " + saveFile.getAbsolutePath());
             }
         }
         

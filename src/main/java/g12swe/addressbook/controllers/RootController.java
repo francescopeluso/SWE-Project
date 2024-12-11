@@ -56,6 +56,7 @@ public class RootController implements Initializable {
             // collego i controller tra di loro
             mainController.setContactController(contactController);
             contactController.setMainController(mainController);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }

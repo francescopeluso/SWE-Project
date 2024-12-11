@@ -7,12 +7,9 @@ import ezvcard.property.StructuredName;
 import ezvcard.property.Telephone;
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
-import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
 import g12swe.addressbook.models.contacts.EmailAddress;
-import g12swe.addressbook.models.contacts.EntryCategory;
 import g12swe.addressbook.models.contacts.PhoneNumber;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -76,12 +73,8 @@ public class ImportExportService extends AddressBookService {
             }
             
         }
-        catch(IOException e){
+        catch(IOException | InvalidEmailAddressException | InvalidPhoneNumberException e){
             e.printStackTrace();
-        } catch (InvalidEmailAddressException ex) {
-            ex.printStackTrace();
-        } catch (InvalidPhoneNumberException ex) {
-            ex.printStackTrace();
         }
         
         return FXCollections.observableSet(tempSet);

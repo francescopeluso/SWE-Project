@@ -2,21 +2,66 @@
     -fx-primary-color: #007acc;
     -fx-secondary-color: #4B6EAF;
     -fx-light-grey-color: #d1d1d1;
-
     -fx-focus-color: -fx-secondary-color;
+    -fx-text-fill: #2c3e50;
 }
 
 .roundBtn {
     -fx-background-radius: 100%;
-    -fx-background-color: #cccccc;
+    -fx-background-color: linear-gradient(to bottom right, #cccccc, #a8a8a8);
     -fx-border: 0px;
-    -fx-color: white;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.roundBtn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #d4d4d4, #b0b0b0);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.roundBtn:pressed {
+    -fx-background-color: linear-gradient(to bottom right, #b8b8b8, #949494);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
 }
 
 .primaryBtn {
-    -fx-background-color: #66ccff;
+    -fx-background-color: linear-gradient(to bottom right, #66ccff, #3399ff);
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #80d4ff, #4da6ff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+}
+
+.primaryBtn:pressed {
+    -fx-background-color: linear-gradient(to bottom right, #4db8ff, #1a8cff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);
 }
 
 .menuBar {
     -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+    -fx-padding: 5px;
+}
+
+.menuBar .menu:hover {
+    -fx-background-color: rgba(0,0,0,0.05);
+    -fx-background-radius: 5px;
+}
+
+.menuBar .menu-item:hover {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
 }

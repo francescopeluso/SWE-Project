@@ -1,4 +1,5 @@
 module g12swe.addressbook {
+    requires transitive javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
     

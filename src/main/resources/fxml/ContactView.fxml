@@ -23,7 +23,7 @@
                   <TextField fx:id="firstNameField" maxWidth="180" promptText="Nome" styleClass="contactInput" HBox.hgrow="ALWAYS" />
                   <TextField fx:id="lastNameField" maxWidth="180" promptText="Cognome" styleClass="contactInput" HBox.hgrow="ALWAYS" />
                   <Region HBox.hgrow="ALWAYS" />
-                  <Button fx:id="editOrSaveButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleEditOrSaveAction" text="Modifica" />
+                  <Button fx:id="editOrSaveButton" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleEditOrSaveAction" styleClass="edit-save-btn" text="Modifica" />
                </children>
             </HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0">
@@ -40,12 +40,7 @@
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
                                     <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="+39 351 000 0000" styleClass="contactInput" />
-                                    <Button mnemonicParsing="false" text="-">
-                                       <HBox.margin>
-                                          <Insets left="2.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="addPhoneButton" mnemonicParsing="false" text="+">
+                                    <Button mnemonicParsing="false" styleClass="remove-btn" text="-">
                                        <HBox.margin>
                                           <Insets left="2.0" />
                                        </HBox.margin>
@@ -68,12 +63,7 @@
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
                                     <TextField maxWidth="168.0" minWidth="168.0" prefWidth="168.0" promptText="user@domain.com" styleClass="contactInput" />
-                                    <Button mnemonicParsing="false" text="-">
-                                       <HBox.margin>
-                                          <Insets left="2.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="addEmailButton" mnemonicParsing="false" text="+">
+                                    <Button mnemonicParsing="false" styleClass="remove-btn" text="-">
                                        <HBox.margin>
                                           <Insets left="2.0" />
                                        </HBox.margin>

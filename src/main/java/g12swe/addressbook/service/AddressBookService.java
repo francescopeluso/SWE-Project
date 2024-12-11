@@ -1,6 +1,5 @@
 package g12swe.addressbook.service;
 
-import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
 import java.io.FileNotFoundException;
 import java.io.IOException;

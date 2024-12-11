@@ -2,9 +2,9 @@ package g12swe.addressbook.models.contacts;
 
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 
@@ -16,7 +16,7 @@ import java.util.List;
  * More detailed information about the file and its role is in the project.
  * 
  */
-public class Contact implements Comparable<Contact>, Comparator<Contact>, Serializable {
+public class Contact implements Comparable<Contact>, Serializable {
     
     /**
      * Each contact can be associated to 0 to 3 emails. This is managed through
@@ -212,9 +212,4 @@ public class Contact implements Comparable<Contact>, Comparator<Contact>, Serial
         return this.surname.compareToIgnoreCase(o.surname);
     }
 
-    @Override
-    public int compare(Contact o1, Contact o2) {
-        return o1.surname.compareToIgnoreCase(o2.surname);
-    }
-    
 }

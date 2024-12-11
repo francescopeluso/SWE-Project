@@ -1,7 +1,6 @@
 package g12swe.addressbook.models.contacts;
 
 import java.time.LocalDateTime;
-import g12swe.addressbook.models.contacts.Contact;
 
 /**
  * @file ExtendedContact.java

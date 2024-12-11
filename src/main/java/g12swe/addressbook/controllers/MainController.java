@@ -1,17 +1,16 @@
 package g12swe.addressbook.controllers;
 
-import g12swe.addressbook.exceptions.InvalidEmailAddressException;
-import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
-import g12swe.addressbook.models.contacts.EntryCategory;
-import g12swe.addressbook.App;
 import g12swe.addressbook.service.ContactFileService;
 import g12swe.addressbook.service.FileService;
 import g12swe.addressbook.service.ImportExportService;
 
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -31,7 +30,6 @@ import javafx.collections.ObservableSet;
 import javafx.collections.SetChangeListener;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 
 
 /**
@@ -81,17 +79,18 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ab = new AddressBook();
-        FileService fileService = new FileService("C:\\Users\\gerar\\G12-Rubrica\\G12-Rubrica-savefile.bin", ab.getContactList());
-        //ImportExportService importService = new ImportExportService("C:\\Users\\gerar\\G12-Rubrica\\filevcard.vcf", ab.getContactList());
+        observableContactsList = FXCollections.observableArrayList();
+
+        ImportExportService importService = new ImportExportService("/Users/fp/G12-Rubrica/rubrica.vcf", ab.getContactList());
+        FileService fileService = new FileService("/Users/fp/G12-RubricaG12-Rubrica-savefile.bin", ab.getContactList());
         
-            /*ab.addContact(new Contact("gerardo", "selce"));
-            ab.addContact(new Contact("valerio", "tre"));
-            
-            try {
-            fileService.exportToFile();
-            } catch (IOException ex) {
+        try {
+            ab.initialize(importService.importFromFile());
+            observableContactsList.setAll(ab.getContactList());
+            contactListView.setItems(observableContactsList);
+        } catch (IOException ex) {
             ex.printStackTrace();
-            }*/
+        }
            
         ContactFileService cfs = new ContactFileService(fileService, true);
         cfs.setOnSucceeded(event -> {
@@ -110,8 +109,6 @@ public class MainController implements Initializable {
 
         cfs.start(); 
         
-        observableContactsList = FXCollections.observableArrayList(ab.getContactList());
-        contactListView.setItems(observableContactsList);
 
         ab.getContactList().addListener((SetChangeListener.Change<? extends Contact> change) -> {
             if (change.wasAdded()) {
@@ -124,7 +121,7 @@ public class MainController implements Initializable {
             contactListView.setItems(observableContactsList);
         });
 
-        // Customize ListView cells to display contact names and surnames.
+        // Customize ListView cells to display contact names and surnames
         contactListView.setCellFactory(param -> new ListCell<>() {
             @Override
             protected void updateItem(Contact contact, boolean empty) {
@@ -137,18 +134,24 @@ public class MainController implements Initializable {
             }
         });
 
-        // Seleziona il primo contatto per impostazione predefinita
-        contactListView.getSelectionModel().selectFirst();
-
-        // Aggiungi il filtro di ricerca
+        // Add search filter
         searchField.addEventFilter(KeyEvent.KEY_RELEASED, keyEvent -> filterContacts());
 
-        // Aggiungi listener per visualizzare i dettagli del contatto selezionato
+        // Add listener for contact selection changes
         contactListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (contactController != null && newValue != null) {
                 contactController.loadContactDetails(newValue);
             }
         });
+
+        // Try to load first contact if available
+        if (!ab.getContactList().isEmpty() && contactController != null) {
+            contactListView.getSelectionModel().selectFirst();
+            Contact firstContact = contactListView.getSelectionModel().getSelectedItem();
+            if (firstContact != null) {
+                contactController.loadContactDetails(firstContact);
+            }
+        }
     }
     
     /**
@@ -158,10 +161,26 @@ public class MainController implements Initializable {
     public void setContactController(ContactController contactController) {
         this.contactController = contactController;
     }
+
+    public AddressBook getAddressBook() {
+        return ab;
+    }
     
     public void updateListView() {
-        System.out.println(ab.getContactList());
+        List<Contact> sortedList = new ArrayList<>(ab.getContactList());
+        Collections.sort(sortedList);
+        observableContactsList.setAll(sortedList);
+        
         contactListView.setItems(observableContactsList);
+
+        if (contactController != null && contactController.getSelectedContact() != null) {
+            for (int i = 0; i < observableContactsList.size(); i++) {
+                if (observableContactsList.get(i).equals(contactController.getSelectedContact())) {
+                    contactListView.getSelectionModel().select(i);
+                    break;
+                }
+            }
+        }
     }
     
     private void workInProgressAlert() {
@@ -280,8 +299,6 @@ public class MainController implements Initializable {
         Contact toDelete = contactListView.getSelectionModel().getSelectedItem();
         if (toDelete != null) {
             ab.removeContact(toDelete);
-            System.out.println(observableContactsList);
-            System.out.println(ab.getContactList());
         }
         
         observableContactsList.setAll(ab.getContactList());

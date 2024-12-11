@@ -2,9 +2,6 @@ package g12swe.addressbook.models;
 
 import g12swe.addressbook.models.contacts.Contact;
 import java.io.Serializable;
-
-import java.util.Collections;
-import java.util.Set;
 import java.util.TreeSet;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableSet;
@@ -30,7 +27,6 @@ public class AddressBook implements Serializable {
      */
     public AddressBook() {
         TreeSet<Contact> orderedContacts = new TreeSet<>();
-        
         this.contactList = FXCollections.observableSet(orderedContacts);
     }
     
@@ -58,6 +54,21 @@ public class AddressBook implements Serializable {
      */
     public boolean removeContact(Contact c) {
         return this.contactList.remove(c);
+    }
+
+    /**
+     * @brief Method to update a contact in the address book.
+     * 
+     * @pre The contact exists in the address book
+     * @post The contact is updated in the address book
+     * 
+     * @param[in] oldContact the contact to update
+     * @param[in] newContact the updated contact information
+     */
+    public void updateContact(Contact oldContact, Contact newContact) {
+        if (this.contactList.remove(oldContact)) {
+            this.contactList.add(newContact);
+        }
     }
     
     /**
