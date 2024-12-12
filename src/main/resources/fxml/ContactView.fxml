@@ -88,7 +88,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextArea maxWidth="200.0" prefWidth="200.0" promptText="Via Giovanni Paolo II, 132, 84084 Fisciano SA" styleClass="contactInput" wrapText="true" />
+                                    <TextArea fx:id="addressField" maxWidth="200.0" prefWidth="200.0" promptText="Via Giovanni Paolo II, 132, 84084 Fisciano SA" styleClass="contactInput" wrapText="true" />
                                  </children>
                               </HBox>
                            </children>
@@ -106,7 +106,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <DatePicker maxWidth="200.0" prefWidth="200.0" promptText="01/01/1970" />
+                                    <DatePicker fx:id="birthdayPicker" maxWidth="200.0" prefWidth="200.0" promptText="01/01/1970" />
                                  </children>
                               </HBox>
                            </children>
@@ -124,7 +124,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextArea maxWidth="200.0" prefWidth="200.0" promptText="Note sul contatto..." styleClass="contactInput" />
+                                    <TextArea fx:id="notesArea" maxWidth="200.0" prefWidth="200.0" promptText="Note sul contatto..." styleClass="contactInput" />
                                  </children>
                               </HBox>
                            </children>
@@ -142,7 +142,7 @@
                            <children>
                               <HBox prefWidth="200.0" spacing="2.0">
                                  <children>
-                                    <TextField maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Pronomi preferiti..." styleClass="contactInput" />
+                                    <TextField fx:id="pronounsField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Pronomi preferiti..." styleClass="contactInput" />
                                  </children>
                               </HBox>
                            </children>

@@ -31,7 +31,7 @@ public class ExtendedContact extends Contact{
      * @param[in] notes represents the description of the contact.
      * @param[in] pronouns represents the pronouns of the contact.
      */
-    public ExtendedContact(String name, String surname, String address, LocalDateTime birthday, String notes, String pronouns){
+    public ExtendedContact(String name, String surname, String address, LocalDateTime birthday, String notes, String pronouns) {
         super(name, surname);
         
         this.address = address;

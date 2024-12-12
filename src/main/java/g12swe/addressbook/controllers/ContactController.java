@@ -5,13 +5,19 @@ import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
 import g12swe.addressbook.exceptions.MandatoryFieldsException;
 import g12swe.addressbook.models.contacts.Contact;
 import g12swe.addressbook.models.contacts.EmailAddress;
+import g12swe.addressbook.models.contacts.ExtendedContact;
 import g12swe.addressbook.models.contacts.PhoneNumber;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
@@ -44,6 +50,14 @@ public class ContactController {
     private TextField lastNameField;
     @FXML
     private Button editOrSaveButton;
+    @FXML
+    private TextArea addressField;
+    @FXML
+    private TextField pronounsField;
+    @FXML
+    private DatePicker birthdayPicker;
+    @FXML
+    private TextArea notesArea;
     
     private boolean isEditMode = false;
     private Contact selected = null;
@@ -98,9 +112,16 @@ public class ContactController {
                 throw new MandatoryFieldsException("Deve essere inserito almeno uno tra il nome e il cognome.");
             }
             
-            Contact newContact = new Contact(firstName, lastName);
+            ExtendedContact newContact = new ExtendedContact(
+                firstName, 
+                lastName,
+                addressField.getText(),
+                birthdayPicker.getValue() != null ? 
+                    LocalDateTime.of(birthdayPicker.getValue(), LocalTime.MIDNIGHT) : null,
+                notesArea.getText(),
+                pronounsField.getText()
+            );
             
-            // Add phone numbers
             for (Node node : phoneNumbersList.getChildren()) {
                 if (node instanceof HBox) {
                     TextField phoneField = (TextField) ((HBox) node).getChildren().get(0);
@@ -111,7 +132,6 @@ public class ContactController {
                 }
             }
             
-            // Add email addresses
             for (Node node : emailAddressesList.getChildren()) {
                 if (node instanceof HBox) {
                     TextField emailField = (TextField) ((HBox) node).getChildren().get(0);
@@ -217,21 +237,21 @@ public class ContactController {
         List<PhoneNumber> contactPhoneNumbers = this.selected.getPhoneNumbers();
         List<EmailAddress> contactEmails = this.selected.getEmailAddresses();
         
-        // Clear existing fields
+
         phoneNumbersList.getChildren().clear();
         emailAddressesList.getChildren().clear();
         
-        // Load phone numbers
+
         for (PhoneNumber phone : contactPhoneNumbers) {
             addPhoneFieldWithListener(phone.getPhoneNumber());
         }
         
-        // Load email addresses
+
         for (EmailAddress email : contactEmails) {
             addEmailFieldWithListener(email.getEmailAddress());
         }
         
-        // Add empty fields if needed
+
         if (contactPhoneNumbers.isEmpty() || 
             !((TextField)((HBox)phoneNumbersList.getChildren().get(
                 phoneNumbersList.getChildren().size() - 1)).getChildren().get(0)).getText().isEmpty()) {
@@ -322,29 +342,22 @@ public class ContactController {
         if (firstName.length() < 1 && lastName.length() < 1) {
             throw new MandatoryFieldsException("Deve essere inserito almeno uno tra il nome e il cognome.");
         }
-        
-        // Creiamo una copia del contatto originale
+
         Contact oldContact = this.selected;
         Contact updatedContact = new Contact(firstName, lastName);
         
-        // Copiamo tutti i dati dal contatto originale a quello nuovo
         for (PhoneNumber phone : oldContact.getPhoneNumbers()) {
             try {
                 updatedContact.addPhoneNumber(phone.getPhoneNumber(), phone.getCategory());
-            } catch (InvalidPhoneNumberException e) {
-                // Gestiamo l'eccezione se necessario
-            }
+            } catch (InvalidPhoneNumberException e) { }
         }
         
         for (EmailAddress email : oldContact.getEmailAddresses()) {
             try {
                 updatedContact.addEmailAddress(email.getEmailAddress(), email.getCategory());
-            } catch (InvalidEmailAddressException e) {
-                // Gestiamo l'eccezione se necessario
-            }
+            } catch (InvalidEmailAddressException e) { }
         }
         
-        // Aggiorniamo la rubrica con il nuovo contatto
         mainController.getAddressBook().updateContact(oldContact, updatedContact);
         this.selected = updatedContact;
         
