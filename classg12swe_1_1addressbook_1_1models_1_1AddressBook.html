@@ -229,6 +229,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (Obser
 <p>Method to update a contact in the address book. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>The contact exists in the address book </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd>The contact is updated in the address book</dd></dl>
+<p>In order to preserve the order of the contacts, the old contact is removed and the new contact is added.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">oldContact</td><td>the contact to update </td></tr>
