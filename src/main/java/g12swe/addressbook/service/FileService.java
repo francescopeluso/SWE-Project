@@ -27,6 +27,7 @@ public class FileService extends AddressBookService {
     }
     
 
+    @SuppressWarnings("unchecked")
     @Override
     public ObservableSet<Contact> importFromFile() throws FileNotFoundException, IOException{
         Set<Contact> tempSet;

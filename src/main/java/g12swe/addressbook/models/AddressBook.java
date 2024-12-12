@@ -62,6 +62,9 @@ public class AddressBook implements Serializable {
      * @pre The contact exists in the address book
      * @post The contact is updated in the address book
      * 
+     * In order to preserve the order of the contacts, the old contact is removed
+     * and the new contact is added.
+     * 
      * @param[in] oldContact the contact to update
      * @param[in] newContact the updated contact information
      */

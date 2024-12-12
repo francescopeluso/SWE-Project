@@ -12,9 +12,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 /**
  * @file ContactController.java
@@ -60,6 +62,77 @@ public class ContactController {
      */
     public Contact getSelectedContact() {
         return this.selected;
+    }
+
+    public void prepareForNewContact() {
+        this.selected = null;
+        isEditMode = true;
+        
+        // Clear all fields
+        firstNameField.clear();
+        lastNameField.clear();
+        phoneNumbersList.getChildren().clear();
+        emailAddressesList.getChildren().clear();
+        
+        // Add empty fields
+        addPhoneFieldWithListener("");
+        addEmailFieldWithListener("");
+        
+        // Enable editing
+        firstNameField.setEditable(true);
+        lastNameField.setEditable(true);
+        
+        // Change button text
+        editOrSaveButton.setText("Aggiungi");
+        
+        // Override the edit/save action for new contact
+        editOrSaveButton.setOnAction(event -> handleNewContactSave());
+    }
+
+    private void handleNewContactSave() {
+        try {
+            String firstName = firstNameField.getText();
+            String lastName = lastNameField.getText();
+            
+            if (firstName.isEmpty() && lastName.isEmpty()) {
+                throw new MandatoryFieldsException("Deve essere inserito almeno uno tra il nome e il cognome.");
+            }
+            
+            Contact newContact = new Contact(firstName, lastName);
+            
+            // Add phone numbers
+            for (Node node : phoneNumbersList.getChildren()) {
+                if (node instanceof HBox) {
+                    TextField phoneField = (TextField) ((HBox) node).getChildren().get(0);
+                    String number = phoneField.getText();
+                    if (!number.isEmpty()) {
+                        newContact.addPhoneNumber(number, null);
+                    }
+                }
+            }
+            
+            // Add email addresses
+            for (Node node : emailAddressesList.getChildren()) {
+                if (node instanceof HBox) {
+                    TextField emailField = (TextField) ((HBox) node).getChildren().get(0);
+                    String email = emailField.getText();
+                    if (!email.isEmpty()) {
+                        newContact.addEmailAddress(email, null);
+                    }
+                }
+            }
+            
+            mainController.addContact(newContact);
+            Stage stage = (Stage) editOrSaveButton.getScene().getWindow();
+            stage.close();
+            
+        } catch (MandatoryFieldsException | InvalidPhoneNumberException | InvalidEmailAddressException ex) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Errore");
+            alert.setHeaderText("Errore durante il salvataggio");
+            alert.setContentText(ex.getMessage());
+            alert.showAndWait();
+        }
     }
 
     /**

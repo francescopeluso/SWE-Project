@@ -16,11 +16,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.application.Platform;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 import java.awt.Desktop;
@@ -30,6 +33,8 @@ import javafx.collections.ObservableSet;
 import javafx.collections.SetChangeListener;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 
 /**
@@ -287,7 +292,29 @@ public class MainController implements Initializable {
      */
     @FXML
     private void insertContact(ActionEvent event) {
-        this.workInProgressAlert();
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ContactView.fxml"));
+            Parent root = loader.load();
+            
+            ContactController contactController = loader.getController();
+            contactController.setMainController(this);
+            contactController.prepareForNewContact(); // Call new method
+            
+            Stage stage = new Stage();
+            stage.setTitle("Nuovo Contatto");
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(contactListView.getScene().getWindow());
+            stage.showAndWait();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addContact(Contact contact) {
+        ab.addContact(contact);
+        updateListView();
     }
     
     /**
