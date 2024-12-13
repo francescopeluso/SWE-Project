@@ -52,7 +52,10 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * Test of importFromFile method, of class ImportExportService.
+     * @brief Test of importFromFile method, of class ImportExportService.
+     * 
+     * This test checks that the importFromFile() method correctly reads from 
+     * the file and returns an ObservaleSet. 
      */
     @Test
     public void testImportFromFile() throws Exception {
@@ -62,7 +65,10 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * Test of exportToFile method, of class ImportExportService.
+     * @brief Test of exportToFile method, of class ImportExportService.
+     * 
+     * This test checks that the exportToFile() method correctly serializes in
+     * a file the contents of the Set.
      */
     @Test
     public void testExportToFile() throws Exception {
@@ -79,7 +85,10 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * Test of importSingleContact method, of class ImportExportService.
+     * @brief Test of importSingleContact method, of class ImportExportService.
+     * 
+     * This test checks that the importSingleContact() method correctly reads 
+     * the contact from the file and adds it to the ObservableSet.
      */
     @Test
     public void testImportSingleContact() throws Exception {
@@ -89,7 +98,10 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * Test of exportSingleContact method, of class ImportExportService.
+     * @brief Test of exportSingleContact method, of class ImportExportService.
+     * 
+     * This test checks that the exportSingleContact() method correctly writes
+     * in a file a contact's informations.
      */
     @Test
     public void testExportSingleContact() throws Exception {

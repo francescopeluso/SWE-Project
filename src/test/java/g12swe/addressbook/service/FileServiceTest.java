@@ -48,8 +48,8 @@ public class FileServiceTest {
     /**
      * @brief Test of importFromFile method, of class FileService.
      * 
-     * This test checks that the importFromFile() method correctly reads an 
-     * ObservableSet
+     * This test checks that the importFromFile() method correctly reads the 
+     * file and returns an ObservableSet.
      */
     @Test
     public void testImportFromFile() throws Exception {
