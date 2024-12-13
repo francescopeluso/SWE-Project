@@ -69,7 +69,6 @@ public class FileServiceTest {
         fileService2.exportToFile();
         
         File file = new File(fileService2.getFileName());
-        //assertTrue(file.exists(), "Il file deve esistere");
         assertTrue(file.length()>0, "il file non deve essere vuoto");
     }
     
