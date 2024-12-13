@@ -37,7 +37,10 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of getCategory method, of class PhoneNumber.
+     * @brief Test of getCategory method, of class PhoneNumber.
+     * 
+     * This test checks that the method getCategory() returns exactly the
+     * category of the PhoneNumber instance.
      */
     @Test
     public void testGetCategory() {
@@ -49,7 +52,10 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of getPhoneNumber method, of class PhoneNumber.
+     * @brief Test of getPhoneNumber method, of class PhoneNumber.
+     * 
+     * This test checks that the method getPhoneNumber() returns exactly the
+     * PhoneNumber of the PhoneNumber instance.
      */
     @Test
     public void testGetPhoneNumber() {
@@ -61,7 +67,10 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of setCategory method, of class PhoneNumber.
+     * @brief Test of setCategory method, of class PhoneNumber.
+     * 
+     * This test checks that the method setCategory() modifies the instance's
+     * category value to the EntryCategory parameter.
      */
     @Test
     public void testSetCategory() {
@@ -76,7 +85,10 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of setPhoneNumber method, of class PhoneNumber.
+     * @brief Test of setPhoneNumber method, of class PhoneNumber.
+     * 
+     * This test checks that the method setPhoneNumber() modifies the instance's
+     * phoneNumber value to the string parameter.
      */
     @Test
     public void testSetPhoneNumber() {
@@ -91,7 +103,11 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of isValid method, of class PhoneNumber.
+     * @brief Test of isValid method, of class PhoneNumber.
+     * 
+     * This test checks that the method isValid() only returns true when the
+     * value of the PhoneNumber attribute follows the correct phone number
+     * pattern.
      */
     @Test
     public void testIsValid() {
@@ -109,7 +125,10 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of equals method, of class PhoneNumber.
+     * @brief Test of equals method, of class PhoneNumber.
+     * 
+     * This test checks that two instances of PhoneNumber are only equal when 
+     * their phoneNumber attribute is the same string.
      */
     @Test
     public void testEquals() {
@@ -143,7 +162,10 @@ public class PhoneNumberTest {
     }
 
     /**
-     * Test of hashCode method, of class PhoneNumber.
+     * @brief Test of hashCode method, of class PhoneNumber.
+     * 
+     * This test checks that two different instances of PhoneNumber generate 
+     * different hashCodes.
      */
     @Test
     public void testHashCode() {
