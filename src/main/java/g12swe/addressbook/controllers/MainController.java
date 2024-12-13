@@ -363,4 +363,6 @@ public class MainController implements Initializable {
         contactListView.getSelectionModel().selectFirst();
     }
     
+
+    
 }

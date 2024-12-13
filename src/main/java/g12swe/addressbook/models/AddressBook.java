@@ -87,4 +87,7 @@ public class AddressBook implements Serializable {
         this.contactList = contactList;
     }
     
+    public boolean research(Contact c){
+        return this.contactList.contains(c);
+    }
 }
