@@ -38,10 +38,14 @@ public class ContactTest {
     
     @AfterEach
     public void tearDown() {
-    }
-
+    }  
+    
     /**
-     * Test of getName method, of class Contact.
+     * @brief Test of getName method, of class Contact.
+     * 
+     * This test makes sure the return value of the testGetName corresponds to
+     * the instance's name attribute.
+     * 
      */
     @Test
     public void testGetName() {
@@ -53,7 +57,11 @@ public class ContactTest {
     }
 
     /**
-     * Test of getSurname method, of class Contact.
+     * @brief Test of getSurname method, of class Contact.
+     * 
+     * This test makes sure the return value of the testGetSurname corresponds 
+     * to the instance's surname attribute. 
+     * 
      */
     @Test
     public void testGetSurname() {
@@ -65,7 +73,11 @@ public class ContactTest {
     }
 
     /**
-     * Test of getPhoneNumbers method, of class Contact.
+     * @brief Test of getPhoneNumbers method, of class Contact.
+     * 
+     * This test checks that the return of the class getPhoneNumbers() is a
+     * list containing the contact's phoneNumbers.
+     * 
      */
     @Test
     public void testGetPhoneNumbers() throws InvalidPhoneNumberException {
@@ -90,7 +102,11 @@ public class ContactTest {
     }
 
     /**
-     * Test of getEmailAddresses method, of class Contact.
+     * @brief Test of getEmailAddresses method, of class Contact.
+     * 
+     * This test checks that the return of the class getEmailAddresses() is a
+     * list containing the contact's email addresses.
+     * 
      */
     @Test
     public void testGetEmailAddresses() throws InvalidEmailAddressException {
@@ -110,7 +126,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of setName method, of class Contact.
+     * @brief Test of setName method, of class Contact.
+     * 
+     * This test checks that the class SetName() correctly modifies the
+     * contact instance's name to the string it has as parameter.
      */
     @Test
     public void testSetName() {
@@ -124,7 +143,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of setSurname method, of class Contact.
+     * @brief Test of setSurname method, of class Contact.
+     * 
+     * This test checks that the class SetName() correctly modifies the
+     * contact instance's name to the string it has as parameter.
      */
     @Test
     public void testSetSurname() {
@@ -138,7 +160,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of addEmailAddress method, of class Contact.
+     * @brief Test of addEmailAddress method, of class Contact.
+     * 
+     * This test checks the correct addition of the input inserted in the 
+     * addEmailAddress()'s method to the contact's email addresses.
      */
     @Test
     public void testAddEmailAddress() throws Exception {
@@ -151,7 +176,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of addPhoneNumber method, of class Contact.
+     * @brief Test of addPhoneNumber method, of class Contact.
+     * 
+     * This test checks the correct addition of the input inserted in the 
+     * addTelephoneNumber()'s method to the contact's telephone numbers.
      */
     @Test
     public void testAddPhoneNumber() throws Exception {
@@ -164,7 +192,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of removeEmailAddress method, of class Contact.
+     * @brief Test of removeEmailAddress method, of class Contact.
+     * 
+     * This test checks the correct removal of the inserted email address in the
+     * contact's email addresses.
      */
     @Test
     public void testRemoveEmailAddress() throws InvalidEmailAddressException {
@@ -179,7 +210,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of removePhoneNumber method, of class Contact.
+     * @brief Test of removePhoneNumber method, of class Contact.
+     * 
+     * This test checks the correct removal of the inserted telephone number in 
+     * the contact's telephone numbers.
      */
     @Test
     public void testRemovePhoneNumber() throws InvalidPhoneNumberException {
@@ -195,7 +229,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of hashCode method, of class Contact.
+     * @brief Test of hashCode method, of class Contact.
+     * 
+     * This test checks that two different contacts generate different
+     * hashCodes 
      */
     @Test
     public void testHashCode() {
@@ -207,7 +244,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of equals method, of class Contact.
+     * @brief Test of equals method, of class Contact.
+     * 
+     * This test checks that two different contacts are only equal to one 
+     * another if they're the exact same instance.
      */
     @Test
     public void testEquals() {
@@ -239,7 +279,10 @@ public class ContactTest {
     }
 
     /**
-     * Test of compareTo method, of class Contact.
+     * @brief Test of compareTo method, of class Contact.
+     * 
+     * This test checks that the correct order of magnitude 
+     * between two instances of contact only relies on their uniqueID.
      */
     @Test
     public void testCompareTo() {
