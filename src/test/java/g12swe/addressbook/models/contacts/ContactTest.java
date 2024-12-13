@@ -43,8 +43,8 @@ public class ContactTest {
     /**
      * @brief Test of getName method, of class Contact.
      * 
-     * This test makes sure the return value of the testGetName corresponds to
-     * the instance's name attribute.
+     * This test makes sure the return value of the testGetName method 
+     * corresponds to the instance's name attribute.
      * 
      */
     @Test

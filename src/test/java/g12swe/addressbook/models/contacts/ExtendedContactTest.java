@@ -38,7 +38,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of getAddress method, of class ExtendedContact.
+     * @brief Test of getAddress method, of class ExtendedContact.
+     * 
+     * This test checks that the method getAddress() returns exactly the address
+     * of the contact instance.
      */
     @Test
     public void testGetAddress() {
@@ -52,7 +55,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of setAddress method, of class ExtendedContact.
+     * @brief Test of setAddress method, of class ExtendedContact.
+     * 
+     * This test checks that the method setAddress() modifies the instance's
+     * address value to the string parameter.
      */
     @Test
     public void testSetAddress() {
@@ -67,7 +73,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of getBirthday method, of class ExtendedContact.
+     * @brief Test of getBirthday method, of class ExtendedContact.
+     * 
+     * This test checks that the method getBirthday() returns exactly the 
+     * birthday of the contact instance.
      */
     @Test
     public void testGetBirthday() {
@@ -82,7 +91,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of setBirthday method, of class ExtendedContact.
+     * @brief Test of setBirthday method, of class ExtendedContact.
+     * 
+     * This test checks that the method setBirthday() modifies the instance's
+     * Birthday value to the LocalDateTime parameter.
      */
     @Test
     public void testSetBirthday() {
@@ -96,7 +108,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of getNotes method, of class ExtendedContact.
+     * @brief Test of getNotes method, of class ExtendedContact.
+     * 
+     * This test checks that the method getNotes() returns exactly the notes
+     * of the contact instance.
      */
     @Test
     public void testGetNotes() {
@@ -110,7 +125,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of setNotes method, of class ExtendedContact.
+     * @brief Test of setNotes method, of class ExtendedContact.
+     * 
+     * This test checks that the method setNotes() modifies the instance's
+     * notes value to the string parameter.
      */
     @Test
     public void testSetNotes() {
@@ -124,7 +142,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of getPronouns method, of class ExtendedContact.
+     * @brief Test of getPronouns method, of class ExtendedContact.
+     * 
+     * This test checks that the method getPronouns() returns exactly the
+     * pronouns of the contact instance.
      */
     @Test
     public void testGetPronouns() {
@@ -138,7 +159,10 @@ public class ExtendedContactTest {
     }
 
     /**
-     * Test of setPronouns method, of class ExtendedContact.
+     * @brief Test of setPronouns method, of class ExtendedContact.
+     * 
+     * This test checks that the method setPronouns() modifies the instance's
+     * pronouns value to the string parameter.
      */
     @Test
     public void testSetPronouns() {
