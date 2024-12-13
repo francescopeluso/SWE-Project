@@ -11,7 +11,7 @@ public class EfficiencyTestMain {
 
     
     public static void main(String[] args) throws IOException {
-        
+        // commento
         AddressBook ab = new AddressBook();
         EfficiencyTest test = new EfficiencyTest("C:\\Users\\ACER\\G12-Rubrica\\test.bin", ab.getContactList());
         
