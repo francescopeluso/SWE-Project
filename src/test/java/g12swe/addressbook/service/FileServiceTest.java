@@ -46,7 +46,10 @@ public class FileServiceTest {
     }
 
     /**
-     * Test of importFromFile method, of class FileService.
+     * @brief Test of importFromFile method, of class FileService.
+     * 
+     * This test checks that the importFromFile() method correctly reads an 
+     * ObservableSet
      */
     @Test
     public void testImportFromFile() throws Exception {
@@ -56,7 +59,10 @@ public class FileServiceTest {
     }
 
     /**
-     * Test of exportToFile method, of class FileService.
+     * @brief Test of exportToFile method, of class FileService.
+     * 
+     * This test checks that the method exportToFile() correctly writes in a 
+     * file the content of the Set.
      */
     @Test
     public void testExportToFile() throws Exception {
