@@ -37,7 +37,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of getCategory method, of class EmailAddress.
+     * @brief Test of getCategory method, of class EmailAddress.
+     * 
+     * This test checks that the return value of the getCategory() method is
+     * the category of the instance.
      */
     @Test
     public void testGetCategory() {
@@ -49,7 +52,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of getEmailAddress method, of class EmailAddress.
+     * @brief Test of getEmailAddress method, of class EmailAddress.
+     * 
+     * This test checks that the return value of the getEmailAddress() method is
+     * the email address of the instance.
      */
     @Test
     public void testGetEmailAddress() {
@@ -61,7 +67,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of setCategory method, of class EmailAddress.
+     * @brief Test of setCategory method, of class EmailAddress.
+     * 
+     * This test checks that the method setCategory() correctly changes the 
+     * instance's category.
      */
     @Test
     public void testSetCategory() {
@@ -75,7 +84,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of setEmailAddress method, of class EmailAddress.
+     * @brief Test of setEmailAddress method, of class EmailAddress.
+     * 
+     * This test checks that the method setEmailAddress() correctly changes the
+     * instance's email address.
      */
     @Test
     public void testSetEmailAddress() {
@@ -87,7 +99,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of isValid method, of class EmailAddress.
+     * @brief Test of isValid method, of class EmailAddress.
+     * 
+     * This test checks that the method isValid() only accepts email addresses
+     * that follow the correct email format.
      */
     @Test
     public void testIsValid() {
@@ -105,7 +120,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of equals method, of class EmailAddress.
+     * @brief Test of equals method, of class EmailAddress.
+     * 
+     * This test checks that two instances of EmailAddress are only equal when 
+     * their emailAddress attribute is the same.
      */
     @Test
     public void testEquals() {
@@ -133,7 +151,10 @@ public class EmailAddressTest {
     }
 
     /**
-     * Test of hashCode method, of class EmailAddress.
+     * @brief Test of hashCode method, of class EmailAddress.
+     * 
+     * This test checks that two different instances of EmailAddress generate 
+     * different hashCodes.
      */
     @Test
     public void testHashCode() {
