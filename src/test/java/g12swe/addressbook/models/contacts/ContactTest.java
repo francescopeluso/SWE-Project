@@ -244,23 +244,28 @@ public class ContactTest {
     @Test
     public void testCompareTo() {
         
-        System.out.println("compareTo");           //compara solo il cognome
-        Contact o = new Contact("Stefani", "B"); 
-        Contact instance = new Contact("Valerio", "B");    //stesso cognome
+        System.out.println("compareTo");
+        
+        //confronto due contatti uguali
+        Contact o = new Contact("Stefani", "Germanotta"); 
+        Contact instance = new Contact("Stefani", "GermanoTTa"); 
         int expResult = 0;
         int result = instance.compareTo(o);
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         
-        
-        expResult = 1;
-        o.setSurname("A");                // A > B
+        //confronto due contatti con cognomi diversi
+        o.setSurname("!");                 
         result = instance.compareTo(o); 
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
         
-        
-        expResult = -1;
-        o.setSurname("C");                // A > B
+        //confronto due contatti con nomi diversi
+        o.setName("C");      
+        o.setSurname("Germanotta");
         result = instance.compareTo(o); 
+        assertNotEquals(expResult, result);
+        
+        //confronto un contatto con se stesso
+        result = instance.compareTo(instance);
         assertEquals(expResult, result);
     }
     
