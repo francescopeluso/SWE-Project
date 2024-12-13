@@ -83,9 +83,25 @@ public class AddressBook implements Serializable {
         return this.contactList;
     }
     
+    /**
+     * @brief Initializes the address book with an existing set of contacts.
+     * 
+     * @param[in] contactList The set of contacts to initialize the address book with.
+     */
+    
     public void initialize(ObservableSet<Contact> contactList){
         this.contactList = contactList;
     }
+    
+    /**
+     * @brief Searches for a contact in the address book.
+     * 
+     * This method checks if a specific contact exists in the address book by using the contains()
+     * method of the set.
+     * 
+     * @param[in] c The contact to search for.
+     * @return true if the contact is found in the address book, falseotherwise.
+     */
     
     public boolean research(Contact c){
         return this.contactList.contains(c);
