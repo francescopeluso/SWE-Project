@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rootcontroller_140',['RootController',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html',1,'g12swe::addressbook::controllers']]]
+  ['rootcontroller_141',['RootController',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html',1,'g12swe::addressbook::controllers']]]
 ];

@@ -97,11 +97,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e4534224ce64acf2c73e3b6d60cdede"><td class="memItemLeft" align="right" valign="top">ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#a3e4534224ce64acf2c73e3b6d60cdede">getContactList</a> ()</td></tr>
 <tr class="memdesc:a3e4534224ce64acf2c73e3b6d60cdede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return an unmodifiable set of the address book.  <a href="classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#a3e4534224ce64acf2c73e3b6d60cdede">More...</a><br /></td></tr>
 <tr class="separator:a3e4534224ce64acf2c73e3b6d60cdede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36de4364518537359fd5bceffcdea394"><td class="memItemLeft" align="right" valign="top"><a id="a36de4364518537359fd5bceffcdea394"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> &gt; contactList)</td></tr>
+<tr class="memitem:a36de4364518537359fd5bceffcdea394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#a36de4364518537359fd5bceffcdea394">initialize</a> (ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> &gt; contactList)</td></tr>
+<tr class="memdesc:a36de4364518537359fd5bceffcdea394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the address book with an existing set of contacts.  <a href="classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#a36de4364518537359fd5bceffcdea394">More...</a><br /></td></tr>
 <tr class="separator:a36de4364518537359fd5bceffcdea394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7557919a1955c74882f8e6d0c7410e1"><td class="memItemLeft" align="right" valign="top"><a id="ad7557919a1955c74882f8e6d0c7410e1"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>research</b> (<a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> c)</td></tr>
+<tr class="memitem:ad7557919a1955c74882f8e6d0c7410e1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#ad7557919a1955c74882f8e6d0c7410e1">research</a> (<a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> c)</td></tr>
+<tr class="memdesc:ad7557919a1955c74882f8e6d0c7410e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a contact in the address book.  <a href="classg12swe_1_1addressbook_1_1models_1_1AddressBook.html#ad7557919a1955c74882f8e6d0c7410e1">More...</a><br /></td></tr>
 <tr class="separator:ad7557919a1955c74882f8e6d0c7410e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -174,6 +174,32 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>research</b> (<a c
 
 </div>
 </div>
+<a id="a36de4364518537359fd5bceffcdea394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36de4364518537359fd5bceffcdea394">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g12swe.addressbook.models.AddressBook.initialize </td>
+          <td>(</td>
+          <td class="paramtype">ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> &gt;&#160;</td>
+          <td class="paramname"><em>contactList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the address book with an existing set of contacts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">contactList</td><td>The set of contacts to initialize the address book with. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a59198013c7d1063a8b5a63b46fcc0bd6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59198013c7d1063a8b5a63b46fcc0bd6">&#9670;&nbsp;</a></span>removeContact()</h2>
 
@@ -200,6 +226,34 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>research</b> (<a c
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the element is removed from the collection. Otherwise it is false. </dd></dl>
+
+</div>
+</div>
+<a id="ad7557919a1955c74882f8e6d0c7410e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7557919a1955c74882f8e6d0c7410e1">&#9670;&nbsp;</a></span>research()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean g12swe.addressbook.models.AddressBook.research </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Searches for a contact in the address book. </p>
+<p>This method checks if a specific contact exists in the address book by using the contains() method of the set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>The contact to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the contact is found in the address book, falseotherwise. </dd></dl>
 
 </div>
 </div>
