@@ -51,6 +51,8 @@ public class Contact implements Comparable<Contact>, Serializable {
      * with the values of the input parameters.
      * It also initializes the class collections and the uniqueId.
      * 
+     * @pre name or surname must not be null
+     * 
      * @param[in] name represents the name
      * @param[in] surname represents the surname
      */

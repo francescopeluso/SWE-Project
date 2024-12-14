@@ -44,7 +44,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testGetCategory() {
-        System.out.println("getCategory");
+        System.out.println("T010");
         PhoneNumber instance = new PhoneNumber("1234567890", EntryCategory.WORK);
         EntryCategory expResult = EntryCategory.WORK;
         EntryCategory result = instance.getCategory();
@@ -59,7 +59,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testGetPhoneNumber() {
-        System.out.println("getPhoneNumber");
+        System.out.println("T011");
         PhoneNumber instance = new PhoneNumber("1234567890", null);
         String expResult = "1234567890";
         String result = instance.getPhoneNumber();
@@ -74,7 +74,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testSetCategory() {
-        System.out.println("setCategory");
+        System.out.println("T012");
         EntryCategory category = EntryCategory.WORK;
         PhoneNumber instance = new PhoneNumber("1234567890", null);
         instance.setCategory(category);
@@ -92,7 +92,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testSetPhoneNumber() {
-        System.out.println("setPhoneNumber");
+        System.out.println("T013");
         String phoneNumber = "1234567890";
         PhoneNumber instance = new PhoneNumber("1234567890", null);
         instance.setPhoneNumber(phoneNumber);
@@ -111,7 +111,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testIsValid() {
-        System.out.println("isValid");
+        System.out.println("T014");
         PhoneNumber instance = new PhoneNumber("1234567890", null);
         boolean expResult = true;
         boolean result = instance.isValid();
@@ -132,7 +132,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
+        System.out.println("T015");
         
         //equals to null
         Object obj = null;
@@ -143,12 +143,14 @@ public class PhoneNumberTest {
         
         
         //equals to a different phoneNumber
+        System.out.println("T016");
         obj = new PhoneNumber("2133445689", null);
         result = instance.equals(obj);
         assertEquals(expResult, result);
         
         
         //equals to the same phoneNumber
+        System.out.println("T017");
         obj = new PhoneNumber("1234567890", null);
         result = instance.equals(obj);
         expResult = true;
@@ -156,6 +158,7 @@ public class PhoneNumberTest {
         
         
         //equals to the same instance
+        System.out.println("T018");
         obj = instance;
         result = instance.equals(obj);
         assertEquals(expResult, result);
@@ -169,7 +172,7 @@ public class PhoneNumberTest {
      */
     @Test
     public void testHashCode() {
-        System.out.println("hashCode");
+        System.out.println("T019");
         PhoneNumber instance = new PhoneNumber("1234567890", null);
         int expResult = new PhoneNumber("1234567890", null).hashCode();
         int result = instance.hashCode();

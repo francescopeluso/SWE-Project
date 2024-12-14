@@ -53,8 +53,8 @@ public class FileServiceTest {
      */
     @Test
     public void testImportFromFile() throws Exception {
+        System.out.println("T062");
         contacts1 = fileService1.importFromFile();
-        
         assertNotNull(contacts1, "il set non dovrebbe essere null");
     }
 
@@ -66,6 +66,7 @@ public class FileServiceTest {
      */
     @Test
     public void testExportToFile() throws Exception {
+        System.out.println("T063");
         Contact c1 = new Contact("gerardo", "selce");
         Contact c2 = new Contact("sharon", "schiavano");
         

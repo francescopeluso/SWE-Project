@@ -18,7 +18,7 @@ public class EfficiencyTestMain {
         //test.generateFile(5000);
         
         // --- PRIMO CASO DI TEST (CARICAMENTO DA FILE) ---
-        
+        System.out.println("T068");
         ObservableSet<Contact> contacts = ab.getContactList();
         long startTime1 = System.nanoTime();
         contacts = test.importFromFile();
@@ -31,7 +31,7 @@ public class EfficiencyTestMain {
         
         // --- FINE PRIMO CASO DI TEST ---
         // --- SECONDO CASO DI TEST (RICERCA DI UN CONTATTO) ---
-        
+        System.out.println("T069");
         List<Contact> contacts2 = new ArrayList<>(contacts);
         Contact c = contacts2.get(2423);
         

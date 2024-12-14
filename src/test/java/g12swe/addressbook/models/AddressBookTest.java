@@ -45,7 +45,7 @@ public class AddressBookTest {
      */
     @Test
     public void testAddContact() {
-        System.out.println("addContact");
+        System.out.println("T070");
         Contact c = new Contact("Stefani", "Germanotta");
         AddressBook instance = new AddressBook();
         instance.addContact(c);
@@ -57,7 +57,7 @@ public class AddressBookTest {
      */
     @Test
     public void testRemoveContact() {
-        System.out.println("removeContact");
+        System.out.println("T071");
         Contact c = new Contact("Stefani", "Germanotta");
         AddressBook instance = new AddressBook();
         instance.addContact(c);
@@ -71,7 +71,7 @@ public class AddressBookTest {
      */
     @Test
     public void testGetContactList() {
-        System.out.println("getContactList");
+        System.out.println("T072");
         AddressBook instance = new AddressBook();
         Contact c = new Contact("Stefani", "Germanotta");
         Contact c2 = new Contact("Beyoncé", "Knowles");

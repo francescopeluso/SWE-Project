@@ -59,6 +59,7 @@ public class ImportExportServiceTest {
      */
     @Test
     public void testImportFromFile() throws Exception {
+        System.out.println("T064");
         importedAddressBook = importAddressBook.importFromFile();
         
         assertNotNull(importedAddressBook, "Il set non dovrebbe essere null");
@@ -72,6 +73,7 @@ public class ImportExportServiceTest {
      */
     @Test
     public void testExportToFile() throws Exception {
+        System.out.println("T065");
         Contact c1 = new Contact("gerardo", "selce");
         Contact c2 = new Contact("valerio", "volzone");
         
@@ -92,6 +94,7 @@ public class ImportExportServiceTest {
      */
     @Test
     public void testImportSingleContact() throws Exception {
+        System.out.println("T066");
         importedContact = importSingleContact.importSingleContact();
         
         assertNotNull(importedContact, "L'oggetto Contact non dovrebbe essere null");
@@ -105,6 +108,7 @@ public class ImportExportServiceTest {
      */
     @Test
     public void testExportSingleContact() throws Exception {
+        System.out.println("T067");
         Contact c = new Contact("sharon", "schiavano");
         
         exportSingleContact.exportSingleContact(c);

@@ -44,7 +44,7 @@ public class EmailAddressTest {
      */
     @Test
     public void testGetCategory() {
-        System.out.println("getCategory");
+        System.out.println("T001");
         EmailAddress instance = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK);
         EntryCategory expResult = EntryCategory.WORK;
         EntryCategory result = instance.getCategory();
@@ -59,7 +59,7 @@ public class EmailAddressTest {
      */
     @Test
     public void testGetEmailAddress() {
-        System.out.println("getEmailAddress");
+        System.out.println("T002");
         EmailAddress instance = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK);
         String expResult = "mariorossi@gmail.com";
         String result = instance.getEmailAddress();
@@ -74,7 +74,7 @@ public class EmailAddressTest {
      */
     @Test
     public void testSetCategory() {
-        System.out.println("setCategory");
+        System.out.println("T003");
         EntryCategory category = EntryCategory.PERSONAL;
         EmailAddress instance = new EmailAddress("mariorossi@gmail.com", category);
         
@@ -91,7 +91,7 @@ public class EmailAddressTest {
      */
     @Test
     public void testSetEmailAddress() {
-        System.out.println("setEmailAddress");
+        System.out.println("T004");
         String emailAddress = "mariorossi@gmail.com";
         EmailAddress instance = new EmailAddress("stefanigermanotta@gmail.com", EntryCategory.WORK);
         instance.setEmailAddress(emailAddress);
@@ -106,7 +106,7 @@ public class EmailAddressTest {
      */
     @Test
     public void testIsValid() {
-        System.out.println("isValid");
+        System.out.println("T005");
         EmailAddress instance = new EmailAddress();
         boolean expResult = false;
         instance.setEmailAddress("ciao");
@@ -129,7 +129,7 @@ public class EmailAddressTest {
     public void testEquals() {
         
        //confronto con null
-        System.out.println("equals");
+        System.out.println("T006");
         Object obj = null;
         EmailAddress instance = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK);
         boolean expResult = false;
@@ -137,12 +137,14 @@ public class EmailAddressTest {
         assertEquals(expResult, result);
         
         //due email diverse
+        System.out.println("T007");
         obj = new EmailAddress("mi@gmail.com", EntryCategory.WORK);
         expResult = false;
         result = instance.equals(obj);
         assertEquals(expResult, result);
         
         //due email uguali
+        System.out.println("T008");
         obj = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK); 
         expResult = true;
         result = instance.equals(obj);
@@ -158,7 +160,7 @@ public class EmailAddressTest {
      */
     @Test
     public void testHashCode() {
-        System.out.println("hashCode");
+        System.out.println("T009");
         EmailAddress instance = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK);
         int expResult = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK).hashCode();
         int result = instance.hashCode();

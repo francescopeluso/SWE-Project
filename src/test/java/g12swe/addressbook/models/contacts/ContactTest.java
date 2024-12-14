@@ -49,7 +49,7 @@ public class ContactTest {
      */
     @Test
     public void testGetName() {
-        System.out.println("getName");
+        System.out.println("T020");
         Contact instance = new Contact("Stefani", "Germanotta");
         String expResult = "Stefani";
         String result = instance.getName();
@@ -65,7 +65,7 @@ public class ContactTest {
      */
     @Test
     public void testGetSurname() {
-        System.out.println("getSurname");
+        System.out.println("T021");
         Contact instance = new Contact("Stefani", "Germanotta");
         String expResult = "Germanotta";
         String result = instance.getSurname();
@@ -81,7 +81,7 @@ public class ContactTest {
      */
     @Test
     public void testGetPhoneNumbers() throws InvalidPhoneNumberException {
-        System.out.println("getPhoneNumbers");
+        System.out.println("T022");
         Contact instance = new Contact("Stefani", "Germanotta");
         instance.addPhoneNumber("3311410705", EntryCategory.WORK);
         
@@ -91,11 +91,13 @@ public class ContactTest {
         List<PhoneNumber> result = instance.getPhoneNumbers();
         assertEquals(expResult, result);
         
+        System.out.println("T023");
         expResult.add(new PhoneNumber("3334445556", EntryCategory.WORK));
         instance.addPhoneNumber("3334445556", EntryCategory.WORK);
         result = instance.getPhoneNumbers();
         assertEquals(expResult, result);
         
+        System.out.println("T024");
         expResult.add(new PhoneNumber("1111153456", EntryCategory.WORK));
         result = instance.getPhoneNumbers();
         assertNotEquals(expResult, result);
@@ -110,6 +112,7 @@ public class ContactTest {
      */
     @Test
     public void testGetEmailAddresses() throws InvalidEmailAddressException {
+        System.out.println("T025");
         System.out.println("getEmailAddresses");
         Contact instance = new Contact("Stefani", "Germanotta");
         instance.addEmailAddress("uwu@gmail.com", EntryCategory.WORK);
@@ -120,6 +123,7 @@ public class ContactTest {
         List<EmailAddress> result = instance.getEmailAddresses();
         assertEquals(expResult, result);
         
+        System.out.println("T026");
         result = instance.getEmailAddresses();
         expResult.add(new EmailAddress("uwu2@gmail.com", EntryCategory.WORK));
         assertNotEquals(expResult, result);
@@ -133,12 +137,13 @@ public class ContactTest {
      */
     @Test
     public void testSetName() {
-        System.out.println("setName");
+        System.out.println("T027");
         String name = "Stefani";
         Contact instance = new Contact("STEFANIA", "Germanotta");
         instance.setName(name);
         assertEquals(name, instance.getName());
         
+        System.out.println("T028");
         assertNotEquals("STEFANIA", instance.getName());
     }
 
@@ -150,12 +155,13 @@ public class ContactTest {
      */
     @Test
     public void testSetSurname() {
-        System.out.println("setSurname");
+        System.out.println("T029");
         String surname = "Germanotta";
         Contact instance = new Contact("Stefani", "GERMANIA");
         instance.setSurname(surname);
         assertEquals(surname, instance.getSurname());
         
+        System.out.println("T030");
         assertNotEquals("GERMANIA", instance.getSurname());
     }
 
@@ -167,7 +173,7 @@ public class ContactTest {
      */
     @Test
     public void testAddEmailAddress() throws Exception {
-        System.out.println("addEmailAddress");
+        System.out.println("T031");
         String emailAddress = "mariorossi@gmail.com";
         Contact instance = new Contact("Mario", "Rossi");
         instance.addEmailAddress(emailAddress, EntryCategory.WORK);
@@ -183,7 +189,7 @@ public class ContactTest {
      */
     @Test
     public void testAddPhoneNumber() throws Exception {
-        System.out.println("addPhoneNumber");
+        System.out.println("T032");
         String phoneNumber = "1234567890";
         Contact instance = new Contact("Mario", "Rossi");
         instance.addPhoneNumber(phoneNumber, EntryCategory.WORK);
@@ -199,12 +205,13 @@ public class ContactTest {
      */
     @Test
     public void testRemoveEmailAddress() throws InvalidEmailAddressException {
-        System.out.println("removeEmailAddress");
+        System.out.println("T033");
         String emailAddress = "mariorossi@gmail.com";
         Contact instance = new Contact("Mario", "Rossi");
         instance.addEmailAddress(emailAddress, EntryCategory.WORK);
         assertTrue(instance.getEmailAddresses().contains(new EmailAddress(emailAddress, EntryCategory.WORK)));
         
+        System.out.println("T034");
         instance.removeEmailAddress(emailAddress);
         assertFalse(instance.getEmailAddresses().contains(new EmailAddress(emailAddress, EntryCategory.WORK)));
     }
@@ -217,13 +224,13 @@ public class ContactTest {
      */
     @Test
     public void testRemovePhoneNumber() throws InvalidPhoneNumberException {
-        System.out.println("removePhoneNumber");
+        System.out.println("T035");
         String phoneNumber = "1234567890";
         Contact instance = new Contact("Mario", "Rossi");
         instance.addPhoneNumber(phoneNumber, EntryCategory.WORK);
         assertTrue(instance.getPhoneNumbers().contains(new PhoneNumber(phoneNumber, EntryCategory.WORK)));
         
-        
+        System.out.println("T036");
         instance.removePhoneNumber(phoneNumber);
         assertFalse(instance.getPhoneNumbers().contains(new PhoneNumber(phoneNumber, EntryCategory.WORK)));
     }
@@ -236,7 +243,7 @@ public class ContactTest {
      */
     @Test
     public void testHashCode() {
-        System.out.println("hashCode");
+        System.out.println("T037");
         Contact instance = new Contact("Mario", "Rossi");
         int expResult = new Contact("Mario", "Rossi").hashCode();
         int result = instance.hashCode();
@@ -251,7 +258,7 @@ public class ContactTest {
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
+        System.out.println("T038");
         Object obj = null;
         Contact instance = new Contact("Mario", "Rossi");
         boolean expResult = false;
@@ -259,18 +266,19 @@ public class ContactTest {
                                                  // null
         assertEquals(expResult, result);
         
+        System.out.println("T040");
         obj = new Contact("Stefani", "Germanotta");
         result = instance.equals(obj);
         assertEquals(expResult, result);   //confronto due contatti con nomi
                                            // diversi
         
-                                           
+        System.out.println("T041");           
         obj = new Contact("Mario", "Rossi");
         result = instance.equals(obj);
         //expResult = true;
         assertEquals(expResult, result);   //confronto due contatti con nomi
                                            //uguali
-        
+        System.out.println("T042");
         obj = instance;
         expResult = true;
         result = instance.equals(obj);    //confronto il contatto con se stesso
@@ -287,7 +295,7 @@ public class ContactTest {
     @Test
     public void testCompareTo() {
         
-        System.out.println("compareTo");
+        System.out.println("T043");
         
         //confronto due contatti uguali
         Contact o = new Contact("Stefani", "Germanotta"); 
@@ -297,17 +305,20 @@ public class ContactTest {
         assertNotEquals(expResult, result);
         
         //confronto due contatti con cognomi diversi
+        System.out.println("T044");
         o.setSurname("!");                 
         result = instance.compareTo(o); 
         assertNotEquals(expResult, result);
         
         //confronto due contatti con nomi diversi
+        System.out.println("T045");
         o.setName("C");      
         o.setSurname("Germanotta");
         result = instance.compareTo(o); 
         assertNotEquals(expResult, result);
         
         //confronto un contatto con se stesso
+        System.out.println("T046");
         result = instance.compareTo(instance);
         assertEquals(expResult, result);
     }
