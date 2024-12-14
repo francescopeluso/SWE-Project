@@ -74,6 +74,9 @@ $(function() {
 <div class="title">g12swe.addressbook.service.ContactFileService Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Service class for handling asynchronous contact file operations.  
+ <a href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for g12swe.addressbook.service.ContactFileService:</div>
 <div class="dyncontent">
@@ -83,19 +86,99 @@ Inheritance diagram for g12swe.addressbook.service.ContactFileService:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a48b1b14be3491ef36538a4b899126de0"><td class="memItemLeft" align="right" valign="top"><a id="a48b1b14be3491ef36538a4b899126de0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ContactFileService</b> (<a class="el" href="classg12swe_1_1addressbook_1_1service_1_1FileService.html">FileService</a> fileService)</td></tr>
+<tr class="memitem:a48b1b14be3491ef36538a4b899126de0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#a48b1b14be3491ef36538a4b899126de0">ContactFileService</a> (<a class="el" href="classg12swe_1_1addressbook_1_1service_1_1FileService.html">FileService</a> fileService)</td></tr>
+<tr class="memdesc:a48b1b14be3491ef36538a4b899126de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html" title="Service class for handling asynchronous contact file operations.">ContactFileService</a>.  <a href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#a48b1b14be3491ef36538a4b899126de0">More...</a><br /></td></tr>
 <tr class="separator:a48b1b14be3491ef36538a4b899126de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17fee00a71f57455e0663e95ca9822c8"><td class="memItemLeft" align="right" valign="top"><a id="a17fee00a71f57455e0663e95ca9822c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>performContactOperation</b> ()</td></tr>
+<tr class="memitem:a17fee00a71f57455e0663e95ca9822c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#a17fee00a71f57455e0663e95ca9822c8">performContactOperation</a> ()</td></tr>
+<tr class="memdesc:a17fee00a71f57455e0663e95ca9822c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs asynchronous contact export operation.  <a href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#a17fee00a71f57455e0663e95ca9822c8">More...</a><br /></td></tr>
 <tr class="separator:a17fee00a71f57455e0663e95ca9822c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aee9d331217d3c5394f4b9495154f7ebd"><td class="memItemLeft" align="right" valign="top"><a id="aee9d331217d3c5394f4b9495154f7ebd"></a>
-Task&lt; ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>createTask</b> ()</td></tr>
+<tr class="memitem:aee9d331217d3c5394f4b9495154f7ebd"><td class="memItemLeft" align="right" valign="top">Task&lt; ObservableSet&lt; <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#aee9d331217d3c5394f4b9495154f7ebd">createTask</a> ()</td></tr>
+<tr class="memdesc:aee9d331217d3c5394f4b9495154f7ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Task for importing contacts.  <a href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html#aee9d331217d3c5394f4b9495154f7ebd">More...</a><br /></td></tr>
 <tr class="separator:aee9d331217d3c5394f4b9495154f7ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Service class for handling asynchronous contact file operations. </p>
+<p>This class extends JavaFX's Service class to provide asynchronous file operations for contacts. It manages both importing and exporting contacts using a <a class="el" href="classg12swe_1_1addressbook_1_1service_1_1FileService.html">FileService</a>, running these potentially time-consuming operations in background threads to avoid blocking the UI. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a48b1b14be3491ef36538a4b899126de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b1b14be3491ef36538a4b899126de0">&#9670;&nbsp;</a></span>ContactFileService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">g12swe.addressbook.service.ContactFileService.ContactFileService </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classg12swe_1_1addressbook_1_1service_1_1FileService.html">FileService</a>&#160;</td>
+          <td class="paramname"><em>fileService</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for <a class="el" href="classg12swe_1_1addressbook_1_1service_1_1ContactFileService.html" title="Service class for handling asynchronous contact file operations.">ContactFileService</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileService</td><td>The <a class="el" href="classg12swe_1_1addressbook_1_1service_1_1FileService.html">FileService</a> instance to use for file operations </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aee9d331217d3c5394f4b9495154f7ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9d331217d3c5394f4b9495154f7ebd">&#9670;&nbsp;</a></span>createTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;ObservableSet&lt;<a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a>&gt; &gt; g12swe.addressbook.service.ContactFileService.createTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new Task for importing contacts. </p>
+<p>Creates and returns a Task that reads contacts from a file asynchronously. The task attempts to import contacts using the <a class="el" href="classg12swe_1_1addressbook_1_1service_1_1FileService.html">FileService</a> and handles any potential errors during the operation.</p>
+<dl class="section return"><dt>Returns</dt><dd>A Task that will return an ObservableSet of Contact objects when complete or null if an error occurs during import @override Service.createTask() </dd></dl>
+
+</div>
+</div>
+<a id="a17fee00a71f57455e0663e95ca9822c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fee00a71f57455e0663e95ca9822c8">&#9670;&nbsp;</a></span>performContactOperation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g12swe.addressbook.service.ContactFileService.performContactOperation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs asynchronous contact export operation. </p>
+<p>Creates and starts a new Thread with a Task that exports contacts to a file. The operation runs asynchronously and includes success/failure handlers. On successful completion, prints a confirmation message. On failure, prints an error message. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/main/java/g12swe/addressbook/service/ContactFileService.java</li>
 </ul>

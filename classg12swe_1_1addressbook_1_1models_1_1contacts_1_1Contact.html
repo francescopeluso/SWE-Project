@@ -280,13 +280,18 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLastUniqueI
 </div><div class="memdoc">
 
 <p>Method to compare the calling object to another <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> object. </p>
+<p>Compares two <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> objects based on their surname, name, and uniqueId. The comparison follows this order:</p><ol type="1">
+<li>First compares surnames</li>
+<li>If surnames are equal, compares names</li>
+<li>If both surname and name are equal, compares uniqueId</li>
+</ol>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">o</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">o</td><td>The <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> object to compare with </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A negative integer if this contact comes before the parameter, zero if they are equal, a positive integer if this contact comes after the parameter </dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['phonenumber_193',['PhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#adf1b3f4140d90c371c61b7339532ea25',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber()'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#a6d939441c7177087d2d82bf5a4883642',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber(String phoneNumber, EntryCategory category)']]]
+  ['mandatoryfieldsexception_216',['MandatoryFieldsException',['../classg12swe_1_1addressbook_1_1exceptions_1_1MandatoryFieldsException.html#ac23c07c5237918ed3abeed576e5973a7',1,'g12swe.addressbook.exceptions.MandatoryFieldsException.MandatoryFieldsException()'],['../classg12swe_1_1addressbook_1_1exceptions_1_1MandatoryFieldsException.html#ad05736a6996870d57232cf2fac362f85',1,'g12swe.addressbook.exceptions.MandatoryFieldsException.MandatoryFieldsException(String msg)']]]
 ];
