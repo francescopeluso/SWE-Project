@@ -171,10 +171,9 @@ public class Contact implements Comparable<Contact>, Serializable {
      */
     @Override
     public int hashCode() {
-        int result = name.toLowerCase().hashCode();
-        result = 31 * result + emailAddresses.hashCode();
-        result = 31 * result + phoneNumbers.hashCode();
-        return result;
+        int hash = 5;
+        hash = 11 * hash + this.uniqueId;
+        return hash;
     }
 
     /**
