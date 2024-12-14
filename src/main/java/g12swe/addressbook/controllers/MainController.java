@@ -29,7 +29,6 @@ import javafx.scene.control.Alert;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import javafx.collections.ObservableSet;
@@ -196,15 +195,7 @@ public class MainController implements Initializable {
         }
     }
     
-    private void workInProgressAlert() {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Attenzione");
-        alert.setHeaderText("Funzione non disponibile.");
-        alert.setContentText("A quanto pare non abbiamo implementato ancora questa funzione.");
-        alert.showAndWait();
-    }
-    
-     /**
+    /**
      * @brief Closes the application.
      *
      * This method exits the application when the exit button is clicked.
