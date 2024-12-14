@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Mario Rossi
+N:Rossi;Mario;;;
+TEL;TYPE=cell,voice:+393401234567
+TEL;TYPE=home,voice:+390123456789
+EMAIL:mario.rossi@example.com
+ADR;TYPE=home:;;Via Roma 1;Milano;;20100;Italia
+BDAY:1980-01-01
+ORG:Acme S.p.A.
+TITLE:Direttore Vendite
+URL:http://www.mariorossi.it
+NOTE:Contatto di esempio per Mario Rossi.
+END:VCARD

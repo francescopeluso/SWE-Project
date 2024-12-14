@@ -26,8 +26,10 @@ public class FileServiceTest {
     public static void setUpClass() {
         contacts1 = FXCollections.observableSet();
         contacts2 = FXCollections.observableSet();
-        fileService1 = new FileService("C:\\Users\\ACER\\Desktop\\test\\test1.bin", contacts1);
-        fileService2 = new FileService("C:\\Users\\ACER\\Desktop\\test\\test1.bin", contacts2);
+        String path1 = FileServiceTest.class.getResource("/assets/testFiles/test1.bin").getPath().replaceAll("%20", "\\ ");
+        String path2 = FileServiceTest.class.getResource("/assets/testFiles/test1.bin").getPath().replaceAll("%20", "\\ ");
+        fileService1 = new FileService(path1, contacts1);
+        fileService2 = new FileService(path2, contacts2);
     }
     
     @AfterAll

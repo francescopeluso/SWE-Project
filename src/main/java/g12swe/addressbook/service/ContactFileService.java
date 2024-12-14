@@ -20,12 +20,9 @@ public class ContactFileService extends Service<ObservableSet<Contact>>{
             @Override
             protected ObservableSet<Contact> call() throws Exception {
                 try{
-                    
                     ObservableSet<Contact> c = fileService.importFromFile();
-                    return c;    
-                    
-                }
-                catch(Exception e){
+                    return c;      
+                } catch(Exception e){
                     System.out.println("Errore durante l'operazione");
                     return null;
                 }
@@ -36,16 +33,14 @@ public class ContactFileService extends Service<ObservableSet<Contact>>{
     }
     
     public void performContactOperation(){
-        
+
         Task<Void> operationTask = new Task<>(){
             
             @Override
             protected Void call() {
-             
                 try{
                     fileService.exportToFile();
-                }
-                catch(Exception e){
+                } catch(Exception e){
                     System.out.println("Errore durante l'operazione");
                 }
                 
@@ -54,8 +49,7 @@ public class ContactFileService extends Service<ObservableSet<Contact>>{
         };
         
         operationTask.setOnSucceeded(event -> {
-        
-            System.out.println("rubrica salvata!!");
+            System.out.println("Rubrica salvata correttamente.");
         });
         
         new Thread(operationTask).start();
