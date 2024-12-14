@@ -33,10 +33,14 @@ public class ImportExportServiceTest {
         importedAddressBook = FXCollections.observableSet();
         addressBookToExport = FXCollections.observableSet();
         
-        exportSingleContact = new ImportExportService("C:\\Users\\ACER\\Desktop\\testvcard\\test1.vcf", addressBookToExport);
-        exportAddressBook = new ImportExportService("C:\\Users\\ACER\\Desktop\\testvcard\\test2.vcf", addressBookToExport);
-        importSingleContact = new ImportExportService("C:\\Users\\ACER\\Desktop\\testvcard\\filevcard.vcf", importedAddressBook);
-        importAddressBook = new ImportExportService("C:\\Users\\ACER\\Desktop\\testvcard\\rubrica.vcf", importedAddressBook);
+        String tempDir = System.getProperty("java.io.tmpdir");
+        exportSingleContact = new ImportExportService(tempDir + "test1.vcf", addressBookToExport);
+        exportAddressBook = new ImportExportService(tempDir + "test2.vcf", addressBookToExport);
+
+        String path1 = ImportExportServiceTest.class.getResource("/assets/testFiles/filevcard.vcf").getPath().replaceAll("%20", "\\ ");
+        String path2 = ImportExportServiceTest.class.getResource("/assets/testFiles/rubrica.vcf").getPath().replaceAll("%20", "\\ ");
+        importSingleContact = new ImportExportService(path1, importedAddressBook);
+        importAddressBook = new ImportExportService(path2, importedAddressBook);
     }
     
     @AfterAll

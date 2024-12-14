@@ -1,0 +1,23 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Mario Rossi
+N:Rossi;Mario;;;
+TEL;TYPE=cell:+393401234567
+EMAIL:mario.rossi@example.com
+END:VCARD
+
+BEGIN:VCARD
+VERSION:4.0
+FN:Luigi Bianchi
+N:Bianchi;Luigi;;;
+TEL;TYPE=work:+390612345678
+EMAIL:luigi.bianchi@example.com
+END:VCARD
+
+BEGIN:VCARD
+VERSION:4.0
+FN:Giulia Verdi
+N:Verdi;Giulia;;;
+TEL;TYPE=home:+390651234567
+EMAIL:giulia.verdi@example.com
+END:VCARD

@@ -23,11 +23,13 @@ public class FileServiceTest {
     }
     
     @BeforeAll
-    public static void setUpClass() {
+    public static void setUpClass() throws java.net.URISyntaxException {
         contacts1 = FXCollections.observableSet();
         contacts2 = FXCollections.observableSet();
-        fileService1 = new FileService("C:\\Users\\ACER\\Desktop\\test\\test1.bin", contacts1);
-        fileService2 = new FileService("C:\\Users\\ACER\\Desktop\\test\\test1.bin", contacts2);
+        String path1 = new File(FileServiceTest.class.getResource("/assets/testFiles/test1.bin").toURI()).getPath();
+        String path2 = new File(FileServiceTest.class.getResource("/assets/testFiles/test1.bin").toURI()).getPath();
+        fileService1 = new FileService(path1, contacts1);
+        fileService2 = new FileService(path2, contacts2);
     }
     
     @AfterAll
