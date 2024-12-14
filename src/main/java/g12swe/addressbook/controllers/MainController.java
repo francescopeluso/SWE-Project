@@ -1,5 +1,6 @@
 package g12swe.addressbook.controllers;
 
+import g12swe.addressbook.App;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
 import g12swe.addressbook.service.ContactFileService;
@@ -27,12 +28,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 import java.awt.Desktop;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import javafx.collections.ObservableSet;
 import javafx.collections.SetChangeListener;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -86,16 +90,7 @@ public class MainController implements Initializable {
         ab = new AddressBook();
         observableContactsList = FXCollections.observableArrayList();
 
-        ImportExportService importService = new ImportExportService("/Users/fp/G12-Rubrica/rubrica.vcf", ab.getContactList());
-        FileService fileService = new FileService("/Users/fp/G12-RubricaG12-Rubrica-savefile.bin", ab.getContactList());
-        
-        try {
-            ab.initialize(importService.importFromFile());
-            observableContactsList.setAll(ab.getContactList());
-            contactListView.setItems(observableContactsList);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        FileService fileService = new FileService(App.getSaveFilePath(), ab.getContactList());
            
         ContactFileService cfs = new ContactFileService(fileService, true);
         cfs.setOnSucceeded(event -> {
@@ -105,8 +100,8 @@ public class MainController implements Initializable {
             
             if (importedContacts != null) {
                 ab.getContactList().clear();
-                observableContactsList.clear();
                 ab.getContactList().addAll(importedContacts);
+                observableContactsList.clear();
                 observableContactsList.addAll(importedContacts);
             }
                 
@@ -191,6 +186,15 @@ public class MainController implements Initializable {
             }
         }
     }
+
+    public void saveAddressBookState() {
+        try {
+            FileService fileService = new FileService(App.getSaveFilePath(), ab.getContactList());
+            fileService.exportToFile();
+        } catch (IOException e) {
+            System.err.println("Error saving address book state: " + e.getMessage());
+        }
+    }
     
     private void workInProgressAlert() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -210,7 +214,7 @@ public class MainController implements Initializable {
 
     @FXML
     private void exitProgram(ActionEvent event) throws IOException {
-        FileService fileService = new FileService("/Users/fp/G12-Rubrica/G12-Rubrica-savefile.bin", ab.getContactList());
+        FileService fileService = new FileService(App.getSaveFilePath(), ab.getContactList());
         fileService.exportToFile();
         Platform.exit();
     }
@@ -262,26 +266,85 @@ public class MainController implements Initializable {
     /**
      * @brief Handles importing contacts from a vCard file.
      *
-     * Currently not implemented. Displays a warning alert.
+     * Asks the user to select a file to import and then imports the contacts
+     * from the file. Displays a success or error alert.
      *
      * @param event The action event triggered by the user.
      */
     @FXML
     private void importVCard(ActionEvent event) {
-        this.workInProgressAlert();
+        try {
+            Stage stage = (Stage) contactListView.getScene().getWindow();
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Importa file VCF");
+            fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("VCard Files", "*.vcf")
+            );
+            
+            File file = fileChooser.showOpenDialog(stage);
+            if (file != null) {
+                ImportExportService importService = new ImportExportService(file.getAbsolutePath(), ab.getContactList());
+                ObservableSet<Contact> importedContacts = importService.importFromFile();
+                
+                if (importedContacts != null) {
+                    ab.getContactList().addAll(importedContacts);
+                    updateListView();
+                    saveAddressBookState();
+                    
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Importazione completata");
+                    alert.setHeaderText(null);
+                    alert.setContentText("I contatti sono stati importati con successo");
+                    alert.showAndWait();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore");
+            alert.setHeaderText(null);
+            alert.setContentText("Si è verificato un errore durante l'importazione");
+            alert.showAndWait();
+        }
     }
     
     /**
      * @brief Handles exporting contacts from a vCard file.
      *
-     * Currently not implemented. Displays a warning alert.
+     * Asks the user to select a path to save the file and then exports the contacts
+     * to a vCard file. Displays a success or error alert.
      *
      * @param event The action event triggered by the user.
      */
-
     @FXML
     private void exportVCard(ActionEvent event) {
-        this.workInProgressAlert();
+        try {
+            Stage stage = (Stage) contactListView.getScene().getWindow();
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Salva file VCF");
+            fileChooser.getExtensionFilters().add(
+            new FileChooser.ExtensionFilter("VCard Files", "*.vcf")
+            );
+            
+            File file = fileChooser.showSaveDialog(stage);
+            if (file != null) {
+            ImportExportService exportService = new ImportExportService(file.getAbsolutePath(), ab.getContactList());
+            exportService.exportToFile();
+            
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Esportazione completata");
+            alert.setHeaderText(null);
+            alert.setContentText("I contatti sono stati esportati con successo");
+            alert.showAndWait();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore");
+            alert.setHeaderText(null);
+            alert.setContentText("Si è verificato un errore durante l'esportazione");
+            alert.showAndWait();
+        }
     }
     /**
      * @brief Handles inserting a new contact.
@@ -315,6 +378,7 @@ public class MainController implements Initializable {
     public void addContact(Contact contact) {
         ab.addContact(contact);
         updateListView();
+        saveAddressBookState();
     }
     
     /**
@@ -330,23 +394,40 @@ public class MainController implements Initializable {
         Contact toDelete = contactListView.getSelectionModel().getSelectedItem();
         if (toDelete != null) {
             ab.removeContact(toDelete);
+            observableContactsList.setAll(ab.getContactList());
+            saveAddressBookState();
         }
-        
-        observableContactsList.setAll(ab.getContactList());
     }
     
     
     /**
      * @brief Resets the AddressBook to its initial state.
      *
-     * Currently not implemented. Displays a warning alert.
+     * Clears all contacts from the AddressBook and the ListView.
+     * Displays a confirmation alert before proceeding.
      *
      * @param event The action event triggered by the user.
      */
 
     @FXML
     private void reinitializeAddressBook(ActionEvent event) {
-        this.workInProgressAlert();
+        Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmAlert.setTitle("Reinizializza Rubrica");
+        confirmAlert.setHeaderText("Sei sicuro di voler eliminare tutti i contatti?");
+        confirmAlert.setContentText("Questa azione non può essere annullata.");
+
+        if (confirmAlert.showAndWait().get().getButtonData().isDefaultButton()) {
+            ab.getContactList().clear();
+            observableContactsList.clear();
+            contactListView.setItems(observableContactsList);
+            saveAddressBookState();
+            
+            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
+            successAlert.setTitle("Rubrica reinizializzata");
+            successAlert.setHeaderText(null);
+            successAlert.setContentText("Tutti i contatti sono stati eliminati con successo.");
+            successAlert.showAndWait();
+        }
     }
     
     private void filterContacts() {

@@ -362,5 +362,6 @@ public class ContactController {
         this.selected = updatedContact;
         
         mainController.updateListView();
+        mainController.saveAddressBookState();
     }
 }

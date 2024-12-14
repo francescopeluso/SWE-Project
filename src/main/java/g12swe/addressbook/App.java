@@ -25,7 +25,6 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RootView.fxml"));
         Parent root = loader.load();
 
@@ -34,7 +33,6 @@ public class App extends Application {
         Scene scene = new Scene(root);
         
         stage.widthProperty().addListener((o, oldValue, newValue) -> {
-            
             RootController controller = loader.getController();
             if (newValue.intValue() < 400) {
                 controller.showMainViewOnly();
@@ -48,7 +46,6 @@ public class App extends Application {
             } else {
                 controller.showBothViews();
             }
-            
         });
         
         stage.heightProperty().addListener((o, oldValue, newValue)->{
@@ -76,7 +73,6 @@ public class App extends Application {
             throw new AppDirOrFilesException("Impossibile creare la cartella di base: " + baseDir.getAbsolutePath());
         }
         
-
         File saveFile = new File(baseDir, "G12-Rubrica-savefile.bin");
 
         if (!saveFile.exists()) {
@@ -89,7 +85,11 @@ public class App extends Application {
             }
         }
         
-        System.setProperty("g12.rubrica.savefile", saveFile.getAbsolutePath());
+
     }
 
+    public static String getSaveFilePath() {
+        String userDir = System.getProperty("user.home");
+        return userDir + File.separator + "G12-Rubrica" + File.separator + "G12-Rubrica-savefile.bin";
+    }
 }
