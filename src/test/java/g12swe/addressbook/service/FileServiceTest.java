@@ -23,11 +23,11 @@ public class FileServiceTest {
     }
     
     @BeforeAll
-    public static void setUpClass() {
+    public static void setUpClass() throws java.net.URISyntaxException {
         contacts1 = FXCollections.observableSet();
         contacts2 = FXCollections.observableSet();
-        String path1 = FileServiceTest.class.getResource("/assets/testFiles/test1.bin").getPath().replaceAll("%20", "\\ ");
-        String path2 = FileServiceTest.class.getResource("/assets/testFiles/test1.bin").getPath().replaceAll("%20", "\\ ");
+        String path1 = new File(FileServiceTest.class.getResource("/assets/testFiles/test1.bin").toURI()).getPath();
+        String path2 = new File(FileServiceTest.class.getResource("/assets/testFiles/test1.bin").toURI()).getPath();
         fileService1 = new FileService(path1, contacts1);
         fileService2 = new FileService(path2, contacts2);
     }
