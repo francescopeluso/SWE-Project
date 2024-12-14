@@ -35,7 +35,7 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn -B package --file pom.xml -Dtest='!FileServiceTest,!ImportExportServiceTest'
+      run: mvn -B package --file pom.xml -Dtest='!FileServiceTest,!ImportExportServiceTest' -DfailIfNoTests=false
       
     - name: Upload package to GitHub Release
       env:
