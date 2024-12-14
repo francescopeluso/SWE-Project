@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">g12swe.addressbook.models.contacts.Contact Class Reference</div>  </div>
@@ -100,6 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3e09e2b923a89e6551099707019b44cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b52dfa1595a6940ec92672f9729c4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a16b52dfa1595a6940ec92672f9729c4f">setSurname</a> (String surname)</td></tr>
 <tr class="separator:a16b52dfa1595a6940ec92672f9729c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d84a9c6bab855852a24fc05c82ab53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a25d84a9c6bab855852a24fc05c82ab53">getUniqueId</a> ()</td></tr>
+<tr class="separator:a25d84a9c6bab855852a24fc05c82ab53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d11e8c09da7fd9824cde7233cc57b57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a3d11e8c09da7fd9824cde7233cc57b57">addEmailAddress</a> (String emailAddress, <a class="el" href="enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1EntryCategory.html">EntryCategory</a> category)  throws InvalidEmailAddressException</td></tr>
 <tr class="memdesc:a3d11e8c09da7fd9824cde7233cc57b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to add an email to the contact.  <a href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a3d11e8c09da7fd9824cde7233cc57b57">More...</a><br /></td></tr>
 <tr class="separator:a3d11e8c09da7fd9824cde7233cc57b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,6 +124,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aced836cf33254d69d57ee6b4e6ce0b9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#aced836cf33254d69d57ee6b4e6ce0b9d">compareTo</a> (<a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> o)</td></tr>
 <tr class="memdesc:aced836cf33254d69d57ee6b4e6ce0b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to compare the calling object to another <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> object.  <a href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#aced836cf33254d69d57ee6b4e6ce0b9d">More...</a><br /></td></tr>
 <tr class="separator:aced836cf33254d69d57ee6b4e6ce0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19a3e4ae4cc45d92eff8f58a9608886"><td class="memItemLeft" align="right" valign="top"><a id="af19a3e4ae4cc45d92eff8f58a9608886"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
+<tr class="separator:af19a3e4ae4cc45d92eff8f58a9608886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4cf12bd41a71a0fb8ab16eab74f79a07"><td class="memItemLeft" align="right" valign="top"><a id="a4cf12bd41a71a0fb8ab16eab74f79a07"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLastUniqueId</b> (int lastUniqueId)</td></tr>
+<tr class="separator:a4cf12bd41a71a0fb8ab16eab74f79a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ada3e57f063d0d597e3ffdd4c0fde98b2"></a>
@@ -375,6 +387,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the surname </dd></dl>
+
+</div>
+</div>
+<a id="a25d84a9c6bab855852a24fc05c82ab53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d84a9c6bab855852a24fc05c82ab53">&#9670;&nbsp;</a></span>getUniqueId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int g12swe.addressbook.models.contacts.Contact.getUniqueId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the uniqueId </dd></dl>
 
 </div>
 </div>

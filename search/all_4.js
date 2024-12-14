@@ -12,5 +12,6 @@ var searchData=
   ['getphonenumbers_41',['getPhoneNumbers',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a089c7bd13520bb433133b75ae1a9d738',1,'g12swe::addressbook::models::contacts::Contact']]],
   ['getpronouns_42',['getPronouns',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1ExtendedContact.html#adbde3876596c5c8da182401c04ff4f77',1,'g12swe::addressbook::models::contacts::ExtendedContact']]],
   ['getselectedcontact_43',['getSelectedContact',['../classg12swe_1_1addressbook_1_1controllers_1_1ContactController.html#a8020ee808671aee1c0924f9b8460adf8',1,'g12swe::addressbook::controllers::ContactController']]],
-  ['getsurname_44',['getSurname',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a2b12aa49458f5d605870fc1e6d96ddb0',1,'g12swe::addressbook::models::contacts::Contact']]]
+  ['getsurname_44',['getSurname',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a2b12aa49458f5d605870fc1e6d96ddb0',1,'g12swe::addressbook::models::contacts::Contact']]],
+  ['getuniqueid_45',['getUniqueId',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a25d84a9c6bab855852a24fc05c82ab53',1,'g12swe::addressbook::models::contacts::Contact']]]
 ];
