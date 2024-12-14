@@ -74,6 +74,8 @@ public class MainController implements Initializable {
     
     @FXML
     private ListView<Contact> contactListView; ///< ListView displaying the contact list.
+    
+    private ContactFileService cfs;
 
     /**
      * @brief Initializes the controller and its bindings.
@@ -91,10 +93,9 @@ public class MainController implements Initializable {
 
         FileService fileService = new FileService(App.getSaveFilePath(), ab.getContactList());
            
-        ContactFileService cfs = new ContactFileService(fileService, true);
+        cfs = new ContactFileService(fileService);
         cfs.setOnSucceeded(event -> {
             
-            System.out.println("Contatti importati");
             ObservableSet<Contact> importedContacts = cfs.getValue();
             
             if (importedContacts != null) {
@@ -112,7 +113,7 @@ public class MainController implements Initializable {
 
         cfs.start(); 
         
-
+        
         ab.getContactList().addListener((SetChangeListener.Change<? extends Contact> change) -> {
             if (change.wasAdded()) {
                 observableContactsList.add(change.getElementAdded());
@@ -187,12 +188,7 @@ public class MainController implements Initializable {
     }
 
     public void saveAddressBookState() {
-        try {
-            FileService fileService = new FileService(App.getSaveFilePath(), ab.getContactList());
-            fileService.exportToFile();
-        } catch (IOException e) {
-            System.err.println("Error saving address book state: " + e.getMessage());
-        }
+        cfs.performContactOperation();
     }
     
     /**

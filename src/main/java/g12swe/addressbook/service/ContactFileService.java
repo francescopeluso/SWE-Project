@@ -8,28 +8,9 @@ import javafx.concurrent.Task;
 public class ContactFileService extends Service<ObservableSet<Contact>>{
     
     private final FileService fileService;
-    private boolean isImport;
     
     public ContactFileService(FileService fileService){
         this.fileService = fileService;
-        this.isImport = false;
-    }
-    
-    public ContactFileService(FileService fileService, boolean isImport){
-        this.fileService = fileService;
-        this.isImport = isImport;
-    }
-    
-    public void setIsImport(boolean isImport){
-        this.isImport = isImport;
-    }
-    
-    public FileService getFileService(){
-        return this.fileService;
-    }
-    
-    public boolean getIsImport(){
-        return this.isImport;
     }
     
     @Override
@@ -39,14 +20,9 @@ public class ContactFileService extends Service<ObservableSet<Contact>>{
             @Override
             protected ObservableSet<Contact> call() throws Exception {
                 try{
-                    if(isImport){
-                        ObservableSet<Contact> c = fileService.importFromFile();
-                        return c;
-                    }
-                    else{
-                        fileService.exportToFile();
-                        return null;
-                    }
+                    
+                    ObservableSet<Contact> c = fileService.importFromFile();
+                    return c;    
                     
                 }
                 catch(Exception e){
@@ -57,6 +33,32 @@ public class ContactFileService extends Service<ObservableSet<Contact>>{
             }
 
         };
+    }
+    
+    public void performContactOperation(){
+        
+        Task<Void> operationTask = new Task<>(){
+            
+            @Override
+            protected Void call() {
+             
+                try{
+                    fileService.exportToFile();
+                }
+                catch(Exception e){
+                    System.out.println("Errore durante l'operazione");
+                }
+                
+                return null;
+            }
+        };
+        
+        operationTask.setOnSucceeded(event -> {
+        
+            System.out.println("rubrica salvata!!");
+        });
+        
+        new Thread(operationTask).start();
     }
     
 }
