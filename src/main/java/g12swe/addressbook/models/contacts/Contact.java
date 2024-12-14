@@ -105,6 +105,13 @@ public class Contact implements Comparable<Contact>, Serializable {
     public void setSurname(String surname){
         this.surname = surname;
     }
+
+    /**
+     * @return the uniqueId 
+     */
+    public int getUniqueId() {
+        return uniqueId;
+    }
     
     /**
      * @brief Method to add an email to the contact.
@@ -222,6 +229,16 @@ public class Contact implements Comparable<Contact>, Serializable {
         }
         
         return Integer.compare(this.uniqueId, o.uniqueId);
+    }
+
+    @Override
+    public String toString() {
+        return uniqueId + " " + name + " " + surname;
+    }
+
+    public static void setLastUniqueId(int lastUniqueId) {
+        uniqueContacts = lastUniqueId;
+        System.out.println("Last unique id: " + lastUniqueId);
     }
 
 }
