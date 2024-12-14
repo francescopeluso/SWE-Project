@@ -403,16 +403,28 @@ public class ContactController {
         Contact oldContact = this.selected;
         Contact updatedContact = new Contact(firstName, lastName);
         
-        for (PhoneNumber phone : oldContact.getPhoneNumbers()) {
-            try {
-                updatedContact.addPhoneNumber(phone.getPhoneNumber(), phone.getCategory());
-            } catch (InvalidPhoneNumberException e) { }
+        for (Node node : phoneNumbersList.getChildren()) {
+            if (node instanceof HBox) {
+            TextField phoneField = (TextField) ((HBox) node).getChildren().get(0);
+            String number = phoneField.getText();
+            if (!number.isEmpty()) {
+                try {
+                updatedContact.addPhoneNumber(number, null);
+                } catch (InvalidPhoneNumberException e) { }
+            }
+            }
         }
         
-        for (EmailAddress email : oldContact.getEmailAddresses()) {
-            try {
-                updatedContact.addEmailAddress(email.getEmailAddress(), email.getCategory());
-            } catch (InvalidEmailAddressException e) { }
+        for (Node node : emailAddressesList.getChildren()) {
+            if (node instanceof HBox) {
+            TextField emailField = (TextField) ((HBox) node).getChildren().get(0);
+            String email = emailField.getText();
+            if (!email.isEmpty()) {
+                try {
+                updatedContact.addEmailAddress(email, null);
+                } catch (InvalidEmailAddressException e) { }
+            }
+            }
         }
         
         mainController.getAddressBook().updateContact(oldContact, updatedContact);

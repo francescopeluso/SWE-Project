@@ -54,6 +54,16 @@ public class FileService extends AddressBookService {
         } catch (ClassNotFoundException ex) {
             return null;
         }
+
+        // find the maximum unique id value between all contacts, and set it with Contact static method
+        int max = 0;
+        for(Contact c : tempSet){
+            if(c.getUniqueId() > max){
+                max = c.getUniqueId();
+            }
+        }
+
+        Contact.setLastUniqueId(max+1);
         
         return FXCollections.observableSet(tempSet);
     }
