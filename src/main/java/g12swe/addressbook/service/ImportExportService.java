@@ -39,10 +39,26 @@ import javafx.collections.ObservableSet;
  */
 public class ImportExportService extends AddressBookService {
 
+    /**
+     * @brief Constructor for the ImportExportService.
+     *
+     * @param fileName The name of the file used for importing and exporting data.
+     * @param contacts The set of contacts to manage.
+     */
     public ImportExportService(String fileName, ObservableSet<Contact> contacts){
         super(fileName, contacts);
     }
 
+     /**
+     * @brief Imports contacts from a vCard file.
+     *
+     * Reads contacts from the file specified in the constructor, parses the vCard format,
+     * and returns them as an observable set.
+     *
+     * @return An observable set of contacts imported from the file.
+     * @throws FileNotFoundException If the file cannot be found.
+     * @throws IOException If an I/O error occurs during reading.
+     */
     @Override
     public ObservableSet<Contact> importFromFile() throws FileNotFoundException, IOException {
         Set<Contact> tempSet = new TreeSet<>();
@@ -79,6 +95,16 @@ public class ImportExportService extends AddressBookService {
         
         return FXCollections.observableSet(tempSet);
     }
+    
+    /**
+     * @brief Exports all contacts to a vCard file.
+     *
+     * Serializes all contacts into the vCard format and writes them to the file specified
+     * during construction.
+     *
+     * @throws FileNotFoundException If the file cannot be created or opened.
+     * @throws IOException If an I/O error occurs during writing.
+     */
 
     @Override
     public void exportToFile() throws FileNotFoundException, IOException {
@@ -112,6 +138,16 @@ public class ImportExportService extends AddressBookService {
         Ezvcard.write(vcards).go(os);
     }
 
+    /**
+     * @brief Imports a single contact from a vCard file.
+     *
+     * Reads the first contact in the vCard file specified during construction
+     * and returns it as a Contact object.
+     *
+     * @return The imported Contact object, or null if an error occurs.
+     * @throws InvalidEmailAddressException If an email address is invalid.
+     * @throws InvalidPhoneNumberException If a phone number is invalid.
+     */
     public Contact importSingleContact() throws InvalidEmailAddressException, InvalidPhoneNumberException {
         VCard vcard;
         
@@ -147,6 +183,16 @@ public class ImportExportService extends AddressBookService {
         return null;
     }
     
+     /**
+     * @brief Exports a single contact to a vCard file.
+     *
+     * Serializes the provided contact into the vCard format and writes it to the
+     * file specified during construction.
+     *
+     * @param c The contact to export.
+     * @throws FileNotFoundException If the file cannot be created or opened.
+     * @throws IOException If an I/O error occurs during writing.
+     */
     public void exportSingleContact(Contact c) throws FileNotFoundException, IOException{
         VCard vcard = new VCard();
         

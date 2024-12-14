@@ -22,10 +22,27 @@ import javafx.collections.ObservableSet;
  */
 public class FileService extends AddressBookService {
     
+    /**
+     * @brief Constructor for the FileService.
+     *
+     * @param fileName The name of the file used for saving and loading data.
+     * @param contacts The observable set of contacts to manage.
+     */
     public FileService(String fileName, ObservableSet<Contact> contacts){
         super(fileName, contacts);
     }
     
+     /**
+     * @brief Imports contacts from a file.
+     *
+     * This method reads contact data from the file specified in
+     * the constructor and converts it into an observable set.
+     *
+     * @return An observable set of contacts loaded from the file.
+     *         Returns null if the file does not contain valid data.
+     * @throws FileNotFoundException If the file is not found.
+     * @throws IOException If an I/O error occurs during reading.
+     */
 
     @SuppressWarnings("unchecked")
     @Override
@@ -40,6 +57,16 @@ public class FileService extends AddressBookService {
         
         return FXCollections.observableSet(tempSet);
     }
+    
+    /**
+     * @brief Exports contacts to a file.
+     *
+     * This method exports the current set of contacts
+     * to the file specified in the constructor.
+     *
+     * @throws FileNotFoundException If the file cannot be created or opened.
+     * @throws IOException If an I/O error occurs during writing.
+     */
 
     @Override
     public void exportToFile() throws FileNotFoundException, IOException{

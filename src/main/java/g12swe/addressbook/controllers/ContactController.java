@@ -38,28 +38,74 @@ public class ContactController {
      */
     private MainController mainController;
     
+    /**
+     * @brief Label displaying the full name of the contact.
+     */
     @FXML
     private Label fullNameLabel;
+    
+    /**
+     * @brief VBox containing the list of phone numbers.
+     */
     @FXML
     private VBox phoneNumbersList;
+    
+    /**
+     * @brief VBox containing the list of email addresses.
+     */
     @FXML
     private VBox emailAddressesList;
+    
+    /**
+     * @brief TextField for the contact's first name.
+     */
     @FXML
     private TextField firstNameField;
+    
+    /**
+     * @brief TextField for the contact's last name.
+     */
     @FXML
     private TextField lastNameField;
+    
+    /**
+     * @brief Button for editing or saving the contact's details.
+     */
     @FXML
     private Button editOrSaveButton;
+    
+     /**
+     * @brief TextArea for the contact's address.
+     */
     @FXML
     private TextArea addressField;
+    
+    /**
+     * @brief TextField for the contact's preferred pronouns.
+     */
     @FXML
     private TextField pronounsField;
+    
+    /**
+     * @brief DatePicker for the contact's birthday.
+     */
     @FXML
     private DatePicker birthdayPicker;
+    
+    /**
+     * @brief TextArea for inserting notes about the contact.
+     */
     @FXML
     private TextArea notesArea;
     
+    /**
+     * @brief Flag indicating if the edit mode is enabled.
+     */
     private boolean isEditMode = false;
+    
+    /**
+     * @brief Currently selected contact.
+     */
     private Contact selected = null;
     
     /**
@@ -77,7 +123,12 @@ public class ContactController {
     public Contact getSelectedContact() {
         return this.selected;
     }
-
+    
+     /**
+     * @brief Prepares the view for adding a new contact.
+     *
+     * Clears all fields, enables edit mode, and sets up the UI for adding a new contact.
+     */
     public void prepareForNewContact() {
         this.selected = null;
         isEditMode = true;
@@ -102,6 +153,12 @@ public class ContactController {
         // Override the edit/save action for new contact
         editOrSaveButton.setOnAction(event -> handleNewContactSave());
     }
+    
+    /**
+     * @brief Handles saving a new contact.
+     *
+     * Validates input fields and adds the new contact to the address book.
+     */
 
     private void handleNewContactSave() {
         try {

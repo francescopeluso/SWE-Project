@@ -204,11 +204,19 @@ public class Contact implements Comparable<Contact>, Serializable {
     }
 
     /**
-     * @brief Method to compare the calling object to another Contact object.
-     * 
-     * @param[in] o
-     * @return 
-     */
+    * @brief Method to compare the calling object to another Contact object.
+    * 
+    * Compares two Contact objects based on their surname, name, and uniqueId.
+    * The comparison follows this order:
+    * 1. First compares surnames
+    * 2. If surnames are equal, compares names
+    * 3. If both surname and name are equal, compares uniqueId
+    * 
+    * @param[in] o The Contact object to compare with
+    * @return A negative integer if this contact comes before the parameter,
+    *         zero if they are equal,
+    *         a positive integer if this contact comes after the parameter
+    */
     @Override
     public int compareTo(Contact o) {
         int surnameCompare = this.surname.compareToIgnoreCase(o.surname);  

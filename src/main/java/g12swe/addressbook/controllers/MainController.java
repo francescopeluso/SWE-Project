@@ -67,15 +67,15 @@ public class MainController implements Initializable {
     private ObservableList<Contact> observableContactsList;
     
     @FXML
-    private TextField searchField;
+    private TextField searchField; ///< TextField for searching contacts.
     
     @FXML
-    private Button addContactBtn;
+    private Button addContactBtn; ///< Button for adding a new contact.
     
     @FXML
     private ListView<Contact> contactListView; ///< ListView displaying the contact list.
     
-    private ContactFileService cfs;
+    private ContactFileService cfs; ///< ListView displaying the contact list.
 
     /**
      * @brief Initializes the controller and its bindings.
@@ -166,10 +166,17 @@ public class MainController implements Initializable {
         this.contactController = contactController;
     }
 
+    /**
+     * @brief Retrieves the AddressBook associated with this controller.
+     * @return The AddressBook instance.
+     */
     public AddressBook getAddressBook() {
         return ab;
     }
     
+    /**
+     * @brief Updates the ListView with sorted contacts.
+     */
     public void updateListView() {
         List<Contact> sortedList = new ArrayList<>(ab.getContactList());
         Collections.sort(sortedList);
@@ -186,7 +193,10 @@ public class MainController implements Initializable {
             }
         }
     }
-
+    
+    /**
+     * @brief Saves the current state of the AddressBook.
+     */
     public void saveAddressBookState() {
         cfs.performContactOperation();
     }
@@ -361,6 +371,12 @@ public class MainController implements Initializable {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * @brief Adds a new contact to the AddressBook.
+     *
+     * @param contact The contact to add.
+     */
 
     public void addContact(Contact contact) {
         ab.addContact(contact);
@@ -416,6 +432,10 @@ public class MainController implements Initializable {
             successAlert.showAndWait();
         }
     }
+    
+    /**
+     * @brief Filters contacts in the ListView based on the search field input.
+     */
     
     private void filterContacts() {
         String searchText = searchField.getText().toLowerCase();
