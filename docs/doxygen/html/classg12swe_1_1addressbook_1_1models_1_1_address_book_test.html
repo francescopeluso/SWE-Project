@@ -114,6 +114,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDown</b> ()</td><
 <tr class="memitem:a45ae91e737f39dc51c64878879234770" id="r_a45ae91e737f39dc51c64878879234770"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45ae91e737f39dc51c64878879234770">testGetContactList</a> ()  throws <a class="el" href="classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception.html">LimitReachedException</a> </td></tr>
 <tr class="memdesc:a45ae91e737f39dc51c64878879234770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test the getContactList method of <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1_address_book.html">AddressBook</a>.  <br /></td></tr>
 <tr class="separator:a45ae91e737f39dc51c64878879234770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a38878691fd377848f7742ce77b308b" id="r_a4a38878691fd377848f7742ce77b308b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a38878691fd377848f7742ce77b308b">testContactLimit</a> ()</td></tr>
+<tr class="memdesc:a4a38878691fd377848f7742ce77b308b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test contact limit in <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1_address_book.html">AddressBook</a>.  <br /></td></tr>
+<tr class="separator:a4a38878691fd377848f7742ce77b308b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -142,6 +145,26 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDownClass<
 
 <p>Test the addContact method of <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1_address_book.html">AddressBook</a>. </p>
 <p>Verifies that a contact can be successfully added to the address book and is present in the contact list after addition. </p>
+
+</div>
+</div>
+<a id="a4a38878691fd377848f7742ce77b308b" name="a4a38878691fd377848f7742ce77b308b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a38878691fd377848f7742ce77b308b">&#9670;&#160;</a></span>testContactLimit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g12swe.addressbook.models.AddressBookTest.testContactLimit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test contact limit in <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1_address_book.html">AddressBook</a>. </p>
+<p>Verifies that attempting to add more than 5000 contacts throws a LimitReachedException </p>
 
 </div>
 </div>

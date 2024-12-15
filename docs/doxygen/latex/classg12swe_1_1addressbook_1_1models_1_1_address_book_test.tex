@@ -14,7 +14,9 @@ void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_test
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_ad023cdb1b518ab8ae150609c5965492a}{test\+Remove\+Contact}} ()  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}} 
 \begin{DoxyCompactList}\small\item\em Test the remove\+Contact method of \doxylink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a45ae91e737f39dc51c64878879234770}{test\+Get\+Contact\+List}} ()  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}} 
-\begin{DoxyCompactList}\small\item\em Test the get\+Contact\+List method of \doxylink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Test the get\+Contact\+List method of \doxylink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a4a38878691fd377848f7742ce77b308b}{test\+Contact\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Test contact limit in \doxylink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,7 +39,17 @@ void g12swe.\+addressbook.\+models.\+Address\+Book\+Test.\+test\+Add\+Contact (\
 
 Test the add\+Contact method of \doxylink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}. 
 
-Verifies that a contact can be successfully added to the address book and is present in the contact list after addition. \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a45ae91e737f39dc51c64878879234770}\index{g12swe.addressbook.models.AddressBookTest@{g12swe.addressbook.models.AddressBookTest}!testGetContactList@{testGetContactList}}
+Verifies that a contact can be successfully added to the address book and is present in the contact list after addition. \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a4a38878691fd377848f7742ce77b308b}\index{g12swe.addressbook.models.AddressBookTest@{g12swe.addressbook.models.AddressBookTest}!testContactLimit@{testContactLimit}}
+\index{testContactLimit@{testContactLimit}!g12swe.addressbook.models.AddressBookTest@{g12swe.addressbook.models.AddressBookTest}}
+\doxysubsubsection{\texorpdfstring{testContactLimit()}{testContactLimit()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a4a38878691fd377848f7742ce77b308b} 
+void g12swe.\+addressbook.\+models.\+Address\+Book\+Test.\+test\+Contact\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Test contact limit in \doxylink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}. 
+
+Verifies that attempting to add more than 5000 contacts throws a Limit\+Reached\+Exception \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a45ae91e737f39dc51c64878879234770}\index{g12swe.addressbook.models.AddressBookTest@{g12swe.addressbook.models.AddressBookTest}!testGetContactList@{testGetContactList}}
 \index{testGetContactList@{testGetContactList}!g12swe.addressbook.models.AddressBookTest@{g12swe.addressbook.models.AddressBookTest}}
 \doxysubsubsection{\texorpdfstring{testGetContactList()}{testGetContactList()}}
 {\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1_address_book_test_a45ae91e737f39dc51c64878879234770} 

@@ -22,7 +22,9 @@ void {\bfseries update\+List\+View} ()
 void {\bfseries save\+Address\+Book\+State} ()
 \begin{DoxyCompactList}\small\item\em Saves the current state of the Address\+Book. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a32f11138bfbf6bb7dc111bd517f4881e}{add\+Contact}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}{Extended\+Contact}} contact)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}} 
-\begin{DoxyCompactList}\small\item\em Adds a new contact to the Address\+Book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds a new contact to the Address\+Book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a59ed363aaa8915530026949750980755}{handle\+Contact\+Updated}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} updated\+Contact)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -54,7 +56,13 @@ Retrieves the Address\+Book associated with this controller.
 \begin{DoxyReturn}{Returns}
 The Address\+Book instance. 
 \end{DoxyReturn}
-\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9684c2c96fc55c52a21963a008bd6fed}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!initialize@{initialize}}
+\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a59ed363aaa8915530026949750980755}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!handleContactUpdated@{handleContactUpdated}}
+\index{handleContactUpdated@{handleContactUpdated}!g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}}
+\doxysubsubsection{\texorpdfstring{handleContactUpdated()}{handleContactUpdated()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a59ed363aaa8915530026949750980755} 
+void g12swe.\+addressbook.\+controllers.\+Main\+Controller.\+handle\+Contact\+Updated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{updated\+Contact}{}\end{DoxyParamCaption})}
+
+Handles when a contact is updated, ensuring proper selection and display \Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9684c2c96fc55c52a21963a008bd6fed}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!initialize@{initialize}}
 \index{initialize@{initialize}!g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}}
 \doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
 {\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9684c2c96fc55c52a21963a008bd6fed} 
