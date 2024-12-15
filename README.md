@@ -19,6 +19,7 @@ If you want to try the automatic loading of the save file that the program creat
 
 ## 📄 Documentation
 - All the documentation will be available [here](https://github.com/francescopeluso/SWE-Project/tree/main/docs)
+- PowerPoint presentation for project discussion [here](https://github.com/francescopeluso/SWE-Project/blob/main/docs/Presentazione%20SWE%20-%20Gruppo%2012.pptx)
 - Doxygen auto-generated "design-by-contract" documentation is available [in this GitHub Pages deployment](https://francescopeluso.github.io/SWE-Project)
 
 ## 💾 Languages and frameworks
