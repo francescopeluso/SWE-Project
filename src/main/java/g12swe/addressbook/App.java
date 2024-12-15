@@ -34,15 +34,11 @@ public class App extends Application {
         
         stage.widthProperty().addListener((o, oldValue, newValue) -> {
             RootController controller = loader.getController();
-            if (newValue.intValue() < 400) {
+            if (newValue.intValue() < 700) {
                 controller.showMainViewOnly();
-                
-                if(newValue.intValue() < 256) {
-                    stage.setResizable(false);
-                    stage.setWidth(256);
-                    stage.setResizable(true);
-                }
-                
+                stage.setResizable(false);
+                stage.setWidth(700);
+                stage.setResizable(true);
             } else {
                 controller.showBothViews();
             }

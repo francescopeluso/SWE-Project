@@ -153,10 +153,9 @@ public class MainController implements Initializable {
 
         // Add listener for contact selection changes
         contactListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (contactController != null && newValue != null) {
-                contactController.loadContactDetails(newValue);
+            if (contactController != null) {
+                contactController.loadContactDetails(newValue); // Pass null when no selection
             }
-            // Disable export button when no contact is selected
             exportSingleContactButton.setDisable(newValue == null);
         });
 
@@ -171,6 +170,7 @@ public class MainController implements Initializable {
                 contactController.loadContactDetails(firstContact);
             }
         }
+
     }
     
     /**

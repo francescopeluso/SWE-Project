@@ -329,6 +329,12 @@ public class ContactController {
      * @param contact the contact to load details for
      */
     public void loadContactDetails(Contact contact) {
+        if (contact == null) {
+            Contact dummyContact = new Contact("", "");
+            this.selected = dummyContact;
+
+            loadContactDetails(dummyContact);
+        }
 
         this.selected = contact;
 
