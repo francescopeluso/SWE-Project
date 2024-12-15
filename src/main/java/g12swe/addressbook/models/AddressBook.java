@@ -1,5 +1,6 @@
 package g12swe.addressbook.models;
 
+import g12swe.addressbook.exceptions.LimitReachedException;
 import g12swe.addressbook.models.contacts.Contact;
 import java.io.Serializable;
 import java.util.TreeSet;
@@ -38,8 +39,12 @@ public class AddressBook implements Serializable {
      * 
      * @param[in] c the contact to add 
      */
-    public void addContact(Contact c) {
-        this.contactList.add(c);
+    public void addContact(Contact c) throws LimitReachedException{
+        if(this.contactList.size() <= 5000)
+            this.contactList.add(c);
+        else
+            throw new LimitReachedException("Hai raggiunto il limite massimo di contatti in rubrica!");
+            
     }
     
     /**

@@ -2,6 +2,7 @@ package g12swe.addressbook.controllers;
 
 import g12swe.addressbook.exceptions.InvalidEmailAddressException;
 import g12swe.addressbook.exceptions.InvalidPhoneNumberException;
+import g12swe.addressbook.exceptions.LimitReachedException;
 import g12swe.addressbook.exceptions.MandatoryFieldsException;
 import g12swe.addressbook.models.contacts.Contact;
 import g12swe.addressbook.models.contacts.EmailAddress;
@@ -151,7 +152,13 @@ public class ContactController {
         editOrSaveButton.setText("Aggiungi");
         
         // Override the edit/save action for new contact
-        editOrSaveButton.setOnAction(event -> handleNewContactSave());
+        editOrSaveButton.setOnAction(event -> {
+            try {
+                handleNewContactSave();
+            } catch (LimitReachedException ex) {
+                ex.printStackTrace();
+            }
+        });
     }
     
     /**
@@ -160,7 +167,7 @@ public class ContactController {
      * Validates input fields and adds the new contact to the address book.
      */
 
-    private void handleNewContactSave() {
+    private void handleNewContactSave() throws LimitReachedException {
         try {
             String firstName = firstNameField.getText();
             String lastName = lastNameField.getText();

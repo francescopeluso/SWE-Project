@@ -1,5 +1,6 @@
 package g12swe.addressbook.models;
 
+import g12swe.addressbook.exceptions.LimitReachedException;
 import g12swe.addressbook.models.contacts.Contact;
 import java.util.Set;
 import java.util.TreeSet;
@@ -50,7 +51,7 @@ public class AddressBookTest {
      * and is present in the contact list after addition.
      */
     @Test
-    public void testAddContact() {
+    public void testAddContact() throws LimitReachedException {
         System.out.println("T070");
         Contact c = new Contact("Stefani", "Germanotta");
         AddressBook instance = new AddressBook();
@@ -65,7 +66,7 @@ public class AddressBookTest {
      * and that the removal operation returns true.
      */
     @Test
-    public void testRemoveContact() {
+    public void testRemoveContact() throws LimitReachedException {
         System.out.println("T071");
         Contact c = new Contact("Stefani", "Germanotta");
         AddressBook instance = new AddressBook();
@@ -82,7 +83,7 @@ public class AddressBookTest {
      * addedd contacts and matches te expected set.
      */
     @Test
-    public void testGetContactList() {
+    public void testGetContactList() throws LimitReachedException {
         System.out.println("T072");
         AddressBook instance = new AddressBook();
         Contact c = new Contact("Stefani", "Germanotta");
