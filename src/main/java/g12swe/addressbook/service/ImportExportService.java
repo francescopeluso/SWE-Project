@@ -155,7 +155,7 @@ public class ImportExportService extends AddressBookService {
             
             
             String name = vcard.getStructuredName().getGiven();
-            String surname = vcard.getStructuredName().getFamily();
+            String surname = vcard.getStructuredName().getFamily() != null ? vcard.getStructuredName().getFamily() : "";
             
             List<Email> emails = vcard.getEmails();
             List<Telephone> phoneNumbers = vcard.getTelephoneNumbers();

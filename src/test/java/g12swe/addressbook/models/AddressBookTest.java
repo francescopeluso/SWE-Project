@@ -97,5 +97,31 @@ public class AddressBookTest {
         
         assertEquals(FXCollections.observableSet(expResult), result);
     }
+
+    /**
+     * @brief Test contact limit in AddressBook
+     * 
+     * Verifies that attempting to add more than 5000 contacts
+     * throws a LimitReachedException
+     */
+    @Test
+    public void testContactLimit() {
+        System.out.println("T073");
+        AddressBook instance = new AddressBook();
+        
+        // Add 5000 contacts
+        for (int i = 0; i < 5000; i++) {
+            try {
+                instance.addContact(new Contact("First" + i, "Last" + i));
+            } catch (LimitReachedException e) {
+                fail("Should not throw exception before limit");
+            }
+        }
+        
+        // Verify adding one more throws exception
+        assertThrows(LimitReachedException.class, () -> {
+            instance.addContact(new Contact("One", "TooMany"));
+        });
+    }
     
 }

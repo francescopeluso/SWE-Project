@@ -40,7 +40,7 @@ public class AddressBook implements Serializable {
      * @param[in] c the contact to add 
      */
     public void addContact(Contact c) throws LimitReachedException{
-        if(this.contactList.size() <= 5000)
+        if(this.contactList.size() < 5000)
             this.contactList.add(c);
         else
             throw new LimitReachedException("Hai raggiunto il limite massimo di contatti in rubrica!");

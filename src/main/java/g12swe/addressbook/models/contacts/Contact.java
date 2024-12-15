@@ -226,11 +226,15 @@ public class Contact implements Comparable<Contact>, Serializable {
     */
     @Override
     public int compareTo(Contact o) {
+        this.surname = this.surname == null ? "" : this.surname;
+
         int surnameCompare = this.surname.compareToIgnoreCase(o.surname);  
         if (surnameCompare != 0) {
             return surnameCompare;
         }
-        
+
+        this.name = this.name == null ? "" : this.name;
+
         int nameCompare = this.name.compareToIgnoreCase(o.name);
         if (nameCompare != 0) {
             return nameCompare;
