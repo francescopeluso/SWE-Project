@@ -5,6 +5,18 @@
 
 ---
 
+## ⚠️ Before you try!
+This program handles two types of Contacts (`Contact` and `ExtendedContact`, which contain a bit more attributes that we do not export to vCard format).\
+If you want to try the automatic loading of the save file that the program creates and on which writes automatically, follow these steps:
+- Go to your home folder
+  - `C:\Users\<your username>\` in Windows,
+  - `/home/<your username>/` in Linux,
+  - `/Users/<your username>/` in macOS
+- Create a folder called "G12-Rubrica"
+- Copy the file `BACKUP-TEST.bin` that you find in the root of this repository to the folder you just created
+- Rename the file to `G12-Rubrica-savefile.bin`
+- You are ready!
+
 ## 📄 Documentation
 - All the documentation will be available [here](https://github.com/francescopeluso/SWE-Project/tree/main/docs)
 - Doxygen auto-generated "design-by-contract" documentation is available [in this GitHub Pages deployment](https://francescopeluso.github.io/SWE-Project)
