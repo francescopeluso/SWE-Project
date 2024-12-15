@@ -124,14 +124,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aced836cf33254d69d57ee6b4e6ce0b9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#aced836cf33254d69d57ee6b4e6ce0b9d">compareTo</a> (<a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> o)</td></tr>
 <tr class="memdesc:aced836cf33254d69d57ee6b4e6ce0b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to compare the calling object to another <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> object.  <a href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#aced836cf33254d69d57ee6b4e6ce0b9d">More...</a><br /></td></tr>
 <tr class="separator:aced836cf33254d69d57ee6b4e6ce0b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af19a3e4ae4cc45d92eff8f58a9608886"><td class="memItemLeft" align="right" valign="top"><a id="af19a3e4ae4cc45d92eff8f58a9608886"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
+<tr class="memitem:af19a3e4ae4cc45d92eff8f58a9608886"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#af19a3e4ae4cc45d92eff8f58a9608886">toString</a> ()</td></tr>
+<tr class="memdesc:af19a3e4ae4cc45d92eff8f58a9608886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a string representation of the <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> object.  <a href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#af19a3e4ae4cc45d92eff8f58a9608886">More...</a><br /></td></tr>
 <tr class="separator:af19a3e4ae4cc45d92eff8f58a9608886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4cf12bd41a71a0fb8ab16eab74f79a07"><td class="memItemLeft" align="right" valign="top"><a id="a4cf12bd41a71a0fb8ab16eab74f79a07"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLastUniqueId</b> (int lastUniqueId)</td></tr>
+<tr class="memitem:a4cf12bd41a71a0fb8ab16eab74f79a07"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a4cf12bd41a71a0fb8ab16eab74f79a07">setLastUniqueId</a> (int lastUniqueId)</td></tr>
+<tr class="memdesc:a4cf12bd41a71a0fb8ab16eab74f79a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a fixed value for the total number of unique contacts.  <a href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a4cf12bd41a71a0fb8ab16eab74f79a07">More...</a><br /></td></tr>
 <tr class="separator:a4cf12bd41a71a0fb8ab16eab74f79a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -489,6 +489,41 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLastUniqueI
 
 </div>
 </div>
+<a id="a4cf12bd41a71a0fb8ab16eab74f79a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf12bd41a71a0fb8ab16eab74f79a07">&#9670;&nbsp;</a></span>setLastUniqueId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void g12swe.addressbook.models.contacts.Contact.setLastUniqueId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lastUniqueId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a fixed value for the total number of unique contacts. </p>
+<p>This static method allows manually setting the counter for unique contacts, which is typically used for managing contact identification.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lastUniqueId</td><td>The fixed value to set for the total number of unique contacts </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3e09e2b923a89e6551099707019b44cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e09e2b923a89e6551099707019b44cb">&#9670;&nbsp;</a></span>setName()</h2>
 
@@ -534,6 +569,27 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLastUniqueI
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af19a3e4ae4cc45d92eff8f58a9608886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19a3e4ae4cc45d92eff8f58a9608886">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String g12swe.addressbook.models.contacts.Contact.toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a string representation of the <a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html">Contact</a> object. </p>
+<p>Overrides the default toString method to provide a custom string format that includes te contacts's uniqueID, name and surname</p>
+<dl class="section return"><dt>Returns</dt><dd>A string containing the contact's uniqueID, name and surname </dd></dl>
 
 </div>
 </div>
