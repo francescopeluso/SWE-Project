@@ -8,7 +8,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @file ExtendedContactTest.java
+ * @brief Unit tests for the ExtendedContact class.
+ * 
+ * This test class verifies the core functionality of the ExtendedContact class.
+ * 
+ */
 public class ExtendedContactTest {
     
     public ExtendedContactTest() {
