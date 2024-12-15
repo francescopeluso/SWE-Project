@@ -101,7 +101,6 @@ public class ContactTest {
      * 
      * This test checks that the return of the class getEmailAddresses() is a
      * list containing the contact's email addresses.
-     * 
      */
     @Test
     public void testGetEmailAddresses() throws InvalidEmailAddressException {

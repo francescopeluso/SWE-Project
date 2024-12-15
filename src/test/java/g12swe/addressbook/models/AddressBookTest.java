@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * @file AddressBookTest.java
  * @brief Unit tests for the AddressBook class
  * 
  * This test class verifies the core functionality of the AddressBook class,
