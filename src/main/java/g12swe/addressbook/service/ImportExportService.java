@@ -89,9 +89,7 @@ public class ImportExportService extends AddressBookService {
             }
             
         }
-        catch(IOException | InvalidEmailAddressException | InvalidPhoneNumberException e){
-            e.printStackTrace();
-        }
+        catch(IOException | InvalidEmailAddressException | InvalidPhoneNumberException e) {}
         
         return FXCollections.observableSet(tempSet);
     }
@@ -174,9 +172,7 @@ public class ImportExportService extends AddressBookService {
             
             return c;
             
-        } catch (IOException e) {
-            e.printStackTrace();
-        }        
+        } catch (IOException e) {}        
         
         
         

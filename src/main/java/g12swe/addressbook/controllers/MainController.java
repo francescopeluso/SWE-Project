@@ -79,10 +79,10 @@ public class MainController implements Initializable {
     private ListView<Contact> contactListView; ///< ListView displaying the contact list.
 
     @FXML
-    private MenuItem importSingleContactButton;
+    private MenuItem importSingleContactButton; ///< MenuItem for importing a single contact.
     
     @FXML
-    private MenuItem exportSingleContactButton;
+    private MenuItem exportSingleContactButton; ///< MenuItem for exporting a single contact.
     
     private ContactFileService cfs; ///< ListView displaying the contact list.
     
@@ -135,7 +135,6 @@ public class MainController implements Initializable {
             contactListView.setItems(observableContactsList);
         });
 
-        // Customize ListView cells to display contact names and surnames
         contactListView.setCellFactory(param -> new ListCell<>() {
             @Override
             protected void updateItem(Contact contact, boolean empty) {
@@ -148,10 +147,8 @@ public class MainController implements Initializable {
             }
         });
 
-        // Add search filter
         searchField.addEventFilter(KeyEvent.KEY_RELEASED, keyEvent -> filterContacts());
 
-        // Add listener for contact selection changes
         contactListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (contactController != null) {
                 contactController.loadContactDetails(newValue); // Pass null when no selection
@@ -159,10 +156,8 @@ public class MainController implements Initializable {
             exportSingleContactButton.setDisable(newValue == null);
         });
 
-        // Initially disable export button since no contact is selected
         exportSingleContactButton.setDisable(true);
 
-        // Try to load first contact if available
         if (!ab.getContactList().isEmpty() && contactController != null) {
             contactListView.getSelectionModel().selectFirst();
             Contact firstContact = contactListView.getSelectionModel().getSelectedItem();
@@ -196,17 +191,7 @@ public class MainController implements Initializable {
         List<Contact> sortedList = new ArrayList<>(ab.getContactList());
         Collections.sort(sortedList);
         observableContactsList.setAll(sortedList);
-        
         contactListView.setItems(observableContactsList);
-
-        if (contactController != null && contactController.getSelectedContact() != null) {
-            for (int i = 0; i < observableContactsList.size(); i++) {
-                if (observableContactsList.get(i).equals(contactController.getSelectedContact())) {
-                    contactListView.getSelectionModel().select(i);
-                    break;
-                }
-            }
-        }
     }
     
     /**
@@ -311,7 +296,6 @@ public class MainController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Errore");
             alert.setHeaderText(null);
@@ -350,7 +334,6 @@ public class MainController implements Initializable {
             alert.showAndWait();
             }
         } catch (Exception e) {
-            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Errore");
             alert.setHeaderText(null);
@@ -391,7 +374,6 @@ public class MainController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Errore");
             alert.setHeaderText(null);
@@ -424,9 +406,7 @@ public class MainController implements Initializable {
             stage.initOwner(contactListView.getScene().getWindow());
             stage.showAndWait();
             
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {}
     }
 
     
@@ -439,6 +419,18 @@ public class MainController implements Initializable {
     public void addContact(ExtendedContact contact) throws LimitReachedException {
         ab.addContact(contact);
         updateListView();
+        
+        // Find and select the newly added contact by matching name and surname
+        for (int i = 0; i < observableContactsList.size(); i++) {
+            Contact c = observableContactsList.get(i);
+            if (c.getName().equals(contact.getName()) && 
+                c.getSurname().equals(contact.getSurname())) {
+                contactListView.getSelectionModel().select(i);
+                contactController.loadContactDetails(c); // Use the stored contact, not the original
+                break;
+            }
+        }
+        
         saveAddressBookState();
     }
     
@@ -456,7 +448,14 @@ public class MainController implements Initializable {
         if (toDelete != null) {
             ab.removeContact(toDelete);
             observableContactsList.setAll(ab.getContactList());
-            contactListView.getSelectionModel().selectFirst();
+            
+            if (observableContactsList.isEmpty()) {
+                // Clear the contact details if no contacts remain
+                contactController.loadContactDetails(null);
+            } else {
+                contactListView.getSelectionModel().selectFirst();
+            }
+            
             saveAddressBookState();
         }
     }
@@ -510,4 +509,21 @@ public class MainController implements Initializable {
         contactListView.getSelectionModel().selectFirst();
     }
     
+    /**
+     * Handles when a contact is updated, ensuring proper selection and display
+     */
+    public void handleContactUpdated(Contact updatedContact) {
+        updateListView();
+        
+        // Find and select the updated contact
+        for (int i = 0; i < observableContactsList.size(); i++) {
+            Contact c = observableContactsList.get(i);
+            if (c.getName().equals(updatedContact.getName()) && 
+                c.getSurname().equals(updatedContact.getSurname())) {
+                contactListView.getSelectionModel().select(i);
+                contactController.loadContactDetails(c);
+                break;
+            }
+        }
+    }
 }

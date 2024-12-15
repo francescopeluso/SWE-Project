@@ -95,22 +95,22 @@ public class ContactController {
     private TextArea notesArea;
 
     @FXML
-    private HBox phoneNumbersContainer;
+    private HBox phoneNumbersContainer; //< HBox containing the phone numbers list
     
     @FXML
-    private HBox emailAddressesContainer;
+    private HBox emailAddressesContainer; //< HBox containing the email addresses list
     
     @FXML
-    private HBox addressContainer;
+    private HBox addressContainer; //< HBox containing the address field
     
     @FXML
-    private HBox birthdayContainer;
+    private HBox birthdayContainer; //< HBox containing the birthday picker
     
     @FXML
-    private HBox notesContainer;
+    private HBox notesContainer; //< HBox containing the notes area
     
     @FXML
-    private HBox pronounsContainer;
+    private HBox pronounsContainer; //< HBox containing the pronouns field
 
     /**
      * @brief Flag indicating if the edit mode is enabled.
@@ -147,7 +147,6 @@ public class ContactController {
         this.selected = null;
         isEditMode = true;
         
-        // Clear all fields
         firstNameField.clear();
         lastNameField.clear();
         phoneNumbersList.getChildren().clear();
@@ -157,18 +156,14 @@ public class ContactController {
         birthdayPicker.setValue(null);
         notesArea.clear();
         
-        // Add empty fields
         addPhoneFieldWithListener("");
         addEmailFieldWithListener("");
         
-        // Enable editing
         firstNameField.setEditable(true);
         lastNameField.setEditable(true);
         
-        // Change button text
         editOrSaveButton.setText("Aggiungi");
         
-        // Override the edit/save action for new contact
         editOrSaveButton.setOnAction(event -> {
             try {
                 handleNewContactSave();
@@ -329,14 +324,35 @@ public class ContactController {
      * @param contact the contact to load details for
      */
     public void loadContactDetails(Contact contact) {
-        if (contact == null) {
-            Contact dummyContact = new Contact("", "");
-            this.selected = dummyContact;
+        this.selected = contact;
 
-            loadContactDetails(dummyContact);
+        if (contact == null || this.selected == null) {
+            // Clear all fields
+            firstNameField.clear();
+            lastNameField.clear();
+            phoneNumbersList.getChildren().clear();
+            emailAddressesList.getChildren().clear();
+            addressField.clear();
+            pronounsField.clear();
+            birthdayPicker.setValue(null);
+            notesArea.clear();
+            
+            // Hide containers
+            addressContainer.setVisible(false);
+            addressContainer.setManaged(false);
+            pronounsContainer.setVisible(false);
+            pronounsContainer.setManaged(false);
+            birthdayContainer.setVisible(false);
+            birthdayContainer.setManaged(false);
+            notesContainer.setVisible(false);
+            notesContainer.setManaged(false);
+            
+            editOrSaveButton.setDisable(true);
+            return;
         }
 
-        this.selected = contact;
+        // Reset edit button state
+        editOrSaveButton.setDisable(false);
 
         List<PhoneNumber> contactPhoneNumbers = this.selected.getPhoneNumbers();
         List<EmailAddress> contactEmails = this.selected.getEmailAddresses();
@@ -424,7 +440,6 @@ public class ContactController {
         firstNameField.setEditable(true);
         lastNameField.setEditable(true);
 
-        // Show all fields and their containers
         addressContainer.setManaged(true);
         addressContainer.setVisible(true);
         addressField.setEditable(true);
@@ -467,7 +482,6 @@ public class ContactController {
         firstNameField.setEditable(false);
         lastNameField.setEditable(false);
 
-        // Hide empty fields and their containers
         if (addressField.getText() == null || addressField.getText().isEmpty()) {
             addressContainer.setManaged(false);
             addressContainer.setVisible(false);
@@ -576,9 +590,10 @@ public class ContactController {
         }
 
         mainController.getAddressBook().updateContact(oldContact, updatedContact);
-        this.selected = updatedContact;
+        this.selected = updatedContact;  // Keep the reference to the updated contact
         
-        mainController.updateListView();
+        // Let MainController update its view with the new contact
+        mainController.handleContactUpdated(updatedContact);
         mainController.saveAddressBookState();
     }
 }

@@ -56,10 +56,10 @@ public class RootController implements Initializable {
             // collego i controller tra di loro
             mainController.setContactController(contactController);
             contactController.setMainController(mainController);
+
+            contactController.loadContactDetails(null);
             
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } catch (IOException e) {}
     }
     
     
