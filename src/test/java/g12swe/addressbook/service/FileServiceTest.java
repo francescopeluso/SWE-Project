@@ -11,17 +11,47 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @file FileServiceTest.java
+ * @brief Unit tests for the FileService class
+ * 
+ * This test class verifies the functionality of FileService methods, including
+ * file import and export operations for Contact objects.
+ * 
+ */
 public class FileServiceTest {
     
-    private static ObservableSet<Contact> contacts1;
+    /**
+     * @brief ObservableSet of contacts for the first test file
+     */
+    private static ObservableSet<Contact> contacts1; 
+    
+    /**
+     * @brief ObservableSet of contacts for the second test file
+     */
     private static ObservableSet<Contact> contacts2;
+    
+    /**
+     * @brief FileService object for the first test scenario
+     */
     private static FileService fileService1;
+    
+    /**
+     * @brief FileService object for the second test scenario
+     */
     private static FileService fileService2;
     
     public FileServiceTest() {
     }
     
+    /**
+     * @brief Set up resources before running the test class
+     * 
+     * This method initializes test file paths and FileService instances for
+     * subsequent test methods.
+     * 
+     * @throws java.net.URISyntaxException 
+     */
     @BeforeAll
     public static void setUpClass() throws java.net.URISyntaxException {
         contacts1 = FXCollections.observableSet();
