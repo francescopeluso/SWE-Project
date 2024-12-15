@@ -109,8 +109,67 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9684c2c96fc55c52a21963a008bd6fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa2a91d1bea43b80503effb5b249f726" id="r_afa2a91d1bea43b80503effb5b249f726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa2a91d1bea43b80503effb5b249f726">setContactController</a> (<a class="el" href="classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller.html">ContactController</a> contactController)</td></tr>
 <tr class="separator:afa2a91d1bea43b80503effb5b249f726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afd3da5e92eb485276ff9ff59f06fb9" id="r_a2afd3da5e92eb485276ff9ff59f06fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1_address_book.html">AddressBook</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2afd3da5e92eb485276ff9ff59f06fb9">getAddressBook</a> ()</td></tr>
+<tr class="memdesc:a2afd3da5e92eb485276ff9ff59f06fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the AddressBook associated with this controller.  <br /></td></tr>
+<tr class="separator:a2afd3da5e92eb485276ff9ff59f06fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0194082848eead66e9377990cf780f" id="r_a9b0194082848eead66e9377990cf780f"><td class="memItemLeft" align="right" valign="top"><a id="a9b0194082848eead66e9377990cf780f" name="a9b0194082848eead66e9377990cf780f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateListView</b> ()</td></tr>
+<tr class="memdesc:a9b0194082848eead66e9377990cf780f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the ListView with sorted contacts. <br /></td></tr>
+<tr class="separator:a9b0194082848eead66e9377990cf780f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810aa13cf2b0159cbb5b2314b07c497c" id="r_a810aa13cf2b0159cbb5b2314b07c497c"><td class="memItemLeft" align="right" valign="top"><a id="a810aa13cf2b0159cbb5b2314b07c497c" name="a810aa13cf2b0159cbb5b2314b07c497c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>saveAddressBookState</b> ()</td></tr>
+<tr class="memdesc:a810aa13cf2b0159cbb5b2314b07c497c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current state of the AddressBook. <br /></td></tr>
+<tr class="separator:a810aa13cf2b0159cbb5b2314b07c497c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f11138bfbf6bb7dc111bd517f4881e" id="r_a32f11138bfbf6bb7dc111bd517f4881e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32f11138bfbf6bb7dc111bd517f4881e">addContact</a> (<a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact.html">ExtendedContact</a> contact)  throws <a class="el" href="classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception.html">LimitReachedException</a> </td></tr>
+<tr class="memdesc:a32f11138bfbf6bb7dc111bd517f4881e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new contact to the AddressBook.  <br /></td></tr>
+<tr class="separator:a32f11138bfbf6bb7dc111bd517f4881e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a32f11138bfbf6bb7dc111bd517f4881e" name="a32f11138bfbf6bb7dc111bd517f4881e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f11138bfbf6bb7dc111bd517f4881e">&#9670;&#160;</a></span>addContact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g12swe.addressbook.controllers.MainController.addContact </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact.html">ExtendedContact</a></td>          <td class="paramname"><span class="paramname"><em>contact</em></span></td><td>)</td>
+          <td> throws <a class="el" href="classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception.html">LimitReachedException</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new contact to the AddressBook. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contact</td><td>The contact to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2afd3da5e92eb485276ff9ff59f06fb9" name="a2afd3da5e92eb485276ff9ff59f06fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2afd3da5e92eb485276ff9ff59f06fb9">&#9670;&#160;</a></span>getAddressBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classg12swe_1_1addressbook_1_1models_1_1_address_book.html">AddressBook</a> g12swe.addressbook.controllers.MainController.getAddressBook </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the AddressBook associated with this controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>The AddressBook instance. </dd></dl>
+
+</div>
+</div>
 <a id="a9684c2c96fc55c52a21963a008bd6fed" name="a9684c2c96fc55c52a21963a008bd6fed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9684c2c96fc55c52a21963a008bd6fed">&#9670;&#160;</a></span>initialize()</h2>
 
