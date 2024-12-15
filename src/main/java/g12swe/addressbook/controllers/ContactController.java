@@ -152,6 +152,10 @@ public class ContactController {
         lastNameField.clear();
         phoneNumbersList.getChildren().clear();
         emailAddressesList.getChildren().clear();
+        addressField.clear();
+        pronounsField.clear();
+        birthdayPicker.setValue(null);
+        notesArea.clear();
         
         // Add empty fields
         addPhoneFieldWithListener("");
@@ -169,7 +173,11 @@ public class ContactController {
             try {
                 handleNewContactSave();
             } catch (LimitReachedException ex) {
-                ex.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Errore");
+                alert.setHeaderText("Errore durante il salvataggio");
+                alert.setContentText(ex.getMessage());
+                alert.showAndWait();
             }
         });
     }
@@ -217,6 +225,19 @@ public class ContactController {
                         newContact.addEmailAddress(email, null);
                     }
                 }
+            }
+
+            if (!addressField.getText().isEmpty()) {
+                newContact.setAddress(addressField.getText());
+            }
+            if (!pronounsField.getText().isEmpty()) {
+                newContact.setPronouns(pronounsField.getText());
+            }
+            if (birthdayPicker.getValue() != null) {
+                newContact.setBirthday(LocalDateTime.of(birthdayPicker.getValue(), LocalTime.MIDNIGHT));
+            }
+            if (!notesArea.getText().isEmpty()) {
+                newContact.setNotes(notesArea.getText());
             }
             
             mainController.addContact(newContact);
@@ -309,6 +330,8 @@ public class ContactController {
      */
     public void loadContactDetails(Contact contact) {
 
+        System.out.println("Contatto istanza di Extended? " + (contact instanceof ExtendedContact));
+
         this.selected = contact;
 
         List<PhoneNumber> contactPhoneNumbers = this.selected.getPhoneNumbers();
@@ -345,6 +368,7 @@ public class ContactController {
         lastNameField.setText(this.selected.getSurname());
 
         if (contact instanceof ExtendedContact) {
+            System.out.println("Carico contenuto del contatto esteso");
             ExtendedContact extendedContact = (ExtendedContact) contact;
             addressField.setText(extendedContact.getAddress());
             pronounsField.setText(extendedContact.getPronouns());
@@ -444,24 +468,36 @@ public class ContactController {
         if (addressField.getText() == null || addressField.getText().isEmpty()) {
             addressContainer.setManaged(false);
             addressContainer.setVisible(false);
+        } else {
+            addressContainer.setManaged(true);
+            addressContainer.setVisible(true);
         }
         addressField.setEditable(false);
 
         if (pronounsField.getText() == null || pronounsField.getText().isEmpty()) {
             pronounsContainer.setManaged(false);
             pronounsContainer.setVisible(false);
+        } else {
+            pronounsContainer.setManaged(true);
+            pronounsContainer.setVisible(true);
         }
         pronounsField.setEditable(false);
 
         if (birthdayPicker.getValue() == null) {
             birthdayContainer.setManaged(false);
             birthdayContainer.setVisible(false);
+        } else {
+            birthdayContainer.setManaged(true);
+            birthdayContainer.setVisible(true);
         }
         birthdayPicker.setDisable(true);
 
         if (notesArea.getText() == null || notesArea.getText().isEmpty()) {
             notesContainer.setManaged(false);
             notesContainer.setVisible(false);
+        } else {
+            notesContainer.setManaged(true);
+            notesContainer.setVisible(true);
         }
         notesArea.setEditable(false);
 
@@ -501,32 +537,41 @@ public class ContactController {
         }
 
         Contact oldContact = this.selected;
-        Contact updatedContact = new Contact(firstName, lastName);
-        
+
+        ExtendedContact updatedContact = new ExtendedContact(
+            firstName, 
+            lastName,
+            addressField.getText(),
+            birthdayPicker.getValue() != null ? 
+                LocalDateTime.of(birthdayPicker.getValue(), LocalTime.MIDNIGHT) : null,
+            notesArea.getText(),
+            pronounsField.getText()
+        );
+
         for (Node node : phoneNumbersList.getChildren()) {
             if (node instanceof HBox) {
-            TextField phoneField = (TextField) ((HBox) node).getChildren().get(0);
-            String number = phoneField.getText();
-            if (!number.isEmpty()) {
-                try {
-                updatedContact.addPhoneNumber(number, null);
-                } catch (InvalidPhoneNumberException e) { }
-            }
+                TextField phoneField = (TextField) ((HBox) node).getChildren().get(0);
+                String number = phoneField.getText();
+                if (!number.isEmpty()) {
+                    try {
+                        updatedContact.addPhoneNumber(number, null);
+                    } catch (InvalidPhoneNumberException e) { }
+                }
             }
         }
-        
+
         for (Node node : emailAddressesList.getChildren()) {
             if (node instanceof HBox) {
-            TextField emailField = (TextField) ((HBox) node).getChildren().get(0);
-            String email = emailField.getText();
-            if (!email.isEmpty()) {
-                try {
-                updatedContact.addEmailAddress(email, null);
-                } catch (InvalidEmailAddressException e) { }
-            }
+                TextField emailField = (TextField) ((HBox) node).getChildren().get(0);
+                String email = emailField.getText();
+                if (!email.isEmpty()) {
+                    try {
+                        updatedContact.addEmailAddress(email, null);
+                    } catch (InvalidEmailAddressException e) { }
+                }
             }
         }
-        
+
         mainController.getAddressBook().updateContact(oldContact, updatedContact);
         this.selected = updatedContact;
         

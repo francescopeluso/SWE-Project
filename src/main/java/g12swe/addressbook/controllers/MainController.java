@@ -4,6 +4,7 @@ import g12swe.addressbook.App;
 import g12swe.addressbook.exceptions.LimitReachedException;
 import g12swe.addressbook.models.AddressBook;
 import g12swe.addressbook.models.contacts.Contact;
+import g12swe.addressbook.models.contacts.ExtendedContact;
 import g12swe.addressbook.service.ContactFileService;
 import g12swe.addressbook.service.FileService;
 import g12swe.addressbook.service.ImportExportService;
@@ -379,7 +380,7 @@ public class MainController implements Initializable {
      * @param contact The contact to add.
      */
 
-    public void addContact(Contact contact) throws LimitReachedException {
+    public void addContact(ExtendedContact contact) throws LimitReachedException {
         ab.addContact(contact);
         updateListView();
         saveAddressBookState();
