@@ -11,7 +11,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @file ContactTest.java
+ * @brief Unit tests for the Contact class.
+ * 
+ * This test class verifies the core functionality of the Contact class.
+ * 
+ */
 public class ContactTest {
     
     public ContactTest() {
@@ -70,7 +76,6 @@ public class ContactTest {
      * 
      * This test checks that the return of the class getPhoneNumbers() is a
      * list containing the contact's phoneNumbers.
-     * 
      */
     @Test
     public void testGetPhoneNumbers() throws InvalidPhoneNumberException {
@@ -254,26 +259,26 @@ public class ContactTest {
         Object obj = null;
         Contact instance = new Contact("Mario", "Rossi");
         boolean expResult = false;
-        boolean result = instance.equals(obj);   //confronto un contatto con un 
-                                                 // null
+        boolean result = instance.equals(obj);   // compare a contact with null
+        
         assertEquals(expResult, result);
         
         System.out.println("T040");
         obj = new Contact("Stefani", "Germanotta");
         result = instance.equals(obj);
-        assertEquals(expResult, result);   //confronto due contatti con nomi
-                                           // diversi
+        assertEquals(expResult, result);   // compare two contacts with different
+                                           // names
         
         System.out.println("T041");           
         obj = new Contact("Mario", "Rossi");
         result = instance.equals(obj);
         //expResult = true;
-        assertEquals(expResult, result);   //confronto due contatti con nomi
-                                           //uguali
+        assertEquals(expResult, result);   // compare two contacts with the same
+                                           // names
         System.out.println("T042");
         obj = instance;
         expResult = true;
-        result = instance.equals(obj);    //confronto il contatto con se stesso
+        result = instance.equals(obj);    // compare the contact with itsel
         assertEquals(expResult, result);
                                            
     }
@@ -289,27 +294,27 @@ public class ContactTest {
         
         System.out.println("T043");
         
-        //confronto due contatti uguali
+        // compare two equal contacts
         Contact o = new Contact("Stefani", "Germanotta"); 
         Contact instance = new Contact("Stefani", "GermanoTTa"); 
         int expResult = 0;
         int result = instance.compareTo(o);
         assertNotEquals(expResult, result);
         
-        //confronto due contatti con cognomi diversi
+        // compare two contacts with different surnames
         System.out.println("T044");
         o.setSurname("!");                 
         result = instance.compareTo(o); 
         assertNotEquals(expResult, result);
         
-        //confronto due contatti con nomi diversi
+        // compare two contacts with different names
         System.out.println("T045");
         o.setName("C");      
         o.setSurname("Germanotta");
         result = instance.compareTo(o); 
         assertNotEquals(expResult, result);
         
-        //confronto un contatto con se stesso
+        // compare a contact with itself
         System.out.println("T046");
         result = instance.compareTo(instance);
         assertEquals(expResult, result);
