@@ -32,6 +32,9 @@
               <MenuItem mnemonicParsing="false" onAction="#insertContact" text="Inserisci contatto" />
                   <MenuItem mnemonicParsing="false" onAction="#deleteContact" text="Elimina contatto" />
                   <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="importSingleContactButton" mnemonicParsing="false" onAction="#importVCard" text="Importa contatto" />
+                  <MenuItem fx:id="exportSingleContactButton" mnemonicParsing="false" onAction="#exportSingleVCard" text="Esporta contatto" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" onAction="#reinitializeAddressBook" text="Reinizializza rubrica" />
             </items>
           </Menu>

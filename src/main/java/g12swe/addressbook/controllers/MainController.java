@@ -35,6 +35,7 @@ import java.io.IOException;
 import java.net.URI;
 import javafx.collections.ObservableSet;
 import javafx.collections.SetChangeListener;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.FileChooser;
@@ -76,8 +77,15 @@ public class MainController implements Initializable {
     
     @FXML
     private ListView<Contact> contactListView; ///< ListView displaying the contact list.
+
+    @FXML
+    private MenuItem importSingleContactButton;
+    
+    @FXML
+    private MenuItem exportSingleContactButton;
     
     private ContactFileService cfs; ///< ListView displaying the contact list.
+    
 
     /**
      * @brief Initializes the controller and its bindings.
@@ -148,7 +156,12 @@ public class MainController implements Initializable {
             if (contactController != null && newValue != null) {
                 contactController.loadContactDetails(newValue);
             }
+            // Disable export button when no contact is selected
+            exportSingleContactButton.setDisable(newValue == null);
         });
+
+        // Initially disable export button since no contact is selected
+        exportSingleContactButton.setDisable(true);
 
         // Try to load first contact if available
         if (!ab.getContactList().isEmpty() && contactController != null) {
@@ -345,6 +358,48 @@ public class MainController implements Initializable {
             alert.showAndWait();
         }
     }
+
+    /**
+     * @brief Handles importing a single contact from a vCard file.
+     *
+     * 
+     *
+     * @param event The action event triggered by the user.
+     */
+    @FXML
+    private void exportSingleVCard(ActionEvent event) {
+        try {
+            Contact selectedContact = contactListView.getSelectionModel().getSelectedItem();
+            if (selectedContact != null) {
+                Stage stage = (Stage) contactListView.getScene().getWindow();
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Salva file VCF");
+                fileChooser.getExtensionFilters().add(
+                    new FileChooser.ExtensionFilter("VCard Files", "*.vcf")
+                );
+                
+                File file = fileChooser.showSaveDialog(stage);
+                if (file != null) {
+                    ImportExportService exportService = new ImportExportService(file.getAbsolutePath(), ab.getContactList());
+                    exportService.exportSingleContact(selectedContact);
+                    
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Esportazione completata");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Il contatto è stato esportato con successo");
+                    alert.showAndWait();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Errore");
+            alert.setHeaderText(null);
+            alert.setContentText("Si è verificato un errore durante l'esportazione");
+            alert.showAndWait();
+        }
+    }
+
     /**
      * @brief Handles inserting a new contact.
      *
@@ -373,6 +428,7 @@ public class MainController implements Initializable {
             e.printStackTrace();
         }
     }
+
     
     /**
      * @brief Adds a new contact to the AddressBook.
@@ -400,6 +456,7 @@ public class MainController implements Initializable {
         if (toDelete != null) {
             ab.removeContact(toDelete);
             observableContactsList.setAll(ab.getContactList());
+            contactListView.getSelectionModel().selectFirst();
             saveAddressBookState();
         }
     }
@@ -452,7 +509,5 @@ public class MainController implements Initializable {
         contactListView.setItems(filteredList);
         contactListView.getSelectionModel().selectFirst();
     }
-    
-
     
 }
