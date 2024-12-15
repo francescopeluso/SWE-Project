@@ -7,7 +7,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @file EmailAddressTest.java
+ * @brief Unit tests for the EmailAddress class
+ * 
+ * This test class verifies the core functionality of the EmailAddress class.
+ * 
+ */
 public class EmailAddressTest {
     
     public EmailAddressTest() {
@@ -121,7 +127,7 @@ public class EmailAddressTest {
     @Test
     public void testEquals() {
         
-       //confronto con null
+       // compare with null
         System.out.println("T006");
         Object obj = null;
         EmailAddress instance = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK);
@@ -129,14 +135,14 @@ public class EmailAddressTest {
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
         
-        //due email diverse
+        // two different emails
         System.out.println("T007");
         obj = new EmailAddress("mi@gmail.com", EntryCategory.WORK);
         expResult = false;
         result = instance.equals(obj);
         assertEquals(expResult, result);
         
-        //due email uguali
+        // two equal email
         System.out.println("T008");
         obj = new EmailAddress("mariorossi@gmail.com", EntryCategory.WORK); 
         expResult = true;
