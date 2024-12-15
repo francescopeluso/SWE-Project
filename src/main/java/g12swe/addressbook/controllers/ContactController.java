@@ -330,8 +330,6 @@ public class ContactController {
      */
     public void loadContactDetails(Contact contact) {
 
-        System.out.println("Contatto istanza di Extended? " + (contact instanceof ExtendedContact));
-
         this.selected = contact;
 
         List<PhoneNumber> contactPhoneNumbers = this.selected.getPhoneNumbers();
@@ -368,7 +366,6 @@ public class ContactController {
         lastNameField.setText(this.selected.getSurname());
 
         if (contact instanceof ExtendedContact) {
-            System.out.println("Carico contenuto del contatto esteso");
             ExtendedContact extendedContact = (ExtendedContact) contact;
             addressField.setText(extendedContact.getAddress());
             pronounsField.setText(extendedContact.getPronouns());
