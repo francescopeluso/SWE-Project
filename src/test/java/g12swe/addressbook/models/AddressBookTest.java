@@ -11,7 +11,16 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @brief Unit tests for the AddressBook class
+ * 
+ * This test class verifies the core functionality of the AddressBook class,
+ * including adding contacts, removing contacts, and retrieving the contact list.
+ * 
+ * The tests ensure that the AddressBook methods correctly manipulate the internal
+ * ObservableSet of Contact objects.
+ * 
+ */
 public class AddressBookTest {
     
     public AddressBookTest() {
@@ -34,7 +43,10 @@ public class AddressBookTest {
     }
 
     /**
-     * Test of addContact method, of class AddressBook.
+     * @brief Test the addContact method of AddressBook
+     * 
+     * Verifies that a contact can be successfully added to the address book
+     * and is present in the contact list after addition.
      */
     @Test
     public void testAddContact() {
@@ -46,7 +58,10 @@ public class AddressBookTest {
     }
 
     /**
-     * Test of removeContact method, of class AddressBook.
+     * @brief Test the removeContact method of AddressBook
+     * 
+     * Checks that a contact can be successfully removed from the address book 
+     * and that the removal operation returns true.
      */
     @Test
     public void testRemoveContact() {
@@ -60,7 +75,10 @@ public class AddressBookTest {
     }
 
     /**
-     * Test of getContactList method, of class AddressBook.
+     * @brief Test the getContactList method of AddressBook
+     * 
+     * Verifies that the contact list returned by getContactList() contains all
+     * addedd contacts and matches te expected set.
      */
     @Test
     public void testGetContactList() {
