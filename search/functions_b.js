@@ -12,7 +12,7 @@ var searchData=
   ['setphonenumber_236',['setPhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1PhoneNumber.html#a24d752c6788498ad79aed537319692e3',1,'g12swe::addressbook::models::contacts::PhoneNumber']]],
   ['setpronouns_237',['setPronouns',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1ExtendedContact.html#a987eed516e2924ff23a9b6c626e70c02',1,'g12swe::addressbook::models::contacts::ExtendedContact']]],
   ['setsurname_238',['setSurname',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1Contact.html#a16b52dfa1595a6940ec92672f9729c4f',1,'g12swe::addressbook::models::contacts::Contact']]],
-  ['setupclass_239',['setUpClass',['../classg12swe_1_1addressbook_1_1service_1_1FileServiceTest.html#ad288a821a7baf96e34bf9a1a5aa176bb',1,'g12swe::addressbook::service::FileServiceTest']]],
+  ['setupclass_239',['setUpClass',['../classg12swe_1_1addressbook_1_1service_1_1FileServiceTest.html#ad288a821a7baf96e34bf9a1a5aa176bb',1,'g12swe.addressbook.service.FileServiceTest.setUpClass()'],['../classg12swe_1_1addressbook_1_1service_1_1ImportExportServiceTest.html#a50079cc9406e97da75b39d2bd7662889',1,'g12swe.addressbook.service.ImportExportServiceTest.setUpClass()']]],
   ['showbothviews_240',['showBothViews',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html#ad74c68fa550df4208e1b3714190694c7',1,'g12swe::addressbook::controllers::RootController']]],
   ['showmainviewonly_241',['showMainViewOnly',['../classg12swe_1_1addressbook_1_1controllers_1_1RootController.html#aaf54bd571a0f2d171d924d6061452b8d',1,'g12swe::addressbook::controllers::RootController']]]
 ];
