@@ -11,23 +11,70 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @file ImportExportService.java
+ * @brief Unit tests for the ImportExportService class handling VCard operations
+ * 
+ * This test class verifies the functionality of ImportExportService methods for
+ * importing and exporting contacts using the VCard (vcf) file format.
+ * 
+ * VCard (Virtual Contact) is a file format standard for electronic business cards,
+ * typically used for exchanging contact information between different applications.
+ * 
+ */
 public class ImportExportServiceTest {
     
+    /**
+     * @brief Object for exporting a single contact to vcf
+     */
     private static ImportExportService exportSingleContact;
+    
+    /**
+     * @brief Object for exporting an entire address book to vcf
+     */
     private static ImportExportService exportAddressBook;
+    
+    /**
+     * @brief Object for importing a single contact from vcf
+     */
     private static ImportExportService importSingleContact;
+    
+    /**
+     * @brief Object for importing an entire address book from vcf
+     */
     private static ImportExportService importAddressBook;
     
+    /**
+     * @brief ObservableSet to store imported address book contacts
+     */
     private static ObservableSet<Contact> importedAddressBook;
+    
+    /**
+     * @brief Single imported contact from vcf
+     */
     private static Contact importedContact;
+    
+    /**
+     * @brief ObservableSet of contacts to be exported to vcf
+     */
     private static ObservableSet<Contact> addressBookToExport;
+    
+    /**
+     * @brief Single contact to be exported to vcf
+     */
     private static Contact contactToExport;
     
     
     public ImportExportServiceTest() {
     }
     
+    /**
+     * @brief @brief Set up resources before running the test class
+     * 
+     * Sets up temporary directiories and file paths for vcf import/export tests.
+     * Uses system temporary directory to create test vcf files.
+     * 
+     */
     @BeforeAll
     public static void setUpClass() {
         importedAddressBook = FXCollections.observableSet();
@@ -56,10 +103,12 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * @brief Test of importFromFile method, of class ImportExportService.
+     * @brief Test importing multiple contacts from a vcf file
      * 
      * This test checks that the importFromFile() method correctly reads from 
      * the file and returns an ObservaleSet. 
+     * 
+     * @throws Exception
      */
     @Test
     public void testImportFromFile() throws Exception {
@@ -70,10 +119,12 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * @brief Test of exportToFile method, of class ImportExportService.
+     * @brief Test exporting multiple contacts to a vcf file
      * 
      * This test checks that the exportToFile() method correctly serializes in
      * a file the contents of the Set.
+     * 
+     * @throws Exception
      */
     @Test
     public void testExportToFile() throws Exception {
@@ -91,10 +142,12 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * @brief Test of importSingleContact method, of class ImportExportService.
+     * @brief Test importing a single contact from a vcf file
      * 
      * This test checks that the importSingleContact() method correctly reads 
      * the contact from the file and adds it to the ObservableSet.
+     * 
+     * @throws Exception
      */
     @Test
     public void testImportSingleContact() throws Exception {
@@ -105,10 +158,12 @@ public class ImportExportServiceTest {
     }
 
     /**
-     * @brief Test of exportSingleContact method, of class ImportExportService.
+     * @brief Test exporting a single contact to a vcf file
      * 
      * This test checks that the exportSingleContact() method correctly writes
      * in a file a contact's informations.
+     * 
+     * @throws Exception
      */
     @Test
     public void testExportSingleContact() throws Exception {
