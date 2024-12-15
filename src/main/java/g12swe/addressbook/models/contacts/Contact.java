@@ -239,11 +239,28 @@ public class Contact implements Comparable<Contact>, Serializable {
         return Integer.compare(this.uniqueId, o.uniqueId);
     }
 
+    /**
+     * @brief Generates a string representation of the Contact object
+     * 
+     * Overrides the default toString method to provide a custom string format
+     * that includes te contacts's uniqueID, name and surname
+     * 
+     * @return A string containing the contact's uniqueID, name and surname
+     */
     @Override
     public String toString() {
         return uniqueId + " " + name + " " + surname;
     }
 
+    /**
+     * @brief Sets a fixed value for the total number of unique contacts
+     * 
+     * This static method allows manually setting the counter for unique contacts,
+     * which is typically used for managing contact identification.
+     * 
+     * @param[in] lastUniqueId The fixed value to set for the total number of
+     *                         unique contacts
+     */
     public static void setLastUniqueId(int lastUniqueId) {
         uniqueContacts = lastUniqueId;
         System.out.println("Last unique id: " + lastUniqueId);
