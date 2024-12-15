@@ -9,22 +9,41 @@ Inheritance diagram for g12swe.\+addressbook.\+service.\+File\+Service\+:\begin{
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_file_service_abd9e26be0b98e424b0ce9099328eeabe}\label{classg12swe_1_1addressbook_1_1service_1_1_file_service_abd9e26be0b98e424b0ce9099328eeabe} 
-{\bfseries File\+Service} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
-\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service_abd9e26be0b98e424b0ce9099328eeabe}{File\+Service}} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service}. \end{DoxyCompactList}\item 
 Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service_a5a4177d06c1e362540eb994d0b0af070}{import\+From\+File}} ()  throws File\+Not\+Found\+Exception, IOException
-\item 
+\begin{DoxyCompactList}\small\item\em Imports contacts from a file. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service_a564662449999496f59cce20d477aea29}{export\+To\+File}} ()  throws File\+Not\+Found\+Exception, IOException
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exports contacts to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service}{g12swe.\+addressbook.\+service.\+Address\+Book\+Service}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Address\+Book\+Service} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
-\item 
-String {\bfseries get\+File\+Name} ()
-\item 
-Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ {\bfseries get\+Contacts} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ae45c9745b65a41ac9e8beeebb71f177e}{Address\+Book\+Service}} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service}{Address\+Book\+Service} class. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a1042f8a3c89cf8e2200583dbc2371eae}{get\+File\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the file name used for import/export operations. \end{DoxyCompactList}\item 
+Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a88615ec9aa9b3b3d19620bcf608362a2}{get\+Contacts}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the collection of contacts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_file_service_abd9e26be0b98e424b0ce9099328eeabe}\index{g12swe.addressbook.service.FileService@{g12swe.addressbook.service.FileService}!FileService@{FileService}}
+\index{FileService@{FileService}!g12swe.addressbook.service.FileService@{g12swe.addressbook.service.FileService}}
+\doxysubsubsection{\texorpdfstring{FileService()}{FileService()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_file_service_abd9e26be0b98e424b0ce9099328eeabe} 
+g12swe.\+addressbook.\+service.\+File\+Service.\+File\+Service (\begin{DoxyParamCaption}\item[{String}]{file\+Name}{, }\item[{Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$}]{contacts}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file used for saving and loading data. \\
+\hline
+{\em contacts} & The observable set of contacts to manage. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -36,7 +55,20 @@ void g12swe.\+addressbook.\+service.\+File\+Service.\+export\+To\+File (\begin{D
 
 
 
-Reimplemented from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service}{g12swe.\+addressbook.\+service.\+Address\+Book\+Service}}.
+Exports contacts to a file. 
+
+This method exports the current set of contacts to the file specified in the constructor.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & If the file cannot be created or opened. \\
+\hline
+{\em IOException} & If an I/O error occurs during writing. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a54f9820329a666fa6363b14a7c305f8c}{g12swe.\+addressbook.\+service.\+Address\+Book\+Service}}.
 
 \Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_file_service_a5a4177d06c1e362540eb994d0b0af070}\index{g12swe.addressbook.service.FileService@{g12swe.addressbook.service.FileService}!importFromFile@{importFromFile}}
 \index{importFromFile@{importFromFile}!g12swe.addressbook.service.FileService@{g12swe.addressbook.service.FileService}}
@@ -46,7 +78,23 @@ Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1cont
 
 
 
-Reimplemented from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service}{g12swe.\+addressbook.\+service.\+Address\+Book\+Service}}.
+Imports contacts from a file. 
+
+This method reads contact data from the file specified in the constructor and converts it into an observable set.
+
+\begin{DoxyReturn}{Returns}
+An observable set of contacts loaded from the file. Returns null if the file does not contain valid data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & If the file is not found. \\
+\hline
+{\em IOException} & If an I/O error occurs during reading. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ab27864c5ab5e3ffb82ee483a6761ebef}{g12swe.\+addressbook.\+service.\+Address\+Book\+Service}}.
 
 
 

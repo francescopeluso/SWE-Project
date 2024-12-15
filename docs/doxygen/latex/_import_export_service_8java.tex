@@ -16,6 +16,8 @@ class \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_s
 \doxysubsection{Detailed Description}
 Service for importing and exporting contacts in the address book application. 
 
+Unit tests for the Import\+Export\+Service class handling VCard operations.
+
 This class facilitates the transfer of contact data to and from external sources, supporting various formats as needed (mainly, the v\+Card format).
 
 Key functionalities include\+:
@@ -24,4 +26,8 @@ Key functionalities include\+:
 \item Exporting contact data to standard formats for sharing or backup purposes.
 \end{DoxyItemize}
 
-This service builds on the file operations provided by {\ttfamily File\+Service} and integrates with the application\textquotesingle{}s controllers for seamless user interaction. 
+This service builds on the file operations provided by {\ttfamily File\+Service} and integrates with the application\textquotesingle{}s controllers for seamless user interaction.
+
+This test class verifies the functionality of Import\+Export\+Service methods for importing and exporting contacts using the VCard (vcf) file format.
+
+VCard (Virtual Contact) is a file format standard for electronic business cards, typically used for exchanging contact information between different applications. 

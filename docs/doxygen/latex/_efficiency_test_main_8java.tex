@@ -1,0 +1,25 @@
+\doxysection{src/test/java/g12swe/addressbook/efficiency/\+Efficiency\+Test\+Main.java File Reference}
+\hypertarget{_efficiency_test_main_8java}{}\label{_efficiency_test_main_8java}\index{src/test/java/g12swe/addressbook/efficiency/EfficiencyTestMain.java@{src/test/java/g12swe/addressbook/efficiency/EfficiencyTestMain.java}}
+
+
+Main class for performance testing of Address\+Book operations.  
+
+
+{\ttfamily import g12swe.\+addressbook.\+models.\+Address\+Book;}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_main}{g12swe.\+addressbook.\+efficiency.\+Efficiency\+Test\+Main}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main class for performance testing of Address\+Book operations. 
+
+This class performs two semi-\/automated efficiency tests\+:
+\begin{DoxyEnumerate}
+\item Measuring the time required to load 5000 contacts from a file
+\item Measuring the time to search for a specific contact in a 5000-\/contact address book
+\end{DoxyEnumerate}
+
+The tests use System.\+nano\+Time() per precise performance measurements. 

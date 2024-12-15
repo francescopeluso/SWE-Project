@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['phonenumber_0',['PhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number.html',1,'g12swe.addressbook.models.contacts.PhoneNumber'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number.html#adf1b3f4140d90c371c61b7339532ea25',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber()'],['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number.html#a6d939441c7177087d2d82bf5a4883642',1,'g12swe.addressbook.models.contacts.PhoneNumber.PhoneNumber(String phoneNumber, EntryCategory category)']]],
-  ['phonenumber_2ejava_1',['PhoneNumber.java',['../_phone_number_8java.html',1,'']]],
-  ['project_2',['ℹ️ About the project',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['project_20group_2012_3',['🚀 Software Engineering course project - Group 12',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['main_0',['main',['../classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_main.html#a51294b0dc5ecff8aebc52c931ea435f8',1,'g12swe::addressbook::efficiency::EfficiencyTestMain']]],
+  ['maincontroller_1',['MainController',['../classg12swe_1_1addressbook_1_1controllers_1_1_main_controller.html',1,'g12swe::addressbook::controllers']]],
+  ['maincontroller_2ejava_2',['MainController.java',['../_main_controller_8java.html',1,'']]],
+  ['mandatoryfieldsexception_3',['MandatoryFieldsException',['../classg12swe_1_1addressbook_1_1exceptions_1_1_mandatory_fields_exception.html',1,'g12swe.addressbook.exceptions.MandatoryFieldsException'],['../classg12swe_1_1addressbook_1_1exceptions_1_1_mandatory_fields_exception.html#ac23c07c5237918ed3abeed576e5973a7',1,'g12swe.addressbook.exceptions.MandatoryFieldsException.MandatoryFieldsException()'],['../classg12swe_1_1addressbook_1_1exceptions_1_1_mandatory_fields_exception.html#ad05736a6996870d57232cf2fac362f85',1,'g12swe.addressbook.exceptions.MandatoryFieldsException.MandatoryFieldsException(String msg)']]],
+  ['members_4',['🧑🏻‍💻 Team members',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
+  ['moment_20you_20re_20reading_20copying_20this_5',['🧩 Dependencies used (at the moment you&apos;re reading/copying this)',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]]
 ];

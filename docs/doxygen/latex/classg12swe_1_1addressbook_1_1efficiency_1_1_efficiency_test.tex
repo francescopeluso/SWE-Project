@@ -1,0 +1,83 @@
+\doxysection{g12swe.\+addressbook.\+efficiency.\+Efficiency\+Test Class Reference}
+\hypertarget{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test}{}\label{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test}\index{g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_a72470675fa92f8b610c700c4afffb09e}{Efficiency\+Test}} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test}{Efficiency\+Test}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_abc63b5ae54886acd64369691d6540004}{generate\+File}} (int num)  throws IOException
+\begin{DoxyCompactList}\small\item\em Generates a file with a specified number of random contacts. \end{DoxyCompactList}\item 
+Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_a176d97ad094a24ad1dbf51bde6934c0c}{import\+From\+File}} ()  throws IOException
+\begin{DoxyCompactList}\small\item\em Imports contacts from the previously generated file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_a72470675fa92f8b610c700c4afffb09e}\index{g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}!EfficiencyTest@{EfficiencyTest}}
+\index{EfficiencyTest@{EfficiencyTest}!g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}}
+\doxysubsubsection{\texorpdfstring{EfficiencyTest()}{EfficiencyTest()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_a72470675fa92f8b610c700c4afffb09e} 
+g12swe.\+addressbook.\+efficiency.\+Efficiency\+Test.\+Efficiency\+Test (\begin{DoxyParamCaption}\item[{String}]{file\+Name}{, }\item[{Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$}]{contacts}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test}{Efficiency\+Test}. 
+
+Initializes the File\+Service with a specific file name and contact set
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Name} & Path of the file to be used for contact generation/import \\
+\hline
+\mbox{\texttt{ in}}  & {\em contacts} & Observable\+Set to store generated contacts \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_abc63b5ae54886acd64369691d6540004}\index{g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}!generateFile@{generateFile}}
+\index{generateFile@{generateFile}!g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}}
+\doxysubsubsection{\texorpdfstring{generateFile()}{generateFile()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_abc63b5ae54886acd64369691d6540004} 
+void g12swe.\+addressbook.\+efficiency.\+Efficiency\+Test.\+generate\+File (\begin{DoxyParamCaption}\item[{int}]{num}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Generates a file with a specified number of random contacts. 
+
+Creates a set number of Contact objects using random combinations of first and last names from predefined arrays. Each contact is added to the contact set and then exported to a file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em num} & Number of random contacts to generate \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_a176d97ad094a24ad1dbf51bde6934c0c}\index{g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}!importFromFile@{importFromFile}}
+\index{importFromFile@{importFromFile}!g12swe.addressbook.efficiency.EfficiencyTest@{g12swe.addressbook.efficiency.EfficiencyTest}}
+\doxysubsubsection{\texorpdfstring{importFromFile()}{importFromFile()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1efficiency_1_1_efficiency_test_a176d97ad094a24ad1dbf51bde6934c0c} 
+Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ g12swe.\+addressbook.\+efficiency.\+Efficiency\+Test.\+import\+From\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws IOException}
+
+
+
+Imports contacts from the previously generated file. 
+
+Reads contacts from the file using the associated File\+Service
+
+\begin{DoxyReturn}{Returns}
+Observable\+Set containing the imported contacts 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em IOException} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/test/java/g12swe/addressbook/efficiency/\mbox{\hyperlink{_efficiency_test_8java}{Efficiency\+Test.\+java}}\end{DoxyCompactItemize}

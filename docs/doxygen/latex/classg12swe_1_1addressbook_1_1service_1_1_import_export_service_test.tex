@@ -1,0 +1,113 @@
+\doxysection{g12swe.\+addressbook.\+service.\+Import\+Export\+Service\+Test Class Reference}
+\hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test}{}\label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test}\index{g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ae44fa56b5a53e11d7d40fe5f28221eb0}\label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ae44fa56b5a53e11d7d40fe5f28221eb0} 
+void {\bfseries set\+Up} ()
+\item 
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ab1e1d86957852ff79d0281028ab14cc2}\label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ab1e1d86957852ff79d0281028ab14cc2} 
+void {\bfseries tear\+Down} ()
+\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a1872cc172f59a948e22d08c901fde20d}{test\+Import\+From\+File}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Test importing multiple contacts from a vcf file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ad37bcf8fc752279a3f73ede891d34eef}{test\+Export\+To\+File}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Test exporting multiple contacts to a vcf file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a15ba84f7acac6538dbc24784fde787be}{test\+Import\+Single\+Contact}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Test importing a single contact from a vcf file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a5a6dfe40e663c479c5e66eea94765b27}{test\+Export\+Single\+Contact}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Test exporting a single contact to a vcf file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a50079cc9406e97da75b39d2bd7662889}{set\+Up\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Set up resources before running the test class. \end{DoxyCompactList}\item 
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a60a918849284a857e3ecc5c953c7b7b6}\label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a60a918849284a857e3ecc5c953c7b7b6} 
+static void {\bfseries tear\+Down\+Class} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a50079cc9406e97da75b39d2bd7662889}\index{g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}!setUpClass@{setUpClass}}
+\index{setUpClass@{setUpClass}!g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}}
+\doxysubsubsection{\texorpdfstring{setUpClass()}{setUpClass()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a50079cc9406e97da75b39d2bd7662889} 
+static void g12swe.\+addressbook.\+service.\+Import\+Export\+Service\+Test.\+set\+Up\+Class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set up resources before running the test class. 
+
+Sets up temporary directiories and file paths for vcf import/export tests. Uses system temporary directory to create test vcf files. \Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a5a6dfe40e663c479c5e66eea94765b27}\index{g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}!testExportSingleContact@{testExportSingleContact}}
+\index{testExportSingleContact@{testExportSingleContact}!g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}}
+\doxysubsubsection{\texorpdfstring{testExportSingleContact()}{testExportSingleContact()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a5a6dfe40e663c479c5e66eea94765b27} 
+void g12swe.\+addressbook.\+service.\+Import\+Export\+Service\+Test.\+test\+Export\+Single\+Contact (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Exception}
+
+
+
+Test exporting a single contact to a vcf file. 
+
+This test checks that the export\+Single\+Contact() method correctly writes in a file a contact\textquotesingle{}s informations.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ad37bcf8fc752279a3f73ede891d34eef}\index{g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}!testExportToFile@{testExportToFile}}
+\index{testExportToFile@{testExportToFile}!g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}}
+\doxysubsubsection{\texorpdfstring{testExportToFile()}{testExportToFile()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_ad37bcf8fc752279a3f73ede891d34eef} 
+void g12swe.\+addressbook.\+service.\+Import\+Export\+Service\+Test.\+test\+Export\+To\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Exception}
+
+
+
+Test exporting multiple contacts to a vcf file. 
+
+This test checks that the export\+To\+File() method correctly serializes in a file the contents of the Set.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a1872cc172f59a948e22d08c901fde20d}\index{g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}!testImportFromFile@{testImportFromFile}}
+\index{testImportFromFile@{testImportFromFile}!g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}}
+\doxysubsubsection{\texorpdfstring{testImportFromFile()}{testImportFromFile()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a1872cc172f59a948e22d08c901fde20d} 
+void g12swe.\+addressbook.\+service.\+Import\+Export\+Service\+Test.\+test\+Import\+From\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Exception}
+
+
+
+Test importing multiple contacts from a vcf file. 
+
+This test checks that the import\+From\+File() method correctly reads from the file and returns an Observale\+Set.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a15ba84f7acac6538dbc24784fde787be}\index{g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}!testImportSingleContact@{testImportSingleContact}}
+\index{testImportSingleContact@{testImportSingleContact}!g12swe.addressbook.service.ImportExportServiceTest@{g12swe.addressbook.service.ImportExportServiceTest}}
+\doxysubsubsection{\texorpdfstring{testImportSingleContact()}{testImportSingleContact()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_test_a15ba84f7acac6538dbc24784fde787be} 
+void g12swe.\+addressbook.\+service.\+Import\+Export\+Service\+Test.\+test\+Import\+Single\+Contact (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Exception}
+
+
+
+Test importing a single contact from a vcf file. 
+
+This test checks that the import\+Single\+Contact() method correctly reads the contact from the file and adds it to the Observable\+Set.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/test/java/g12swe/addressbook/service/Import\+Export\+Service\+Test.\+java\end{DoxyCompactItemize}

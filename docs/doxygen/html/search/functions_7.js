@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['removecontact_0',['removeContact',['../classg12swe_1_1addressbook_1_1models_1_1_address_book.html#a59198013c7d1063a8b5a63b46fcc0bd6',1,'g12swe::addressbook::models::AddressBook']]],
-  ['removeemailaddress_1',['removeEmailAddress',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html#a16001912a7ba596d4af2b8ab159b3ab4',1,'g12swe::addressbook::models::contacts::Contact']]],
-  ['removephonenumber_2',['removePhoneNumber',['../classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact.html#a6d3041d1ba890cd4304c8314f419468e',1,'g12swe::addressbook::models::contacts::Contact']]]
+  ['limitreachedexception_0',['LimitReachedException',['../classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception.html#a8064efb4e1db3d5397642fa6d0ee9c56',1,'g12swe.addressbook.exceptions.LimitReachedException.LimitReachedException()'],['../classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception.html#aafaba7eaabcc95b06ca8a04832289491',1,'g12swe.addressbook.exceptions.LimitReachedException.LimitReachedException(String msg)']]],
+  ['loadcontactdetails_1',['loadContactDetails',['../classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller.html#a0b81e1ab2be6f26680f520a092c03d03',1,'g12swe::addressbook::controllers::ContactController']]]
 ];

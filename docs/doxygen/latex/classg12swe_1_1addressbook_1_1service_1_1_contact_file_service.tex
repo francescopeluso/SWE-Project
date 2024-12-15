@@ -1,0 +1,81 @@
+\doxysection{g12swe.\+addressbook.\+service.\+Contact\+File\+Service Class Reference}
+\hypertarget{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service}{}\label{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service}\index{g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}}
+
+
+Service class for handling asynchronous contact file operations.  
+
+
+Inheritance diagram for g12swe.\+addressbook.\+service.\+Contact\+File\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_a48b1b14be3491ef36538a4b899126de0}{Contact\+File\+Service}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service}} file\+Service)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service}{Contact\+File\+Service}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_a17fee00a71f57455e0663e95ca9822c8}{perform\+Contact\+Operation}} ()
+\begin{DoxyCompactList}\small\item\em Performs asynchronous contact export operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_ac5e38b6bdcd4593f8a7d258a636c5b02}{create\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new Task for importing contacts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class for handling asynchronous contact file operations. 
+
+This class extends Java\+FX\textquotesingle{}s Service class to provide asynchronous file operations for contacts. It manages both importing and exporting contacts using a \doxylink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service}, running these potentially time-\/consuming operations in background threads to avoid blocking the UI. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_a48b1b14be3491ef36538a4b899126de0}\index{g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}!ContactFileService@{ContactFileService}}
+\index{ContactFileService@{ContactFileService}!g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}}
+\doxysubsubsection{\texorpdfstring{ContactFileService()}{ContactFileService()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_a48b1b14be3491ef36538a4b899126de0} 
+g12swe.\+addressbook.\+service.\+Contact\+File\+Service.\+Contact\+File\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service}}}]{file\+Service}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service}{Contact\+File\+Service}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Service} & The \doxylink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service} instance to use for file operations \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_ac5e38b6bdcd4593f8a7d258a636c5b02}\index{g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}!createTask@{createTask}}
+\index{createTask@{createTask}!g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}}
+\doxysubsubsection{\texorpdfstring{createTask()}{createTask()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_ac5e38b6bdcd4593f8a7d258a636c5b02} 
+Task$<$ Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ $>$ g12swe.\+addressbook.\+service.\+Contact\+File\+Service.\+create\+Task (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates a new Task for importing contacts. 
+
+Creates and returns a Task that reads contacts from a file asynchronously. The task attempts to import contacts using the \doxylink{classg12swe_1_1addressbook_1_1service_1_1_file_service}{File\+Service} and handles any potential errors during the operation.
+
+\begin{DoxyReturn}{Returns}
+A Task that will return an Observable\+Set of Contact objects when complete or null if an error occurs during import @override Service.\+create\+Task() 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_a17fee00a71f57455e0663e95ca9822c8}\index{g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}!performContactOperation@{performContactOperation}}
+\index{performContactOperation@{performContactOperation}!g12swe.addressbook.service.ContactFileService@{g12swe.addressbook.service.ContactFileService}}
+\doxysubsubsection{\texorpdfstring{performContactOperation()}{performContactOperation()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_contact_file_service_a17fee00a71f57455e0663e95ca9822c8} 
+void g12swe.\+addressbook.\+service.\+Contact\+File\+Service.\+perform\+Contact\+Operation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Performs asynchronous contact export operation. 
+
+Creates and starts a new Thread with a Task that exports contacts to a file. The operation runs asynchronously and includes success/failure handlers. On successful completion, prints a confirmation message. On failure, prints an error message. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/g12swe/addressbook/service/Contact\+File\+Service.\+java\end{DoxyCompactItemize}

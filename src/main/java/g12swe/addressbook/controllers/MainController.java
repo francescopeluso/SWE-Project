@@ -403,7 +403,7 @@ public class MainController implements Initializable {
     /**
      * @brief Handles inserting a new contact.
      *
-     * Currently not implemented. Displays a warning alert.
+     * Asks the user to input the contact details and then adds the contact to the AddressBook.
      *
      * @param event The action event triggered by the user.
      */
@@ -445,7 +445,7 @@ public class MainController implements Initializable {
     /**
      * @brief Handles deleting a contact.
      *
-     * Currently not implemented. Displays a warning alert.
+     * Removes the selected contact from the AddressBook.
      *
      * @param event The action event triggered by the user.
      */

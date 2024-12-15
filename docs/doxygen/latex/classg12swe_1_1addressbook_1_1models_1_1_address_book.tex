@@ -11,15 +11,18 @@ Inheritance diagram for g12swe.\+addressbook.\+models.\+Address\+Book\+:\begin{f
 \item 
 \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_aeb8656cd1b0c1cc3502561f8e69d5971}{Address\+Book}} ()
 \begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_ae76d4a3f30b48ebc06d25d058145bce7}{add\+Contact}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} c)
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_ae76d4a3f30b48ebc06d25d058145bce7}{add\+Contact}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} c)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}}
 \begin{DoxyCompactList}\small\item\em Method to add a contact to the address book. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_a59198013c7d1063a8b5a63b46fcc0bd6}{remove\+Contact}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} c)
 \begin{DoxyCompactList}\small\item\em Method to remove a contact from the address book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_ad6db17f2e2140d95e6893cb275b89771}{update\+Contact}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} old\+Contact, \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} new\+Contact)
+\begin{DoxyCompactList}\small\item\em Method to update a contact in the address book. \end{DoxyCompactList}\item 
 Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_a539784ea172b97aa2a83b994f2ea2cf8}{get\+Contact\+List}} ()
 \begin{DoxyCompactList}\small\item\em Method to return an unmodifiable set of the address book. \end{DoxyCompactList}\item 
-\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_a36de4364518537359fd5bceffcdea394}\label{classg12swe_1_1addressbook_1_1models_1_1_address_book_a36de4364518537359fd5bceffcdea394} 
-void {\bfseries initialize} (Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contact\+List)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_a36de4364518537359fd5bceffcdea394}{initialize}} (Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contact\+List)
+\begin{DoxyCompactList}\small\item\em Initializes the address book with an existing set of contacts. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book_ad7557919a1955c74882f8e6d0c7410e1}{research}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} c)
+\begin{DoxyCompactList}\small\item\em Searches for a contact in the address book. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -40,7 +43,7 @@ This constructor creates an \doxylink{classg12swe_1_1addressbook_1_1models_1_1_a
 \index{addContact@{addContact}!g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}}
 \doxysubsubsection{\texorpdfstring{addContact()}{addContact()}}
 {\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1_address_book_ae76d4a3f30b48ebc06d25d058145bce7} 
-void g12swe.\+addressbook.\+models.\+Address\+Book.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{c}{}\end{DoxyParamCaption})}
+void g12swe.\+addressbook.\+models.\+Address\+Book.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{c}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}}}
 
 
 
@@ -70,6 +73,21 @@ Method to return an unmodifiable set of the address book.
 \begin{DoxyReturn}{Returns}
 the contact list 
 \end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_a36de4364518537359fd5bceffcdea394}\index{g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}!initialize@{initialize}}
+\index{initialize@{initialize}!g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1_address_book_a36de4364518537359fd5bceffcdea394} 
+void g12swe.\+addressbook.\+models.\+Address\+Book.\+initialize (\begin{DoxyParamCaption}\item[{Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$}]{contact\+List}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the address book with an existing set of contacts. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em contact\+List} & The set of contacts to initialize the address book with. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_a59198013c7d1063a8b5a63b46fcc0bd6}\index{g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}!removeContact@{removeContact}}
 \index{removeContact@{removeContact}!g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}}
 \doxysubsubsection{\texorpdfstring{removeContact()}{removeContact()}}
@@ -94,6 +112,51 @@ The contact is removed from the address book
 \begin{DoxyReturn}{Returns}
 true if the element is removed from the collection. Otherwise it is false. 
 \end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_ad7557919a1955c74882f8e6d0c7410e1}\index{g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}!research@{research}}
+\index{research@{research}!g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}}
+\doxysubsubsection{\texorpdfstring{research()}{research()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1_address_book_ad7557919a1955c74882f8e6d0c7410e1} 
+boolean g12swe.\+addressbook.\+models.\+Address\+Book.\+research (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Searches for a contact in the address book. 
+
+This method checks if a specific contact exists in the address book by using the contains() method of the set.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & The contact to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contact is found in the address book, falseotherwise. 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1_address_book_ad6db17f2e2140d95e6893cb275b89771}\index{g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}!updateContact@{updateContact}}
+\index{updateContact@{updateContact}!g12swe.addressbook.models.AddressBook@{g12swe.addressbook.models.AddressBook}}
+\doxysubsubsection{\texorpdfstring{updateContact()}{updateContact()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1_address_book_ad6db17f2e2140d95e6893cb275b89771} 
+void g12swe.\+addressbook.\+models.\+Address\+Book.\+update\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{old\+Contact}{, }\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}}}]{new\+Contact}{}\end{DoxyParamCaption})}
+
+
+
+Method to update a contact in the address book. 
+
+\begin{DoxyPrecond}{Precondition}
+The contact exists in the address book 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contact is updated in the address book
+\end{DoxyPostcond}
+In order to preserve the order of the contacts, the old contact is removed and the new contact is added.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em old\+Contact} & the contact to update \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Contact} & the updated contact information \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

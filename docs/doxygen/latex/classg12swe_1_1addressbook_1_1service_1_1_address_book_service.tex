@@ -9,21 +9,110 @@ Inheritance diagram for g12swe.\+addressbook.\+service.\+Address\+Book\+Service\
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ae45c9745b65a41ac9e8beeebb71f177e}\label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ae45c9745b65a41ac9e8beeebb71f177e} 
-{\bfseries Address\+Book\+Service} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
-\item 
-\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a1042f8a3c89cf8e2200583dbc2371eae}\label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a1042f8a3c89cf8e2200583dbc2371eae} 
-String {\bfseries get\+File\+Name} ()
-\item 
-\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a88615ec9aa9b3b3d19620bcf608362a2}\label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a88615ec9aa9b3b3d19620bcf608362a2} 
-Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ {\bfseries get\+Contacts} ()
-\item 
-\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ab27864c5ab5e3ffb82ee483a6761ebef}\label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ab27864c5ab5e3ffb82ee483a6761ebef} 
-abstract Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ {\bfseries import\+From\+File} ()  throws File\+Not\+Found\+Exception, IOException
-\item 
-\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a54f9820329a666fa6363b14a7c305f8c}\label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a54f9820329a666fa6363b14a7c305f8c} 
-abstract void {\bfseries export\+To\+File} ()  throws File\+Not\+Found\+Exception, IOException
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ae45c9745b65a41ac9e8beeebb71f177e}{Address\+Book\+Service}} (String file\+Name, Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ contacts)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service}{Address\+Book\+Service} class. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a1042f8a3c89cf8e2200583dbc2371eae}{get\+File\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the file name used for import/export operations. \end{DoxyCompactList}\item 
+Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a88615ec9aa9b3b3d19620bcf608362a2}{get\+Contacts}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the collection of contacts. \end{DoxyCompactList}\item 
+abstract Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ab27864c5ab5e3ffb82ee483a6761ebef}{import\+From\+File}} ()  throws File\+Not\+Found\+Exception, IOException
+\begin{DoxyCompactList}\small\item\em Imports contacts from a file. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a54f9820329a666fa6363b14a7c305f8c}{export\+To\+File}} ()  throws File\+Not\+Found\+Exception, IOException
+\begin{DoxyCompactList}\small\item\em Exports contacts to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ae45c9745b65a41ac9e8beeebb71f177e}\index{g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}!AddressBookService@{AddressBookService}}
+\index{AddressBookService@{AddressBookService}!g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}}
+\doxysubsubsection{\texorpdfstring{AddressBookService()}{AddressBookService()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ae45c9745b65a41ac9e8beeebb71f177e} 
+g12swe.\+addressbook.\+service.\+Address\+Book\+Service.\+Address\+Book\+Service (\begin{DoxyParamCaption}\item[{String}]{file\+Name}{, }\item[{Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$}]{contacts}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classg12swe_1_1addressbook_1_1service_1_1_address_book_service}{Address\+Book\+Service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to use for import/export operations \\
+\hline
+{\em contacts} & The collection of contacts to manage \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a54f9820329a666fa6363b14a7c305f8c}\index{g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}!exportToFile@{exportToFile}}
+\index{exportToFile@{exportToFile}!g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}}
+\doxysubsubsection{\texorpdfstring{exportToFile()}{exportToFile()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a54f9820329a666fa6363b14a7c305f8c} 
+abstract void g12swe.\+addressbook.\+service.\+Address\+Book\+Service.\+export\+To\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception, IOException\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Exports contacts to a file. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & if the specified file cannot be created or opened \\
+\hline
+{\em IOException} & if an I/O error occurs during writing \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service_a564662449999496f59cce20d477aea29}{g12swe.\+addressbook.\+service.\+File\+Service}}, and \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_a07345c925e7583ba1f6e789492135522}{g12swe.\+addressbook.\+service.\+Import\+Export\+Service}}.
+
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a88615ec9aa9b3b3d19620bcf608362a2}\index{g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}!getContacts@{getContacts}}
+\index{getContacts@{getContacts}!g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}}
+\doxysubsubsection{\texorpdfstring{getContacts()}{getContacts()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a88615ec9aa9b3b3d19620bcf608362a2} 
+Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ g12swe.\+addressbook.\+service.\+Address\+Book\+Service.\+get\+Contacts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the collection of contacts. 
+
+\begin{DoxyReturn}{Returns}
+The Observable\+Set containing all contacts. 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a1042f8a3c89cf8e2200583dbc2371eae}\index{g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}!getFileName@{getFileName}}
+\index{getFileName@{getFileName}!g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}}
+\doxysubsubsection{\texorpdfstring{getFileName()}{getFileName()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_a1042f8a3c89cf8e2200583dbc2371eae} 
+String g12swe.\+addressbook.\+service.\+Address\+Book\+Service.\+get\+File\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the file name used for import/export operations. 
+
+\begin{DoxyReturn}{Returns}
+The name of the file 
+\end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ab27864c5ab5e3ffb82ee483a6761ebef}\index{g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}!importFromFile@{importFromFile}}
+\index{importFromFile@{importFromFile}!g12swe.addressbook.service.AddressBookService@{g12swe.addressbook.service.AddressBookService}}
+\doxysubsubsection{\texorpdfstring{importFromFile()}{importFromFile()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1service_1_1_address_book_service_ab27864c5ab5e3ffb82ee483a6761ebef} 
+abstract Observable\+Set$<$ \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} $>$ g12swe.\+addressbook.\+service.\+Address\+Book\+Service.\+import\+From\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception, IOException\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Imports contacts from a file. 
+
+\begin{DoxyReturn}{Returns}
+An Observable\+Set containing the imported contacts 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & if the specified file cannot be found \\
+\hline
+{\em IOException} & if an I/O error occurs during reading \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_file_service_a5a4177d06c1e362540eb994d0b0af070}{g12swe.\+addressbook.\+service.\+File\+Service}}, and \mbox{\hyperlink{classg12swe_1_1addressbook_1_1service_1_1_import_export_service_a01a1f6046d11ff656a7ac3fc8ee9f092}{g12swe.\+addressbook.\+service.\+Import\+Export\+Service}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

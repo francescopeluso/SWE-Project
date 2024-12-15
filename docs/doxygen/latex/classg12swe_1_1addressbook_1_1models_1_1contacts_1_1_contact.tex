@@ -23,6 +23,8 @@ void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_conta
 \item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a16b52dfa1595a6940ec92672f9729c4f}{set\+Surname}} (String surname)
 \item 
+int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a25d84a9c6bab855852a24fc05c82ab53}{get\+Unique\+Id}} ()
+\item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3d11e8c09da7fd9824cde7233cc57b57}{add\+Email\+Address}} (String email\+Address, \mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_email_address_exception}{Invalid\+Email\+Address\+Exception}}
 \begin{DoxyCompactList}\small\item\em Method to add an email to the contact. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aa946fbcc766f81d628457ef90019832b}{add\+Phone\+Number}} (String phone\+Number, \mbox{\hyperlink{enumg12swe_1_1addressbook_1_1models_1_1contacts_1_1_entry_category}{Entry\+Category}} category)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_invalid_phone_number_exception}{Invalid\+Phone\+Number\+Exception}} 
@@ -36,7 +38,14 @@ int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contac
 boolean \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a57350eb46ffe110382292662e78ce507}{equals}} (Object obj)
 \begin{DoxyCompactList}\small\item\em Override the equals method. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_aced836cf33254d69d57ee6b4e6ce0b9d}{compare\+To}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact}} o)
-\begin{DoxyCompactList}\small\item\em Method to compare the calling object to another \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method to compare the calling object to another \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_af19a3e4ae4cc45d92eff8f58a9608886}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Generates a string representation of the \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a4cf12bd41a71a0fb8ab16eab74f79a07}{set\+Last\+Unique\+Id}} (int last\+Unique\+Id)
+\begin{DoxyCompactList}\small\item\em Sets a fixed value for the total number of unique contacts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -52,6 +61,9 @@ Constructor of the class.
 
 This constructor creates a \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object and initialize the attributes with the values of the input parameters. It also initializes the class collections and the unique\+Id.
 
+\begin{DoxyPrecond}{Precondition}
+name or surname must not be null
+\end{DoxyPrecond}
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em name} & represents the name \\
@@ -122,13 +134,20 @@ int g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+compare\+To (\begin{Dox
 
 Method to compare the calling object to another \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. 
 
+Compares two \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} objects based on their surname, name, and unique\+Id. The comparison follows this order\+:
+\begin{DoxyEnumerate}
+\item First compares surnames
+\item If surnames are equal, compares names
+\item If both surname and name are equal, compares unique\+Id
+\end{DoxyEnumerate}
+
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em o} & \\
+\mbox{\texttt{ in}}  & {\em o} & The \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object to compare with \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+A negative integer if this contact comes before the parameter, zero if they are equal, a positive integer if this contact comes after the parameter 
 \end{DoxyReturn}
 \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a57350eb46ffe110382292662e78ce507}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!equals@{equals}}
 \index{equals@{equals}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
@@ -186,6 +205,15 @@ String g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+get\+Surname (\begin
 \begin{DoxyReturn}{Returns}
 the surname 
 \end{DoxyReturn}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a25d84a9c6bab855852a24fc05c82ab53}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!getUniqueId@{getUniqueId}}
+\index{getUniqueId@{getUniqueId}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{getUniqueId()}{getUniqueId()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a25d84a9c6bab855852a24fc05c82ab53} 
+int g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+get\+Unique\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the unique\+Id 
+\end{DoxyReturn}
 \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a7b2b014121a29839afc434d6dbfd06a8}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!hashCode@{hashCode}}
 \index{hashCode@{hashCode}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
 \doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
@@ -241,6 +269,23 @@ The \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_phone_number}
 \mbox{\texttt{ in}}  & {\em phone\+Number} & the phone number to remove \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a4cf12bd41a71a0fb8ab16eab74f79a07}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!setLastUniqueId@{setLastUniqueId}}
+\index{setLastUniqueId@{setLastUniqueId}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{setLastUniqueId()}{setLastUniqueId()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a4cf12bd41a71a0fb8ab16eab74f79a07} 
+static void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+set\+Last\+Unique\+Id (\begin{DoxyParamCaption}\item[{int}]{last\+Unique\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets a fixed value for the total number of unique contacts. 
+
+This static method allows manually setting the counter for unique contacts, which is typically used for managing contact identification.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em last\+Unique\+Id} & The fixed value to set for the total number of unique contacts \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_a3e09e2b923a89e6551099707019b44cb}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!setName@{setName}}
 \index{setName@{setName}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
 \doxysubsubsection{\texorpdfstring{setName()}{setName()}}
@@ -263,6 +308,21 @@ void g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+set\+Surname (\begin{D
 \mbox{\texttt{ in}}  & {\em surname} & the surname to set \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_af19a3e4ae4cc45d92eff8f58a9608886}\index{g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}!toString@{toString}}
+\index{toString@{toString}!g12swe.addressbook.models.contacts.Contact@{g12swe.addressbook.models.contacts.Contact}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact_af19a3e4ae4cc45d92eff8f58a9608886} 
+String g12swe.\+addressbook.\+models.\+contacts.\+Contact.\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a string representation of the \doxylink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_contact}{Contact} object. 
+
+Overrides the default to\+String method to provide a custom string format that includes te contacts\textquotesingle{}s unique\+ID, name and surname
+
+\begin{DoxyReturn}{Returns}
+A string containing the contact\textquotesingle{}s unique\+ID, name and surname 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

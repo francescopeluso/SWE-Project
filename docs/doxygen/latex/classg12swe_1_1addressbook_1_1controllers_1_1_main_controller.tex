@@ -12,10 +12,48 @@ Inheritance diagram for g12swe.\+addressbook.\+controllers.\+Main\+Controller\+:
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9684c2c96fc55c52a21963a008bd6fed}{initialize}} (URL url, Resource\+Bundle rb)
 \begin{DoxyCompactList}\small\item\em Initializes the controller and its bindings. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_afa2a91d1bea43b80503effb5b249f726}{set\+Contact\+Controller}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_contact_controller}{Contact\+Controller}} contact\+Controller)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}} \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a2afd3da5e92eb485276ff9ff59f06fb9}{get\+Address\+Book}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the Address\+Book associated with this controller. \end{DoxyCompactList}\item 
+\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9b0194082848eead66e9377990cf780f}\label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9b0194082848eead66e9377990cf780f} 
+void {\bfseries update\+List\+View} ()
+\begin{DoxyCompactList}\small\item\em Updates the List\+View with sorted contacts. \end{DoxyCompactList}\item 
+\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a810aa13cf2b0159cbb5b2314b07c497c}\label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a810aa13cf2b0159cbb5b2314b07c497c} 
+void {\bfseries save\+Address\+Book\+State} ()
+\begin{DoxyCompactList}\small\item\em Saves the current state of the Address\+Book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a32f11138bfbf6bb7dc111bd517f4881e}{add\+Contact}} (\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}{Extended\+Contact}} contact)  throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}} 
+\begin{DoxyCompactList}\small\item\em Adds a new contact to the Address\+Book. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a32f11138bfbf6bb7dc111bd517f4881e}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!addContact@{addContact}}
+\index{addContact@{addContact}!g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}}
+\doxysubsubsection{\texorpdfstring{addContact()}{addContact()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a32f11138bfbf6bb7dc111bd517f4881e} 
+void g12swe.\+addressbook.\+controllers.\+Main\+Controller.\+add\+Contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1contacts_1_1_extended_contact}{Extended\+Contact}}}]{contact}{}\end{DoxyParamCaption}) throws \mbox{\hyperlink{classg12swe_1_1addressbook_1_1exceptions_1_1_limit_reached_exception}{Limit\+Reached\+Exception}}}
+
+
+
+Adds a new contact to the Address\+Book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contact} & The contact to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a2afd3da5e92eb485276ff9ff59f06fb9}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!getAddressBook@{getAddressBook}}
+\index{getAddressBook@{getAddressBook}!g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}}
+\doxysubsubsection{\texorpdfstring{getAddressBook()}{getAddressBook()}}
+{\footnotesize\ttfamily \label{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a2afd3da5e92eb485276ff9ff59f06fb9} 
+\mbox{\hyperlink{classg12swe_1_1addressbook_1_1models_1_1_address_book}{Address\+Book}} g12swe.\+addressbook.\+controllers.\+Main\+Controller.\+get\+Address\+Book (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the Address\+Book associated with this controller. 
+
+\begin{DoxyReturn}{Returns}
+The Address\+Book instance. 
+\end{DoxyReturn}
 \Hypertarget{classg12swe_1_1addressbook_1_1controllers_1_1_main_controller_a9684c2c96fc55c52a21963a008bd6fed}\index{g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}!initialize@{initialize}}
 \index{initialize@{initialize}!g12swe.addressbook.controllers.MainController@{g12swe.addressbook.controllers.MainController}}
 \doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
