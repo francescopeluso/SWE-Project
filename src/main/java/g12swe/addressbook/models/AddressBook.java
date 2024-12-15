@@ -88,7 +88,6 @@ public class AddressBook implements Serializable {
      * 
      * @param[in] contactList The set of contacts to initialize the address book with.
      */
-    
     public void initialize(ObservableSet<Contact> contactList){
         this.contactList = contactList;
     }
@@ -102,7 +101,6 @@ public class AddressBook implements Serializable {
      * @param[in] c The contact to search for.
      * @return true if the contact is found in the address book, falseotherwise.
      */
-    
     public boolean research(Contact c){
         return this.contactList.contains(c);
     }
