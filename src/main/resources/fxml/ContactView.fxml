@@ -28,7 +28,7 @@
             </HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0">
                <children>
-                  <HBox prefWidth="200.0">
+                  <HBox fx:id="phoneNumbersContainer" prefWidth="200.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="78.0" text="Telefono:">
                            <HBox.margin>
@@ -51,7 +51,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefWidth="200.0">
+                  <HBox fx:id="emailAddressesContainer" prefWidth="200.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="78.0" text="Email:">
                            <HBox.margin>
@@ -77,7 +77,7 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefWidth="200.0">
+                  <HBox fx:id="addressContainer" prefWidth="200.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="78.0" text="Indirizzo:">
                            <HBox.margin>
@@ -95,7 +95,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefWidth="200.0">
+                  <HBox fx:id="birthdayContainer" prefWidth="200.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="78.0" text="Compleanno:">
                            <HBox.margin>
@@ -113,7 +113,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefWidth="200.0">
+                  <HBox fx:id="notesContainer" prefWidth="200.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="78.0" text="Note:">
                            <HBox.margin>
@@ -131,7 +131,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefWidth="200.0">
+                  <HBox fx:id="pronounsContainer" prefWidth="200.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="78.0" text="Pronomi:">
                            <HBox.margin>

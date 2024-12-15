@@ -39,11 +39,6 @@ public class ContactController {
      */
     private MainController mainController;
     
-    /**
-     * @brief Label displaying the full name of the contact.
-     */
-    @FXML
-    private Label fullNameLabel;
     
     /**
      * @brief VBox containing the list of phone numbers.
@@ -98,7 +93,25 @@ public class ContactController {
      */
     @FXML
     private TextArea notesArea;
+
+    @FXML
+    private HBox phoneNumbersContainer;
     
+    @FXML
+    private HBox emailAddressesContainer;
+    
+    @FXML
+    private HBox addressContainer;
+    
+    @FXML
+    private HBox birthdayContainer;
+    
+    @FXML
+    private HBox notesContainer;
+    
+    @FXML
+    private HBox pronounsContainer;
+
     /**
      * @brief Flag indicating if the edit mode is enabled.
      */
@@ -331,6 +344,20 @@ public class ContactController {
         firstNameField.setText(this.selected.getName());
         lastNameField.setText(this.selected.getSurname());
 
+        if (contact instanceof ExtendedContact) {
+            ExtendedContact extendedContact = (ExtendedContact) contact;
+            addressField.setText(extendedContact.getAddress());
+            pronounsField.setText(extendedContact.getPronouns());
+            birthdayPicker.setValue(extendedContact.getBirthday() != null ? extendedContact.getBirthday().toLocalDate() : null);
+            notesArea.setText(extendedContact.getNotes());
+        } else {
+            addressField.clear();
+            pronounsField.clear();
+            birthdayPicker.setValue(null);
+            notesArea.clear();
+        }
+
+
         editOrSaveButton.setText("Modifica");
         
         isEditMode = false;
@@ -370,12 +397,39 @@ public class ContactController {
         firstNameField.setEditable(true);
         lastNameField.setEditable(true);
 
-        for (int i = 0; i < phoneNumbersList.getChildren().size(); i++) {
-            ((TextField)((HBox)phoneNumbersList.getChildren().get(i)).getChildren().get(0)).setEditable(true);
+        // Show all fields and their containers
+        addressContainer.setManaged(true);
+        addressContainer.setVisible(true);
+        addressField.setEditable(true);
+
+        pronounsContainer.setManaged(true);
+        pronounsContainer.setVisible(true);
+        pronounsField.setEditable(true);
+
+        birthdayContainer.setManaged(true);
+        birthdayContainer.setVisible(true);
+        birthdayPicker.setDisable(false);
+
+        notesContainer.setManaged(true);
+        notesContainer.setVisible(true);
+        notesArea.setEditable(true);
+
+        for (Node node : phoneNumbersList.getChildren()) {
+            HBox hbox = (HBox)node;
+            TextField field = (TextField)hbox.getChildren().get(0);
+            hbox.setManaged(true);
+            hbox.setVisible(true);
+            field.setEditable(true);
+            ((Button)hbox.getChildren().get(1)).setVisible(true);
         }
 
-        for (int i = 0; i < emailAddressesList.getChildren().size(); i++) {
-            ((TextField)((HBox)emailAddressesList.getChildren().get(i)).getChildren().get(0)).setEditable(true);
+        for (Node node : emailAddressesList.getChildren()) {
+            HBox hbox = (HBox)node;
+            TextField field = (TextField)hbox.getChildren().get(0);
+            hbox.setManaged(true);
+            hbox.setVisible(true);
+            field.setEditable(true);
+            ((Button)hbox.getChildren().get(1)).setVisible(true);
         }
     }
     
@@ -386,12 +440,51 @@ public class ContactController {
         firstNameField.setEditable(false);
         lastNameField.setEditable(false);
 
-        for (int i = 0; i < phoneNumbersList.getChildren().size(); i++) {
-            ((TextField)((HBox)phoneNumbersList.getChildren().get(i)).getChildren().get(0)).setEditable(false);
+        // Hide empty fields and their containers
+        if (addressField.getText() == null || addressField.getText().isEmpty()) {
+            addressContainer.setManaged(false);
+            addressContainer.setVisible(false);
+        }
+        addressField.setEditable(false);
+
+        if (pronounsField.getText() == null || pronounsField.getText().isEmpty()) {
+            pronounsContainer.setManaged(false);
+            pronounsContainer.setVisible(false);
+        }
+        pronounsField.setEditable(false);
+
+        if (birthdayPicker.getValue() == null) {
+            birthdayContainer.setManaged(false);
+            birthdayContainer.setVisible(false);
+        }
+        birthdayPicker.setDisable(true);
+
+        if (notesArea.getText() == null || notesArea.getText().isEmpty()) {
+            notesContainer.setManaged(false);
+            notesContainer.setVisible(false);
+        }
+        notesArea.setEditable(false);
+
+        for (Node node : phoneNumbersList.getChildren()) {
+            HBox hbox = (HBox)node;
+            TextField field = (TextField)hbox.getChildren().get(0);
+            if (field.getText().isEmpty()) {
+                hbox.setManaged(false);
+                hbox.setVisible(false);
+            }
+            field.setEditable(false);
+            ((Button)hbox.getChildren().get(1)).setVisible(false);
         }
 
-        for (int i = 0; i < emailAddressesList.getChildren().size(); i++) {
-            ((TextField)((HBox)emailAddressesList.getChildren().get(i)).getChildren().get(0)).setEditable(false);
+        for (Node node : emailAddressesList.getChildren()) {
+            HBox hbox = (HBox)node;
+            TextField field = (TextField)hbox.getChildren().get(0);
+            if (field.getText().isEmpty()) {
+                hbox.setManaged(false);
+                hbox.setVisible(false);
+            }
+            field.setEditable(false);
+            ((Button)hbox.getChildren().get(1)).setVisible(false);
         }
     }
 
