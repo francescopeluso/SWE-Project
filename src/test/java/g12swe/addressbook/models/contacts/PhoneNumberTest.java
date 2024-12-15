@@ -7,7 +7,13 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @file PhoneNumberTest.java
+ * @brief Unit tests for the PhoneNumber class.
+ * 
+ * This test class verifies the core functionality of the PhoneNumber class.
+ * 
+ */
 public class PhoneNumberTest {
     
     public PhoneNumberTest() {
@@ -127,7 +133,7 @@ public class PhoneNumberTest {
     public void testEquals() {
         System.out.println("T015");
         
-        //equals to null
+        // equals to null
         Object obj = null;
         PhoneNumber instance = new PhoneNumber("1234567890", null);  
         boolean expResult = false;
@@ -135,14 +141,14 @@ public class PhoneNumberTest {
         assertEquals(expResult, result);
         
         
-        //equals to a different phoneNumber
+        // equals to a different phoneNumber
         System.out.println("T016");
         obj = new PhoneNumber("2133445689", null);
         result = instance.equals(obj);
         assertEquals(expResult, result);
         
         
-        //equals to the same phoneNumber
+        // equals to the same phoneNumber
         System.out.println("T017");
         obj = new PhoneNumber("1234567890", null);
         result = instance.equals(obj);
@@ -150,7 +156,7 @@ public class PhoneNumberTest {
         assertEquals(expResult, result);
         
         
-        //equals to the same instance
+        // equals to the same instance
         System.out.println("T018");
         obj = instance;
         result = instance.equals(obj);
